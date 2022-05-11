@@ -16,8 +16,7 @@
 </script>
 
 <dt-article>
-  <h1>Word to Sentence Visual Semantic<h1>
-  <h2> Visual context re-ranker for image captioning: Lesson Learned</h2>
+  <h2> Word to Sentence Visual Semantic Similarity for Caption Generation: Lesson learned</h2>
   <dt-byline></dt-byline>
   <p>In this blog post, I will share with you some insight and lessons learned from our recent research idea that should work in theory (i.e., BERT+GloVe), but in practice, it doesn’t work in our scenario.
     Recent state-of-the-art progress in pre-trained vision and language and image captioning models relies heavily on long training on abundant data. However, these accuracy improvements depend on long iterations of training and the availability of computational resources (i.e., GPU, TPU, etc), which leads to time and energy consumption  <dt-cite key="strubell2019energy"></dt-cite>. In some cases, the improvements after re-training are less than 1 point in the benchmark dataset. In this work, we introduce an approach that can be applied to any caption system as a post-processing-based method that only needs to be trained once. In particular, we propose an approach for improving caption generation systems by choosing the most closely related output to the image rather than the most likely output produced by the model. Our model revises the language generation output beam search from a visual context perspective</p>
@@ -47,12 +46,12 @@
 
 
 
+    <figure>
+  <img src="Figure_1.jpg" alt="Trulli" style="width:70%">
+  <figcaption>Fig.1 An overview of our visual semantic re-ranking. We employ the visual context in word and sentence level manners from the image to re-rank the most related caption to its visual context. An example, from caption Transformer generator, shows the visual re-ranker (Visual Beam)  uses the semantic relation to re-ranked the most descriptive caption.</figcaption>
+</figure>
 
 
-      <div class="image-container">
-  <img src="Figure_1.jpg" />
-       <figcaption>  Fig. 2. The plot of BLEU and std. dev of </figcaption>
-</div>
 
 
       <p><strong>Word level similarity.</strong>  To learn the semantic relation between a caption and its visual context in a word-level manner: first, we employ a bidirectional LSTM based CopyRNN keyphrase extractor <dt-cite key="meng2017deep"></dt-cite>  to extract keyphrases from the sentence as context. The model is trained on combined pre-processed datasets (1) wikidump (i.e., keyword, short sentence) and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications)<dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe is used to compute the cosine similarity between the visual context and its related context. For example, “a woman in a red dress and a black skirt walks down a sidewalk” the model will extract dress and walks, which are the highlights keywords of the caption. <p>
@@ -339,22 +338,23 @@
         <td>0.9395</td>
     </tr>
       <caption> <font color="#a9a9a9"> <small> Table 1 Performance of compared baselines on the Karpathy test split. <small></font> </caption>
-
-
-
 </table>
+
+
+
+
 
    <p> Experiments applying different rerankers to each base system are shown in Table 1 (above). The tested rerankers are: (1) VR_BERT+GloVe, which uses BERT and GloVe similarity between the candidate caption and the visual context (top-k V_1 and V_2 during the inference) to obtain the reranked score. (2) VR_RoBERTa+GloVe, which carries out the same procedure using similarity produced by Sentence RoBERTa.<p>
 
 
 <p>Our re-ranker produced mixed results as the model struggles when the beam search is less diverse. The model is therefore not able to select the most closely related caption to its environmental context as shown in Figure 2/2_zoom (below), which is a visualization of the final visual beam re-ranking.<p>
 
-            <div class="image-container">
-  <img src="Figure_2.jpg" style="width: 100%;" class="left"/>
-       <figcaption>  Fig. 2. The plot of BLEU and std. dev of </figcaption>
 
-  </div>
 
+      <figure>
+  <img src="Figure_2.jpg" alt="Trulli" style="width:100%">
+  <figcaption>Figure 2 Visualization of the top-15 beam search after visual re-ranking. The color $\square$ $\leq 0$, \textcolor{babyblue!40}{$\blacksquare$} $\leq 0.4$ and  $\leq 0.8$ \textcolor{darksalmon}{$\blacksquare$} represents  the degree of change in probability after visual re-ranking, respectively.  Also, we can observe that a less diverse beam negatively impacted the score, as in the case of Transformer and show and tell baselines.</figcaption>
+</figure>
 
 
 
@@ -429,6 +429,7 @@
         <td><strong>7.48<strong></td>
         <td>8.68</td>
     </tr>
+          <caption> <font color="#a9a9a9"> <small> Table 2 Performance of compared baselines on the Karpathy test split. <small></font> </caption>
 </table>
 
 
@@ -436,12 +437,13 @@
 
  <p><strong>Ablation Study. </strong>  We performed an ablation study to investigate the effectiveness of each model. As to the proposed architecture, each expert tried to learn different representations in a word and sentence manner. In this experiment, we trained each model separately, as shown in Table 3 (below). The GloVe as a stand-alone performed better than the combined model (and thus, the combined model breaks the accuracy). To investigate this even further we visualized each expert before the fusion layers as shown in Figure 3. <p>
 
-                  <div class="image-container">
-  <img src="Figure_3_1.jpg" style="width: 65%;" class="left" />
-      <img src="Figure_3_2.jpg" style="width: 65%;" class="left" />
-       <figcaption>  Fig. 2. The plot of BLEU and std. dev of </figcaption>
-</div>
 
+
+    <figure>
+  <img src="Figure_3_1.jpg" alt="Trulli" style="width:70%">
+        <img src="Figure_3_2.jpg" alt="Trulli" style="width:70%">
+  <figcaption>Figure 3 \textbf{\text{\small$\spadesuit$} Top}) 1k random sample from Flicker test set with shown and tell model. Each Expert is contributing different probability confidence and therefore the model is learning the semantic relation in word level and sentence level. (\text{\small$\clubsuit$} \textbf{Bottom}) 5k random sample from COCO caption with Transformer based caption model. The Glove score is dominating the distribution to become the expert.</figcaption>
+</figure>
 
 
 
@@ -508,6 +510,7 @@
         <td> <font color="#ccdfc0">1.149</font></td>
         <td>0.9398</td>
     </tr>
+       <caption> <font color="#a9a9a9"> <small> Table 2 Performance of compared baselines on the Karpathy test split. <small></font> </caption>
 </table>
 
 
