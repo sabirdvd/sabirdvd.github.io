@@ -1,0 +1,1794 @@
+
+<!doctype html>
+
+<meta charset="utf-8">
+<script src="template.v1.js"></script>
+<script type="text/front-matter">
+  title: "Word to Sentence Visual Semantic Similarity for Caption Generation: Lesson learned"
+  description: "negative result"
+  authors:
+  - Ahmed Sabir: https://www.cs.upc.edu/~asabir/
+  - Date
+  affiliations:
+  - Universitat Politècnica de Catalunya: https://www.upc.edu
+  - 10 April 2022
+
+</script>
+
+
+<dt-article>
+  <h2> Word to Sentence Visual Semantic Similarity for Caption Generation: Lesson learned</h2>
+  <dt-byline></dt-byline>
+  <p>In this blog post, I will share with you some insight and lessons learned from our recent research idea that should work in theory (i.e., BERT+GloVe), but in practice, it doesn’t work in our scenario.
+    Recent state-of-the-art progress in pre-trained vision and language and image captioning models relies heavily on long training on abundant data. However, these accuracy improvements depend on long iterations of training and the availability of computational resources (i.e., GPU, TPU, etc), which leads to time and energy consumption  <dt-cite key="strubell2019energy"></dt-cite>. In some cases, the improvements after re-training are less than 1 point in the benchmark dataset. In this work, we introduce an approach that can be applied to any caption system as a post-processing-based method that only needs to be trained once. In particular, we propose an approach for improving caption generation systems by choosing the most closely related output to the image rather than the most likely output produced by the model. Our model revises the language generation output beam search from a visual context perspective</p>
+
+<h2 id="">Introduction<a hidden class="anchor" aria-hidden="true" href="">#</a></h2>
+
+ <p><strong>Image Captioning System.</strong>  Automatic caption is a fundamental task that incorporates vision and language. The task can be tackled in two stages: first, image-visual information extraction and then linguistic description generation. Most models couple the relations between visual and linguistic information via a Convolutional Neural Network (CNN) to encode the input image and Long Short Term Memory for language generation  <dt-cite key="Oriol:15"></dt-cite> <dt-cite key="anderson2018bottom"></dt-cite> (LSTM). Recently, self-attention has been used to learn these relations via Transformers  <dt-cite key="huang2019attention"></dt-cite>, <dt-cite key="Marcella:20"></dt-cite> or Transformer-based models like Vision and Language BERT  <dt-cite key="lu202012"></dt-cite>. These systems show promising results on benchmark datasets such as COCO  <dt-cite key="young2014image"></dt-cite>. However, the generated caption lexical diversity remains a relatively unexplored research problem. Lexical diversity refers to how accurate the generated description is for a given image. An accurate caption should provide details about specific and relevant aspects of the image. Caption lexical diversity can be divided into three levels: word level (different words), syntactic level (word order), and semantic level (relevant concepts)  <dt-cite key="wang2019describing"></dt-cite>. In this work, we approach word-level diversity by learning the semantic correlation between the caption and its visual context, as shown in Figure 1 (below), where the visual information from the image is used to learn the semantic relation from the caption in a word and sentence manner.<p>
+
+
+  <p> <p><strong>Visual Context Image Captioning System.</strong>  Modern sophisticated image captioning systems focus heavily on visual grounding to capture real-world scenarios. Early works  <dt-cite key="fang2015captions"></dt-cite>  built a visual detector to guide and re-rank image captions with a global similarity. The work of  <dt-cite key="wang2018object"></dt-cite>  investigates the informativeness of object information (e.g., object frequency) in end-to-end caption generation. Cornia et al.  propose controlled caption language grounding through visual regions from the image <dt-cite key="cornia2019show"></dt-cite>. Chen et al.  rely on scene concept abstract (object, relationship, and attribute) grounded in the image to learn accurate semantics without labels for image caption <dt-cite key="gupta2020contrastive"></dt-cite>. More recently, Zhang et al.  incorporate different concepts such as scene graph, object, and attribute to learn correct linguistic and visual relevance for better caption language grounding <dt-cite key="zhang2021consensus"></dt-cite>. <p>
+
+
+
+
+
+ <p> Inspired by these works,  <dt-cite key="fang2015captions"></dt-cite>  that uses re-ranking via visual information, Wang et al.<dt-cite key="cornia2019show"></dt-cite>  and  Cornia et al.  <dt-cite key="wang2018object"></dt-cite> that explored the benefit of object information in image captioning, Gupta et al.  that benefits of language modeling to extract contextualized word representations <dt-cite key="gupta2020contrastive"></dt-cite> and the exploitation of the semantic coherency in caption language grounding  <dt-cite key="zhang2021consensus"></dt-cite>, we propose a visual grounding-based object scorer to re-rank the most closely related caption with both static and contextualized semantic similarity. <p>
+
+
+
+  <p>Beam search caption extraction — Baselines. We employ the three most common architectures for caption generation to extract the top beam search. The first baseline is based on the standard shallow CNN-LSTM model <dt-cite key="Oriol:15"></dt-cite>. The second, VilBERT  <dt-cite key="lu202012"></dt-cite>  is fine-tuned on a total of 12 different vision and language datasets such as caption image retrieval. Finally, the third baseline is a specialized Transformer based caption generator <dt-cite key="Marcella:20"></dt-cite>. <p>
+
+
+   <h2>Learning Word to Sentence Visual Semantic</h2>
+
+<p><strong>Problem Formulation.</strong> Beam search is the dominant method for approximate decoding in structured prediction tasks such as machine translation, speech recognition, and image captioning. The larger beam size allows the model to perform a better exploration of the search space compared to greedy decoding. Our goal is to leverage the visual context information of the image to re-rank the candidate sequences obtained through the beam search, thereby moving the most visually relevant candidate up in the list, as well as moving incorrect candidates down. <p>
+
+
+    <figure>
+    <img src="Figure_1.png" alt="Trulli" style="width:80%">
+  <figcaption>Fig.1 An overview of our visual semantic re-ranking. We employ the visual context in word and sentence level manners from the image to re-rank the most related caption to its visual context. An example, from caption Transformer generator, shows the visual re-ranker (Visual Beam)  uses the semantic relation to re-ranked the most descriptive caption.</figcaption>
+</figure>
+
+
+
+
+      <p><strong>Word level similarity.</strong>  To learn the semantic relation between a caption and its visual context in a word-level manner: first, we employ a bidirectional LSTM based CopyRNN keyphrase extractor <dt-cite key="meng2017deep"></dt-cite>  to extract keyphrases from the sentence as context. The model is trained on combined pre-processed datasets (1) wikidump (i.e., keyword, short sentence) and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications)<dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe is used to compute the cosine similarity between the visual context and its related context. For example, “a woman in a red dress and a black skirt walks down a sidewalk” the model will extract dress and walks, which are the highlights keywords of the caption. <p>
+
+
+
+
+  <p><strong>Sentence level similarity.</strong> We fine-tune the BERT base model to learn the visual context information. The model learns a dictionary-like relation word-to-sentence paradigm. We use the visual data as context for the sentence via cosine distance. <p>
+
+
+  <p> BERT <dt-cite key="Jacob:19"></dt-cite> . BERT achieves remarkable results on many sentence level tasks and especially in the textual semantic similarity task (STS-B)<dt-cite key="conneau2017supervised"></dt-cite>. Therefore, we fine-tuned BERT_base on the training dataset, (textual information, 460k captions: 373k for training and 87k for validation) i.e., visual, caption, label [semantically related or not related]), with a binary classification cross-entropy loss function [0,1] where the target is the semantic similarity between the visual and the candidate caption.<p>
+
+<p> Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>. RoBERTa is an improved version of BERT, and since RoBERTa Large is more robust, we rely on pre-trained SentenceRoBERTa-sts as its yields a better cosine score.<p>
+
+
+<p><strong>Fusion Similarity Expert.</strong>  Product of experts (PoE) <dt-cite key="hinton1999products"></dt-cite>  implies an effort into combining the expertise of each expert (model) in a collaborative manner. It allows each expert to specialize in analyzing one particular aspect of the problem and establishing a judgment based on that aspect. Inspired by PoE , we combined the two experts word and sentence level as last fusion as shown in Figure 1. PoE takes advantage of each expert and can produce much sharper distributions than a single model. The PoE is computed as follows:<p>
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<p>
+
+
+
+  \[ P\left(\mathbf{w} | \theta_{1} .. \theta_{n}\right)=\arg  \max _{\mathbf{w}} \frac{\Pi_{m} p_{m}\left(\mathbf{w} | \theta_{m}\right)} {\sum_{\mathbf{c}} \Pi_{m} p_{m}\left(\mathbf{c} | \theta_{m}\right)} \]
+</p>
+
+
+<p> where \(w\) is a data vector in the discrete space, \(θm\) are the parameters of each model \(m\), \(pm(w|θm)\) is the probability of \(w\) under model \(m\) and \(c\) are the indexes of all possible vector in the data space.<p>
+
+
+
+<p> \[\arg  \max _{\mathbf{w}} {\Pi_{m} p_{m}\left(\mathbf{w} | \theta_{m}\right)}\]<p>
+
+
+<p> where, \(p_{m}\left(\mathbf{w} | \theta_{m}\right)\)  are the probabilities assigned by each expert to the candidate word \(\mathbf{w}\).
+
+
+
+  <h2 id="">Dataset<a hidden class="anchor" aria-hidden="true" href="">#</a></h2>
+
+<p> We evaluate the proposed approach on two different sized datasets. The idea is to evaluate our method on the most common caption dataset in two scenarios: (1) a shallow model CNN-LSTM (i.e. less data), as well as a system that is trained on a huge amount of data (i.e. Transformer).<p>
+
+
+ <p> ♠ Flicker 8K <dt-cite key="young2014image"></dt-cite>. The dataset contains 8K images, each image has five human label annotated captions. We use this data to train the shallow model (6270 train/1730 test).<p>
+
+
+ <p> ♣ COCO <dt-cite key="Tsung-Yi:14"></dt-cite>. It contains around 120K images, and each image is annotated with five different human label captions. We use the most used split that is provided by (Karpathy test set) <dt-cite key="karpathy2015deep"></dt-cite>, where 5k images are used for testing and 5k for validation, and the rest for model training for the Transformer baseline.<p>
+
+
+
+ <p><strong>Visual Context Dataset. </strong> Since there are many public datasets for caption, they contain no textual visual information such as objects in the image. We enrich the two datasets, mentioned above, with textual visual context information. In particular, to automate visual context generation and without the need for human labeling, we use ResNet152 <dt-cite key="Kaiming:16"></dt-cite>  to extract top-k 3 visual context information for each image in the caption dataset.<p>
+
+
+ <p><strong>Evaluation Metric. </strong>  We use the official COCO offline evaluation suite, producing several widely used caption quality metrics: BLEU <dt-cite key="papineni2002bleu"></dt-cite>  METEOR <dt-cite key="banerjee2005meteor"></dt-cite>, ROUGE <dt-cite key="lin2004rouge"></dt-cite>, CIDEr <dt-cite key="vedantam2015cider"></dt-cite>, and BERTscore or (B-S) <dt-cite key="bert-score"></dt-cite>.<p>
+
+
+
+      <h2 id="">Results and Analysis<a hidden class="anchor" aria-hidden="true" href="">#</a></h2>
+<p>We use visual semantic information to re-rank candidate captions produced by out-of-the-box state-of-the-art caption generators. We extract top-20 beam search candidate captions from three different architectures (1) standard CNN+LSTM model <dt-cite key="Oriol:15"></dt-cite>, (2) a pre-trained language and vision model VilBERT <dt-cite key="lu202012"></dt-cite>, fine-tuned on a total of 12 different vision and language datasets such as caption image retrieval, and (3) a specialized caption-based Transformer <dt-cite key="Marcella:20"></dt-cite>.<p>
+
+
+
+        <style>
+            .geeks {
+                caption-side: bottom;
+            }
+        </style>
+
+
+<table>
+    <tr>
+        <td>Model</td>
+        <td>B-1</td>
+        <td>B-2</td>
+        <td>B -3</td>
+        <td>B-4</td>
+        <td>M</td>
+        <td>R</td>
+        <td>C</td>
+        <td>BERTscore</td>
+    </tr>
+    <tr>
+        <td>♠ Tell-BeamS <dt-cite key="Oriol:15"></dt-cite> </td>
+        <td> <strong>0.331 <strong> </td>
+        <td><strong>0.159<strong></td>
+        <td>0.071</td>
+        <td>0.035</td>
+        <td>0.093</td>
+        <td>0.270</td>
+        <td>0.035</td>
+        <td><strong>0.8871<strong></td>
+    </tr>
+    <tr>
+        <td>Tell+VR_V1-BERT-Glove</td>
+        <td>0.330</td>
+        <td>0.158</td>
+        <td>0.069</td>
+        <td>0.035</td>
+        <td>0.095</td>
+        <td>0.273</td>
+        <td>0.036</td>
+        <td>0.8855</td>
+    </tr>
+    <tr>
+        <td>Tell+VR_V2-BERT-Glove</td>
+        <td>0.320</td>
+        <td>0.154</td>
+
+        <td><strong> 0.073 <strong></td>
+        <td><strong> 0.037<strong></td>
+        <td>0.099</td>
+        <td><strong>0.277<strong></td>
+        <td><strong>0.041<strong></td>
+        <td>0.8850</td>
+    </tr>
+    <tr>
+        <td>Tell+VR_V1-RoBERTa-Glove (sts)</td>
+        <td>0.313</td>
+        <td>0.153</td>
+        <td>0.072</td>
+        <td><strong>0.037<strong></td>
+        <td><strong>0.101<strong></td>
+        <td>0.273</td>
+        <td>0.036</td>
+        <td>0.8839</td>
+    </tr>
+
+    <tr>
+        <td>Tell+VR_V2-RoBERTa-Glove (sts)</td>
+        <td>0.330</td>
+        <td>0.158</td>
+        <td>0.069</td>
+        <td>0.035</td>
+        <td>0.095</td>
+        <td>0.273</td>
+        <td>0.036</td>
+        <td>0.8869</td>
+    </tr>
+          <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+
+    <tr>
+        <td>♣ Vil-BeamS <dt-cite key="lu202012"></dt-cite></td>
+        <td>0.739</td>
+        <td>0.577</td>
+        <td>0.440</td>
+        <td>0.336</td>
+        <td>0.271</td>
+        <td>0.543</td>
+        <td>1.027</td>
+        <td>0.9363</td>
+    </tr>
+
+    <tr>
+        <td>Vil+VR_V1-BERT-Glove</td>
+        <td>0.739</td>
+        <td>0.576</td>
+        <td>0.438</td>
+        <td>0.334</td>
+        <td><strong>0.273<strong></td>
+        <td>0.544</td>
+        <td>1.034</td>
+        <td><strong>0.9365<strong></td>
+    </tr>
+    <tr>
+        <td>Vil+VR_V2-BERT-Glove</td>
+        <td><strong>0.740<strong></td>
+        <td>0.578</td>
+        <td>0.439</td>
+        <td>0.334</td>
+        <td><strong>0.273<strong></td>
+        <td><strong>0.545<strong></td>
+        <td>1.034</td>
+        <td>0.9365</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Vil+VR_V1-RoBERTa-Glove (sts)</td>
+        <td>0.738</td>
+        <td>0.576</td>
+        <td>0.440</td>
+        <td>0.335</td>
+        <td><strong>0.273<strong></td>
+        <td>0.544</td>
+        <td>1.036</td>
+        <td>0.9365</td>
+    </tr>
+    <tr>
+        <td>Vil+VR_V2-RoBERTa-Glove (sts)</td>
+        <td><strong>0.740<strong></td>
+        <td><strong>0.579<strong></td>
+        <td><strong>0.442<strong></td>
+        <td><strong>0.338<strong></td>
+        <td>0.272</td>
+        <td><strong>0.545<strong></td>
+        <td><strong>1.040<strong></td>
+        <td><strong>0.9366<strong></td>
+    </tr>
+         <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>♣ Trans-BeamS <dt-cite key="Marcella:20"></dt-cite> </td>
+        <td><strong>0.780<strong></td>
+        <td><strong>0.631<strong></td>
+        <td><strong>0.491<strong></td>
+        <td><strong>0.374<strong></td>
+        <td><strong>0.278<strong></td>
+        <td><strong>0.569<strong></td>
+        <td><strong>1.153<strong></td>
+        <td><strong>0.9399<strong></td>
+    </tr>
+    <tr>
+        <td>Trans+VR_V1-BERT-Glove</td>
+        <td><strong>0.780<strong></td>
+        <td>0.629</td>
+        <td>0.487</td>
+        <td>0.371</td>
+        <td><strong>0.278<strong></td>
+        <td>0.567</td>
+        <td>1.149</td>
+        <td>0.9398</td>
+    </tr>
+    <tr>
+        <td>Trans+VR_V2-BERT-Glove</td>
+        <td><strong>0.780<strong></td>
+        <td>0.630</td>
+        <td>0.488</td>
+        <td>0.371</td>
+        <td><strong>0.278<strong></td>
+        <td>0.568</td>
+        <td>1.150</td>
+        <td><strong>0.9399<strong></td>
+    </tr>
+    <tr>
+        <td>Trans+VR_V1-RoBERTa-Glove (sts)</td>
+        <td>0.779</td>
+        <td>0.629</td>
+        <td>0.487</td>
+        <td>0.370</td>
+        <td>0.277</td>
+        <td>0.567</td>
+        <td>1.145</td>
+        <td>0.9395</td>
+    </tr>
+    <tr>
+        <td>Trans+VR_V2-RoBERTa-Glove(sts)</td>
+        <td>0.779</td>
+        <td>0.629</td>
+        <td>0.487</td>
+        <td>0.370</td>
+        <td>0.277</td>
+        <td>0.567</td>
+        <td>1.145</td>
+        <td>0.9395</td>
+    </tr>
+      <caption> <font color="#a9a9a9"> <small> Table 1 Performance of compared baselines on the Karpathy test split. <small></font> </caption>
+</table>
+
+
+
+
+
+   <p> Experiments applying different rerankers to each base system are shown in Table 1 (above). The tested rerankers are: (1) VR_BERT+GloVe, which uses BERT and GloVe similarity between the candidate caption and the visual context (top-k V_1 and V_2 during the inference) to obtain the reranked score. (2) VR_RoBERTa+GloVe, which carries out the same procedure using similarity produced by Sentence RoBERTa.<p>
+
+
+<p>Our re-ranker produced mixed results as the model struggles when the beam search is less diverse. The model is therefore not able to select the most closely related caption to its environmental context as shown in Figure 2, which is a visualization of the final visual beam re-ranking.<p>
+
+
+
+      <figure>
+  <img src="Figure_2.jpg" alt="Trulli" style="width:100%">
+  <figcaption>Figure 2 Visualization of the top-15 beam search after visual re-ranking. The  babyblue color \(\leq 0.4\)  and  \(\leq 0.8\) darksalmon  represents  the degree of change in probability after visual re-ranking, respectively.  Also, we can observe that a less diverse beam negatively impacted the score, as in the case of Transformer and show and tell baselines.</figcaption>
+</figure>
+
+
+
+
+
+     <p><strong>Evaluation of Lexical Diversity. </strong>  As shown in Table 2 (below), we evaluate the model from a lexical diversity perspective. We can conclude that we have (1) more vocabulary, and (2) the Unique word per caption is also improved, even with a lower Type-Token Ratio TTR <dt-cite key="brown2005encyclopedia"></dt-cite> . (TTR is the number of unique words or types divided by the total number of tokens in a text fragment.).<p>
+
+      <p>Although this approach re-ranks higher diversity caption, the improvement is not strong enough to impact the benchmark result positively as shown in Table 1.<p>
+
+<table>
+    <tr>
+        <td>Model</td>
+        <td>Voc</td>
+        <td>TTR</td>
+        <td>Uniq</td>
+        <td>WPC</td>
+    </tr>
+
+    <tr>
+        <td>♠Tell-BeamS <dt-cite key="Oriol:15"></dt-cite></td>
+        <td>304</td>
+        <td>0.79</td>
+        <td><strong>10.4<strong></td>
+        <td>12.7</td>
+    </tr>
+    <tr>
+        <td>Tell+VR-RoBERTa</td>
+        <td><strong>310<strong></td>
+        <td><strong>0.82<strong></td>
+        <td>9.42</td>
+        <td><strong>13.5<strong></td>
+    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>♣Vil-BeamS <dt-cite key="lu202012"></dt-cite></td>
+        <td>894</td>
+        <td><strong>0.87<strong></td>
+        <td>8.05</td>
+        <td>10.5</td>
+    </tr>
+    <tr>
+        <td>Vil+VR-RoBERTa</td>
+        <td><strong>953<strong></td>
+        <td>0.85</td>
+        <td><strong>8.86<strong></td>
+        <td><strong>10.8<strong></td>
+    </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>♣Trans-BeamS <dt-cite key="Marcella:20"></dt-cite> </td>
+        <td>935</td>
+        <td>0.86</td>
+        <td>7.44</td>
+        <td><strong>9.62<strong></td>
+    </tr>
+    <tr>
+        <td>Trans+VR-BERT</td>
+        <td><strong>936<strong></td>
+        <td>0.86</td>
+        <td><strong>7.48<strong></td>
+        <td>8.68</td>
+    </tr>
+          <caption> <font color="#a9a9a9"> <small> Table 2 Measuring the lexical diversity of caption before and after re-ranking. Uniq and WPC columns in-
+dicate the average of unique/total words per caption,
+respectively. (The ♠ refers to the Fliker 1730 test set, ♣ refers to the COCO Karpathy 5K test set). <small></font> </caption>
+</table>
+
+
+
+
+ <p><strong>Ablation Study. </strong>  We performed an ablation study to investigate the effectiveness of each model. As to the proposed architecture, each expert tried to learn different representations in a word and sentence manner. In this experiment, we trained each model separately, as shown in Table 3 (below). The GloVe as a stand-alone performed better than the combined model (and thus, the combined model breaks the accuracy). To investigate this even further we visualized each expert before the fusion layers as shown in Figure 3. <p>
+
+
+
+    <figure>
+     <img src="Figure_3_2.jpg" alt="Trulli" style="width:70%">
+  <img src="Figure_3_1.jpg" alt="Trulli" style="width:70%">
+
+  <figcaption>Figure 3  (\(\mathbf{Top}\) ♠)    1k random sample from Flicker test set with shown and tell model. Each Expert is contributing different probability confidence and therefore the model is learning the semantic relation in word level and sentence level. (\(\mathbf{Bottom}\) ♣)  5k random sample from COCO caption with Transformer based caption model. The Glove score is dominating the distribution to become the expert.</figcaption>
+</figure>
+
+
+
+
+
+  <table>
+    <tr>
+        <td>Model</td>
+        <td>B-4</td>
+        <td>M</td>
+        <td>R</td>
+        <td>C</td>
+        <td>B-S</td>
+    </tr>
+    <tr>
+        <td>Trans-BeamS</td>
+        <td><strong>0.374<strong></td>
+        <td><strong>0.278<strong></td>
+        <td><strong>0.569<strong></td>
+        <td><strong>1.153<strong></td>
+        <td><strong>0.9399<strong></td>
+    </tr>
+    <tr>
+        <td>+VR-RoBERT-GloVe</td>
+        <td>0.370</td>
+        <td>0.277</td>
+        <td>0.567</td>
+        <td>1.145</td>
+        <td>0.9395</td>
+    </tr>
+    <tr>
+
+        <td>+VR-BERT-GloVe</td>
+        <td>  <font color="#f5acad">0.371</font> </td>
+        <td><font color="#f5acad">0.278 </font></td>
+         <td>0.567</td>
+        <td><font color="#f5acad">1.149 </font></td>
+        <td>0.9398</td>
+    </tr>
+    <tr>
+        <td>+VR-RoBERT-BERT</td>
+        <td>0.369</td>
+        <td>0.278</td>
+        <td>0.567</td>
+        <td>1.144</td>
+        <td>0.9395</td>
+    </tr>
+    <tr>
+        <td>+VR_V1-GloVe</td>
+        <td>0.371</td>
+        <td>0.278</td>
+        <td>0.568</td>
+        <td>1.148</td>
+        <td>0.9398</td>
+    </tr>
+
+    <tr>
+
+        <td>+VR_V2-GloVe</td>
+        <td><font color="#ccdfc0">0.371</font> </td>
+        <td> <font color="#ccdfc0">0.278</font> </td>
+        <td>0.568</td>
+        <td> <font color="#ccdfc0">1.149</font></td>
+        <td>0.9398</td>
+    </tr>
+       <caption> <font color="#a9a9a9"> <small> Table 2 Ablation study. We analyze the contribution of each Expert to the final accuracy as shown in see Figure 3. <small></font> </caption>
+</table>
+
+
+
+
+
+    <p><strong>Limitation. </strong> In contrast to CNN-LSTM (♠ top Figure 3), where each expert is contributing to the final decisions, we observed that having a shorter caption (with less context) can influence the BERT similarity score negatively. Therefore, the GloVe dominates as the main expert as shown in Figure 3 (♣ Bottom).<p>
+
+
+
+<h2 id="">Conclusion<a hidden class="anchor" aria-hidden="true" href="">#</a></h2>
+
+<p>In this work, we introduce an approach that overcomes the limitation of beam search and avoids re-training for better accuracy. We proposed a combined word and sentence visual beam search re-ranker. However, we discover that word and sentence similarity disagree with each other when the beam search is less diverse. Our experiments also highlight the usefulness of the model by showing successful cases.<p>
+
+      <p><font color="white"> We can also cite  external publications.</font></p>
+
+</dt-article>
+
+<dt-appendix>
+</dt-appendix>
+<script type="text/bibliography">
+  @article{gregor2015draw,
+    title={DRAW: A recurrent neural network for image generation},
+    author={Gregor, Karol and Danihelka, Ivo and Graves, Alex and Rezende, Danilo Jimenez and Wierstra, Daan},
+    journal={arXivreprint arXiv:1502.04623},
+    year={2015},
+    url={https://arxiv.org/pdf/1502.04623.pdf},
+        }
+          
+@book{Aho:72,
+    author  = {Alfred V. Aho and Jeffrey D. Ullman},
+    title   = {The Theory of Parsing, Translation and Compiling},
+    year    = "1972",
+    volume  = "1",
+    publisher = {Prentice-Hall},
+    address = {Englewood Cliffs, NJ}
+}
+
+@book{APA:83,
+    author  = {{American Psychological Association}},
+    title   = {Publications Manual},
+    year    = "1983",
+   publisher = {American Psychological Association},
+   address = {Washington, DC}
+}
+
+@article{ACM:83,
+	author = {Association for Computing Machinery},
+	year = "1983",
+	journal = {Computing Reviews},
+	volume = "24",
+	number = "11",
+	pages = "503--512"
+}
+
+@article{Chandra:81,
+	author = {Ashok K. Chandra and Dexter C. Kozen and Larry J. Stockmeyer},
+	year = "1981",
+	title = {Alternation},
+	journal = {Journal of the Association for Computing Machinery},
+	volume = "28",
+	number = "1",
+	pages = "114--133",
+	doi = "10.1145/322234.322243",
+}
+
+@inproceedings{andrew2007scalable,
+  title={Scalable training of {L1}-regularized log-linear models},
+  author={Andrew, Galen and Gao, Jianfeng},
+  booktitle={Proceedings of the 24th International Conference on Machine Learning},
+  pages={33--40},
+  year={2007},
+}
+
+@book{Gusfield:97,
+    author  = {Dan Gusfield},
+    title   = {Algorithms on Strings, Trees and Sequences},
+    year    = "1997",
+    publisher = {Cambridge University Press},
+    address = {Cambridge, UK}
+}
+
+@inproceedings{borsch2011,
+	Address = {Canberra, Australia},
+	Author = {Benjamin Borschinger and Mark Johnson},
+	Booktitle = {Proceedings of the Australasian Language Technology Association Workshop 2011},
+	Month = {December},
+	Pages = {10--18},
+	Title = {A Particle Filter algorithm for {B}ayesian Wordsegmentation},
+	Year = {2011}}
+
+@article{rasooli-tetrault-2015,
+    author    = {Mohammad Sadegh Rasooli and Joel R. Tetreault},
+    title     = {Yara Parser: {A} Fast and Accurate Dependency Parser},
+    journal   = {Computing Research Repository},
+    volume    = {arXiv:1503.06733},
+    year      = {2015},
+    url       = {http://arxiv.org/abs/1503.06733},
+    note    = {version 2}
+}
+
+@article{Ando2005,
+	Acmid = {1194905},
+	Author = {Ando, Rie Kubota and Zhang, Tong},
+	Issn = {1532-4435},
+	Issue_Date = {12/1/2005},
+	Journal = {Journal of Machine Learning Research},
+	Month = dec,
+	Numpages = {37},
+	Pages = {1817--1853},
+	Publisher = {JMLR.org},
+	Title = {A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data},
+	Volume = {6},
+	Year = {2005}}
+
+@InProceedings{P16-1001,
+  author =	"Goodman, James
+  	 and Vlachos, Andreas
+	     and Naradowsky, Jason",
+  title =    "Noise reduction and targeted exploration in imitation learning for      Abstract Meaning Representation parsing    ",
+  booktitle = 	    "Proceedings of the 54th Annual Meeting of the Association for      Computational Linguistics (Volume 1: Long Papers)    ",
+  year =    "2016",
+  publisher =	"Association for Computational Linguistics",
+  pages =   "1--11",
+  location =	"Berlin, Germany",
+  doi =    "10.18653/v1/P16-1001",
+  url =    "http://aclweb.org/anthology/P16-1001"
+}
+
+@InProceedings{C14-1001,
+  author =	"Harper, Mary",
+  title = 	"Learning from 26 Languages: Program Management and Science in the Babel Program",
+  booktitle = 	"Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers",
+  year =    "2014",
+  publisher =	"Dublin City University and Association for Computational Linguistics",
+  pages =   "1",
+  location =	"Dublin, Ireland",
+  url =    "http://aclweb.org/anthology/C14-1001"
+}
+
+@inproceedings{Christian:15,
+title = {Going deeper with convolutions},
+author = {Christian Szegedy},
+year = {2015},
+month = {06},
+pages = {},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
+}
+%%%author = {Christian Szegedy and Wei Liu and Yangqing Jia and Pierre Sermanet and Scott Reed and Dragomir Anguelov and Dumitru Erhan and Vincent Vanhoucke and Andrew Rabinovich}
+
+
+@inproceedings{Christian:15,
+  title={Going deeper with convolutions},
+  author={Szegedy, Christian and Liu, Wei and Jia, Yangqing and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew and others},
+  year={2015},
+  organization={Cvpr}
+}
+
+@inproceedings{Chris:15,
+  title={Going deeper with convolutions},
+  author={Szegedy, Christian and Liu, Wei and Jia, Yangqing and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew and others},
+  year={2015},
+  organization={Cvpr}
+}
+@inproceedings{Szegedy:15,
+title={\& Rabinovich, A.(2015). Going deeper with convolutions},
+author={Szegedy, C and Liu, W and Jia, Y and Sermanet, P and Reed, S and Anguelov, D},
+booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+year={2015},
+pages={}
+}
+
+
+
+@inproceedings{Tsung-Yi:14,
+  title={Microsoft coco: Common objects in context},
+  author={Lin, Tsung-Yi and Maire, Michael and Belongie, Serge and Hays, James and Perona, Pietro and Ramanan, Deva and Doll{\'a}r, Piotr and Zitnick, C Lawrence},
+  booktitle={European conference on computer vision},
+  pages={},
+  year={2014},
+  organization={Springer}
+}
+
+
+@inproceedings{Kai:11,
+  title={End-to-end scene text recognition},
+  author={Wang, Kai and Babenko, Boris and Belongie, Serge},
+  booktitle={Computer Vision (ICCV), 2011 IEEE International Conference on},
+  pages={},
+  year={2011},
+  organization={IEEE}
+}
+
+@inproceedings{Jeffrey:14,
+  title={Glove: Global vectors for word representation},
+  author={Pennington, Jeffrey and Socher, Richard and Manning, Christopher},
+  booktitle={Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)},
+  pages={},
+  year={2014}
+}
+
+@inproceedings{Bolei:14,
+  title={Learning deep features for scene recognition using places database},
+  author={Zhou, Bolei and Lapedriza, Agata and Xiao, Jianxiong and Torralba, Antonio and Oliva, Aude},
+  booktitle={Advances in neural information processing systems},
+  pages={},
+  year={2014}
+}
+
+
+
+
+@article{Andreas:16,
+  title={Coco-text: Dataset and benchmark for text detection and recognition in natural images},
+  author={Veit, Andreas and Matera, Tomas and Neumann, Lukas and Matas, Jiri and Belongie, Serge},
+  journal={arXiv preprint arXiv:1601.07140},
+  year={2016}
+}
+
+@inproceedings{Tomas:13,
+  title={Distributed representations of words and phrases and their compositionality},
+  author={Mikolov, Tomas and Sutskever, Ilya and Chen, Kai and Corrado, Greg S and Dean, Jeff},
+  booktitle={Advances in neural information processing systems},
+  pages={},
+  year={2013}
+}
+
+@inproceedings{Sergey:03,
+  title={Probability from similarity},
+  author={Blok, Sergey and Medin, Douglas and Osherson, Daniel},
+  booktitle={AAAI Spring Symposium on Logical Formalization of Commonsense Reasoning},
+  pages={},
+  year={2003}
+}
+
+@InProceedings{Pierre:2016,
+  author = {Pierre Lison and Jörg Tiedemann},
+  title = {OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles},
+  booktitle = {Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016)},
+  year = {2016},
+  month = {may},
+  date = {23-28},
+  location = {Portorož, Slovenia},
+  editor = {Nicoletta Calzolari (Conference Chair) and Khalid Choukri and Thierry Declerck and Sara Goggi and Marko Grobelnik and Bente Maegaard and Joseph Mariani and Helene Mazo and Asuncion Moreno and Jan Odijk and Stelios Piperidis},
+  publisher = {European Language Resources Association (ELRA)},
+  address = {Paris, France},
+  isbn = {978-2-9517408-9-1},
+  language = {english}
+ } 
+
+
+@inproceedings{Kaiming:16,
+  title={Deep residual learning for image recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={},
+  year={2016}
+}
+
+@article{David:03,
+  title={Latent dirichlet allocation},
+  author={Blei, David M and Ng, Andrew Y and Jordan, Michael I},
+  journal={Journal of machine Learning research},
+  volume={3},
+  number={Jan},
+  pages={},
+  year={2003}
+}
+
+         @article{strubell2019energy,
+  title={Energy and Policy Considerations for Deep Learning in NLP},
+  author={Strubell, Emma and Ganesh, Ananya and McCallum, Andrew},
+  journal={arXiv preprint arXiv:1906.02243},
+  year={2019}
+}
+
+@inproceedings{Yash:16,
+  title={Dynamic Lexicon Generation for Natural Scene Images},
+  author={Patel, Yash and Gomez, Lluis and Rusinol, Mar{\c{c}}al and Karatzas, Dimosthenis},
+  booktitle={European Conference on Computer Vision},
+  pages={},
+  year={2016},
+  organization={Springer}
+}
+
+
+@article{Yunze:17,
+  title={Reading Scene Text with Attention Convolutional Sequence Modeling},
+  author={Gao, Yunze and Chen, Yingying and Wang, Jinqiao and Lu, Hanqing},
+  journal={arXiv preprint arXiv:1709.04303},
+  year={2017}
+}
+
+
+@inproceedings{Alex:06,
+  title={Connectionist temporal classification: labelling unsegmented sequence data with recurrent neural networks},
+  author={Graves, Alex and Fern{\'a}ndez, Santiago and Gomez, Faustino and Schmidhuber, J{\"u}rgen},
+  booktitle={Proceedings of the 23rd international conference on Machine learning},
+  pages={369--376},
+  year={2006},
+  organization={ACM}
+}
+
+@inproceedings{Anand:12,
+  title={Top-down and bottom-up cues for scene text recognition},
+  author={Mishra, Anand and Alahari, Karteek and Jawahar, CV},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference on},
+  pages={},
+  year={2012},
+  organization={IEEE}
+}
+
+@article{Baoguang:16,
+  title={An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition},
+  author={Shi, Baoguang and Bai, Xiang and Yao, Cong},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  year={2016},
+  publisher={IEEE}
+}
+
+@inproceedings{Alessandro:13,
+  title={Photoocr: Reading text in uncontrolled conditions},
+  author={Bissacco, Alessandro and Cummins, Mark and Netzer, Yuval and Neven, Hartmut},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={},
+  year={2013}
+}
+
+@inproceedings{Lukas:10,
+  title={A method for text localization and recognition in real-world images},
+  author={Neumann, Lukas and Matas, Jiri},
+  booktitle={Asian Conference on Computer Vision},
+  pages={},
+  year={2010},
+  organization={Springer}
+}
+
+@article{Lukas:11,
+  title={A method for text localization and recognition in real-world images},
+  author={Neumann, Lukas and Matas, Jiri},
+  journal={Computer Vision--ACCV 2010},
+  pages={770--783},
+  year={2011},
+  publisher={Springer}
+}
+
+@article{Suman:17,
+  title={Visual attention models for scene text recognition},
+  author={Ghosh, Suman K and Valveny, Ernest and Bagdanov, Andrew D},
+  journal={arXiv preprint arXiv:1706.01487},
+  year={2017}
+}
+
+@inproceedings{Max:14,
+  title={Deep Features for Text Spotting.},
+  author={Jaderberg, Max and Vedaldi, Andrea and Zisserman, Andrew},
+  booktitle={ECCV (4)},
+  pages={},
+  year={2014}
+}
+
+@article{Max:16,
+  title={Reading text in the wild with convolutional neural networks},
+  author={Jaderberg, Max and Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew},
+  journal={International Journal of Computer Vision},
+  volume={116},
+  number={1},
+  pages={},
+  year={2016},
+  publisher={Springer}
+}
+
+@article{Max:14b,
+  title={Synthetic data and artificial neural networks for natural scene text recognition},
+  author={Jaderberg, Max and Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew},
+  journal={arXiv preprint arXiv:1406.2227},
+  year={2014}
+}
+
+@inproceedings{Daniel:08,
+  author={Lopresti, Daniel},
+  title={Optical character recognition errors and their effects on natural language processing}, 
+  booktitle={Proceedings of the second workshop on Analytics for noisy unstructured text data},
+  pages={},
+  year={2008},
+  organization={ACM}
+}
+
+}
+@article{Samuel:15,
+  title={A large annotated corpus for learning natural language inference},
+  author={Bowman, Samuel R and Angeli, Gabor and Potts, Christopher and Manning, Christopher D},
+  journal={arXiv preprint arXiv:1508.05326},
+  year={2015}
+}
+
+@article{Zhiguo:17,
+  title={Bilateral multi-perspective matching for natural language sentences},
+  author={Wang, Zhiguo and Hamza, Wael and Florian, Radu},
+  journal={arXiv preprint arXiv:1702.03814},
+  year={2017}
+}
+
+@article{Samuel:14,
+  title={Recursive neural networks can learn logical semantics},
+  author={Bowman, Samuel R and Potts, Christopher and Manning, Christopher D},
+  journal={arXiv preprint arXiv:1406.1827},
+  year={2014}
+}
+
+@article{Yichen:17,
+  title={Natural language inference over interaction space},
+  author={Gong, Yichen and Luo, Heng and Zhang, Jian},
+  journal={arXiv preprint arXiv:1709.04348},
+  year={2017}
+}
+
+@inproceedings{Guibin:17,
+  title={Ensemble application of convolutional and recurrent neural networks for multi-label text categorization},
+  author={Chen, Guibin and Ye, Deheng and Xing, Zhenchang and Chen, Jieshan and Cambria, Erik},
+  booktitle={2017 International Joint Conference on Neural Networks (IJCNN)},
+  pages={},
+  year={2017},
+  organization={IEEE}
+}
+
+@article{Sepp:97,
+  title={Long short-term memory},
+  author={Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
+  journal={Neural computation},
+  volume={9},
+  number={8},
+  pages={},
+  year={1997},
+  publisher={MIT Press}
+}
+
+@inproceedings{Xingyou:16,
+  title={Combination of convolutional and recurrent neural network for sentiment analysis of short texts},
+  author={Wang, Xingyou and Jiang, Weijie and Luo, Zhiyong},
+  booktitle={Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers},
+  pages={},
+  year={2016}
+}
+
+
+
+@inproceedings{Gomez:18,
+  title     = {Single Shot Scene Text Retrieval},
+  author    = {Lluis Gomez, Andres Mafla, Marçal Rusiñol, and Dimosthenis Karatzas},
+  booktitle = {ECCV},
+  year      = {2018}
+}
+
+
+@article{raffel2015feed,
+  title={Feed-forward networks with attention can solve some long-term memory problems},
+  author={Raffel, Colin and Ellis, Daniel PW},
+  journal={arXiv preprint arXiv:1512.08756},
+  year={2015}
+}
+
+@article{Chunting:15,
+  title={A C-LSTM neural network for text classification},
+  author={Zhou, Chunting and Sun, Chonglin and Liu, Zhiyuan and Lau, Francis},
+  journal={arXiv preprint arXiv:1511.08630},
+  year={2015}
+}
+
+
+@article{Dzmitry:14,
+  title={Neural machine translation by jointly learning to align and translate},
+  author={Bahdanau, Dzmitry and Cho, Kyunghyun and Bengio, Yoshua},
+  journal={arXiv preprint arXiv:1409.0473},
+  year={2014}
+}
+
+@article{Timothy:16,
+  title={Incorporating nesterov momentum into adam},
+  author={Dozat, Timothy},
+  year={2016}
+}
+
+@article{Ahmed:18,
+  title={Visual Re-ranking with Natural Language Understanding for Text Spotting},
+  author={Sabir, Ahmed and Moreno-Noguer, Francesc and Padr{\'o}, Llu{\'\i}s},
+  journal={arXiv preprint arXiv:1810.12738},
+  year={2018}
+}
+
+@article{Yuval:17,
+  title={Mimicking word embeddings using subword rnns},
+  author={Pinter, Yuval and Guthrie, Robert and Eisenstein, Jacob},
+  journal={arXiv preprint arXiv:1707.06961},
+  year={2017}
+}
+
+@inproceedings{Ming:16,
+  title={Improved representation learning for question answer matching},
+  author={Tan, Ming and Dos Santos, Cicero and Xiang, Bing and Zhou, Bowen},
+  booktitle={Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  volume={1},
+  pages={},
+  year={2016}
+}
+
+@inproceedings{Vinod:10,
+  title={Rectified linear units improve restricted boltzmann machines},
+  author={Nair, Vinod and Hinton, Geoffrey E},
+  booktitle={Proceedings of the 27th international conference on machine learning (ICML-10)},
+  pages={},
+  year={2010}
+}
+
+@article{Sergey:15,
+  title={Batch normalization: Accelerating deep network training by reducing internal covariate shift},
+  author={Ioffe, Sergey and Szegedy, Christian},
+  journal={arXiv preprint arXiv:1502.03167},
+  year={2015}
+}
+
+@inproceedings{Alex:08,
+  title={Unconstrained on-line handwriting recognition with recurrent neural networks},
+  author={Graves, Alex and Liwicki, Marcus and Bunke, Horst and Schmidhuber, J{\"u}rgen and Fern{\'a}ndez, Santiago},
+  booktitle={Advances in neural information processing systems},
+  pages={},
+  year={2008}
+}
+
+@article{Wenpeng:16,
+  title={Multichannel variable-size convolution for sentence classification},
+  author={Yin, Wenpeng and Sch{\"u}tze, Hinrich},
+  journal={arXiv preprint arXiv:1603.04513},
+  year={2016}
+ }
+ 
+ @inproceedings{Aliaksei:15,
+  title={Learning to rank short text pairs with convolutional deep neural networks},
+  author={Severyn, Aliaksei and Moschitti, Alessandro},
+  booktitle={Proceedings of the 38th international ACM SIGIR conference on research and development in information retrieval},
+  pages={},
+  year={2015},
+  organization={ACM}
+}
+
+
+@inproceedings{Jacob:19,
+  title={BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  booktitle={NAACL-HLT (1)},
+  year={2019}
+}
+
+
+@inproceedings{Peters:18,
+  author={Peters, Matthew E. and  Neumann, Mark and Iyyer, Mohit and Gardner, Matt and Clark, Christopher and Lee, Kenton and Zettlemoyer, Luke},
+  title={Deep contextualized word representations},
+  booktitle={Proc. of NAACL},
+  year={2018}
+}
+
+
+@article{Daniel:18,
+  title={Universal sentence encoder},
+  author={Cer, Daniel and Yang, Yinfei and Kong, Sheng-yi and Hua, Nan and Limtiaco, Nicole and John, Rhomni St and Constant, Noah and Guajardo-Cespedes, Mario and Yuan, Steve and Tar, Chris and others},
+  journal={arXiv preprint arXiv:1803.11175},
+  year={2018}
+}
+
+@InProceedings{Armand:17,
+  title={Bag of Tricks for Efficient Text Classification},
+  author={Joulin, Armand and Grave, Edouard and Bojanowski, Piotr and Mikolov, Tomas},
+  booktitle={Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 2, Short Papers},
+  month={April},
+  year={2017},
+  publisher={Association for Computational Linguistics},
+  pages={},
+}
+
+@article{Nal:14,
+  title={A convolutional neural network for modelling sentences},
+  author={Kalchbrenner, Nal and Grefenstette, Edward and Blunsom, Phil},
+  journal={arXiv preprint arXiv:1404.2188},
+  year={2014}
+}
+
+@inproceedings{Oriol:15,
+  title={Show and tell: A neural image caption generator},
+  author={Vinyals, Oriol and Toshev, Alexander and Bengio, Samy and Erhan, Dumitru},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={3156--3164},
+  year={2015}
+}
+
+@inproceedings{Christian:17,
+  title={Inception-v4, inception-resnet and the impact of residual connections on learning},
+  author={Szegedy, Christian and Ioffe, Sergey and Vanhoucke, Vincent and Alemi, Alexander A},
+  booktitle={Thirty-First AAAI Conference on Artificial Intelligence},
+  year={2017}
+}
+
+@InProceedings{Alexis:17,
+  author    = {Conneau, Alexis  and  Kiela, Douwe  and  Schwenk, Holger  and  Barrault, Lo\"{i}c  and  Bordes, Antoine},
+  title     = {Supervised Learning of Universal Sentence Representations from Natural Language Inference Data},
+  booktitle = {Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing},
+  month     = {September},
+  year      = {2017},
+  address   = {Copenhagen, Denmark},
+  publisher = {Association for Computational Linguistics},
+  pages     = {670--680},
+  url       = {https://www.aclweb.org/anthology/D17-1070}
+}
+
+@article{Pierre:16,
+  title={Opensubtitles2016: Extracting large parallel corpora from movie and tv subtitles},
+  author={Lison, Pierre and Tiedemann, J{\"o}rg},
+  year={2016},
+  publisher={European Language Resources Association}
+}
+
+ @InProceedings{Shitala:18,
+    author = {Prasad, Shitala and Wai Kin Kong, Adams},
+    title = {Using Object Information for Spotting Text},
+    booktitle = {The European Conference on Computer Vision (ECCV)},
+    month = {September},
+    year = {2018}
+    }
+    
+  @inproceedings{Shancheng:18,
+  title={Attention and Language Ensemble for Scene Text Recognition with Convolutional Sequence Modeling},
+  author={Fang, Shancheng and Xie, Hongtao and Zha, Zheng-Jun and Sun, Nannan and Tan, Jianlong and Zhang, Yongdong},
+  booktitle={2018 ACM Multimedia Conference on Multimedia Conference},
+  pages={},
+  year={2018},
+  organization={ACM}
+  }
+  
+  @inproceedings{Ashish:17,
+  title={Attention is all you need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  booktitle={Advances in neural information processing systems},
+  pages={5998--6008},
+  year={2017}
+}
+
+@inproceedings{Marcella:20,
+  title={Meshed-Memory Transformer for Image Captioning},
+  author={Cornia, Marcella and Stefanini, Matteo and Baraldi, Lorenzo and Cucchiara, Rita},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={10578--10587},
+  year={2020}
+}
+
+@inproceedings{Qi:16,
+  title={Keyphrase extraction using deep recurrent neural networks on twitter},
+  author={Zhang, Qi and Wang, Yang and Gong, Yeyun and Huang, Xuan-Jing},
+  booktitle={Proceedings of the 2016 conference on empirical methods in natural language processing},
+  pages={},
+  year={2016}
+}
+
+@article{young2014image,
+  title={From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions},
+  author={Young, Peter and Lai, Alice and Hodosh, Micah and Hockenmaier, Julia},
+  journal={TACL},
+  volume={},
+  pages={},
+  year={2014},
+  publisher={MIT Press}
+}
+
+@inproceedings{karpathy2015deep,
+  title={Deep visual-semantic alignments for generating image descriptions},
+  author={Karpathy, Andrej and Fei-Fei, Li},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={3128--3137},
+  year={2015}
+}
+
+
+
+@inproceedings{banerjee2005meteor,
+  title={METEOR: An automatic metric for MT evaluation with improved correlation with human judgments},
+  author={Banerjee, Satanjeev and Lavie, Alon},
+  booktitle={Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization},
+  pages={65--72},
+  year={2005}
+}
+
+
+@inproceedings{vedantam2015cider,
+  title={Cider: Consensus-based image description evaluation},
+  author={Vedantam, Ramakrishna and Lawrence Zitnick, C and Parikh, Devi},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={4566--4575},
+  year={2015}
+}
+
+@article{reimers2019sentence,
+  title={Sentence-bert: Sentence embeddings using siamese bert-networks},
+  author={Reimers, Nils and Gurevych, Iryna},
+  journal={arXiv preprint arXiv:1908.10084},
+  year={2019}
+}
+
+@article{hinton1999products,
+  title={Products of experts},
+  author={Hinton, Geoffrey E},
+  year={1999},
+  publisher={IET}
+}
+
+@article{meng2017deep,
+  title={Deep keyphrase generation},
+  author={Meng, Rui and Zhao, Sanqiang and Han, Shuguang and He, Daqing and Brusilovsky, Peter and Chi, Yu},
+  journal={arXiv preprint arXiv:1704.06879},
+  year={2017}
+}
+
+
+@inproceedings{xu2015show,
+  title={Show, attend and tell: Neural image caption generation with visual attention},
+  author={Xu, Kelvin and Ba, Jimmy and Kiros, Ryan and Cho, Kyunghyun and Courville, Aaron and Salakhudinov, Ruslan and Zemel, Rich and Bengio, Yoshua},
+  booktitle={International conference on machine learning},
+  pages={2048--2057},
+  year={2015}
+}
+
+
+@inproceedings{anderson2018bottom,
+  title={Bottom-up and top-down attention for image captioning and visual question answering},
+  author={Anderson, Peter and He, Xiaodong and Buehler, Chris and Teney, Damien and Johnson, Mark and Gould, Stephen and Zhang, Lei},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={},
+  year={2018}
+}
+
+@article{JDH17,
+  title={Billion-scale similarity search with GPUs},
+  author={Johnson, Jeff and Douze, Matthijs and J{\'e}gou, Herv{\'e}},
+  journal={arXiv preprint arXiv:1702.08734},
+  year={2017}
+}
+
+@inproceedings{lu202012,
+  title={12-in-1: Multi-task vision and language representation learning},
+  author={Lu, Jiasen and Goswami, Vedanuj and Rohrbach, Marcus and Parikh, Devi and Lee, Stefan},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={10437--10446},
+  year={2020}
+}
+
+@inproceedings{bert-score,
+  title={BERTScore: Evaluating Text Generation with BERT},
+  author={Tianyi Zhang and Varsha Kishore* and Felix Wu* and Kilian Q. Weinberger and Yoav Artzi},
+  booktitle={International Conference on Learning Representations},
+  year={2020},
+  url={https://openreview.net/forum?id=SkeHuCVFDr}
+}
+
+@inproceedings{blok2003probability,
+  title={Probability from similarity},
+  author={Blok, Sergey and Medin, Douglas and Osherson, Daniel},
+  booktitle={AAAI Spring Symposium on Logical Formalization of Commonsense Reasoning},
+  pages={},
+  year={2003}
+}
+
+
+
+@article{radford2019language,
+  title={Language models are unsupervised multitask learners},
+  author={Radford, Alec and Wu, Jeffrey and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya},
+  journal={OpenAI blog},
+  volume={},
+  number={},
+  pages={},
+  year={2019}
+}
+
+@article{liu2019roberta,
+  title={Roberta: A robustly optimized bert pretraining approach},
+  author={Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},
+  journal={arXiv preprint arXiv:1907.11692},
+  year={2019}
+}
+@article{wang2018glue,
+  title={GLUE: A multi-task benchmark and analysis platform for natural language understanding},
+  author={Wang, Alex and Singh, Amanpreet and Michael, Julian and Hill, Felix and Levy, Omer and Bowman, Samuel R},
+  journal={arXiv preprint arXiv:1804.07461},
+  year={2018}
+}
+
+@article{mccarthy2010mtld,
+  title={MTLD, vocd-D, and HD-D: A validation study of sophisticated approaches to lexical diversity assessment},
+  author={McCarthy, Philip M and Jarvis, Scott},
+  journal={Behavior research methods},
+  volume={42},
+  number={2},
+  pages={381--392},
+  year={2010},
+  publisher={Springer}
+}
+@article{koehn2017six,
+  title={Six challenges for neural machine translation},
+  author={Koehn, Philipp and Knowles, Rebecca},
+  journal={arXiv preprint arXiv:1706.03872},
+  year={2017}
+}
+
+@inproceedings{huang2019attention,
+  title={Attention on attention for image captioning},
+  author={Huang, Lun and Wang, Wenmin and Chen, Jie and Wei, Xiao-Yong},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={4634--4643},
+  year={2019}
+}
+
+@inproceedings{luo2018discriminability,
+  title={Discriminability objective for training descriptive captions},
+  author={Luo, Ruotian and Price, Brian and Cohen, Scott and Shakhnarovich, Gregory},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={6964--6974},
+  year={2018}
+}
+
+@inproceedings{wang2019describing,
+  title={Describing like humans: on diversity in image captioning},
+  author={Wang, Qingzhong and Chan, Antoni B},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={4195--4203},
+  year={2019}
+}
+@article{cer2017semeval,
+  title={Semeval-2017 task 1: Semantic textual similarity-multilingual and cross-lingual focused evaluation},
+  author={Cer, Daniel and Diab, Mona and Agirre, Eneko and Lopez-Gazpio, Inigo and Specia, Lucia},
+  journal={arXiv preprint arXiv:1708.00055},
+  year={2017}
+}
+
+ @InProceedings{Shitala:18,
+    author = {Prasad, Shitala and Wai Kin Kong, Adams},
+    title = {Using Object Information for Spotting Text},
+    booktitle = {The European Conference on Computer Vision (ECCV)},
+    month = {September},
+    year = {2018}
+    }
+    
+  @inproceedings{Shancheng:18,
+  title={Attention and Language Ensemble for Scene Text Recognition with Convolutional Sequence Modeling},
+  author={Fang, Shancheng and Xie, Hongtao and Zha, Zheng-Jun and Sun, Nannan and Tan, Jianlong and Zhang, Yongdong},
+  booktitle={2018 ACM Multimedia Conference on Multimedia Conference},
+  pages={},
+  year={2018},
+  organization={ACM}
+  }
+  
+  
+
+
+
+@inproceedings{vijayakumar2018diverse,
+  title={Diverse beam search for improved description of complex scenes},
+  author={Vijayakumar, Ashwin and Cogswell, Michael and Selvaraju, Ramprasaath and Sun, Qing and Lee, Stefan and Crandall, David and Batra, Dhruv},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={},
+  number={},
+  year={2018}
+}
+@inproceedings{sabir2018visual,
+  title={Visual re-ranking with natural language understanding for text spotting},
+  author={Sabir, Ahmed and Moreno-Noguer, Francesc and Padr{\'o}, Llu{\'\i}s},
+  booktitle={Asian Conference on Computer Vision},
+  pages={68--82},
+  year={2018},
+  organization={Springer}
+}
+
+@inproceedings{anderson2016spice,
+  title={Spice: Semantic propositional image caption evaluation},
+  author={Anderson, Peter and Fernando, Basura and Johnson, Mark and Gould, Stephen},
+  booktitle={European conference on computer vision},
+  pages={382--398},
+  year={2016},
+  organization={Springer}
+}
+@article{lison2016opensubtitles2016,
+  title={Opensubtitles2016: Extracting large parallel corpora from movie and tv subtitles},
+  author={Lison, Pierre and Tiedemann, J{\"o}rg},
+  year={2016},
+  publisher={European Language Resources Association}
+}
+
+@article{blok2007induction,
+  title={Induction as conditional probability judgment},
+  author={Blok, Sergey V and Medin, Douglas L and Osherson, Daniel N},
+  journal={Memory \& Cognition},
+  volume={35},
+  number={6},
+  pages={1353--1364},
+  year={2007},
+  publisher={Springer}
+}
+
+@article{voorspoels2015people,
+  title={How do people learn from negative evidence? Non-monotonic generalizations and sampling assumptions in inductive reasoning},
+  author={Voorspoels, Wouter and Navarro, Daniel J and Perfors, Amy and Ransom, Keith and Storms, Gert},
+  journal={Cognitive Psychology},
+  volume={81},
+  pages={1--25},
+  year={2015},
+  publisher={Elsevier}
+}
+@inproceedings{heussen2010can,
+  title={Can similarity-based models of induction handle negative evidence?},
+  author={Heussen, Daniel and Voorspoels, Wouter and Storms, Gert},
+  booktitle={Proceedings of the Annual Conference of the Cognitive Science Society},
+  volume={32},
+  pages={2033--2038},
+  year={2010},
+  organization={Lawrence Erlbaum Associates}
+}
+
+
+@article{sharma2017nlgeval,
+    author  = {Sharma, Shikhar and El Asri, Layla and Schulz, Hannes and Zumer, Jeremie},
+    title   = {Relevance of Unsupervised Metrics in Task-Oriented Dialogue for Evaluating Natural Language Generation},
+    journal = {CoRR},
+    volume  = {abs/1706.09799},
+    year    = {2017},
+    url     = {http://arxiv.org/abs/1706.09799}
+}
+
+
+
+@inproceedings{pennington2014glove,
+  title={Glove: Global vectors for word representation},
+  author={Pennington, Jeffrey and Socher, Richard and Manning, Christopher D},
+  booktitle={Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)},
+  pages={1532--1543},
+  year={2014}
+}
+
+@article{li2015diversity,
+  title={A diversity-promoting objective function for neural conversation models},
+  author={Li, Jiwei and Galley, Michel and Brockett, Chris and Gao, Jianfeng and Dolan, Bill},
+  journal={arXiv preprint arXiv:1510.03055},
+  year={2015}
+}
+
+@article{augenstein2017semeval,
+  title={Semeval 2017 task 10: Scienceie-extracting keyphrases and relations from scientific publications},
+  author={Augenstein, Isabelle and Das, Mrinal and Riedel, Sebastian and Vikraman, Lakshmi and McCallum, Andrew},
+  journal={arXiv preprint arXiv:1704.02853},
+  year={2017}
+}
+
+@article{zhu2020towards,
+  title={Towards Understanding Sample Variance in Visually Grounded Language Generation: Evaluations and Observations},
+  author={Zhu, Wanrong and Wang, Xin Eric and Narayana, Pradyumna and Sone, Kazoo and Basu, Sugato and Wang, William Yang},
+  journal={arXiv preprint arXiv:2010.03644},
+  year={2020}
+}
+
+@inproceedings{lewis2020pretrained,
+  title={Pretrained Language Models for Biomedical and Clinical Tasks: Understanding and Extending the State-of-the-Art},
+  author={Lewis, Patrick and Ott, Myle and Du, Jingfei and Stoyanov, Veselin},
+  booktitle={Proceedings of the 3rd Clinical Natural Language Processing Workshop},
+  pages={146--157},
+  year={2020}
+}
+
+
+@article{wang2018object,
+  title={Object counts! bringing explicit detections back into image captioning},
+  author={Wang, Josiah and Madhyastha, Pranava and Specia, Lucia},
+  journal={arXiv preprint arXiv:1805.00314},
+  year={2018}
+}
+
+@inproceedings{fang2015captions,
+  title={From captions to visual concepts and back},
+  author={Fang, Hao and Gupta, Saurabh and Iandola, Forrest and Srivastava, Rupesh K and Deng, Li and Doll{\'a}r, Piotr and Gao, Jianfeng and He, Xiaodong and Mitchell, Margaret and Platt, John C and others},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={1473--1482},
+  year={2015}
+}
+
+@inproceedings{zhang2020context,
+  title={Context-aware attention network for image-text retrieval},
+  author={Zhang, Qi and Lei, Zhen and Zhang, Zhaoxiang and Li, Stan Z},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3536--3545},
+  year={2020}
+}
+@inproceedings{cornia2019show,
+  title={Show, control and tell: A framework for generating controllable and grounded captions},
+  author={Cornia, Marcella and Baraldi, Lorenzo and Cucchiara, Rita},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={8307--8316},
+  year={2019}
+}
+
+@book{brown2005encyclopedia,
+  title={Encyclopedia of language and linguistics},
+  author={Brown, Keith},
+  volume={1},
+  year={2005},
+  publisher={Elsevier}
+}
+@article{zhang2019bertscore,
+  title={Bertscore: Evaluating text generation with bert},
+  author={Zhang, Tianyi and Kishore, Varsha and Wu, Felix and Weinberger, Kilian Q and Artzi, Yoav},
+  journal={arXiv preprint arXiv:1904.09675},
+  year={2019}
+}
+
+
+
+@inproceedings{dai2017towards,
+  title={Towards diverse and natural image descriptions via a conditional gan},
+  author={Dai, Bo and Fidler, Sanja and Urtasun, Raquel and Lin, Dahua},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={2970--2979},
+  year={2017}
+}
+@inproceedings{vedantam2017context,
+  title={Context-aware captions from context-agnostic supervision},
+  author={Vedantam, Ramakrishna and Bengio, Samy and Murphy, Kevin and Parikh, Devi and Chechik, Gal},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={251--260},
+  year={2017}
+}
+
+@article{herdade2019image,
+  title={Image captioning: Transforming objects into words},
+  author={Herdade, Simao and Kappeler, Armin and Boakye, Kofi and Soares, Joao},
+  journal={arXiv preprint arXiv:1906.05963},
+  year={2019}
+}
+
+
+@inproceedings{rennie2017self,
+  title={Self-critical sequence training for image captioning},
+  author={Rennie, Steven J and Marcheret, Etienne and Mroueh, Youssef and Ross, Jerret and Goel, Vaibhava},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={7008--7024},
+  year={2017}
+}
+
+@inproceedings{you2016image,
+  title={Image captioning with semantic attention},
+  author={You, Quanzeng and Jin, Hailin and Wang, Zhaowen and Fang, Chen and Luo, Jiebo},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={4651--4659},
+  year={2016}
+}
+
+}
+@inproceedings{ren2017deep,
+  title={Deep reinforcement learning-based image captioning with embedding reward},
+  author={Ren, Zhou and Wang, Xiaoyu and Zhang, Ning and Lv, Xutao and Li, Li-Jia},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={290--298},
+  year={2017}
+}
+
+
+}
+@article{ippolito2019comparison,
+  title={Comparison of diverse decoding methods from conditional language models},
+  author={Ippolito, Daphne and Kriz, Reno and Kustikova, Maria and Sedoc, Jo{\~a}o and Callison-Burch, Chris},
+  journal={arXiv preprint arXiv:1906.06362},
+  year={2019}
+}
+
+@article{voorspoels2015people,
+  title={How do people learn from negative evidence? Non-monotonic generalizations and sampling assumptions in inductive reasoning},
+  author={Voorspoels, Wouter and Navarro, Daniel J and Perfors, Amy and Ransom, Keith and Storms, Gert},
+  journal={Cognitive Psychology},
+  volume={81},
+  pages={1--25},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@article{li2015diversity,
+  title={A diversity-promoting objective function for neural conversation models},
+  author={Li, Jiwei and Galley, Michel and Brockett, Chris and Gao, Jianfeng and Dolan, Bill},
+  journal={arXiv preprint arXiv:1510.03055},
+  year={2015}
+}
+@inproceedings{gupta2020contrastive,
+  title={Contrastive learning for weakly supervised phrase grounding},
+  author={Gupta, Tanmay and Vahdat, Arash and Chechik, Gal and Yang, Xiaodong and Kautz, Jan and Hoiem, Derek},
+  booktitle={Computer Vision--ECCV 2020: 16th European Conference, Glasgow, UK, August 23--28, 2020, Proceedings, Part III 16},
+  pages={752--768},
+  year={2020},
+  organization={Springer}
+}
+@inproceedings{song2021sentsim,
+  title={SentSim: Crosslingual Semantic Evaluation of Machine Translation},
+  author={Song, Yurun and Zhao, Junchen and Specia, Lucia},
+  booktitle={Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages={3143--3156},
+  year={2021}
+}
+@inproceedings{zhang2021rstnet,
+  title={RSTNet: Captioning With Adaptive Attention on Visual and Non-Visual Words},
+  author={Zhang, Xuying and Sun, Xiaoshuai and Luo, Yunpeng and Ji, Jiayi and Zhou, Yiyi and Wu, Yongjian and Huang, Feiyue and Ji, Rongrong},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={15465--15474},
+  year={2021}
+}
+
+@inproceedings{wang2020compare,
+  title={Compare and reweight: Distinctive image captioning using similar images sets},
+  author={Wang, Jiuniu and Xu, Wenjia and Wang, Qingzhong and Chan, Antoni B},
+  booktitle={European Conference on Computer Vision},
+  pages={370--386},
+  year={2020},
+  organization={Springer}
+}
+@article{gao2021simcse,
+   title={{SimCSE}: Simple Contrastive Learning of Sentence Embeddings},
+   author={Gao, Tianyu and Yao, Xingcheng and Chen, Danqi},
+   journal={arXiv preprint arXiv:2104.08821},
+   year={2021}
+}
+
+@article{conneau2017supervised,
+  title={Supervised learning of universal sentence representations from natural language inference data},
+  author={Conneau, Alexis and Kiela, Douwe and Schwenk, Holger and Barrault, Loic and Bordes, Antoine},
+  journal={arXiv preprint arXiv:1705.02364},
+  year={2017}
+}
+
+@article{radford2021learning,
+  title={Learning transferable visual models from natural language supervision},
+  author={Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and others},
+  journal={arXiv preprint arXiv:2103.00020},
+  year={2021}
+}
+
+@inproceedings{huang2017speed,
+  title={Speed/accuracy trade-offs for modern convolutional object detectors},
+  author={Huang, Jonathan and Rathod, Vivek and Sun, Chen and Zhu, Menglong and Korattikara, Anoop and Fathi, Alireza and Fischer, Ian and Wojna, Zbigniew and Song, Yang and Guadarrama, Sergio and others},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={},
+  year={2017}
+}
+@inproceedings{papineni2002bleu,
+  title={Bleu: a method for automatic evaluation of machine translation},
+  author={Papineni, Kishore and Roukos, Salim and Ward, Todd and Zhu, Wei-Jing},
+  booktitle={Proceedings of the 40th annual meeting of the Association for Computational Linguistics},
+  pages={311--318},
+  year={2002}
+}
+
+
+
+@inproceedings{lin2004rouge,
+  title={Rouge: A package for automatic evaluation of summaries},
+  author={Lin, Chin-Yew},
+  booktitle={Text summarization branches out},
+  pages={74--81},
+  year={2004}
+}
+
+@inproceedings{clark2011better,
+  title={Better hypothesis testing for statistical machine translation: Controlling for optimizer instability},
+  author={Clark, Jonathan H and Dyer, Chris and Lavie, Alon and Smith, Noah A},
+  booktitle={Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies},
+  pages={176--181},
+  year={2011}
+}
+
+@inproceedings{deshpande2019fast,
+  title={Fast, diverse and accurate image captioning guided by part-of-speech},
+  author={Deshpande, Aditya and Aneja, Jyoti and Wang, Liwei and Schwing, Alexander G and Forsyth, David},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={10695--10704},
+  year={2019}
+}
+
+@inproceedings{chen2020say,
+  title={Say as you wish: Fine-grained control of image caption generation with abstract scene graphs},
+  author={Chen, Shizhe and Jin, Qin and Wang, Peng and Wu, Qi},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9962--9971},
+  year={2020}
+}
+
+@inproceedings{zhang2021consensus,
+  title={Consensus graph representation learning for better grounded image captioning},
+  author={Zhang, Wenqiao and Shi, Haochen and Tang, Siliang and Xiao, Jun and Yu, Qiang and Zhuang, Yueting},
+  booktitle={Proc 35 AAAI Conf on Artificial Intelligence},
+  year={2021}
+}
+
+@inproceedings{elliott2014comparing,
+  title={Comparing automatic evaluation measures for image description},
+  author={Elliott, Desmond and Keller, Frank},
+  booktitle={Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
+  pages={452--457},
+  year={2014}
+}
+
+  @inproceedings{changpinyo2021conceptual,
+  title={Conceptual 12M: Pushing Web-Scale Image-Text Pre-Training To Recognize Long-Tail Visual Concepts},
+  author={Changpinyo, Soravit and Sharma, Piyush and Ding, Nan and Soricut, Radu},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3558--3568},
+  year={2021}
+}
+
+@inproceedings{abadi2016tensorflow,
+  title={Tensorflow: A system for large-scale machine learning},
+  author={Abadi, Mart{\'\i}n and Barham, Paul and Chen, Jianmin and Chen, Zhifeng and Davis, Andy and Dean, Jeffrey and Devin, Matthieu and Ghemawat, Sanjay and Irving, Geoffrey and Isard, Michael and others},
+  booktitle={12th $\{$USENIX$\}$ symposium on operating systems design and implementation ($\{$OSDI$\}$ 16)},
+  pages={265--283},
+  year={2016}
+}
+
+@article{paszke2019pytorch,
+  title={Pytorch: An imperative style, high-performance deep learning library},
+  author={Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and others},
+  journal={arXiv preprint arXiv:1912.01703},
+  year={2019}
+}
+
+@inproceedings{ott2019fairseq,
+  title = {fairseq: A Fast, Extensible Toolkit for Sequence Modeling},
+  author = {Myle Ott and Sergey Edunov and Alexei Baevski and Angela Fan and Sam Gross and Nathan Ng and David Grangier and Michael Auli},
+  booktitle = {Proceedings of NAACL-HLT 2019: Demonstrations},
+  year = {2019},
+}
+
+@inproceedings{post2018call,
+  title={A Call for Clarity in Reporting BLEU Scores},
+  author={Post, Matt},
+  booktitle={Proceedings of the Third Conference on Machine Translation: Research Papers},
+  pages={186--191},
+  year={2018}
+}
+
+@inproceedings{popovic2015chrf,
+  title={chrF: character n-gram F-score for automatic MT evaluation},
+  author={Popovi{\'c}, Maja},
+  booktitle={Proceedings of the Tenth Workshop on Statistical Machine Translation},
+  pages={392--395},
+  year={2015}
+}
+
+@inproceedings{shetty2017speaking,
+  title={Speaking the same language: Matching machine to human captions by adversarial training},
+  author={Shetty, Rakshith and Rohrbach, Marcus and Anne Hendricks, Lisa and Fritz, Mario and Schiele, Bernt},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={4135--4144},
+  year={2017}
+}
+
+@inproceedings{peinelt2020tbert,
+  title={tBERT: Topic models and BERT joining forces for semantic similarity detection},
+  author={Peinelt, Nicole and Nguyen, Dong and Liakata, Maria},
+  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  pages={7047--7055},
+  year={2020}
+}
+@inproceedings{rashtchian2010collecting,
+  title={Collecting image annotations using amazon’s mechanical turk},
+  author={Rashtchian, Cyrus and Young, Peter and Hodosh, Micah and Hockenmaier, Julia},
+  booktitle={Proceedings of the NAACL HLT 2010 workshop on creating speech and language data with Amazon’s Mechanical Turk},
+  pages={139--147},
+  year={2010}
+}
+           
+</script>
+
+
