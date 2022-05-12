@@ -1,6 +1,10 @@
 
 <!doctype html>
 
+
+<a href="https://sabirdvd.github.io" class="button"> <small>↩</small></a>
+
+
 <meta charset="utf-8">
 <script src="template.v1.js"></script>
 <script type="text/front-matter">
@@ -8,10 +12,10 @@
   description: "negative result"
   authors:
   - Ahmed Sabir: https://www.cs.upc.edu/~asabir/
-  - Date
+  - PUBLISHED Date
   affiliations:
   - Universitat Politècnica de Catalunya: https://www.upc.edu
-  - 10 April 2022
+  -  10 Feb 2022
 
 </script>
 
@@ -336,7 +340,8 @@
         <td>1.145</td>
         <td>0.9395</td>
     </tr>
-      <caption> <font color="#a9a9a9"> <small> Table 1 Performance of compared baselines on the Karpathy test split. <small></font> </caption>
+      <caption> <font color="#6e6e6f"> <small> <small> Table 1 Performance of compared baselines on the Karpathy test split. <small> <small></font> </caption>
+     <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The ♠ refers to the Fliker 1730 test set, ♣ refers to the COCO Karpathy 5K test set. <small> <small> </td></tr></tfoot>
 </table>
 
 
@@ -362,6 +367,9 @@
      <p><strong>Evaluation of Lexical Diversity. </strong>  As shown in Table 2 (below), we evaluate the model from a lexical diversity perspective. We can conclude that we have (1) more vocabulary, and (2) the Unique word per caption is also improved, even with a lower Type-Token Ratio TTR <dt-cite key="brown2005encyclopedia"></dt-cite> . (TTR is the number of unique words or types divided by the total number of tokens in a text fragment.).<p>
 
       <p>Although this approach re-ranks higher diversity caption, the improvement is not strong enough to impact the benchmark result positively as shown in Table 1.<p>
+
+
+
 
 <table>
     <tr>
@@ -428,11 +436,13 @@
         <td><strong>7.48<strong></td>
         <td>8.68</td>
     </tr>
-          <caption> <font color="#a9a9a9"> <small> Table 2 Measuring the lexical diversity of caption before and after re-ranking. Uniq and WPC columns in-
-dicate the average of unique/total words per caption,
-respectively. (The ♠ refers to the Fliker 1730 test set, ♣ refers to the COCO Karpathy 5K test set). <small></font> </caption>
-</table>
+          <caption> <font color="#6e6e6f"> <small> <small>  Table 2 Measuring the lexical diversity of caption before and after re-ranking. <small> <small></font> </caption>
+    <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> Uniq and WPC columns indicate the average of unique/total words per caption, respectively. <small> <small> </td></tr></tfoot>
+    <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The ♠ refers to the Fliker 1730 test set, ♣ refers to the COCO Karpathy 5K test set. <small> <small> </td></tr></tfoot>
 
+
+
+</table>
 
 
 
@@ -510,9 +520,9 @@ respectively. (The ♠ refers to the Fliker 1730 test set, ♣ refers to the COC
         <td>0.568</td>
         <td> <font color="#ccdfc0">1.149</font></td>
         <td>0.9398</td>
-    </tr>
-       <caption> <font color="#a9a9a9"> <small> Table 2 Ablation study. We analyze the contribution of each Expert to the final accuracy as shown in see Figure 3. <small></font> </caption>
-</table>
+    </tr><caption> <font color="#6e6e6f"> <small> <small>  Table 2 Ablation study. We analyze the contribution of each Expert to the final accuracy. <small>  <small></font> </caption>
+      <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> Note that, the color represents Figure 3. ♣ Bottom Figure 3 shows that <font color="#f5acad">BERT</font> is not contributing, as <font color="#ccdfc0">GloVe</font>, to the final score. <small> <small> </td></tr></tfoot>
+  </table>
 
 
 
