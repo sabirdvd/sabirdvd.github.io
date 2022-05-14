@@ -20,7 +20,7 @@
 </script>
 
 
-<dt-article>
+<dt-article class="centered">
   <h2> Word to Sentence Visual Semantic Similarity for Caption Generation: Lesson learned</h2>
   <dt-byline></dt-byline>
   <p>In this blog post, I will share with you some insight and lessons learned from our recent research idea that should work in theory (i.e., BERT+GloVe), but in practice, it doesn’t work in our scenario.
@@ -65,9 +65,9 @@
   <p><strong>Sentence level similarity.</strong> We fine-tune the BERT base model to learn the visual context information. The model learns a dictionary-like relation word-to-sentence paradigm. We use the visual data as context for the sentence via cosine distance. <p>
 
 
-  <p> BERT <dt-cite key="Jacob:19"></dt-cite> . BERT achieves remarkable results on many sentence level tasks and especially in the textual semantic similarity task (STS-B)<dt-cite key="conneau2017supervised"></dt-cite>. Therefore, we fine-tuned BERT_base on the training dataset, (textual information, 460k captions: 373k for training and 87k for validation) i.e., visual, caption, label [semantically related or not related]), with a binary classification cross-entropy loss function [0,1] where the target is the semantic similarity between the visual and the candidate caption.<p>
+  <p> <strong>BERT <dt-cite key="Jacob:19"></dt-cite>.</strong>  BERT achieves remarkable results on many sentence level tasks and especially in the textual semantic similarity task (STS-B)<dt-cite key="conneau2017supervised"></dt-cite>. Therefore, we fine-tuned BERT_base on the training dataset, (textual information, 460k captions: 373k for training and 87k for validation) i.e., visual, caption, label [semantically related or not related]), with a binary classification cross-entropy loss function [0,1] where the target is the semantic similarity between the visual and the candidate caption.<p>
 
-<p> Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>. RoBERTa is an improved version of BERT, and since RoBERTa Large is more robust, we rely on pre-trained SentenceRoBERTa-sts as its yields a better cosine score.<p>
+<p> <strong>Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>.</strong>  RoBERTa is an improved version of BERT, and since RoBERTa Large is more robust, we rely on pre-trained SentenceRoBERTa-sts as its yields a better cosine score.<p>
 
 
 <p><strong>Fusion Similarity Expert.</strong>  Product of experts (PoE) <dt-cite key="hinton1999products"></dt-cite>  implies an effort into combining the expertise of each expert (model) in a collaborative manner. It allows each expert to specialize in analyzing one particular aspect of the problem and establishing a judgment based on that aspect. Inspired by PoE , we combined the two experts word and sentence level as last fusion as shown in Figure 1. PoE takes advantage of each expert and can produce much sharper distributions than a single model. The PoE is computed as follows:<p>
