@@ -136,7 +136,7 @@ natural language via GPT\(2\)  encoder </strong><dt-cite key="radford2019languag
 s=\frac{1}{n^{2}-n} \sum_{i} \sum_{j \neq i} \cos \left(\vec{w}_{i}, \vec{w}_{j}\right)
 \]
 
-<p> where  \(cos\) refers to cosine similarity, \(n\) refers to the number of word embeddings \(w \) used in the self-similarity measurement </p>
+<p> where  \(cos\) refers to cosine similarity, \(n\) refers to the number of word embeddings \(w \) used in the  self-similarity measurement.</p>
 
 
 <p>Their result shows the high self-similarity in the early layer and the loss of semantic information related to the input
@@ -385,7 +385,7 @@ This work introduces  (Pre-training <strong>con</strong>dition on <strong>dense 
 
 
 <p> The loss function is similar to the SimCLR <dt-cite key="geigle2021retrieve"></dt-cite> and word2vec NCE  <dt-cite key="geigle2021retrieve"></dt-cite> but here the learning is done over span vector.
-    Finally, the two loss is combined (MLM  and constrstive loss): </p>
+    Finally, the two losses are combined (MLM  and contrastive  loss): </p>
 
 \[
 \small
@@ -483,7 +483,7 @@ The model consists of: BERT encoder, Predicate Argument Spans layer, Aggregation
 
 <p class="noteBoxes type4">
 
-<small>   He slices tomatoes in the kitchen  <font color="brown"><small>(He, slices ), (slices, tomatoes ), ( slices, in, the, kitchen )</font>  </small> </small>
+<small>   He slices tomatoes in the kitchen  <font color="brown"><small>(He, slices), (slices, tomatoes), (slices, in, the, kitchen)</font>  </small> </small>
 </p>
 
 <p>
@@ -492,7 +492,7 @@ By looking at this sentence, the generate predicate slices the sentence into thr
 <em> he, tomatoes and in the kitchen </em>. By adopting this strategy, the authors manged to form three predicate-argument span and split
 into  individual words (<em>He, slices </em>), (<em>slices, tomatoes</em>), (<em>slices, in, the, kitchen</em>). By doing this, each given sentence will obtain all potential predicate-argument spans.
 
-    Not that, if the model could not capture any predicate-argument structure, the mean-pooled sentence representation with all token is used
+ Note that, if the model could not capture any predicate-argument structure, the mean-pooled sentence representation with all tokens are used.
 </p>
 
 
@@ -558,8 +558,8 @@ Where \(\mathbf{x}\)  is the output of the former encoder layer (for the first e
     \begin{aligned}
 \mathbf{h}_{2}^{\ell} &=\text {Dropout}\left(\color{blue}{\mathbf{W}_{m_{1}}^{\ell}} \cdot \color{black}{\mathbf{h}_{1}^{\ell}}+\textcolor{brown}{\mathbf{b}_{m_{1}}^{\ell}} \right) \\
 \mathbf{h}_{3}^{\ell} &=(\mathbf{x})=\color{blue}{\mathbf{g}_{L N_{1}}^{\ell}} \color{black}{\odot} \frac{\left(\mathbf{h}_{2}^{\ell}+\mathbf{x}\right)-\mu}{\sigma}+\textcolor{brown}{\mathbf{b}_{L N_{1}}^{\ell}} \\
-\mathbf{h}_{4}^{\ell} &=\operatorname{GELU}\left(\color{blue}{\mathbf{W}_{m_{2}}^{\ell}} \color{black}{\cdot} \mathbf{h}_{3}^{\ell}+\textcolor{brown}{\mathbf{b}_{m_{2}}^{\ell}}\right) \\
-\mathbf{h}_{5}^{\ell} &=\operatorname{Dropout}\left(\color{blue}{\mathbf{W}_{m_{3}}^{\ell}} \color{black}{\cdot} \mathbf{h}_{4}^{\ell}+\textcolor{brown}{\mathbf{b}_{m_{3}}^{\ell}}\right) \\
+\mathbf{h}_{4}^{\ell} &=\operatorname{GELU}\left(\color{blue}{\mathbf{W}_{m_{2}}^{\ell}} \color{black}{\cdot} \space   \mathbf{h}_{3}^{\ell}+\textcolor{brown}{\mathbf{b}_{m_{2}}^{\ell}}\right) \\
+\mathbf{h}_{5}^{\ell} &=\operatorname{Dropout}\left(\color{blue}{\mathbf{W}_{m_{3}}^{\ell}} \color{black}{\cdot} \space \mathbf{h}_{4}^{\ell}+\textcolor{brown}{\mathbf{b}_{m_{3}}^{\ell}}\right) \\
 \text { out }^{\ell} &=\color{blue}{\mathbf{g}_{L N_{2}}^{\ell}} \color{black}{\odot} \frac{\left(\mathbf{h}_{5}^{\ell}+\mathbf{h}_{3}^{\ell}\right)-\mu}{\sigma}+\color{brown}{\mathbf{b}_{L N_{2}}^{\ell}}
 \end{aligned}
 
@@ -675,7 +675,7 @@ Since the bias terms are additive they only correspond to a fraction of the para
 
 <p> This paper investigates and answers the research question: Is data augmentation useful in NLP like in Computer Vision?
     The result shows
-    that the improvement of data augmentation in 12  NLP datasets with BERT and GPT- \(2\) is <font color="#8b0000"> negligible </font> . However, there is gain for a small dataset after using data augmentation
+    that the improvement of data augmentation in 12  NLP datasets with BERT and GPT- \(2\) is <font color="#8b0000">negligible</font>. However, there is gain for a small dataset after using data augmentation
     (top result with random word detection, back translation, and synonym substitution).
 </p>
 
@@ -717,9 +717,9 @@ of label examples. More specifically, when we have data containing \(N\) pairs \
     This work tried to compare the correlation  between <strong> overt  attention </strong> which is measurable (ie., eye tracking which part of the sentence is focused on) with transformer model.
 
     The finding of the correlation between overt human attention and transformer self-attention are:</p>
-<p>1. Only on the early layers</p>
+<p>1. Only on the early layers.</p>
 <p>2. It did not depend on the size of the model.</p>
-<p>3. The correlation has nothing to do with model performance</p>
+<p>3. The correlation has nothing to do with model performance.</p>
 
 <p> &rarr; <strong> Estimating word co-occurrence probabilities using a log-bilinear model </strong> <dt-cite key="futrell2022estimating"></dt-cite><a href="https://github.com/langprocgroup/vectorprob"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
