@@ -94,7 +94,7 @@
 
 <dt-article class="centered">
 
-  <h2><p align="center"> ACL  \(2022\)  Interesting Papers & Workshop<p></h2>
+  <h2><p align="center"> ACL  \(2020\)  Interesting Papers & Workshop<p></h2>
   <dt-byline></dt-byline>
 
 <head>
@@ -119,7 +119,7 @@
 
   <p>
 This paper investigates the use of CLIP </strong><dt-cite key="radford2021learning"></dt-cite> for a non-visual task (i.e., sentence similarity). CLIP encodes
-natural language via GPT\(2\)  encoder </strong><dt-cite key="radford2019language"></dt-cite>. The GPT\(2\) is a causal language model that is only trained on next-word prediction.
+natural language via GPT\(2\)  encoder for image classification task</strong><dt-cite key="radford2019language"></dt-cite>. The GPT\(2\) is a causal language model that is only trained on next-word prediction.
       This work compares the
     representation between GPT and CLIP from a solely linguistic perspective. Note that the two models are trained on very different objectives.
       What makes CLIP unique is that it can be used as an image classifier "on the fly" using only natural language and pre-defined label class,
@@ -127,7 +127,7 @@ natural language via GPT\(2\)  encoder </strong><dt-cite key="radford2019languag
 
 </p>
 
-<p> This idea uses <dt-cite key="ethayarajh2019contextual"></dt-cite>  self-similarity  between contextualized word/sentence embeddings to studay
+<p> The main idea of this work is to employ the self-similarity  <dt-cite key="ethayarajh2019contextual"></dt-cite>    between contextualized word/sentence embeddings to study
     whether the CLIP contrastive visual object has affected the anisotropy of the original model GPT-\(2\):
 
 
@@ -144,7 +144,7 @@ s=\frac{1}{n^{2}-n} \sum_{i} \sum_{j \neq i} \cos \left(\vec{w}_{i}, \vec{w}_{j}
 <p>Their result shows the high self-similarity in the early layer and the loss of semantic information related to the input
 token in the upper layers. These effects are much less pronounced in CLIP than they are in GPT\(2\). That indicated the contrastive
     visual semantic objective has regularizing effects that shape more than the projection of the sentence embedding.
-    Table 1 below shows CLIP vs GPT on semantic similarity via cosine similarity.
+    Table below shows CLIP vs GPT on semantic similarity via cosine distance
 
 </p>
 
@@ -176,7 +176,8 @@ token in the upper layers. These effects are much less pronounced in CLIP than t
 
   <p>
     In summary, the final finding of this work is that the visual semantic pre-training is beneficial not only for visual representation but also for
-encoding semantic representation of language at both word and sentence levels as shown in the Table above in the textual semantic similarity task STS-B benchmark.
+encoding semantic representation of natural language at both word and sentence levels. This is
+    because the visual semantic pre-training is also able to capture the semantic information of natural language.
 
   </p>
 
@@ -196,14 +197,16 @@ distillation techniques from CLIP. In particular, the distill information is fro
 
 <p>
  The introduced model is a fusion of two pre-trained models 1) BERT (Mask language model and next sentence prediction)
-    and, 2) CLIP with contrastive loss. Then after training the BERT model can be used  alone  for downstream tasks via fine-tuning.
+    and, 2) CLIP with contrastive loss. Then after training the BERT model can be used  alone  for downstream tasks via fine-tuning as shown
+    in the figure below.
 
 
 </p>
 
       <figure>
   <img src="XDBERT.jpg" alt="Trulli" style="width:95%">
-  <figcaption> Figure. Illustration of the proposed process to inject BERT with visual information. (a) Pre-training stage, (2) Adaptation, and then (3) Fine-tuning on downstream tasks.  </figcaption>
+  <figcaption> Figure. Illustration of the proposed process to inject BERT with visual information. (a) Pre-training stage,
+      (2) Adaptation stage, and then (3) Fine-tuning on downstream tasks.  </figcaption>
 </figure>
 
 
@@ -239,7 +242,7 @@ distillation techniques from CLIP. In particular, the distill information is fro
 
   </table>
 
-<p> The Table above shows the benefits of these visual representations in downstream tasks such as STS-B and  (Quora Question Pairs identification) QQP tasks.  </p>
+<p> The table above shows the benefits of these visual representations in non-visual downstream tasks such as STS-B and  (Quora Question Pairs identification) QQP tasks.  </p>
 
 </p>
 
@@ -247,10 +250,13 @@ distillation techniques from CLIP. In particular, the distill information is fro
 
 <p>&clubs; <strong>Sentence-T\(5\): Scalable Sentence Encoders </strong><dt-cite key="ni2021sentence"></dt-cite> <a href="https://github.com/google-research/text-to-text-transfer-transformer/blob/main/README.md#released-model-checkpoints"><i class="fab fa-github" style='font-size:20px'></i></a></strong></p>
 
-<p> This approach modify the T\(5\) (seq-to-seq) <dt-cite key="raffel2019exploring"></dt-cite> to be used for sentence similarity task. The model relies
-on contrastive learning to pull a positive sentence together while pushing away the negative one (sentence \(1\), sentence \(2+\), and sentence \(2-\) (negative).
-    Note that, unlike BERT <dt-cite key="Jacob:19"></dt-cite> the model that uses CLS token at beginning of each sentence,
-    T\(5\) as seq-to-seq assumes the model is aware of the semantics of the entire sentence when generating the prediction.</p>
+<p> This approach modifies  the T\(5\) (seq-to-seq) <dt-cite key="raffel2019exploring"></dt-cite> to be utilized  for sentence embeddings tasks. The model relies
+on contrastive learning to pull a positive sentence together while pushing away the negative one.
+    Note that, unlike BERT <dt-cite key="Jacob:19"></dt-cite> the model that uses the CLS token at beginning of each sentence,
+    T\(5\) as seq-to-seq assumes the model is aware of the semantics of the entire sentence when generating the prediction.  The figure
+    below shows the original  T\(5\) and the proposed different architectures for sentence embeddings tasks.
+
+</p>
 
 
 <p> The Sentence-T\(5\) can be used to learn text embeddings with just four lines of code from the Sentence Transformer library: </p>
@@ -272,8 +278,8 @@ model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 </figure>
 
 
-<p>The training is done in two-stage training via Dual Encoder training (See Figure) (1) Fine-tune on semi-structured data
-    (e.g., Community QA), and then (2) Fine-tune on human-labeled data (NLI). The model uses  in-batch sampled softmax contrastive loss  <dt-cite key="henderson2017efficient"></dt-cite>: </p>
+<p>The training is done in two-stage training via dual encoder training: (1) fine-tune on semi-structured data
+    (e.g., Community QA), and then (2) fine-tune on human-labeled data (e.g., Natural Language Inference). The model uses  in-batch sampled softmax contrastive loss  <dt-cite key="henderson2017efficient"></dt-cite>: </p>
 
 
 \[ \small
@@ -281,16 +287,20 @@ model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 \]
 
 <p>where \(v_{i}\) is the input sentence and  \(v_{i}^{+}\) is the semantically related sentence, and  \(v_{j}^{-}\) is the negative
-    sentence provided by an example from \(v_{i}\), \( \mathcal{B}\) is the mini-batch of example and \(\tau\) is the softmax temperature. </p>
+    sentence provided by an example from \(v_{i}\), \( \mathcal{B}\) is the mini-batch of examples and \(\tau\) is the softmax temperature. </p>
 
 
  <hr>
 
 <p>&clubs;<strong> A good Prompt Is Worth Millions of Parameters: for Vision-Language Models <dt-cite key="jin2021good"></dt-cite> <a href="https://github.com/woojeongjin/FewVLM"><i class="fab fa-github" style='font-size:20px'></i></a></strong></p>
 
-<p> GPT-\(3\) (\(175\)M) <dt-cite key="brown2020language"></dt-cite> like large model shows good performance on zero and few-shot task.
-    The Zero-shot task is the model that predict the answer given only natural language descriptions of the task (without any gradient updates).
-    The one-shot in addition to the task description the model sees a single example of the task (and also without any gradient update).
+<p>
+
+    GPT-\(3\) (\(175\)M) <dt-cite key="brown2020language"></dt-cite> like a large language model shows good performance on zero and few-shot learning tasks.
+    The Zero-shot learning is when the model predicts the answer given only natural language descriptions of
+    the task (without any gradient updates).  The one-shot in addition to the zero shot learning the model sees
+    a single example of the task (and also without any gradient update) as shown the following examples:
+
 
 </p>
 
@@ -312,17 +322,16 @@ model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 
 
 
-<p>This work proposes T\(5\) based smaller few-shot learner (220M/740M) for language and vision tasks. The model uses  two pre-training objectives:
-    (1)  Mask Language Model and (2) Prefix Language Model  (PrefixLM) that predict the next sentence. For example,  <em> a lady waking next to bicycle</em> and
+<p>This work proposes T\(5\) based (smaller version) few-shot learner (\(220\)M/\(740\)M) for language and vision tasks. The model uses  two pre-training objectives:
+    (1)  Mask Language Model (fill the mask word) and (2) Prefix Language Model  (PrefixLM) that predict the next sentence, e.g.,  <em> a lady walking next to bicycle</em> and
     pre-fix objectives generate the next sentence <em>  carrying  an umbrella.</em>
 
        </p>
 
 
 
-<p> The finding of this work are:  (1) Prompts affect zero-shot performance,
-    (2) Noisy prompts learn as quickly as hand-crafted prompts are given a larger training dataset. (3) Mask Language Modeling helps VQA task while
-    PrefixLM boosts captioning performance.
+<p> The finding of this work are: (1) Prompts influence zero-shot performance, and (2) Noisy prompts learn as quickly as hand-crafted prompts for a given larger training dataset.
+    (3) Mask Language Modeling helps VQA task while PrefixLM boosts captioning performance.
 
 </p>
 
@@ -332,8 +341,7 @@ model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 
 <p>&clubs; <strong>Unsupervised Corpus Aware Language Model Pre-training for Dense Passage Retrieval</strong><dt-cite key="gao2021unsupervised"></dt-cite><a href="https://github.com/luyug/Condenser"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
-<p> Dense retrieval using a pre-trained model is a straightforward process, given
-the query \( q \)  and positive sample and a set of negative \( d_{1}, d_{2},.. \) samples to contrastive loss function:  </p>
+<p> Dense retrieval using a pre-trained model is a straightforward process, a query \( q \)  and positive sample and a set of negative samples \( d_{1}, d_{2},.. \)  to a contrastive loss function:  </p>
 
 
 \[ \small
@@ -345,13 +353,13 @@ This work introduces  (Pre-training <strong>con</strong>dition on <strong>dense 
     a Transformer with asymmetric connections method that removes the overhead of large training with noisy labels and complicated processes to have one robust model.
     In particular, an architecture that  (1) enhances BERT  [<tt>CLS</tt>] representation and forces it to play an essential
     role in the pre-training as a dense retrieval model with an improved
-    local noise resistance, and (2) a corpus level contrastive learn that warms up the global embedding mapping space.</p>
+    local noise resistance, and (2) a corpus level contrastive learning that warms up the global embedding mapping space.</p>
 
 
 <p>
 <strong>Condenser</strong> consists of three Transformer encoder layers:  (\( 1\)) Early backbone, (\( 2\)) Late backbone, (\( 3 \)) Condenser head layers.
     The first two are typical transformer encoders. The condenser layers inputs a [<tt>CLS</tt>]
-    vecctor x from <em>late</em>  layers and token vector from <em>early</em> layer:
+    vecctor \(x\) from <em>late</em>  layers and token vector from <em>early</em> layer:
 
 
 </p>
@@ -370,12 +378,12 @@ This work introduces  (Pre-training <strong>con</strong>dition on <strong>dense 
 \mathcal{L}_{\mathrm{mlm}}=\sum_{i \in \text { masked }} \text { CrossEntropy }\left(W h_{i}^{c d}, x_{i}\right)
 \]
 
-<p>The condenser head layer forces [<tt>CLS</tt>] to learn information aggregation (1) in  late layers to particpate as language
+<p>The condenser head layer forces [<tt>CLS</tt>] to learn information aggregation (1) in  <em>late layers</em>  to participate  as language
     model, and (2) to create a stronger [<tt>CLS</tt>] without the noise label. </p>
 
-<p> Then on top of it, the condenser head, a Corpus Aware Contrastive learning object is used as follows:
-    (1) given a set of document from the target search corpus \(d_{1}, d_{2}, d_{k}\), (2) they extract from each pair of spans
-     \(s_{11}, s_{12}, s_{k}\), which is treated as pseudo passages, and (3) finally everything is encode \(s_{ij}\) ->   \(h_{ij}\) into the model with a loss function:
+<p> Then on top of the condenser head, a Corpus Aware Contrastive Learning Object is used as follows:
+    (1) given a set of documents from the target search corpus \(d_{1}, d_{2}, d_{k}\), (2) pair of spans are extracted  from each
+     \(s_{11}, s_{12}, s_{k}\), which is treated as pseudo passages, and (3) finally everything  is encoded  \(s_{ij}\) ->   \(h_{ij}\) into the model with a loss function:
 
 
 
@@ -389,7 +397,7 @@ This work introduces  (Pre-training <strong>con</strong>dition on <strong>dense 
 
 
 <p> The loss function is similar to the SimCLR <dt-cite key="geigle2021retrieve"></dt-cite> and word2vec NCE  <dt-cite key="geigle2021retrieve"></dt-cite> but here the learning is done over span vector.
-    Finally, the two losses are combined (MLM  and contrastive  loss): </p>
+    Finally, the two losses are combined (MLM  and Contrastive  Loss): </p>
 
 \[
 \small
@@ -404,26 +412,26 @@ This work introduces  (Pre-training <strong>con</strong>dition on <strong>dense 
 <p>
 
    This paper proposes a combined bi and cross-encoder,
-and re-rank setup that are trained jointly for cross model retrieval scenario. The problem with cross-encoder is that model needs a
+and re-rank setup that are trained jointly for cross model retrieval scenarios. The problem with cross-encoder is that model needs a
 forward pass for all tokens to retrieve the most related image, which is too slow in query search.
 
     The other option is the bi-encoder which uses fast cosine search. However, the performance is limited and doesn't match the cross-encoder performance.
 
-      The main concept that proposed in this work can be divided into two parts (1) quick retrieval of top-\( k\) with bi-encoders, and (2) re-ranking of top-\( k\) via cross-encoders. By doing this, the model
+      The concept  proposed in this work can be divided into two parts (1) quick retrieval of top-\( k\) with bi-encoders, and then (2) re-ranking of top-\( k\) via cross-encoders. By doing this, the model
 can achieve better state-of-the-art performance with fast retrieval.
 
 </p>
 
-<p> The cross-encoders is finetune with both image and text using Binary Cross-Entropy (BCE) loss: </p>
+<p> The cross-encoder is finetune with both image and text using Binary Cross-Entropy (BCE) loss: </p>
 
 \[
 \small
 \mathcal{L}_{\mathrm{CE}}(i, c)=-(y \log \mathrm{p}(i, c)+(1-y) \log (1-\mathrm{p}(i, c)))
 \]
 
-<p> \(p(i, c)\)  refers to the probability of the combination input image \(i\) and the caption \(c\). At
-    retrivel, all \((i, c)\) need to be processed and re-ranked by  \(p(i, c)\) probability. For given a
-    text query \(c\), the model retrive the single  most related image \(i\) from image collection \(I\):
+<p> \(p(i, c)\)  refers to the probability of the combined input image \(i\) and the caption \(c\). At
+   retrieval, all \((i, c)\) need to be processed and re-ranked by  \(p(i, c)\) probability. For given a
+    text query \(c\), the model retrieves  the single  most related image \(i\) from image collection \(I\):
 
 </p>
 
@@ -432,9 +440,9 @@ can achieve better state-of-the-art performance with fast retrieval.
 \arg \max (\mathrm{p}(i, c), \forall i \in I)
 \]
 
-<p> For the bi-encoders each image and text caption is passed separately through the pretrained Transformer model. Where \((i, c)\) are positive
+<p> For the bi-encoders, each image and text caption are passed separately through the pre-trained Transformer model. Where \((i, c)\) are positive
     image-caption pairs from the training corpus while \(c^{\prime}\) and \(i^{\prime}\) are negative examples sampled from the same corpus
-    such that image-caption pairs/instances \((i, c^{\prime})\) and \((i^{\prime}, c)\) do not occur in the corpus:
+     image-caption pairs/instances \((i, c^{\prime})\) and \((i^{\prime}, c)\) but not seen by the model:
 </p>
 
 \[
@@ -476,13 +484,13 @@ marriage equality </small>
 <p>
    Although cross-encoder achieved SOTA performance across different benchmarks, they are more complex and required more resources.
 This work proposes an enhancement to a less complex bi-encoder-based model (e.g., SBERT) which is have been adopted in many sentence pair tasks such as semantic similarity and neural retrieval.
-The model consists of: BERT encoder, Predicate Argument Spans layer, Aggregation layer and concatenation layer with SBERT: </p>
+The model consists of: a BERT encoder, Predicate Argument Spans layer, Aggregation layer, and finally a Concatenation layer with SBERT: </p>
 
 
-<p> <strong> BERT: </strong> Each sentence is first fed into BERT with mean pooling to extract fixed contextual representation.</p>
+<p> <strong> BERT: </strong> Each sentence is first fed into BERT with mean pooling layer to extract fixed contextual representation.</p>
 
 <p><strong> Predicate Argument Spans (PAS):</strong> Then, the mean pooled BERT contextual
-    representation is fed into BERT-based semantic role labeling (SRL) tagger to obtain predicates and relevant arguments. Then,
+    representation is fed into BERT-based Semantic Role Labeling (SRL) tagger to obtain predicates and relevant arguments. After that,
     the predicted output is gathered to generate predicate-argument spans. For example:
 </p>
 
@@ -493,20 +501,20 @@ The model consists of: BERT encoder, Predicate Argument Spans layer, Aggregation
 
 <p>
 
-By looking at this sentence, the generate predicate slices the sentence into three arguments
-<em> he, tomatoes and in the kitchen </em>. By adopting this strategy, the authors manged to form three predicate-argument span and split
-into  individual words (<em>He, slices </em>), (<em>slices, tomatoes</em>), (<em>slices, in, the, kitchen</em>). By doing this, each given sentence will obtain all potential predicate-argument spans.
+By looking at this sentence, the  generated predicate slices the sentence into three arguments
+<em> he, tomatoes and in the kitchen </em>. By adopting this strategy, the authors managed to form three predicate-argument spans  and split
+them into   individual words (<em>He, slices</em>), (<em>slices, tomatoes</em>), (<em>slices, in, the, kitchen</em>). By doing this, each given sentence will obtain all potential predicate-argument spans.
 
- Note that, if the model could not capture any predicate-argument structure, the mean-pooled sentence representation with all tokens are used.
+ Note that, if the model could not capture any predicate-argument structure, the mean-pooled sentence representation with all tokens  is used.
 </p>
 
 
 <p> <strong>Aggregation:</strong>  After obtaining all the spans (predicate-argument) a BERT model is employed to
 
-    represent them as word token. Given  predicate-argument span sequence
+    represent them as word tokens. Given  predicate-argument span sequence
     in the sentence \(s=\left\{s_{1}, s_{2}, \ldots, s_{N}\right\}\), where \(N\) is the number of spans at every
-    span \(s_{i}\) consist of token \(x=\left\{x_{1}, \ldots, x_{l}\right\}\) to generate the span \(s_{i}\). Finally,
-    a dense vector with mean pooling \(h_{i}\) over all token:
+    span \(s_{i}\)  consisting of token \(x=\left\{x_{1}, \ldots, x_{l}\right\}\) to generate the span \(s_{i}\),
+    a dense vector with mean pooling \(h_{i}\) all over the tokens:
 
 
 \[
@@ -515,7 +523,7 @@ into  individual words (<em>He, slices </em>), (<em>slices, tomatoes</em>), (<em
 \]
 
    <p> where the representation for each span sequence \(h_{i} \in \mathbb{R}^{D}\) is represented as \(h=\left\{h_{1}, h_{2}, \ldots, h_{N}\right\}\).
-    Then, all information is aggreagted using self-attentive mechanism <dt-cite key="sun2020self"></dt-cite>.
+    Then, all information is  aggregated using a self-attentive mechanism <dt-cite key="sun2020self"></dt-cite>.
 
 
 
@@ -557,7 +565,7 @@ Where \(\mathbf{x}\)  is the output of the former encoder layer (for the first e
 
     \]
 
-<p> And then fed to an MLP with layer-norm (LN): </p>
+<p> And then everything is fed into an MLP with Layer-Norm (\(LN\)): </p>
 
  \[
 \small
@@ -579,7 +587,7 @@ Where \(\mathbf{x}\)  is the output of the former encoder layer (for the first e
 
 <p> The \(\color{blue}{\mathbf{W}_{(\cdot)}^{\ell,(\cdot)}}\), \(\color{brown}{\mathbf{b}_{(\cdot)}^{\ell,(\cdot)}}\) and \(\color{blue}{\mathbf{g}_{(\cdot)}^{\ell}}\) are the network parameters.
 Since the bias terms are additive they only correspond to a fraction of the parameters of the network (e.g., BERT large \(0.08\)%).
-    This work freezed all the parameters  \(\color{blue}{\mathbf{W}}\) and  \(\color{blue}{\mathbf{g}}\) and only
+    This work froze all the parameters  \(\color{blue}{\mathbf{W}}\) and  \(\color{blue}{\mathbf{g}}\) and only
     fine-tune the bias terms \(\color{brown}{\mathbf{b}_{(\cdot)}^{\ell,(\cdot)}}\).
 
 </p>
@@ -591,23 +599,23 @@ Since the bias terms are additive they only correspond to a fraction of the para
 
             <td> Model </td>
       <td style="text-align:center">%Param </td>
-    <td style="text-align:center">　STSB</td>
-      <td style="text-align:center">　QQP</td>
+    <td style="text-align:center">STSB</td>
+      <td style="text-align:center">QQP</td>
 
   </tr>
 
      <tr>
            <td>　Full-FT </td>
-           <td style="text-align:center">100  </td>
-          <td style="text-align:center">　88.9±0.7</td>
-         <td style="text-align:center">　87.1±0.1 </td>
+           <td style="text-align:center">100</td>
+          <td style="text-align:center">88.9±0.7</td>
+         <td style="text-align:center">87.1±0.1 </td>
     </tr>
 
           <tr>
            <td>　BitFit </td>
-                 <td style="text-align:center"> 0.09  </td>
+                 <td style="text-align:center"> 0.09</td>
           <td style="text-align:center">　<strong>89.2±0.2</strong></td>
-         <td style="text-align:center">　84.0±0.2</td>
+         <td style="text-align:center">84.0±0.2</td>
     </tr>
 
 
@@ -616,7 +624,7 @@ Since the bias terms are additive they only correspond to a fraction of the para
 
   </table>
 
-<p> The Table shows that model still achieve a good or better result with only 0.09% of parameters being fine-tuned.
+<p> The table shows that the model still achieves a good or better result with only 0.09% of parameters being fine-tuned.
  </p>
 
  <hr>
@@ -635,9 +643,9 @@ Since the bias terms are additive they only correspond to a fraction of the para
    <font color="#c71585"> <TT>  <small> bit of an expert on the topic. </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <- GPT\(2\)+SD (prompting: <strong>This is a sexist</strong>)</small></small></font>
 </p>
 
-<p>  As shown in the example the model is self-aware of the bias and capable of debiasing its output.
-    In this example, the feedback to the model SD as prompts <em> this sentence is sexist </em>than the model
-    debias the previous output with an output less bias.</p>
+<p>  As shown in the example above the model is self-aware of the bias and capable of debiasing its output.
+    In this example, feedback is given to the model SD as prompts <em> this sentence is sexist</em>, and then the model
+    debias its previous output with an output to fix the bias.</p>
 
 
  <hr>
@@ -652,7 +660,7 @@ Since the bias terms are additive they only correspond to a fraction of the para
 
 <p class="noteBoxes type3">  <TT> <small>  <font color="#6495ed"> What word is similar to good ? </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <-   User  </small> </small> </font>
  <br>
-   <font color="#c71585"> <TT>  <small>The homophone of good is: wood  </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <-GPT-\(3\) </small> </small> </font>
+   <font color="#c71585"> <TT>  <small>The homophone of good is: wood  </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <- GPT-\(3\) </small> </small> </font>
  <br>
       <TT> <small>  <font color="#6495ed"> similar to "means" with similar meaning </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- User   </small> </small> </font>
   <br>
@@ -664,7 +672,7 @@ Since the bias terms are additive they only correspond to a fraction of the para
 
 </p>
 
-<p> The user interacts  with the model and the model can <strong> memorize </strong> this clarification and then re-call it
+<p> The user interacts  with the model, and the model can <strong> memorize </strong> this clarification and then re-call it
     when the user asks a similar question to avoid making the same mistakes.
  </p>
 
@@ -681,7 +689,7 @@ Since the bias terms are additive they only correspond to a fraction of the para
 
 <p> This paper investigates and answers the research question: Is data augmentation useful in NLP like in Computer Vision?
     The result shows
-    that the improvement of data augmentation in 12  NLP datasets with BERT and GPT- \(2\) is <font color="#8b0000">negligible</font>. However, there is gain for a small dataset after using data augmentation
+    that the improvement of data augmentation in \(12\)  NLP datasets with BERT and GPT- \(2\) is <font color="#8b0000">negligible</font>. However, there is a gain for a small dataset after using data augmentation
     (top result with random word detection, back translation, and synonym substitution).
 </p>
 
@@ -698,9 +706,9 @@ The main problem with running these models in real applications is the slow infe
 <p>
 To tackle these limitations this work (\(1\)) relies on the Siamese Network instead of cross attention network to speed up the inference, and (\(2\)) Label Tuning  (LT) which makes the fine-tuning cheap. The main
     idea of LT is first to compute the embedding for each desired class and then tune them on a subset of the
-of label examples. More specifically, when we have data containing \(N\) pairs \(x_{i}\) input and its reference label \(x_{z}\), we (the authors) can compute
+label examples. More specifically, when we  (the authors)  have data containing \(N\) pairs \(x_{i}\) input and its reference label \(x_{z}\), we can compute
     a matrix of the input embedding  \(X \in \mathcal{R}^{N \times d}\) with its related labels \(Y \in \mathcal{R}^{K \times d}\), where the size of the label is \(K\) and  \(d\) for the dimension.
-    Then, we can define a scoring function for each input and label combined as:
+    Then, we can define a scoring function for each input and label combined:
 
     \[ \small
     S=X \times Y^{T}\left(S \in \mathcal{R}^{N \times K}\right)
@@ -714,8 +722,8 @@ of label examples. More specifically, when we have data containing \(N\) pairs \
 \]
 
 <p> To prevent overfitting, regularization techniques are
-    used (i.e., Frobenius Norm with drop-out), then the model is
-    tuned on \(4\)-fold cross-validation o the few shot set.
+    used (i.e., Frobenius norm with drop-out), then the model is
+    tuned on \(4\)-fold cross-validation on the few shot set.
 
  <hr>
 
@@ -736,12 +744,12 @@ of label examples. More specifically, when we have data containing \(N\) pairs \
 
 <p> &rarr; <strong> Estimating word co-occurrence probabilities using a log-bilinear model </strong> <dt-cite key="futrell2022estimating"></dt-cite><a href="https://github.com/langprocgroup/vectorprob"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
-<p> This paper recycles the simplest neural language model via log-bilinear (LBL) <dt-cite key="mnih2007three"></dt-cite>  model to estimated the co-occurrence probabilities using word embeddings.
-The main idea is to leverage pre-trained embedding to enhanced  generalization in small dataset senarios based on the \(w \) word and its related context \(c\).
+<p> This paper recycles the simplest neural language model via log-bilinear (LBL) <dt-cite key="mnih2007three"></dt-cite>  model to estimate the co-occurrence probabilities using word embeddings.
+The main idea is to leverage pre-trained embedding to enhance  generalization in small dataset scenarios  based on the \(w \) word and its related context \(c\).
     Given vocabulary size \(V\) a finite target word  \(W \subseteq V\), and dataset of \(N\) pair of word  and context
 
     \(\left\{\left\langle w_{i}, c_{i}\right\rangle\right\}_{i=1}^{N}\), and a pre-trained word Embedding mapping with  \(E: V \rightarrow \mathbb{R}^{D}\). The
-    concept to find a conditional distribution \(q(w \mid c)\) from data sample e.g., dataset consists sample from
+    concept to find a conditional distribution \(q(w \mid c)\) from data sample e.g., a dataset consists sample from
 some distribution \(p(w, c)=p(c) p(w \mid c)\):
 
 
@@ -758,10 +766,10 @@ Z(c) &=\sum_{w \in W} \exp \left\{\phi(\mathbf{w})^{\top} \mathbf{A} \psi(\mathb
 \]
 
 
-<p> where \(\mathbf{w}=E(w)\) and  \(\mathbf{c}=E(c)\) are the static embedding of target word \(w\) and context \(c\) respectively.
-    The target word encoder \(\phi (\cdot)\) and the context encoder \(\psi(\cdot)\) are parameterized function via feed forward neural network,
+<p> where \(\mathbf{w}=E(w)\) and  \(\mathbf{c}=E(c)\) are the static embeddings of target word \(w\) and context \(c\) respectively.
+    The target word encoder \(\phi (\cdot)\) and the context encoder \(\psi(\cdot)\) are parameterized functions via a feed-forward neural network,
     \(A\)
-    is the interaction matrix \( K \times L \). The model parameters  \(\phi\), \(\psi\) and \(A\)  are  trained with corss-entropy loss:
+    is the interaction matrix \( K \times L \). The model parameters  \(\phi\), \(\psi\) and \(A\)  are  trained with  cross-entropy  loss:
 
 
    </p>
