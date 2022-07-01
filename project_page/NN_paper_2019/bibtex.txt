@@ -1,7 +1,0 @@
-@article{Bel2022,
-Title={Belief Revision based Caption Re-ranker with Visual Semantic Information},
-Author={Ahmed Sabir, Francesc Moreno-Noguer, Pranava Madhyastha , Lluís Padró},
-Journal={EMNLP},
-Year={2022}}
-
-
