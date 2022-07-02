@@ -1,0 +1,9 @@
+@inproceedings{sabir2018visual,
+  title={Visual re-ranking with natural language understanding for text spotting},
+  author={Sabir, Ahmed and Moreno-Noguer, Francesc and Padr{\'o}, Llu{\'\i}s},
+  booktitle={Asian Conference on Computer Vision},
+  pages={68--82},
+  year={2018},
+  organization={Springer}
+}
+
