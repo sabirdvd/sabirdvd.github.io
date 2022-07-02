@@ -1,0 +1,8 @@
+@inproceedings{sabir2020textual,
+  title={Textual visual semantic dataset for text spotting},
+  author={Sabir, Ahmed and Moreno-Noguer, Francesc and Padr{\'o}, Llu{\'\i}s},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+  pages={542--543},
+  year={2020}
+}
+
