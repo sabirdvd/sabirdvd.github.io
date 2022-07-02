@@ -92,14 +92,15 @@
 
 
 
-    <p align="justify"> Text Spotting in the wild consists of detecting and rec-ognizing text appearing in images (e.g.,  signboards, traffic signals or
-      brands in clothing or objects). This is a challenging problem due to the complexity of the context where texts appear (uneven backgrounds, shading, occlusions, perspec-tive distortions, etc.). 
-       Only a few approaches try to exploitthe relation between text and its surrounding environmentto better recognize text in the scene.  In this paper, we propose a visual context dataset for
-        Text Spotting in the wild,where the publicly available dataset COCO-text (<a href="https://arxiv.org/pdf/1601.07140v2.pdf">Veit al., 2016</a>)  has been  extended  with  information  about  the  scene  (such  asobjects  and  places  
-       appearing  in  the  image)  to  enable  re-searchers to include semantic relations between texts andscene in their Text Spotting systems, and to offer a commonframework  for  such  approaches.   
-       For  each  text  in  an  image, we extract three kinds of context information:  objectsin the scene, image location label and a textual image de-scription (caption).  We 
-       use state-of-the-art out-of-the-box available tools to extract this additional information. Sincethis information has textual form, it can be used to
-      leveragetext similarity or semantic relation methods into Text Spotting systems, either as a post-processing or in an end-to-end training strategy</a></tr>
+    <p align="justify"> Text Spotting in the wild consists of detecting and recognizing text appearing in images (e.g.,  signboards, traffic signals or
+      brands in clothing or objects). This is a challenging problem due to the complexity of the context where texts appear (uneven backgrounds, shading, occlusions, perspective distortions, etc.). 
+       Only a few approaches try to exploit the relation between text and its surrounding environment to better recognize text in the scene.  In this paper, we propose a visual context dataset for
+        Text Spotting in the wild,where the publicly available dataset COCO-text (<a href="https://arxiv.org/pdf/1601.07140v2.pdf">Veit al., 2016</a>)  has been  extended  with  information  
+        about  the  scene  (such  as objects  and  places   appearing  in  the  image)  to  enable  researchers to include semantic relations between texts andscene in their 
+        Text Spotting systems, and to offer a common framework  for  such  approaches.   
+       For  each  text  in  an  image, we extract three kinds of context information:  objects in the scene, image location label and a textual image description (caption).  We 
+       use state-of-the-art out-of-the-box available tools to extract this additional information. Since this information has textual form, it can be used to
+      leverage text similarity or semantic relation methods into Text Spotting systems, either as a post-processing or in an end-to-end training strategy</a></tr>
 </div>
 
 </br>
@@ -130,9 +131,9 @@
       <tr><td width="1000" align="left"> 
         <div class="paper" id="ap_agent">
           <h2>Dataset</h2>
-          <p>   We proposed a variation of the COCO-text dataset and baseline BERT</p>
-          <p align="center"> <img src="Figure-2-c-1.png" width="700" align="middle" /></p>
-          <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Training data<sub>COCO=text</sub></a>
+          <p>  We proposed three different types of visual context object, scene, and caption. </p>
+          <p align="center"> <img src="Figure-2-c-1.png" width="730" align="middle" /></p>
+          <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Training data<sub>COCO-text</sub></a>
           <pre xml:space="preserve">
             <strong>word</strong>, <strong>objects</strong>, <strong>places</strong>
             airfrance,airliner,airfield
@@ -146,7 +147,7 @@
       </td></tr>
       <tr><td width="1000" align="left"> 
         <div class="paper" id="ap_role_scenario1">
-          <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">with Caption<sub>COCO-text</sub> </a>
+          <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">with Caption<sub>COCO-Text-V</sub> </a>
           <pre >
             <strong>label</strong>, <strong>word</strong>, <strong>caption</strong>
             1,parking,a street sign with a sign on the side of it 
@@ -161,7 +162,7 @@
       </td></tr>
       <tr><td width="1000" align="left"> 
         <div class="paper" id="ap_role_scenario1">
-          <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">Test<sub>ICDAR-17</sub> </a>
+          <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">Test<sub>ICDAR17-Task3-V</sub> </a>
           <pre >
             <strong>word</strong>, <strong>caption</strong>
             pizza, a person cutting a pizza with a fork and knife
@@ -175,9 +176,9 @@
 
       <tr><td width="1000" align="left"> 
         <div class="paper" id="ap_role_scenario1">
-          <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">Object-and-text-co-occ<sub>COCO-text</sub></a>
-          <pre xml:space="preserve">
-          <strong>word</strong>, <strong>visual</strong>
+          <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">Object-and-text-co-occ<sub>COCO-Pairs</sub></a>
+          <pre>
+           <strong>word</strong>,<strong>visual</strong>
            stop, street
            cable, remote
            airways, airliner
