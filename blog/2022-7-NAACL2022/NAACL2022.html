@@ -56,7 +56,7 @@
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
-            width: 600px;
+            width: 600px auto;
         }
         
         .type1 {
@@ -122,7 +122,10 @@
             <p>&clubs;<strong> MCSE: Multimodal Contrastive Learning of Sentence Embedding</strong> <dt-cite key="zhang2022mcse"></dt-cite> <a href="https://github.com/uds-lsv/MCSE"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
 
-           <p>Humans rely on different modalities such as vision, language, and sound to capture an experience. Recent works successfully show that by integrating visual semantics into a pre-trained language model will improve its generalization capability and thus improve performance on various NLP tasks such as textual semantic similarity
+           <p>Humans rely on different modalities such as vision, language, and sound to capture an experience.
+                Recent works successfully show that by integrating visual semantics into a pre-trained language model 
+                will improve its generalization capability and thus improve performance on various NLP tasks such 
+                as textual semantic similarity
             <dt-cite key="li2020unimo"></dt-cite>. </p>
             
             
@@ -136,10 +139,10 @@
             </p>
             
             <p> The unsupervised SimSCE is used with dropout noise data augmentation. The model encodes the sentence 
-            twice using  different dropout masks. For given sentnece \(x_{i}\), the sentence is encoded twice via dropout masks 
+            twice using  different dropout masks. For given  sentence \(x_{i}\), the sentence is encoded twice via dropout masks 
             \(\boldsymbol{h}_{i}^{z}=g_{\phi}\left(f_{\theta}\left(x_{i}, z\right)\right)\) and  \(\boldsymbol{h}_{\dot{i}}^{z^{\prime}}=g_{\phi}\left(f_{\theta}\left(x_{i}, z^{\prime}\right)\right)\)
             where \(z\) and \(z^{\prime}\) refer to diffrent dropout masks, \(f_{\theta}\)  is a pre-trained language encoder BERT   and \(g_{\phi}\) 
-            is the porjection of the head after the <tt> [CLS]</tt> token. The training object can be writen as:
+            is the projection of the head after the <tt> [CLS]</tt> token. The training object can be written as:
             
             </p>
             \[
@@ -147,7 +150,7 @@
             \ell_{i}^{S}=-\log \frac{e^{\operatorname{sim}\left(\mathbf{h}_{i}^{z_{i}}, \mathbf{h}_{i}^{z_{i}^{\prime}}\right) / \tau}}{\sum_{j=1}^{N} e^{\operatorname{sim}\left(\mathbf{h}_{i}^{z_{i}}, \mathbf{h}_{j}^{z_{j}^{\prime}}\right) / \tau}}  \]
             
             
-            <p>where \(N \) is the  mini-batch size, τ is the softmax temperture parameter and \(sim\) is the cosine similarity. </p>
+            <p>where \(N \) is the  mini-batch size, τ is the softmax temperature parameter and \(sim\) is the cosine similarity. </p>
             
             
             
@@ -160,12 +163,11 @@
             \boldsymbol{s}_{i}^{z}=g_{\phi_{1}}\left(f_{\theta}\left(x_{i}, z\right)\right), \boldsymbol{v}_{i}=g_{\phi_{2}}\left(f^{v}\left(y_{i}\right)\right)
             \]
             
-            <p>  where \(f^{v}(\cdot) \) is a fixed pre-trained image encoder ResNet, and \(g_{\phi_{1}}(\cdot)\), \(g_{\phi_{2}}(\cdot)\) are the projection head between 
+            <p>  where \(f^{v}(\cdot) \) is a fixed pre-trained image encoder ResNet <dt-cite key="he2016deep"></dt-cite> , and \(g_{\phi_{1}}(\cdot)\), \(g_{\phi_{2}}(\cdot)\) are the projection head between 
                 the two modality. The projection head is a single-layer MLPs with Tanh activation. 
             
-                
-                
-                The multimodal contrastive learning objective as:
+              
+                The multimodal contrastive learning objective can written as
             </p>
             
             
@@ -264,9 +266,12 @@
 
                 
 
-<p> Data augmentation with contrastive learning show remarcable results in computer vision <dt-cite key="chen2020simple"></dt-cite> However, in NLP (e.g., deletion, replacement) often change the meaning of the sentence and and thus hurt the accuracy. The work of SimSCE <dt-cite key="gao2021simcse"></dt-cite> found that constructing positive pairs via a simple dropout-based augmentation works much better than more complex augmentations such as word deletions or replacements based on synonyms or masked language models.  The ideal sentence should not be invariant augmentation. 
+<p> Data augmentation with contrastive learning show remarkable results in computer vision <dt-cite key="chen2020simple"></dt-cite> However, in NLP (e.g., deletion, replacement) often change the meaning of the sentence and and thus hurt the accuracy. The work of SimSCE <dt-cite key="gao2021simcse"></dt-cite> found that constructing positive pairs via a simple dropout-based augmentation works much better than more complex augmentations such as word deletions or replacements based on synonyms or masked language models.  The ideal sentence should not be invariant augmentation. 
 
-     <p> This work uses equivariant contrastive learning  from Computer Vision <dt-cite key="dangovski2021equivariant"></dt-cite> which improves vision representation learning by using a contrastive loss on insensitive image transformations (e.g., grayscale). The same idea is applied to NLP by employing  a generative model like  ELECTRA <dt-cite key="clark2020electra"></dt-cite>  to predict  different  outputs  that equivariant to Mask Language Model. 
+     <p> This work uses equivariant contrastive learning  from Computer Vision <dt-cite key="dangovski2021equivariant"></dt-cite> 
+        which improves vision representation learning by using a contrastive loss on insensitive image transformations
+        (e.g., grayscale). The same idea is applied to NLP by employing  a generative model like  
+        ELECTRA <dt-cite key="clark2020electra"></dt-cite>  to predict  different  outputs  that equivariant to Mask Language Model. 
     
 </p>
 
@@ -301,7 +306,9 @@
 f(T(x))=T^{\prime}(f(x)) \text {. }
 \]
 --> 
- <p> In particular, they proposed an extension to SimSCE with successful data augmentation with difference prediction objection with that condition to the sentence embedding. For given input sentence \(x\) the SimCSE provides a positive example via dropout masks and the same training objective: 
+ <p> In particular, they proposed an extension to SimSCE with successful data augmentation with difference 
+     prediction objection with that condition to the sentence embedding. For given input sentence \(x\) the 
+     SimCSE provides a positive example via dropout masks and the same training objective: 
 
  </p>
 
@@ -316,13 +323,14 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
     </p>
 
 
-    <p> As shown in Figure 1, to generate different conditional predictions  an ELECTRA model <dt-cite key=""></dt-cite> is used, which  contains a generator and discriminator. For a given 
+    <p> As shown in Figure 1, to generate different conditional predictions  an ELECTRA model <dt-cite key=""></dt-cite> is used,
+         which  contains a generator and discriminator. For a given 
         sentence with length \(T\), \(x= x_{1}, x_{2},...x_{T}\), a random mask is applied
         \(m= m_{1}, m_{2},...m_{T}\), \(m_{t}\) \(\in[0,1]\) on \(x\) to obtain \(x^\prime =m \cdot x\).
         Then, another BERT model (MLM) is employed to generate \(G\) to recover the randomly 
         masks token \(x^\prime\) and edited the sentence  \(x^{\prime \prime}  \ = G(x^\prime) \). Finally,
         the discriminator \(D\) is used to replaced the Token Detection task. The cross-entropy loss
-        for each sentence \(x\) can be writen as: 
+        for each sentence \(x\) can be written as: 
         
     
     </p>
@@ -335,7 +343,8 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
       
       \]
 
-      <p> Then, after training, the model is optimized for the two losses (i.e., SimCSE and condition ELECTRA) with weight coefficient \(\lambda\). 
+      <p> Then, after training, the model is optimized for the two losses (i.e., SimCSE and condition ELECTRA)
+           with weight coefficient \(\lambda\). 
 
 
       </p>
@@ -346,7 +355,10 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
       \mathcal{L}=\mathcal{L}_{\text {contrast }}+\lambda \cdot \mathcal{L}_{\text {RTD }}
 
 \]
-<p> The Table below shows the benefits of using data augmentation techniques for sentence embedding tasks such as textual semantic similarity. This work also shows how data augmentation techniques can be applied for NLP tasks. Note that the original SimCSE demonstrates that different straightforward augmentation techniques can break the accuracy.
+<p> The Table below shows the benefits of using data augmentation techniques for sentence
+     embedding tasks such as textual semantic similarity. This work also shows how data augmentation 
+     techniques can be applied for NLP tasks. Note that the original SimCSE demonstrates that different 
+     straightforward augmentation techniques can break the accuracy.
 </p>
 
 <center>  
@@ -405,7 +417,10 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
                 <dt-cite key="cho2022fine"></dt-cite> <a href="https://github.com/j-min/CLIP-Caption-Reward"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
 
-            <p> Recent work uses CIDEr (i.e., text similarity) as a reward function to learn image captioning. This work uses CLIP image-Text similarity score as a reward for image captioning system. More specifically,  they use CLIP score <dt-cite key="hessel2021clipscore"></dt-cite> which is the cosine similarity score between CLIP \(f^{I}(I)\) images and \(f^{T}(c)\) text features.
+            <p> Recent work uses CIDEr (i.e., text similarity) as a reward function to learn image captioning. 
+                This work uses CLIP image-Text similarity score as a reward for image captioning system. More specifically,  
+                they use CLIP score <dt-cite key="hessel2021clipscore"></dt-cite> which is the cosine similarity score between 
+                CLIP \(f^{I}(I)\) images and \(f^{T}(c)\) text features.
         
 
             </p>
@@ -418,7 +433,9 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
             \[ \small R(I, c)=\text { CLIP }-S(I, c)=w * \max \left(\frac{f^{I}(I) f^{T}(c)}{\left|f^{I}(I)\right| \cdot\left|f^{T}(c)\right|}, 0\right) \]
 
 
-            <p> where \(I\) and \(c\) refers  to image and caption,  \(f^{I}(I)\) and \(f^{T}(c)\)  are the CLIP image and text encoders. The captioning model \(P_{\theta}(c \mid I)\) is optimize using  REINFORCE  <dt-cite key="williams1992simple"></dt-cite>  with a self-critical baseline <dt-cite key="rennie2017self"></dt-cite>:
+            <p> where \(I\) and \(c\) refers  to image and caption,  \(f^{I}(I)\) and \(f^{T}(c)\)  are the CLIP 
+                image and text encoders. The captioning model \(P_{\theta}(c \mid I)\) is optimize using  REINFORCE  
+                <dt-cite key="williams1992simple"></dt-cite>  with a self-critical baseline <dt-cite key="rennie2017self"></dt-cite>:
 
             </p>
 
@@ -439,7 +456,9 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
             <!-- Since CLIP is not trained with a language modeling objective, the captioning model trained with the CLIP-S 
                 reward often generates grammatically incorrect captions (e.g., repeated words; see Table 3).-->
 
-            <p> However, this results in grammatically incorrect captions (e.g., word repetition) as CLIP is not trained on language model objective as shown in the example below in Table 1 on MS COCO karpathy test split.</p>
+            <p> However, this results in grammatically incorrect captions (e.g., word repetition) 
+                as CLIP is not trained on language model objective as shown in the example below in Table 1 on 
+                MS COCO karpathy test split.</p>
                 
                 
       
@@ -459,7 +478,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
             <tr>
                 <td style="text-align:center">　CLIP-S</td>
-                <td style="text-align:center">　several rows of planes packed outside a termonal window are with fog outside </td>
+                <td style="text-align:center">　several rows of planes packed outside a terminal window are with fog outside </td>
                 <td></td>
 
             </tr>
@@ -467,15 +486,18 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
             
            
             <caption>
-                <font color="#6e6e6f"> <small> <small> Table1. Generated caption with different rewards. As CLIP is not an LM, the caption is grammatically incorrect. </small> </small> </font> <small>  <small></font> </caption>
+                <font color="#6e6e6f"> <small> <small> Table1. Generated caption with different rewards. As CLIP is
+                     not an LM, the caption is grammatically incorrect. </small> </small> </font> <small>  <small></font> </caption>
 
   </table>
 </center>  
 
   <p>
      To address this, this work proposed  to inject grammatical knowledge  (grammar head) into CLIP encoder with randomly generated  negative caption as noise (e.g., inserting/swapping/shuffling, etc.).
-     In particular, a two-layer perceptron will take CLIP text feature  \(f^{T}(c)\) as input and produces a probability \(c\) for grammatically correct caption with 
-     binary cross-entropy \(g(c) \in[0,1]\), where the grammar objective  is labeled \(y = 1\) for reference captions and \(y = 0\) for the negative captions: \(−y\) log g(c):
+     In particular, a two-layer perceptron will take CLIP text feature  \(f^{T}(c)\) as input and produces a 
+     probability \(c\) for grammatically correct caption with 
+     binary cross-entropy \(g(c) \in[0,1]\), where the grammar objective  is labeled \(y = 1\) for reference captions and \(y = 0\) 
+     for the negative captions: \(−y\) log g(c):
 
 
 
@@ -484,7 +506,9 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 
 
- <p>Next, the model is jointly finetuned with the text encoder and grammar head using both the original CLIP and grammar head objectives. Finally, the captioning model is trained with the grammar score and the  augmented  reward: </p>
+ <p>Next, the model is jointly finetuned with the text encoder and grammar head using both the original 
+     CLIP and grammar head objectives. Finally, the captioning model is trained with the grammar 
+     score and the  augmented  reward: </p>
 
 
   <p>
