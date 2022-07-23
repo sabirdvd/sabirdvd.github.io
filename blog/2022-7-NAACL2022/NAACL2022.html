@@ -56,7 +56,7 @@
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
-            width: 700px;
+            width: 600px;
         }
         
         .type1 {
@@ -187,7 +187,7 @@
                   (2) Adaptation stage, and then (3) Fine-tuning on downstream tasks.  </figcaption>
             </figure>
             --> 
-            
+            <center>  
             
             <table>
               <tr>
@@ -214,12 +214,14 @@
                 <caption> <font color="#6e6e6f"> <small> <small> Table 1. Performance comparison Between SimCSE and MCSE on STS-B tasks and SICK-Relatedness tasks. <small>  <small></font> </caption>
             
               </table>
-            
+            </center>
+
+
             <p> The Table 1 above shows the performance comparison STS-B and SICK-R: SICK-Relatedness tasks. 
                 The results show the benefits of these visual representations in non-visual downstream tasks such as STS-B. Also, the model is able to retrieve more diverse captions as shown in the Table 2 below. </p>
             
             </p>
-            
+             <center>  
             <table align="center">
                 <tr>
             
@@ -251,7 +253,7 @@
             
             </table>
             
-            
+        </center>
                 
             <hr>       
 
@@ -347,6 +349,8 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 <p> The Table below shows the benefits of using data augmentation techniques for sentence embedding tasks such as textual semantic similarity. This work also shows how data augmentation techniques can be applied for NLP tasks. Note that the original SimCSE demonstrates that different straightforward augmentation techniques can break the accuracy.
 </p>
 
+<center>  
+
 <table  align="center">
     <tr>
   
@@ -373,7 +377,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
   
     </table>
 
-
+</center>  
  
 
                 <!-- --------------------------------------------------------------------------------------------------------->
@@ -441,6 +445,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
       
 
         </p>
+        <center>  
         <table>
             <tr>
                 <td style="text-align:center">　Reward</td>
@@ -465,7 +470,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
                 <font color="#6e6e6f"> <small> <small> Table1. Generated caption with different rewards. As CLIP is not an LM, the caption is grammatically incorrect. </small> </small> </font> <small>  <small></font> </caption>
 
   </table>
-  
+</center>  
 
   <p>
      To address this, this work proposed  to inject grammatical knowledge  (grammar head) into CLIP encoder with randomly generated  negative caption as noise (e.g., inserting/swapping/shuffling, etc.).
@@ -487,7 +492,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 </p>
 
-
+<center>  
 <table>
     <tr>
 
@@ -519,6 +524,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
         <font color="#6e6e6f"> <small> <small> Table 2. caption with different rewards. The proposed <strong>G</strong>rammar head fixes the  grammar incorrectness.   <small>  <small></font> </caption>
 
 </table>
+</center>  
 <p> As shown in the Table 2 above the CLIP-S+Grammar, the caption is more diverse than CIDEr as the model describes rainy weather with <em> wet</em>. </p>
 
 
@@ -535,7 +541,13 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
              name <strong> family </strong> and <strong> sport</strong>.   
         </p>
 
-<p class="noteBoxes type4">
+        <center>
+                    
+  
+
+            <p class="noteBoxes type4"  align="left">  
+
+
 
     
   
@@ -547,8 +559,9 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
     spending free time with her  is <font color="red">###  </font>  1 and be good listener </small> <br>
 </p>
 
-
-<p class="noteBoxes type4">
+</center>
+<center>
+<p class="noteBoxes type4" align="left">
 
     
   
@@ -560,7 +573,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
     <small>  on may 27th 2006 did it have an NPA <font color="blue">basketball</font> game on tv ? yup miami 98 over detroit 83 </small> <br>
 </p>
-
+</center>
 
 
 <p>  As shown in the figure below the proposed model  Progressive Class-semantic Matching (PCM). The PCM is consist of three components: 
@@ -626,9 +639,11 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 \end{aligned}
 \]
 --> 
+<center>
+                    
+  
 
-
-<p class="noteBoxes type4">  
+<p class="noteBoxes type4"  align="left">  
 
     <small>  word : world (from AG news)   </small> <br>
   
@@ -638,7 +653,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 
 </p>
-
+</center> 
 
 
  <!-- --------------------------------------------------------------------------------------------------------->
@@ -970,9 +985,9 @@ same model weights since the input are the same.
                         <p>  Most previous work,  uses simple template to mimic the real sentences (e.g., <em>The {man/woman} laughed because</em>) for gender bias evaluation. However, these template is too simple and can trigger gender-specific continuations. This work proposed a real synthetic dataset for gender bias evaluation using prompts. This dataset is used to study biases between profession definitions and gender in language models as shown below. </p>
                     
 
-
-                      
-                        <p class="noteBoxes type3">
+                        <center>
+                    
+                        <p class="noteBoxes type3" align="left">
                            
                             <TT> <small>  <font color="gray"> A  <font color="#6495ed"><strong> silversmith </strong> </font>is  a <font color="#c71585"> metalworker  </font> 
                                  who  crafts  objects from silver  </small>  </TT>
@@ -993,8 +1008,8 @@ same model weights since the input are the same.
                         who  manages  diseases related to skin, hair and nails </small>  
                       <font color="#6e6e6f"> <font color="blue"> where ..  </font>  <small>  <small> </font> </TT>  <-  Final prompt  </small> </small>
                       </font>
-                       
-                        
+                                            
+                </center>
                         
                         </p>
                       
@@ -1016,6 +1031,7 @@ same model weights since the input are the same.
                                         
                                              </p>
                                    
+                                             <center> 
                                         <table  align="center">
                                             <tr>
                                                 <th colspan="3"></th> 
@@ -1040,7 +1056,7 @@ same model weights since the input are the same.
                                         
                                             </tr>
                                         </table>
-                                          
+                                    </center>
 
                                           <p>  This study shows that the noise that comes from images-caption extracted from the web without a strict filter. Most recent model such as CLIP is trained on this kinda data, and thus these pairs (no relation between image and the associated text) introduce noise to the model.</p>
 
