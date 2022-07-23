@@ -57,12 +57,13 @@
             padding: 10px;
             margin: 10px 0;
             width: 600px;
+            
         }
+      
         @media screen and (max-width: 480px){
     #wrap {
     max-width: auto;
     }
-}
         
         .type1 {
             border-color: #E76F51;
@@ -88,6 +89,7 @@
             width: 15px;
             padding-right: 10px;
         }
+    }
     </style>
 </head>
 
@@ -97,6 +99,7 @@
     }
 </style>
 
+        
 <dt-article class="centered">
 
     <h2>
@@ -146,7 +149,7 @@
             <p> The unsupervised SimSCE is used with dropout noise data augmentation. The model encodes the sentence 
             twice using  different dropout masks. For given  sentence \(x_{i}\), the sentence is encoded twice via dropout masks 
             \(\boldsymbol{h}_{i}^{z}=g_{\phi}\left(f_{\theta}\left(x_{i}, z\right)\right)\) and  \(\boldsymbol{h}_{\dot{i}}^{z^{\prime}}=g_{\phi}\left(f_{\theta}\left(x_{i}, z^{\prime}\right)\right)\)
-            where \(z\) and \(z^{\prime}\) refer to diffrent dropout masks, \(f_{\theta}\)  is a pre-trained language encoder BERT   and \(g_{\phi}\) 
+            where \(z\) and \(z^{\prime}\) refer to different dropout masks, \(f_{\theta}\)  is a pre-trained language encoder BERT   and \(g_{\phi}\) 
             is the projection of the head after the <tt> [CLS]</tt> token. The training object can be written as:
             
             </p>
@@ -168,11 +171,11 @@
             \boldsymbol{s}_{i}^{z}=g_{\phi_{1}}\left(f_{\theta}\left(x_{i}, z\right)\right), \boldsymbol{v}_{i}=g_{\phi_{2}}\left(f^{v}\left(y_{i}\right)\right)
             \]
             
-            <p>  where \(f^{v}(\cdot) \) is a fixed pre-trained image encoder ResNet <dt-cite key="he2016deep"></dt-cite> , and \(g_{\phi_{1}}(\cdot)\), \(g_{\phi_{2}}(\cdot)\) are the projection head between 
+            <p>  where \(f^{v}(\cdot) \) is a fixed pre-trained image encoder ResNet <dt-cite key="he2016deep"></dt-cite>, and \(g_{\phi_{1}}(\cdot)\), \(g_{\phi_{2}}(\cdot)\) are the projection head between 
                 the two modality. The projection head is a single-layer MLPs with Tanh activation. 
             
               
-                The multimodal contrastive learning objective can written as
+                The multimodal contrastive learning objective can written as:
             </p>
             
             
@@ -180,12 +183,14 @@
             \ell_{i}^{\mathrm{M}}=-\sum_{\mathrm{z} \in\left\{z_{i}, z_{i}^{\prime}\right\}} \log \frac{e^{\operatorname{sim}\left(\mathbf{s}_{i}^{z}, \mathbf{v}_{i}\right) / \tau^{\prime}}}{\sum_{j=1}^{N} e^{\operatorname{sim}\left(\mathbf{s}_{i}^{z}, \mathbf{v}_{j}\right) / \tau^{\prime}}} \]
             
             
-            <p> The \( \lambda \) is the trade-off hyperparameter between the two objectives. The final loss with the two objectives can be written as:
+            <p> The \( \lambda \) is the trade-off hyperparameter between the two objectives. The final loss with the 
+                two objectives:
             </p>
             
             \[ \small  \ell_{i}=\ell_{i}^{S}+\lambda \ell_{i}^{M} \]
             
-            
+           <p> The Table 1 below shows the performance comparison STS-B and SICK-R: SICK-Relatedness tasks. 
+                The results show the benefits of these visual representations in non-visual downstream tasks such as STS-B.  </p>
             
             <!--
                   <figure>
@@ -218,14 +223,14 @@
                 </tr>
             
             
-                <caption> <font color="#6e6e6f"> <small> <small> Table 1. Performance comparison Between SimCSE and MCSE on STS-B tasks and SICK-Relatedness tasks. <small>  <small></font> </caption>
+                <caption> <font color="#6e6e6f"> <small> <small> Table 1. Performance comparison Between SimCSE and MCSE on 
+                    STS-B tasks and SICK-Relatedness tasks. <small>  <small></font> </caption>
             
               </table>
             </center>
 
 
-            <p> The Table 1 above shows the performance comparison STS-B and SICK-R: SICK-Relatedness tasks. 
-                The results show the benefits of these visual representations in non-visual downstream tasks such as STS-B. Also, the model is able to retrieve more diverse captions as shown in the Table 2 below. </p>
+            <p> Also, the model is able to retrieve more descriptive captions as shown in Table 2 below. </p>
             
             </p>
              <center>  
@@ -256,7 +261,7 @@
               
             
                 <caption>
-                    <font color="#6e6e6f"> <small> <small> Table 2. Retrieved examples comparison between SimCSE and MCSE on Flickr30k test set.  <small>  <small></font> </caption>
+                    <font color="#6e6e6f"> <small> <small> Table 2. Retrieved examples comparison between SimCSE and MCSE on Flickr30k.  <small>  <small></font> </caption>
             
             </table>
             
@@ -270,13 +275,19 @@
                 <dt-cite key="chuang2022diffcse"></dt-cite> <a href="https://github.com/voidism/DiffCSE"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
                 
+                
 
-<p> Data augmentation with contrastive learning show remarkable results in computer vision <dt-cite key="chen2020simple"></dt-cite> However, in NLP (e.g., deletion, replacement) often change the meaning of the sentence and and thus hurt the accuracy. The work of SimSCE <dt-cite key="gao2021simcse"></dt-cite> found that constructing positive pairs via a simple dropout-based augmentation works much better than more complex augmentations such as word deletions or replacements based on synonyms or masked language models.  The ideal sentence should not be invariant augmentation. 
+<p> Data augmentation with contrastive learning shows remarkable results in computer vision <dt-cite key="chen2020simple"></dt-cite>. 
+    However, text augmentation in NLP (e.g., deletion, replacement) often change the meaning of the sentence and  thus hurt the accuracy. 
+    The work of SimSCE <dt-cite key="gao2021simcse"></dt-cite> found that constructing positive pairs via a 
+    simple dropout-based augmentation works much better than more complex augmentations such as 
+    word deletions or replacements based on synonyms or masked language models.  
+    <!--The ideal sentence should not be invariant augmentation. --> 
 
      <p> This work uses equivariant contrastive learning  from Computer Vision <dt-cite key="dangovski2021equivariant"></dt-cite> 
         which improves vision representation learning by using a contrastive loss on insensitive image transformations
         (e.g., grayscale). The same idea is applied to NLP by employing  a generative model like  
-        ELECTRA <dt-cite key="clark2020electra"></dt-cite>  to predict  different  outputs  that equivariant to Mask Language Model. 
+        ELECTRA <dt-cite key="clark2020electra"></dt-cite>  to predict  different  outputs  that are equivariant to Mask Language Model. 
     
 </p>
 
@@ -287,11 +298,13 @@
     </p>
    
 
-     .</p>
+   
 
      <figure align="center">
         <img src="SimSCE_en.png" alt="Trulli" style="width:95%">
-        <figcaption> Figure. Overview of DiffCSE. The left side is the standard SimCSE via dropout with regular contrastive loss. The right side is the proposed model using a condition ELECTRA model to predict diffrent \(x\) and \(x^\prime\) from the input sentence vector \(h\). 
+        <figcaption> Figure 1. Overview of DiffCSE. The left side is the standard SimCSE via dropout with regular contrastive loss. 
+            The right side is the proposed model using a condition ELECTRA model to predict different \(x\) and \(x^\prime\) 
+            from the input sentence vector \(h\). 
 
             
         </figcaption>
@@ -311,8 +324,8 @@
 f(T(x))=T^{\prime}(f(x)) \text {. }
 \]
 --> 
- <p> In particular, they proposed an extension to SimSCE with successful data augmentation with difference 
-     prediction objection with that condition to the sentence embedding. For given input sentence \(x\) the 
+ <p> In particular, they proposed an extension to SimSCE model with successful data augmentation with difference 
+     prediction objective that condition to the sentence embedding. For given input sentence \(x\) the 
      SimCSE provides a positive example via dropout masks and the same training objective: 
 
  </p>
@@ -324,14 +337,10 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
       \]
 
       <p> where \(N\) is the batch size for input batch, \(sim\) is the cosine similarity
-    function, and \(\tau\) is a hyperparameter. </p>      
-    </p>
-
-
-    <p> As shown in Figure 1, to generate different conditional predictions  an ELECTRA model <dt-cite key=""></dt-cite> is used,
+    function, and \(\tau\) is a hyperparameter. Then, As shown in Figure 1, to generate different conditional predictions  an ELECTRA model <dt-cite key="clark2020electra"></dt-cite> is used,
          which  contains a generator and discriminator. For a given 
-        sentence with length \(T\), \(x= x_{1}, x_{2},...x_{T}\), a random mask is applied
-        \(m= m_{1}, m_{2},...m_{T}\), \(m_{t}\) \(\in[0,1]\) on \(x\) to obtain \(x^\prime =m \cdot x\).
+        sentence with length \(T\), \(x= x_{1}, x_{2},..,x_{T}\), a random mask is applied
+        \(m= m_{1}, m_{2},.., m_{T}\), \(m_{t}\) \(\in[0,1]\) on \(x\) to obtain \(x^\prime =m \cdot x\).
         Then, another BERT model (MLM) is employed to generate \(G\) to recover the randomly 
         masks token \(x^\prime\) and edited the sentence  \(x^{\prime \prime}  \ = G(x^\prime) \). Finally,
         the discriminator \(D\) is used to replaced the Token Detection task. The cross-entropy loss
@@ -360,11 +369,12 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
       \mathcal{L}=\mathcal{L}_{\text {contrast }}+\lambda \cdot \mathcal{L}_{\text {RTD }}
 
 \]
-<p> The Table below shows the benefits of using data augmentation techniques for sentence
+<p> Table 1 below shows the benefits of using data augmentation techniques for sentence
      embedding tasks such as textual semantic similarity. This work also shows how data augmentation 
      techniques can be applied for NLP tasks. Note that the original SimCSE demonstrates that different 
-     straightforward augmentation techniques can break the accuracy.
+     straightforward augmentation techniques (e.g., crop, word deletion, synonym replacement. etc.) can break the accuracy.
 </p>
+
 
 <center>  
 
@@ -390,7 +400,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
       </tr>
   
   
-      <caption> <font color="#6e6e6f"> <small> <small>  Table. Performance comparison on STS-B tasks and SICK-Relatedness tasks. <small>  <small></font> </caption>
+      <caption> <font color="#6e6e6f"> <small> <small>  Table 1. Performance comparison on STS-B tasks and SICK-Relatedness tasks. <small>  <small></font> </caption>
   
     </table>
 
@@ -422,7 +432,8 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
                 <dt-cite key="cho2022fine"></dt-cite> <a href="https://github.com/j-min/CLIP-Caption-Reward"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
 
-            <p> Recent work uses CIDEr (i.e., text similarity) as a reward function to learn image captioning. 
+            <p> Recent work uses CIDEr (i.e., text similarity) as a reward function to learn more descriptive image captions 
+                <dt-cite key="rennie2017self,li2020oscar"></dt-cite>. 
                 This work uses CLIP image-Text similarity score as a reward for image captioning system. More specifically,  
                 they use CLIP score <dt-cite key="hessel2021clipscore"></dt-cite> which is the cosine similarity score between 
                 CLIP \(f^{I}(I)\) images and \(f^{T}(c)\) text features.
@@ -505,7 +516,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
      for the negative captions: \(−y\) log g(c):
 
 
-
+     
   </p>
 <p> \[ g(c)=\operatorname{sigmoid}\left(\operatorname{MLP}\left(f^{T}(c)\right)\right) \in[0,1] \] </p>
 
@@ -520,6 +531,10 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
     \[ R(I, c)=\operatorname{CLIP}-\mathrm{S}(I, c)+\lambda g(c)  \]
 
 </p>
+
+<p> As shown in Table 2 below, the proposed CLIP-S+Grammar, the caption is more diverse than CIDEr as the model 
+    describes rainy weather with <em> wet</em>. </p>
+
 
 <center>  
 <table>
@@ -550,11 +565,10 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
  
 
     <caption>
-        <font color="#6e6e6f"> <small> <small> Table 2. caption with different rewards. The proposed <strong>G</strong>rammar head fixes the  grammar incorrectness.   <small>  <small></font> </caption>
+        <font color="#6e6e6f"> <small> <small> Table 2. Caption with different rewards. The proposed <strong>G</strong>rammar head fixes the  grammar incorrectness.   <small>  <small></font> </caption>
 
 </table>
 </center>  
-<p> As shown in the Table 2 above the CLIP-S+Grammar, the caption is more diverse than CIDEr as the model describes rainy weather with <em> wet</em>. </p>
 
 
 
@@ -606,7 +620,8 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 
 <p>  As shown in the figure below the proposed model  Progressive Class-semantic Matching (PCM). The PCM is consist of three components: 
-    (1) class semantic representation \( C_{i} \) which construct input to the BERT by concatenating sentence with class semantic-related words; (2) standard K-way classifier with two-layer MLP and it will output a set of logits \(o_{i}^{s}\); (3) a class-sentence matching classifier via 
+    (1) class semantic representation \( C_{i} \) which construct input to the BERT by 
+    concatenating sentence with class semantic-related words; (2) standard K-way classifier with two-layer MLP and it will output a set of logits \(o_{i}^{s}\); (3) a class-sentence matching classifier via 
     matching logits \( o_{i}^{m} \) with Sigmoid function is applied to convert it into the probabilistic form. 
     
 </p>
@@ -614,7 +629,8 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 
    <p>  The model relies on initialization stage of the classes-to-related 
-    words.  Therefore, to initialize the class-related words \( C_{k} \) for PCM: (1) fine-tune K-way classifier on labeled data; pass labeled text into fine-tuned model; (2) calculate attention value for each token; (3) retain top-\(j\) attend word for each class  \( C_{k} \).</p>
+    words.  Therefore, to initialize the class-related words \( C_{k} \) for PCM: (1) 
+    fine-tune K-way classifier on labeled data; pass labeled text into a fine-tuned model; (2) calculate attention value for each token; (3) retain top-\(j\) attend word for each class  \( C_{k} \).</p>
 
   <!---  
 <p align="center">
@@ -627,12 +643,14 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
         <figure align="center">
            
             <img src="matching.png" alt="Trulli" style="width:60%">
-            <figcaption> Figure. Illustration of the proposed PCM model. The arrow with same color shows the flow of the information into the model. \(c_{K}\) denotes the set of class semantic-related words, <em> Avg</em> is the average word embedding, <em>GAP</em> is the global average pooling of the input text features.  </figcaption>
+            <figcaption> Figure. Illustration of the proposed PCM model. The arrow with the same color shows the flow of the information into the model. \(c_{K}\) denotes the set of class semantic-related words, <em> Avg</em> is the average word embedding, <em>GAP</em> is the global average pooling of the input text features.  </figcaption>
 
           </figure>
         
 
-   <p>In the table below the authors show some examples from AG news and the proposed model can relate more accurate topics than fine-tuned topics BERT as shown color <font color="red"> red</font> shows with unrelated topics. 
+   <p>As shown in the example below the authors show some examples from AG news and the 
+       proposed model can relate more accurate topics than fine-tuned topics BERT as 
+       shown in color <font color="red"> red</font> with unrelated topics. 
 </p>
 
 
@@ -717,18 +735,18 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 <p>&clubs; <strong>Is Neural Topic Modelling Better than Clustering?</strong><dt-cite key="zhang2022neural"></dt-cite> <a href="https://github.com/hyintell/topicx"><i class="fab fa-github" style='font-size:20px'></i></a></strong></p>
 
 
-<p> Recent Neural based approaches </strong><dt-cite key="grootendorst2022bertopic"></dt-cite> (via contextualized 
+<p> Recent Neural-based approaches </strong><dt-cite key="grootendorst2022bertopic"></dt-cite> (via contextualized 
     embeddings) achieved a breakthrough in topic modeling. 
-    However, what about clustering via contextualized embeddings for topic modeling. This work tried to answer this question 
-    by using clustering via contextualized embeddings to extract topic.  The main idea is to rely on semantically 
-    similar words or documents that are close to each other in vector space. Each cluster can be seen as a topic 
+    However, what about traditional clustering via contextualized embeddings for topic modeling. This work tried to answer this question 
+    by using clustering via contextualized embeddings to extract topics.  The main idea is to rely on semantically 
+    similar words or documents that are close to each other in the vector space. Each cluster can be seen as a topic 
     if grouped together. Also compared to current neural topic models, clustering-based models are more simple,
      and efficient and can generate commendable topics, which can be applied as an alternative.
  </p>   
     
     
     <p>The proposed method can be summarized in the following steps: 
-        First, they use pre-trained language models to obtain contextualized embeddings. 
+        First, they (the authors) use pre-trained language models to obtain contextualized embeddings. 
         Second, they apply K-Means to cluster similar documents (each cluster will be regarded as a topic). 
         Third, they adopt a weighting method to select representative words as topics.
   </p>
@@ -816,8 +834,8 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
     <figure align="center">
         <img src="imagination.png" alt="Trulli" style="width:90%">
-        <figcaption> Figure 1. Illustration of the proposed Imagination-Augmented Natural Language Understanding model. GAN is used 
-            to encode the text and the cross model encoder \(E_{c}\) learns the imagination-augmented language representation. The learning
+        <figcaption> Figure 1. Illustration of the proposed Imagination-Augmented Natural Language Understanding model. 
+            GAN is used  to generate the image and the cross model encoder learns the imagination-augmented language representation. The learning
             process is divided into two setups: (1) pre-trained textual transformer and (2) fine-tune the visual-augmented cross-model encoder on
             downstream tasks such GLUE. 
 
@@ -834,9 +852,10 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
    -->
 
   
-    <p><strong> Image Generator.</strong>  For each piece of input text \(x\) , they  treat it as the prompt and use the VQGAN 
+    <p><strong> Image Generator.</strong>  Each piece of input text \(x\)
+        is treated as a prompt and VQGAN is used 
         <dt-cite key="esser2021taming"></dt-cite>
-        model to render the imagination. At each optimization step, CLIP model is used to assess how well the generated
+         to render the imagination. At each optimization step, CLIP model is used to assess how well the generated
     image corresponds to the text: </p>   
 
 
@@ -858,7 +877,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
    
 <p><strong>Cross-Modal Encoder.</strong>   The Cross-Modal Encoder takes the image and text and fuses them together. 
     The output will be representations of the imagination augmented in a bi-directional way. In particular, the Cross-Model 
-    encoder uses a vision transformer with a late fusion layer. For each  modality self-attention (SA) is applied 
+    encoder uses a vision transformer with a late fusion layer. For each  modality, the self-attention (SA) is applied 
     to the text or the image as: 
 </p>
 
@@ -872,7 +891,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
         \(W\) is the weight matrix for multiple heads.  </p>
     
        
-      <p>  Then, they apply late fusion on the text feature \(t\) and visual feature \(v\) to 
+      <p>  Then, they (the authors) apply late fusion on the text feature \(t\) and visual feature \(v\) to 
           construct the cross-modal feature. Given the set of visual features \(S_{v}\) and textual features \(S_{t}\), 
         the fused embedding  \(X_{S}\) can be given:</p>
 
@@ -885,13 +904,13 @@ X_{S}=\left[\operatorname{ReLU}\left(W_{t} S_{t}+b_{t}\right), \operatorname{ReL
 
 <p> <strong> Visually-Supervised Transformer.</strong> VOKEN <dt-cite key="tan2020vokenization"></dt-cite> is used 
 to learn token related images. The  VOKEN is trained on two objectives:
-(1) the original BERT pretrained with Mask Language Model while (2) second objective 
-to predict  the token associated with external visual context. Note that the two objectives share the 
+(1) the original BERT pretrained with Mask Language Model while (2) the second objective 
+to predict  the token associated with  an  external visual context. Note that, the two objectives share the 
 same model weights since the input are the same.
    
 
 <p> <strong>Learning Procedure.</strong> The learning procedure is divided into two steps: (1) pre-trained 
-    the visually supervised Transformer, (2) fine-tune the proposed framework  with imagination on downstream tasks. </p>
+    the visually supervised Transformer, and (2) fine-tune the proposed framework  with imagination on downstream tasks. </p>
     
     <p><strong>Step 1: Visually-Supervised Transformer.</strong>  As we mentioned above, VOKEN 
         proposed a voken classification task. Given a set of tokens with masks, 
@@ -912,29 +931,28 @@ same model weights since the input are the same.
     The Voken enables the matching between the general language token and its related image from COCO dataset. </p>
 
  
-<p><strong>Step 2: Imagination-augmented Fine-tuning:</strong> The finetuing is preforme on 
-    downstream tasks like GLUE with cross-entropy loss: </p>
+<p><strong>Step 2: Imagination-augmented Fine-tuning:</strong> The fine-tuning is performed on downstream tasks like GLUE with cross-entropy loss: </p>
 
 \[\small
 {L}_{\text {Imagine }}=-\sum_{j=1}^{|D|} \sum_{k=1}^{K} y_{k} \log p_{k}\left(d_{j}(\boldsymbol{t} ; \boldsymbol{v}) \mid D\right)
 \]
 
 <p> where \(j\) refer to the \(j\)-th data sample in the dataset \(D\), \(K\) is the class number, \(p_{k}\) represents the 
-    conditional probability of \(d_{j}\). The model relies only on the langauge model during the fine-tuning: 
+    conditional probability of \(d_{j}\). The model relies only on the language model during the fine-tuning: 
 </p>
 
 \[\small
 {L}_{\text {Lang }}=-\sum_{j=1}^{|D|} \sum_{k=1}^{K} y_{k} \log p_{k}\left(d_{j}(\boldsymbol{t}) \mid D\right)
 \] 
 
-<p> Finally, the imagination-augmented loss and lanugage model loss are summed 
-    up with blanced factor \( \lambda \)s durining the training: </p>
+<p> Finally, the imagination-augmented loss and language model loss is summed up with balanced factor \( \lambda \)s during the training: </p>
 \[
 {L}=\lambda {L}_{\text {Imagine }}+(1-\lambda){L}_{\text {Lang }}
 \] 
 
 
-<p>  Figure 2 below shows that adding visual information imagination-augmented helps give the model a context and thus the predictions are more aligned with human. </p>
+<p>  Figure 2 below shows that adding visual information imagination-augmented helps give the model a context and thus the predictions are 
+    more aligned with human score. </p>
 
 
 <figure align="center">
@@ -1056,7 +1074,7 @@ same model weights since the input are the same.
                                     <p> This work analyzed conversations with images in  open domain scenario (ImageChate dataset) <dt-cite key="shuster2018image"></dt-cite>. The question is tried to answer 
                                         Is the conversation topic always related to the image ? if not, how does the conversation topic evolve? and how beneficial the image to the conversation.
                                         
-                                        The results show (1) by utterance: that only 69% of the conversation is related to images, and (2) by conversion only 39% of the object is mentioned.  The test images have 45% image objects information, 24% of the conversation contains non-object information such as the description of events in the image, and 31% no information about the image at all. The Figure shows examples of some of the conversation mentioned in the study.
+                                        The results show (1) by utterance: that only 69% of the conversation is related to images, and (2) by conversation only 39% of the object is mentioned.  The test images have 45% image objects information, 24% of the conversation contains non-object information such as the description of events in the image, and 31% no information about the image at all. The Figure shows examples of some of the conversation mentioned in the study.
                                         
                                              </p>
                                    
@@ -1315,7 +1333,7 @@ same model weights since the input are the same.
                                     With Adaptive Attention on Visual and Non-Visual Words}, author={Zhang, Xuying and Sun, Xiaoshuai and Luo, Yunpeng and Ji, Jiayi and Zhou, Yiyi and Wu, Yongjian and Huang, Feiyue and Ji, Rongrong}, booktitle={Proceedings
                                     of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages={15465--15474}, year={2021} } @inproceedings{wang2020compare, title={Compare and reweight: Distinctive image captioning using similar images
                                     sets}, author={Wang, Jiuniu and Xu, Wenjia and Wang, Qingzhong and Chan, Antoni B}, booktitle={European Conference on Computer Vision}, pages={370--386}, year={2020}, organization={Springer} } @article{gao2021simcse,
-                                    title={{SimCSE}: Simple Contrastive Learning of Sentence Embeddings}, author={Gao, Tianyu and Yao, Xingcheng and Chen, Danqi}, journal={arXiv preprint arXiv:2104.08821}, year={2021} } @article{conneau2017supervised,
+                                    title={{SimCSE}: Simple Contrastive Learning of Sentence Embeddings}, author={Gao, Tianyu and Yao, Xingcheng and Chen, Danqi}, journal={arXiv preprint arXiv:2104.08821}, url={https://arxiv.org/pdf/2104.08821.pdf}, year={2021} } @article{conneau2017supervised,
                                     title={Supervised learning of universal sentence representations from natural language inference data}, author={Conneau, Alexis and Kiela, Douwe and Schwenk, Holger and Barrault, Loic and Bordes, Antoine}, journal={arXiv
                                     preprint arXiv:1705.02364}, year={2017} } @article{radford2021learning, title={Learning transferable visual models from natural language supervision}, author={Radford, Alec and Kim, Jong Wook and Hallacy, Chris and
                                     Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and others}, journal={arXiv preprint arXiv:2103.00020}, year={2021} } @inproceedings{huang2017speed,
