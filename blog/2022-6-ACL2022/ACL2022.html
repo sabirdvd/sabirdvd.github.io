@@ -63,7 +63,7 @@
   	border-radius: 5px;
 	padding: 10px;
 	margin: 10px 0;
-	width: 300px;
+	width: 600px;
 }
 
 .type1
@@ -161,6 +161,7 @@ token in the upper layers. These effects are much less pronounced in CLIP than t
 </p>
 
 
+<center>  
 
 <table>
   <tr>
@@ -184,7 +185,7 @@ token in the upper layers. These effects are much less pronounced in CLIP than t
     <caption> <font color="#6e6e6f"> <small> <small>  SemEval-2017 Semantic Textual Similarity (STS) Benchmark <dt-cite key="cer2017semeval"></dt-cite>. <small>  <small></font> </caption>
 
   </table>
-
+</center>  
 
   <p>
     In summary, the final finding of this work is that the visual semantic pre-training is beneficial not only for visual representation but also for
@@ -222,6 +223,7 @@ distillation techniques from CLIP. In particular, the distill information is fro
 </figure>
 
 
+	    <center>  
 <table>
   <tr>
 
@@ -253,7 +255,8 @@ distillation techniques from CLIP. In particular, the distill information is fro
     <caption> <font color="#6e6e6f"> <small> <small>  SemEval-2017 Semantic Textual Similarity (STS) Benchmark <dt-cite key="cer2017semeval"></dt-cite>. <small>  <small></font> </caption>
 
   </table>
-
+</center>
+	    
 <p> The table above shows the benefits of these visual representations in non-visual downstream tasks such as STS-B and  (Quora Question Pairs identification) QQP tasks.  </p>
 
 </p>
@@ -316,8 +319,11 @@ model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 
 </p>
 
+		    
 <p> <small> <strong> Zero-shot:</strong> </small> </p>
-<p class="noteBoxes type3">  <TT> <small>  <font color="#6495ed"> Translate English to French: </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- task description </small> </small> </font>
+		    <center>
+			      
+<p class="noteBoxes type3"  align="left">  <TT> <small>  <font color="#6495ed"> Translate English to French: </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- task description </small> </small> </font>
  <br>
    <font color="#c71585"> <TT>  <small>Cheese  </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <- prompt </small> </small> </font>
 </p>
@@ -331,7 +337,7 @@ model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
     <br>
    <font color="#c71585"> <TT>  <small>Cheese  </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <- prompt </small> </small> </font>
 </p>
-
+</center>
 
 
 <p>This work proposes T\(5\) based (smaller version) few-shot learner (\(220\)M/\(740\)M) for language and vision tasks. The model uses  two pre-training objectives:
@@ -485,13 +491,15 @@ can achieve better state-of-the-art performance with fast retrieval.
 
 </p>
 
-<p class="noteBoxes type4">
+	 <center>
+<p class="noteBoxes type4" align="left">
 
 <small>  a) Marriage equality law passed in Rhode Island  </small> <br>
 
 <small>  b) Rhode Island becomes the 10th state to enact
 marriage equality </small>
 </p>
+		  </center>
 
 <p>
    Although cross-encoder achieved SOTA performance across different benchmarks, they are more complex and required more resources.
@@ -505,12 +513,12 @@ The model consists of: a BERT encoder, Predicate Argument Spans layer, Aggregati
     representation is fed into BERT-based Semantic Role Labeling (SRL) tagger to obtain predicates and relevant arguments. After that,
     the predicted output is gathered to generate predicate-argument spans. For example:
 </p>
-
-<p class="noteBoxes type4">
+ <center>
+<p class="noteBoxes type4" align="left">
 
 <small>   He slices tomatoes in the kitchen  <font color="brown"><small>(He, slices), (slices, tomatoes), (slices, in, the, kitchen)</font>  </small> </small>
 </p>
-
+ </center>
 <p>
 
 By looking at this sentence, the  generated predicate slices the sentence into three arguments
@@ -605,7 +613,7 @@ Since the bias terms are additive they only correspond to a fraction of the para
 </p>
 
 
-
+ <center>
 <table>
   <tr>
 
@@ -635,7 +643,8 @@ Since the bias terms are additive they only correspond to a fraction of the para
     <caption> <font color="#6e6e6f"> <small> <small>  Fine-tuning using a subset of the bias parameters BERT-base. <small>  <small></font> </caption>
 
   </table>
-
+ </center>
+	    
 <p> The table shows that the model still achieves a good or better result with only 0.09% of parameters being fine-tuned.
  </p>
 
@@ -646,15 +655,15 @@ Since the bias terms are additive they only correspond to a fraction of the para
 
 <p> This paper shows that large language models can self-diagnosis (SD) the bias with a simple prompting template:  </p>
 
-
-<p class="noteBoxes type3">  <TT> <small>  <font color="#6495ed"> Naturally: the nurse is a ___   </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- prompt </small> </small> </font>
+ <center>
+<p class="noteBoxes type3" align="left">  <TT> <small>  <font color="#6495ed"> Naturally: the nurse is a ___   </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- prompt </small> </small> </font>
  <br>
  <TT> <small>  <font color="#6495ed"> woman. </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- GPT\(2\) </small> </small> </font>
 
     <br>
    <font color="#c71585"> <TT>  <small> bit of an expert on the topic. </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <- GPT\(2\)+SD (prompting: <strong>This is a sexist</strong>)</small></small></font>
 </p>
-
+ </center>
 <p>  As shown in the example above the model is self-aware of the bias and capable of debiasing its output.
     In this example, feedback is given to the model SD as prompts <em> this sentence is sexist</em>, and then the model
     debias its previous output with an output to fix the bias.</p>
