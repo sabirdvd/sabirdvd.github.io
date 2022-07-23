@@ -327,10 +327,12 @@ model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
  <br>
    <font color="#c71585"> <TT>  <small>Cheese  </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <- prompt </small> </small> </font>
 </p>
+</center>
 
-
+	   <center>
 <p> <small> <strong> One-shot:</strong> </small> </p>
-<p class="noteBoxes type3">  <TT> <small>  <font color="#6495ed"> Translate English to French: </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- task description </small> </small> </font>
+	
+<p class="noteBoxes type3"  align="left">  <TT> <small>  <font color="#6495ed"> Translate English to French: </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- task description </small> </small> </font>
  <br>
  <TT> <small>  <font color="#6495ed"> sea otter ==> loutre de mer  </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <- example </small> </small> </font>
 
@@ -678,8 +680,8 @@ Since the bias terms are additive they only correspond to a fraction of the para
 
 <p> This work proposes a simple a memory enhanced prompting for GPT-\(3\)  as shown in the following example:</p>
 
-
-<p class="noteBoxes type3">  <TT> <small>  <font color="#6495ed"> What word is similar to good ? </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <-   User  </small> </small> </font>
+ <center>
+<p class="noteBoxes type3" align="left">  <TT> <small>  <font color="#6495ed"> What word is similar to good ? </font>  </small>  </TT>     <font color="#6e6e6f">  <small>  <small> <-   User  </small> </small> </font>
  <br>
    <font color="#c71585"> <TT>  <small>The homophone of good is: wood  </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <- GPT-\(3\) </small> </small> </font>
  <br>
@@ -692,7 +694,7 @@ Since the bias terms are additive they only correspond to a fraction of the para
     <font color="#c71585"> <TT>  <small> (retrieves from memory) amazed  </small> </TT> </font>   <font color="#6e6e6f">  <small>  <small> <- GPT-\(3\) + memory  </small> </small> </font>
 
 </p>
-
+ </center>
 <p> The user interacts  with the model, and the model can <strong> memorize </strong> this clarification and then re-call it
     when the user asks a similar question to avoid making the same mistakes.
  </p>
