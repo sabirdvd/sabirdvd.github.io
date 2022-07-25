@@ -12,7 +12,7 @@
   - PUBLISHED Date
   affiliations:
   - Universitat Politècnica de Catalunya: https://www.upc.edu
-  -  X July  2022 (first draft)
+  -  25 July  2022 
  
   
 
@@ -57,16 +57,18 @@
             padding: 10px;
             margin: 10px 0;
             width: 600px;
+
+            
             
         }
       
-        @media screen and (max-width: 480px){
-    #wrap {
-    max-width: 400px;
+        @media screen and (max-width: 540px) {
+    .view {
+        width: 400px;
     }
-      }
-        
-      
+}
+  
+
         .type1 {
             border-color: #E76F51;
             background-color: rgba(231, 111, 81, 0.1);
@@ -133,17 +135,17 @@
 
 
            <p>Humans rely on different modalities such as vision, language, and sound to capture an experience.
-                Recent works successfully show that by integrating visual semantics into a pre-trained language model 
+                Recent works  <dt-cite key="li2020unimo,lu2022imagination,li2022blip"></dt-cite> successfully show that by integrating visual semantics into a pre-trained language model 
                 will improve its generalization capability and thus improve performance on various NLP tasks such 
-                as textual semantic similarity
-            <dt-cite key="li2020unimo"></dt-cite>. </p>
+                as textual semantic similarity. </p>
             
             
             
 
            
 
-            <p> Following previous trends, this work extends an existing sentence embedding method (i.e., SimSCE <dt-cite key="gao2021simcse"></dt-cite>) with visual information. The results show that adding visual information to a pre-trained sentence embedding model can be beneficial to learn a better sentence representation. Also, it can improve the alignment and maintain the uniformity of the embedding space.
+            <p> Following previous trends, this work extends an existing sentence embedding method (i.e., SimSCE 
+                <dt-cite key="gao2021simcse"></dt-cite>) with visual information. The results show that adding visual information to a pre-trained sentence embedding model can be beneficial to learn a better sentence representation. Also, it can improve the alignment and maintain the uniformity of the embedding space.
                
                 
             </p>
@@ -177,7 +179,7 @@
                 the two modality. The projection head is a single-layer MLPs with Tanh activation. 
             
               
-                The multimodal contrastive learning objective can written as:
+                The multimodal contrastive learning objective can be written as:
             </p>
             
             
@@ -191,8 +193,9 @@
             
             \[ \small  \ell_{i}=\ell_{i}^{S}+\lambda \ell_{i}^{M} \]
             
-           <p> The Table 1 below shows the performance comparison STS-B and SICK-R: SICK-Relatedness tasks. 
-                The results show the benefits of these visual representations in non-visual downstream tasks such as STS-B.  </p>
+           <p> Table 1 below shows the performance comparison on STS-B and SICK-R: SICK-Relatedness tasks. 
+               The results show the benefits of these visual 
+               representations in non-visual downstream tasks such as STS-B.  </p>
             
             <!--
                   <figure>
@@ -280,7 +283,7 @@
                 
 
 <p> Data augmentation with contrastive learning shows remarkable results in computer vision <dt-cite key="chen2020simple"></dt-cite>. 
-    However, text augmentation in NLP (e.g., deletion, replacement) often change the meaning of the sentence and  thus hurt the accuracy. 
+    However, text augmentation in NLP (e.g., deletion, replacement) often changes the meaning of the sentence and  thus hurt the accuracy. 
     The work of SimSCE <dt-cite key="gao2021simcse"></dt-cite> found that constructing positive pairs via a 
     simple dropout-based augmentation works much better than more complex augmentations such as 
     word deletions or replacements based on synonyms or masked language models.  
@@ -326,9 +329,10 @@
 f(T(x))=T^{\prime}(f(x)) \text {. }
 \]
 --> 
- <p> In particular, they proposed an extension to SimSCE model with successful data augmentation with difference 
-     prediction objective that condition to the sentence embedding. For given input sentence \(x\) the 
+ <p> In particular, they proposed an extension to SimSCE model with successful data 
+     augmentation with different prediction objectives that condition to the sentence embedding. For a given input sentence \(x\) the 
      SimCSE provides a positive example via dropout masks and the same training objective: 
+
 
  </p>
 
@@ -430,13 +434,13 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 
 
-            <p>&clubs;<strong> Fine-grained Image Captioning with CLIP Reward </strong>
+            <p>&clubs;<strong> Fine-grained Image Captioning with CLIP Reward</strong>
                 <dt-cite key="cho2022fine"></dt-cite> <a href="https://github.com/j-min/CLIP-Caption-Reward"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
 
             <p> Recent work uses CIDEr (i.e., text similarity) as a reward function to learn more descriptive image captions 
                 <dt-cite key="rennie2017self,li2020oscar"></dt-cite>. 
-                This work uses CLIP image-Text similarity score as a reward for image captioning system. More specifically,  
+                This work uses CLIP image-text similarity score as a reward for image captioning system. More specifically,  
                 they use CLIP score <dt-cite key="hessel2021clipscore"></dt-cite> which is the cosine similarity score between 
                 CLIP \(f^{I}(I)\) images and \(f^{T}(c)\) text features.
         
@@ -579,16 +583,19 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 
     <p>&clubs;<strong>  Progressive Class Semantic Matching for Semi-supervised Text Classification </strong>
-        <dt-cite key=""></dt-cite> <a href="https://github.com"><i class="fab fa-github" style='font-size:20px'></i></a></p>
+        <dt-cite key="xu2022progressive"></dt-cite> <a href="https://github.com/HeimingX/PCM"><i class="fab fa-github" style='font-size:20px'></i></a></p>
 
 
-        <p> This work shows the benefits of inherent semi-supervised knowledge into a pre-trained model like BERT. BERT original objectives are <em> Mask Language modeling (MLM) </em> and <em> Next Sentence Prediction (NSP) </em>. This work was inspired (author) by  NSP default inherent topic matching capability, as shown in the example below with the cosine distance between the input word and class 
+        <p> This work shows the benefits of inherent semi-supervised knowledge into a pre-trained model 
+            like BERT<dt-cite key="devlin2018bert"></dt-cite>. BERT's original objectives are <em> Mask Language modeling (MLM) </em>and<em>Next Sentence Prediction (NSP)</em>.
+             This work was inspired (author) by  NSP default inherent topic matching capability, 
+             as shown in the example below with the cosine distance between the input word and class 
              name <strong> family </strong> and <strong> sport</strong>.   
         </p>
 
         <center>
-                    
-  
+            
+           
 
             <p class="noteBoxes type4"  align="left">  
 
@@ -622,9 +629,9 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 
 <p>  As shown in the figure below the proposed model  Progressive Class-semantic Matching (PCM). The PCM is consist of three components: 
-    (1) class semantic representation \( C_{i} \) which construct input to the BERT by 
-    concatenating sentence with class semantic-related words; (2) standard K-way classifier with two-layer MLP and it will output a set of logits \(o_{i}^{s}\); (3) a class-sentence matching classifier via 
-    matching logits \( o_{i}^{m} \) with Sigmoid function is applied to convert it into the probabilistic form. 
+    (1) class semantic representation \( C_{i} \), which constructs input to the BERT model by 
+    concatenating sentences with class semantic-related words; (2) standard K-way classifier with two-layer MLP with an output set as logits \(o_{i}^{s}\); (3) a class-sentence matching classifier via 
+    matching logits \( o_{i}^{m} \) via Sigmoid function to convert it into the probabilistic form. 
     
 </p>
 
@@ -645,12 +652,15 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
         <figure align="center">
            
             <img src="matching.png" alt="Trulli" style="width:60%">
-            <figcaption> Figure. Illustration of the proposed PCM model. The arrow with the same color shows the flow of the information into the model. \(c_{K}\) denotes the set of class semantic-related words, <em> Avg</em> is the average word embedding, <em>GAP</em> is the global average pooling of the input text features.  </figcaption>
+            <figcaption> Figure. Illustration of the proposed PCM model. The arrow with the 
+                same color shows the flow of the information into the model. \(c_{K}\) denotes the set of class semantic-related words,
+                 <em> Avg</em> is the average word embedding, and <em>GAP</em> is the global average pooling of the input text features. 
+                 </figcaption>
 
           </figure>
         
 
-   <p>As shown in the example below the authors show some examples from AG news and the 
+   <p>As shown in the example below the authors show some examples from AG news dataset. The 
        proposed model can relate more accurate topics than fine-tuned topics BERT as 
        shown in color <font color="red"> red</font> with unrelated topics. 
 </p>
@@ -734,12 +744,12 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
  <hr>
 <!-- here -->
-<p>&clubs; <strong>Is Neural Topic Modelling Better than Clustering?</strong><dt-cite key="zhang2022neural"></dt-cite> <a href="https://github.com/hyintell/topicx"><i class="fab fa-github" style='font-size:20px'></i></a></strong></p>
+<p>&clubs; <strong>Is Neural Topic Modelling Better than Clustering?</strong><dt-cite key="zhang2022neural"></dt-cite><a href="https://github.com/hyintell/topicx"><i class="fab fa-github" style='font-size:20px'></i></a></strong></p>
 
 
-<p> Recent Neural-based approaches </strong><dt-cite key="grootendorst2022bertopic"></dt-cite> (via contextualized 
+<p> Recent Neural-based approaches </strong><dt-cite key="zhao2021topic,grootendorst2022bertopic"></dt-cite> (via contextualized 
     embeddings) achieved a breakthrough in topic modeling. 
-    However, what about traditional clustering via contextualized embeddings for topic modeling. This work tried to answer this question 
+    However, the intuitive research question here: what about traditional clustering via contextualized embeddings for topic modeling. This work tried to answer this question 
     by using clustering via contextualized embeddings to extract topics.  The main idea is to rely on semantically 
     similar words or documents that are close to each other in the vector space. Each cluster can be seen as a topic 
     if grouped together. Also compared to current neural topic models, clustering-based models are more simple,
@@ -753,7 +763,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
         Third, they adopt a weighting method to select representative words as topics.
   </p>
 
-<p>  However, traditional TFIDF ignores the semantic between  
+<p>  However, traditional TFIDF ignores the semantics between  
     documents. To address this issue, two alternative strategies are  considered:  
     First, the authors concatenate the documents within a cluster to be a single long document and then calculate the term 
     frequency of each word in each cluster:</p>
@@ -821,14 +831,12 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
     in the brain to understand the language better. The neural activation, in the brain, 
     of vision-related tasks is active when reading texts. This work tried to mimic human 
     understanding via introducing a visual commonsense framework to pretrained multimodal models. 
-    The main idea is to use a generated synthetic visual information using the text as an additional feature to the text itself to 
+    The main idea is to use generated synthetic visual information using the text as an additional feature to the text itself to 
     capture visual commonsense knowledge.
 </p> 
    <p> The model consists of three blocks  as shown in Figure 1: <strong> (1) Image Generator:</strong> the GAN model is guided by CLIP model to generate relevant 
-       image <dt-cite key="crowson2022vqgan"></dt-cite>,  <strong> (2) Cross-Model Encoder: </strong> the model  takes the generated image and 
-       text and fused them together. The output will be representations of the imagination augmented in a bi-directional way. 
-       In particular, the Cross-Model encoder uses a vision transformer <dt-cite key="dosovitskiy2020image"></dt-cite> with a late fusion layer. 
-         <strong> (3) Visually Supervised Transformer: </strong>the model employs BERT Mask Language Model to learn token related images (i.e., visual grounding). </p>
+       images <dt-cite key="crowson2022vqgan"></dt-cite>,  <strong> (2) Cross-Model Encoder: </strong> the model  takes the generated image and 
+       text and fused them together. <strong> (3) Visually Supervised Transformer: </strong>the model employs BERT Mask Language Model to learn token related images (i.e., visual grounding). </p>
 
          
          
@@ -839,7 +847,7 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
         <figcaption> Figure 1. Illustration of the proposed Imagination-Augmented Natural Language Understanding model. 
             GAN is used  to generate the image and the cross model encoder learns the imagination-augmented language representation. The learning
             process is divided into two setups: (1) pre-trained textual transformer and (2) fine-tune the visual-augmented cross-model encoder on
-            downstream tasks such GLUE. 
+            downstream tasks such as GLUE benchmark dataset. 
 
 
             
@@ -874,12 +882,11 @@ f(T(x))=T^{\prime}(f(x)) \text {. }
 
 
 
- 
 
    
 <p><strong>Cross-Modal Encoder.</strong>   The Cross-Modal Encoder takes the image and text and fuses them together. 
     The output will be representations of the imagination augmented in a bi-directional way. In particular, the Cross-Model 
-    encoder uses a vision transformer with a late fusion layer. For each  modality, the self-attention (SA) is applied 
+    Encoder uses a vision transformer <dt-cite key="dosovitskiy2020image"></dt-cite>  with a late fusion layer. For each  modality, the self-attention (SA) is applied 
     to the text or the image as: 
 </p>
 
@@ -907,7 +914,7 @@ X_{S}=\left[\operatorname{ReLU}\left(W_{t} S_{t}+b_{t}\right), \operatorname{ReL
 <p> <strong> Visually-Supervised Transformer.</strong> VOKEN <dt-cite key="tan2020vokenization"></dt-cite> is used 
 to learn token related images. The  VOKEN is trained on two objectives:
 (1) the original BERT pretrained with Mask Language Model while (2) the second objective 
-to predict  the token associated with  an  external visual context. Note that, the two objectives share the 
+is to predict  the token associated with  an  external visual context. Note that, the two objectives share the 
 same model weights since the input are the same.
    
 
@@ -916,7 +923,7 @@ same model weights since the input are the same.
     
     <p><strong>Step 1: Visually-Supervised Transformer.</strong>  As we mentioned above, VOKEN 
         proposed a voken classification task. Given a set of tokens with masks, 
-        the model is asked to predict  the best-matching image (the voken) for each tokens. 
+        the model is asked to predict  the best-matching image (the voken) for each token. 
         The pre-training loss can be given as:</strong> 
 
     
@@ -960,7 +967,7 @@ same model weights since the input are the same.
 <figure align="center">
     <img src="sts-b+images.png" alt="Trulli" style="width:70%">
     <figcaption>   Figure 2. Example of the proposed model on STS-B task with images and without images. The 
-        imagination-augmented models give a prediction that is more aligned with the ground truth
+        imagination-augmented models give a prediction that is more aligned with the ground truth.
     
 
        
@@ -979,7 +986,7 @@ same model weights since the input are the same.
     the model loss is evaluated using MLE Loss, but at inference time the model is evaluated using 
     standard metrics like BLEU <dt-cite key="papineni2002bleu"></dt-cite>.</p>
    
-<p> This work applied reinforcement agents to bridge the gap between training and inference. In particular, the agent 
+<p> This work applied Reinforcement Learning agents (RL) to bridge the gap between training and inference. In particular, the agent 
     as a state takes the previous sequence  \(\hat{y}_{1:t-1} \) and takes an action on the current token \(\hat{y}_{t} \), then
     after generating the token the agent gives a reward from the environment which is commonly defined (e.g., BLEU). Thus,
     the objective of this work is to maximize the expected reward by the evaluation metric like BLEU.</p>
@@ -1005,7 +1012,7 @@ same model weights since the input are the same.
 
 
 
-<p> <strong> Sentence-level Semantic Similairty (SLSS).</strong> 
+<p> <strong> Sentence-level Semantic Similarity (SLSS).</strong> 
     The SLSS is the cosine similarity between Cross-lingual Embedding between the source and the target language (generated sequence)<dt-cite key="song2021sentsim"></dt-cite>. The embedding is computed using a pre-trained cross-lingual language model to project both source and target embedding in a shared semantic space, and then compute the cosine similarity score. 
 </p>
                    
@@ -1031,7 +1038,7 @@ same model weights since the input are the same.
                             <dt-cite key="madaan2022memory"></dt-cite><a href="https://github.com/aliciasun/natural-prompts">
                                 <i class="fab fa-github" style='font-size:20px'></i></a></p>
 
-                        <p>  Most previous work,  uses simple template to mimic the real sentences (e.g., <em>The {man/woman} laughed because</em>) for gender bias evaluation. However, these template is too simple and can trigger gender-specific continuations. This work proposed a real synthetic dataset for gender bias evaluation using prompts. This dataset is used to study biases between profession definitions and gender in language models as shown below. </p>
+                        <p>  Most previous work,  uses simple template to mimic the real sentences (e.g., <em>The {man/woman} laughed because .. </em>) for gender bias evaluation. However, these template is too simple and can trigger gender-specific continuations. This work proposed a real synthetic dataset for gender bias evaluation using prompts. This dataset is used to study biases between profession definitions and gender in language models as shown below. </p>
                     
 
                         <center>
@@ -1624,5 +1631,33 @@ same model weights since the input are the same.
                                         author={Grootendorst, Maarten},
                                         journal={arXiv preprint arXiv:2203.05794},
                                         year={2022}
+                                      }
+                                      @article{li2022blip,
+                                        title={Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation},
+                                        author={Li, Junnan and Li, Dongxu and Xiong, Caiming and Hoi, Steven},
+                                        journal={arXiv preprint arXiv:2201.12086},
+                                        url={https://arxiv.org/pdf/2201.12086.pdf},
+                                        year={2022}
+                                      }
+                                      @article{xu2022progressive,
+                                        title={Progressive Class Semantic Matching for Semi-supervised Text Classification},
+                                        author={Xu, Hai-Ming and Liu, Lingqiao and Abbasnejad, Ehsan},
+                                        journal={arXiv preprint arXiv:2205.10189},
+                                        url={https://arxiv.org/pdf/2205.10189.pdf},
+                                        year={2022}
+                                      }
+                                      @article{devlin2018bert,
+                                        title={Bert: Pre-training of deep bidirectional transformers for language understanding},
+                                        author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+                                        journal={arXiv preprint arXiv:1810.04805},
+                                        url ={https://arxiv.org/pdf/1810.04805.pdf},
+                                        year={2018}
+                                      }
+                                      @article{zhao2021topic,
+                                        title={Topic modelling meets deep neural networks: A survey},
+                                        author={Zhao, He and Phung, Dinh and Huynh, Viet and Jin, Yuan and Du, Lan and Buntine, Wray},
+                                        journal={arXiv preprint arXiv:2103.00498},
+                                        url={https://www.ijcai.org/proceedings/2021/0638.pdf},
+                                        year={2021}
                                       }
                                 </script>
