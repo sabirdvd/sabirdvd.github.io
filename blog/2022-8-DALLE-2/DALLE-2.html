@@ -306,7 +306,7 @@
               <p><strong>Decoder.</strong> The decoder is a diffusion model <dt-cite key="ho2020denoising,song2020improved"></dt-cite>. The 
               main idea of the diffusion model is to add   Gaussian noise to destroy the training data and then learn 
               to recover it using the same noise process (reconstructing). This approach is called denoising process, which 
-              employs a Markov chain rules.  The benefit of this method is that it can be used to generate high-quality images.
+              employs a Markov chain.  The benefit of this method is that it can be used to generate high-quality images.
               Figure 4 shows the denoising process to reconstruct the image (forward pass) from noise, and to add 
                the Gaussian noise to the image (backward  pass)<dt-cite key="ho2020denoising"></dt-cite>.
             </p>
@@ -327,7 +327,7 @@
              \]
 
               <p> where \( x_{t} \mid x_{t-1}\)  and  \( \sqrt{\alpha_{t}} x_{t-1}\) are the scaling factor 
-                and  \(\mathcal{I}\) diagonal. If the noise is small enough, the posterior  \(q\left(x_{t-1} \mid x_{t}\right)\) 
+                and  \(\mathcal{I}\) is a diagonal Gaussian. If the noise is small enough, the posterior  \(q\left(x_{t-1} \mid x_{t}\right)\) 
                 (reversed step) is approximated by diagonal Gaussian, which indicated the network can learn to construct 
                 previous observations. However, if the noise is too large,  
                 \(x_{T}\) is approximated by standard normal distribution \( \mathcal{N}(0, \mathcal{I}) \). 
