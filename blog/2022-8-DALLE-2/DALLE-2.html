@@ -442,12 +442,13 @@
             <p><strong>Diffusion prior.</strong> The vector \(z_{i}\) is modeled via a Gaussian diffusion model conditioned on the caption \(y\). 
               The encoder is trained on casual attention to encode CLIP text embedding 
               and the noise from CLIP image embedding. The final embedding is to 
-              predict unnoised CLIP image embedding. In particular, for the decoder, a transformer with a causal attention mask is trained to encode (1) CLIP text embedding, 
-                (2) the embedding for each diffusion timestep, noised CLIP image embedding. The transformer output is 
-                used to predict un unnoised CLIP image embedding. Unlike <dt-cite key="ho2020denoising"> </dt-cite> as mentioned
+              predict the unnoised CLIP image embedding. In particular, for the decoder, a transformer with a causal attention mask 
+              is trained to encode (1) CLIP text embedding, 
+                and (2) the embedding for each diffusion timestep, noised CLIP image embedding. The transformer output is 
+                used to predict the unnoised CLIP image embedding. Unlike <dt-cite key="ho2020denoising"> </dt-cite> as mentioned
                 above, the model try to predict the noise \( \epsilon\), and thus the model here is 
                 trained to predict the unnoised \(z_{i}\) 
-                 directly, with a mean-squared error loss on: 
+                 directly, with a mean-squared error loss: 
         
 
           <!--
