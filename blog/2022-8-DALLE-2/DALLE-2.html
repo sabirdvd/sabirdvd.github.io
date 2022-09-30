@@ -274,7 +274,7 @@
             <p> The CLIP model contains two components a text encoder \(g\) and image
               encoder \(f\). The model during training will use batches of the images
               and caption pairs as a sample from a large dataset from the web. The model 
-              optimizes a contrastive cross-entropy loss which encourages 
+              optimizes a contrastive cross-entropy loss, which encourages 
               the high dot product of \(f\) and \(g\) if the image and \(c\) come from
               the same image captioning pairs, meanwhile, it encourages the low dot 
               product if \(x\) and \(c\) come from different image caption pairs.
@@ -303,7 +303,7 @@
               </p>
              
               <p><strong>Decoder.</strong> The decoder is a diffusion model <dt-cite key="ho2020denoising,song2020improved"></dt-cite>. The 
-              main idea of the diffusion model is to add   Gaussian noise to destroy the training data and then learn 
+              main idea of the diffusion model is to add Gaussian noise to destroy the training data and then learn 
               to recover it using the same noise process (reconstructing). This approach is called denoising process, which 
               employs a Markov chain.  The benefit of this method is that it can be used to generate high-quality images.
               Figure 4 shows the denoising process to reconstruct the image (forward pass) from noise, and to add 
