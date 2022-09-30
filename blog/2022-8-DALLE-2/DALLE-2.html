@@ -445,7 +445,7 @@
               predict unnoised CLIP image embedding. In particular, for the decoder, a transformer with a causal attention mask is trained to encode (1) CLIP text embedding, 
                 (2) the embedding for each diffusion timestep, noised CLIP image embedding. The transformer output is 
                 used to predict un unnoised CLIP image embedding. Unlike <dt-cite key="ho2020denoising"> </dt-cite> as mentioned
-                above that the model try to predict the noise \( \epsilon\), the model here is 
+                above, the model try to predict the noise \( \epsilon\), and thus the model here is 
                 trained to predict the unnoised \(z_{i}\) 
                  directly, with a mean-squared error loss on: 
         
