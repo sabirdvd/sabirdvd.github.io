@@ -601,17 +601,18 @@
                 image from coco and (Middle) and (Right) image from DALL-E 2 via synthetic prompt. In particular, 
                 we used Caption Transformer <dt-cite key="cornia2020meshed"></dt-cite> 
                 that is trained on a human-annotated MS-COCO dataset <dt-cite key="lin2014microsoft"></dt-cite> with beam search B= \(5\) to 
-                generate different prompts. These images positive/negative can be used as a training dataset or 
-                   for contrastive learning objective function. 
+                generate different prompts. These images positive/negative can be used as training samples for supervised learning with labels
+                (soft label), and also with unsupervised learning based contrastive learning objective function. 
+ 
               </p>
-              
+             
              
 
                 <p> <strong>Caption Diversity Evaluation.</strong>
                 Diversity based Caption evaluation is an important task in computer vision. Caption evaluation systems relies on traditional metrics 
                 like BLEU  <dt-cite key="papineni2002bleu"></dt-cite> that disagrees with human judgment in most cases  <dt-cite key="freitag2020bleu"></dt-cite>.  
                  In addition, diversity based metrics also are based \(n\)-gram counting  <dt-cite key="deshpande2019fast"></dt-cite>, 
-                  which cannot capture the semantic of the caption.  The evaluation can be done as follows: 
+                  which cannot capture the semantic meaning of the caption.  The evaluation can be done as follows: 
                   first,  the model generates images using the image caption baseline beam search as a prompt. 
                   Secondly, an image matching via cosine similarity is used to compare the original image to the  
                   generated images. Figure 7 and Figure 8 show the original image from COCO (Left) and the most similar/dissimilar images
@@ -665,13 +666,15 @@
 
                 
  
-<p><strong>Gender Bias Evaluation.</strong> A another open research application is gender bias evaluation. 
-  Gender bias evaluation research in images is mostly active in image captioning <dt-cite key="hendricks2018women"></dt-cite>.
-  The result shows that existing gender bias towards man 1:3  <dt-cite key="zhao2017men"></dt-cite>  in COCO dataset <dt-cite key="lin2014microsoft"></dt-cite>. However,
+<p><strong>Gender Bias Evaluation.</strong> Another open research application is gender bias evaluation. 
+  Gender bias evaluation research in images is mostly active in image captioning task <dt-cite key="hendricks2018women"></dt-cite>.
+  The result shows in image captioning, there is an existing gender bias toward men 1:3  <dt-cite key="zhao2017men"></dt-cite>  
+  in COCO dataset <dt-cite key="lin2014microsoft"></dt-cite>. However,
   in this case, DALL·E 2 is trained using CLIP on 400M images with a language model objective, therefore, 
   the gender bias is amplified from both modalities vision and language. In Figure 9 and Figure 10, show that 
   <em>programmer</em> and <em>doctor</em>  images have higher ratio towards man.   Also in most cases when there 
-  is a strong gender bias towards men, the women's images are enforced by a strong filter and thus look unnatural as shown in the Figures below, 
+  is a strong gender bias towards men, the women's images are enforced by a strong filter and thus the images look unnatural 
+  as shown in the Figures below, 
   which indicates that openAI tried to balanced the gender bias. However, there is more research need to be done 
   for example, the study of the direct and indirect bias  (<em>leakage bias</em>) with a specific gender <dt-cite key="wang2019balanced"></dt-cite> 
   (e.g., food or kitchen associated with a woman picture).
