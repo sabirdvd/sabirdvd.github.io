@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 <a href="https://sabirdvd.github.io" class="button"> <small>↩</small></a>
@@ -91,7 +90,8 @@
             width: 15px;
             padding-right: 10px;
         }
-    }
+      }
+      
     </style>
 </head>
 
@@ -104,10 +104,19 @@
         
 <dt-article class="centered">
   <h2> Review: Topic Modeling for Arabic Language</h2>
+  
   <dt-byline></dt-byline>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>MathJax example</title>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+      </script>
+  </head>
 
-
-
+  <body>
+      <p>
 <!--
     <p>In this blog post, I will review recent trent in modeling topic text  via pre-trained language model. More specifically, I will fouces  of arabic language <dt-cite key=""></dt-cite>. This dataset is based on the COCO <dt-cite key="lin2014microsoft"></dt-cite>, and we (our work) further extend the dataset using state-of-the-art and out-of-the-box tools to extract the most related visual semantic context information from each image. Note that, this dataset is an extension of a dataset that is built for a previous approach to be fine-tuned, but It can be used for any task.</p>
 -->
@@ -116,9 +125,8 @@
    <p> Our code is available on <a href="https://github.com/sabirdvd/Topic-modeling-for-Arabic-Tweets-">Github </a> and for quick start try <a href="https://ahmed.jp/visual_topics.html">Demo </a>. </p>
 
 
-	
-
-   <p> Before we start let's ask ChatGPT  this question: </p>
+   <p> Before we start let's ask ChatGPT <dt-cite key="openAI:22"></dt-cite> this most common question about which transformer architecture is suited for topic modeling?</p>
+  
 
    <p class="noteBoxes type4"  align="center">  
 
@@ -127,7 +135,12 @@
   
 </p>
 
-	<p> Both BERT (Bidirectional Encoder Representations from Transformers) and GPT-2 (Generative Pre-training Transformer 2) 
+
+
+	
+	<h3>  </h3>	
+
+	<p> <strong> Answer </strong>:  Both BERT (Bidirectional Encoder Representations from Transformers) and GPT-2 (Generative Pre-training Transformer 2) 
 		are large language models that have been trained on a wide range of tasks and have achieved state-of-the-art results on many benchmarks. However, they were designed for different purposes and have different strengths, so it's not necessarily accurate to say that one is "better" than the other for a particular task.
 BERT is a transformer-based model that was specifically designed for natural language understanding tasks such as named entity recognition, 
 		question answering, and language translation. It is trained to predict missing words in a sentence given the context, which allows it to capture the relationships between words and their meanings in a more robust way than previous models. BERT is particularly good at understanding the context in which words are used and can handle a wide range of tasks without the need for task-specific modifications.
@@ -145,47 +158,27 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 <!--radix_placeholder_article_footer-->
 
 
-
-
-
-
-
 <div class="d-appendix">
 </div>
 
 <dt-appendix>
 </dt-appendix>
 
-<script type="BibTeX">
-    <pre class="citation long">@article{olah2018the,
-  author = {Olah, Chris and Satyanarayan, Arvind and Johnson, Ian and Carter, Shan and Schubert, Ludwig and Ye, Katherine and Mordvintsev, Alexander},
-  title = {The Building Blocks of Interpretability},
-  journal = {Distill},
-  year = {2018},
-  note = {https://distill.pub/2018/building-blocks},
-  doi = {10.23915/distill.00010}
-}</pre>
-</script>
+
+
+
 
 
 <script type="text/bibliography">
 
-  @article{gregor2015draw,
-    title={DRAW: A recurrent neural network for image generation},
-    author={Gregor, Karol and Danihelka, Ivo and Graves, Alex and Rezende, Danilo Jimenez and Wierstra, Daan},
-    journal={arXivreprint arXiv:1502.04623},
-    year={2015},
-    url={https://arxiv.org/pdf/1502.04623.pdf},
-        }
-          
-@book{Aho:72,
-    author  = {Alfred V. Aho and Jeffrey D. Ullman},
-    title   = {The Theory of Parsing, Translation and Compiling},
-    year    = "1972",
-    volume  = "1",
-    publisher = {Prentice-Hall},
-    address = {Englewood Cliffs, NJ}
+@article{openAI:22,
+    author  = {openAI},
+    title   = {Optimizing language models for dialouge},
+    year    = "2022",
+    url       = {https://openai.com/blog/chatgpt/},
+    
 }
+
 
 @book{APA:83,
     author  = {{American Psychological Association}},
@@ -1783,5 +1776,3 @@ keywords = {}
 }
 
 </script>
-
-
