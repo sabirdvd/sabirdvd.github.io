@@ -183,6 +183,17 @@ inside the model and how it's different from the rest of the GPT family.</p>
 
 
 <h2>ChatGPT</h2>
+	  
+<p> 	  
+Large Language Models (LM) like the GPT family are often used to follow instructions (prompt) to execute the user’s tasks.
+	However, quite often, these models generate: (1) less explicit intentions as following instructions, 
+	and (2) outputs untruthful information or harmful. The main reason behind this that the LM objective is to 
+	predict the next token (autoregressive), which is different from following the user's instruction. 
+	The solution to this problem proposed by openAI is to fine-tune the user intent with human feedback.
+
+	
+	</p>
+	  
 <p> ChatGPT architecture is similar to instructGPT <dt-cite key="ouyang2022training"></dt-cite>,  which is based on GPT3 with Reinforcement Learning via Human Feedback (RLHF) with the ability to use context window to look back at previous information. In other words, one of the key 
 	differences of ChatGPT with previous models is its ability to follow instructions. The RLHF is used to help the model better understand 
 	written instruction. The human feedback formulates a more accurate reward signal.
