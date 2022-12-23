@@ -2,16 +2,16 @@
 
 <a href="https://sabirdvd.github.io" class="button"> <small>↩</small></a>
 <meta charset="utf-8">
-<script src="https://github.com/sabirdvd/sabirdvd.github.io/blob/main/template.v1.js"></script>
+<script src="template.v1.js"></script>
 <script type="text/front-matter">
-
-  title: "Review: ChatGPT: Optimizing Language Models for Dialogue"
+  title: " Review: ChatGPT: Optimizing Language Models <br> for Dialogue"
+  description: 
   authors:
   - Ahmed Sabir: https://www.cs.upc.edu/~asabir/
   - PUBLISHED Date
   affiliations:
   - Universitat Politècnica de Catalunya: https://www.upc.edu
-  -  29 Dec 2022
+  -  31 Dec 2022
 
 </script>
 <script type="text/javascript">
@@ -103,7 +103,8 @@
 
         
 <dt-article class="centered">
-  <h2> Review: ChatGPT: Optimizing Language Models <br> for Dialogue </br> </h2>
+  <h2>Review: ChatGPT: Optimizing Language Models <br> for Dialogue </br> </h2>
+  
   <dt-byline></dt-byline>
   <head>
       <meta charset="utf-8">
@@ -117,71 +118,74 @@
   <body>
       <p>
 <!--
-    <p>In this blog post, I will review recent trent in modeling topic text  via pre-trained language model. More specifically, I will fouces  of arabic language <dt-cite key=""></dt-cite>. This dataset is based on the COCO <dt-cite key="lin2014microsoft"></dt-cite>, and we (our work) further extend the dataset using state-of-the-art and out-of-the-box tools to extract the most related visual semantic context information from each image. Note that, this dataset is an extension of a dataset that is built for a previous approach to be fine-tuned, but It can be used for any task.</p>
+    <p>In this blog post, we will review recent trent in modeling topic text  via pre-trained language model. More specifically, we will fouces  of arabic language <dt-cite key=""></dt-cite>. This dataset is based on the COCO <dt-cite key="lin2014microsoft"></dt-cite>, and we (our work) further extend the dataset using state-of-the-art and out-of-the-box tools to extract the most related visual semantic context information from each image. Note that, this dataset is an extension of a dataset that is built for a previous approach to be fine-tuned, but It can be used for any task.</p>
 -->
-    <p>   </p>
 
 
-   <p> In this blog post, we will discuss the recent ChatGPT <dt-cite key="openAI:22"></dt-cite>. A GPT-3.5 based model that is fined-tuned with supervised 
-    and reinforcement learning techniques.  </p>
-  
-
-   <p> Before we start, let's look at the following example that shows  how the model can be used to generate a human like response to a given question.</p>
-
-   <p class="noteBoxes type4"  align="center">  
+<p> In this blog post, we will discuss the recent ChatGPT <dt-cite key="openAI:22"></dt-cite>. A GPT-3.5 based model that is fined-tuned with supervised 
+  and reinforcement learning techniques.  </p>
 
 
-  What is the difference between probability and chance? explain with python code 
-  
+ <p> Before we start, let's look at the following example that shows  how the model can be used to generate a human like response to a given question.</p>
+
+ <p class="noteBoxes type4"  align="center">  
+
+
+What is the difference between probability and chance? explain with python code 
+
 </p>
 
 
-
-	
-
-
-	<p> <strong> Answer </strong>:  
-    Probability and chance are related concepts, but they are not the same thing.
+<p> <strong> Answer </strong>:  
+  Probability and chance are related concepts, but they are not the same thing.
 </p>
 
-	<p>
-    Probability is a measure of the likelihood of an event occurring. It is a number between 0 and 1, where 0 represents an impossible event 
-    and 1 represents a certain event. Probability is calculated based on the number of possible outcomes and the number of favorable outcomes. 
-    For example, if you have a bag of 10 marbles,
-     5 red and 5 blue, the probability of drawing a red marble is 5/10, or 0.5. In Python, you can calculate probability using the following code:
-	</p>
-
-  
-  <dt-code block language="python">
-    # Calculate probability of drawing a red marble
-    marbles = ["red", "red", "red", "red", "red", "blue", "blue", "blue", "blue", "blue"]
-    probability_red = marbles.count("red") / len(marbles)
-    print(f"Probability of drawing a red marble: {probability_red}")
-  </dt-code>
+<p>
+  Probability is a measure of the likelihood of an event occurring. It is a number between 0 and 1, where 0 represents an impossible event 
+  and 1 represents a certain event. Probability is calculated based on the number of possible outcomes and the number of favorable outcomes. 
+  For example, if you have a bag of 10 marbles,
+   5 red and 5 blue, the probability of drawing a red marble is 5/10, or 0.5. In Python, you can calculate probability using the following code:
+</p>
 
 
-	
+<dt-code block language="python">
+  # Calculate probability of drawing a red marble
+  marbles = ["red", "red", "red", "red", "red", "blue", "blue", "blue", "blue", "blue"]
+  probability_red = marbles.count("red") / len(marbles)
+  print(f"Probability of drawing a red marble: {probability_red}")
+</dt-code>
 
-	<p> Chance is the likelihood of an event occurring by random chance. It is a measure of how likely it is that an event will occur 
-    simply by luck or coincidence. Chance is not based on a specific set of outcomes or probabilities, but rather on the idea that anything can happen. 
-    For example, if you flip a coin, there is a 50% chance (or 0.5 probability) of getting heads and a 50% chance 
-    (or 0.5 probability) of getting tails. In Python, you can simulate chance using the random module:
-  </p>
 
 
-  <dt-code block language="python">
-    import random
 
-    # Simulate flipping a coin
-    result = random.choice(["heads", "tails"])
-    print(f"Coin flip result: {result}")
-  </dt-code>
+<p> Chance is the likelihood of an event occurring by random chance. It is a measure of how likely it is that an event will occur 
+  simply by luck or coincidence. Chance is not based on a specific set of outcomes or probabilities, but rather on the idea that anything can happen. 
+  For example, if you flip a coin, there is a 50% chance (or 0.5 probability) of getting heads and a 50% chance 
+  (or 0.5 probability) of getting tails. In Python, you can simulate chance using the random module:
+</p>
+
+
+<dt-code block language="python">
+  import random
+
+  # Simulate flipping a coin
+  result = random.choice(["heads", "tails"])
+  print(f"Coin flip result: {result}")
+</dt-code>
 
 
 
 
 <p> As shown in the example above,  the model can impressively generate human-like text and code. Now, let's step back and look 
-  inside the model and how it's different from the rest of the GPT family.</p>
+inside the model and how it's different from the rest of the GPT family.</p>
+
+  
+
+
+
+	
+
+
 <!--radix_placeholder_article_footer-->
 
 
