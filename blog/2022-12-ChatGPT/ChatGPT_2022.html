@@ -216,6 +216,19 @@ rank those outputs to create different combination of the ranked outputs. The ou
 		    <dt-cite key="stiennon2020learning"></dt-cite>.
 
 	  
+
+<p> 
+<strong>RL via proximal policy optimization (PPO) on RM. </strong>
+
+
+The model is then  fine-tuned  (supervised) on human prompts with Proximal Policy 
+Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO model, 
+and the PPO generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. 
+
+
+
+
+</p>
 	  
 
 
@@ -257,6 +270,15 @@ rank those outputs to create different combination of the ranked outputs. The ou
    publisher = {American Psychological Association},
    address = {Washington, DC}
 }
+
+@article{schulman2017proximal,
+  title={Proximal policy optimization algorithms},
+  author={Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+  journal={arXiv preprint arXiv:1707.06347},
+  year={2017},
+  url={https://arxiv.org/pdf/1707.06347.pdf},
+}
+
 
 @article{stiennon2020learning,
   title={Learning to summarize with human feedback},
