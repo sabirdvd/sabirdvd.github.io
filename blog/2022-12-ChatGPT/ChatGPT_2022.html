@@ -208,9 +208,13 @@ Large Language Models (LM) like the GPT family are often used to follow instruct
 <strong> Supervised fine-tuning (SFT). </strong> They started by a pre-trained GPT-3 <dt-cite key="brown2020language"></dt-cite> model trained on  Internet data. Then sampled typical human 
 prompts used for GPT  and asked labelers  to write down the correct output.
 
-
-
   </p>
+
+	    <p>
+<strong> Reward Model Training (RM).  </strong>  Then, they generate multiple outputs from the model for each of the prompts and asked labelers to 
+rank those outputs to create different combination of the ranked outputs. The output results are used to train a Reward Model 
+		    <dt-cite key="stiennon2020learning"></dt-cite>.
+
 	  
 	  
 
@@ -254,6 +258,15 @@ prompts used for GPT  and asked labelers  to write down the correct output.
    address = {Washington, DC}
 }
 
+@article{stiennon2020learning,
+  title={Learning to summarize with human feedback},
+  author={Stiennon, Nisan and Ouyang, Long and Wu, Jeffrey and Ziegler, Daniel and Lowe, Ryan and Voss, Chelsea and Radford, Alec and Amodei, Dario and Christiano, Paul F},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  pages={3008--3021},
+  year={2020},
+  url={https://proceedings.neurips.cc/paper/2020/file/1f89885d556929e98d3ef9b86448f951-Paper.pdf},
+}
 
 @article{brown2020language,
   title={Language models are few-shot learners},
