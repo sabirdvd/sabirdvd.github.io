@@ -234,11 +234,22 @@ The model is then  fine-tuned  (supervised) on human prompts with Proximal Polic
 Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO model, 
 and the PPO generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. 
 
-
-
-
 </p>
 	  
+	  <h2>Dataset</h2>
+<p> As we mentioned before in the previous section, the ChatGPT model is trained by employing different techniques on different datasets:
+</p>
+
+<p> <strong> Prompt data.</strong> (1) prompts are submitted to OpenAI API, and (2) manually written dataset by labelers. 
+
+
+  <p> <strong> Others dataset. </strong> For each model we described before, the model is trained on different datasets. 
+    For the first stage <strong> SFT</strong> a labeler demonstration example dataset is used, 
+      <strong> RM</strong>: labelers ranking output dataset, and finally, the <strong> PPO</strong> 
+      model is trained without human labels.  
+</p>
+  
+
 
 
 <!--radix_placeholder_article_footer-->
