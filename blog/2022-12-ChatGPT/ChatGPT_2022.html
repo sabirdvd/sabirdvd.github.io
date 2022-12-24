@@ -213,10 +213,19 @@ prompts used for GPT  and asked labelers  to write down the correct output.
 	    <p>
 <strong> Reward Model Training (RM).  </strong>  Then, they generate multiple outputs from the model for each of the prompts and asked labelers to 
 rank those outputs to create different combination of the ranked outputs. The output results are used to train a Reward Model 
-		    <dt-cite key="stiennon2020learning"></dt-cite>. The main idea there is to train a reward model that predicts the human-preferred output.
+		    <dt-cite key="stiennon2020learning"></dt-cite>. The main idea there is to train a reward model that predicts 
+		    the human-preferred output. The RM loss to predict \(y \in\left\{y_0, y_1\right\}\), which is a prompt better judged by human given input prompt can be written:
 
-	  
+\[ \small
+\operatorname{loss}\left(r_\theta\right)=-E_{\left(x, y_0, y_1, i\right) \sim D}\left[\log \left(\sigma\left(r_\theta\left(x, y_i\right)-r_\theta\left(x, y_{1-i}\right)\right)\right)\right]
 
+\]	  
+
+<p> where \(r_\theta(x, y)\) is the scalar output of the reward model for input prompt \(x\) and label \(y\) with 
+  parameters \(\theta\), and \(D\) is the training data of human judgments. 
+<p> 
+
+		    
 <p> 
 <strong>RL via proximal policy optimization (PPO) on RM. </strong>
 
