@@ -350,16 +350,16 @@ Another approach is to use natural language processing (NLP) techniques, such as
 	  text and group them into different topics based on their co-occurrence patterns.
 </p>
 	 
-	  </p>
+	  <p>
 A third approach is to use manual annotation, where a human reads the text and assigns it one or more topics based on their understanding of the content. This can be a time-consuming process, but it can be effective for short texts, especially if the topics are well-defined and the text is straightforward.
 </p>
 	 
-</p>
+<p>
 Overall, the best approach for extracting topics from short texts will depend on the specific goals and resources available.
 		  
 </p>	 
 	  
-<p> Now let narrow the idea after asking the model about emoppying pre-trained model for topic modeling.</p>
+<p> Now let's narrow the idea after asking the model about employing a pre-trained model for topic modeling such as GPT-2.</p>
 
   
 	  	  	 <p class="noteBoxes type4"  align="center">  
@@ -388,10 +388,99 @@ Overall, using GPT-2 with LDA for topic extraction is a promising approach that 
 	
 </p> 	
 
-
+	 	 
 	  <p><strong>Write Code. </strong> ChatGPT isn’t limited to English. Not only can it handle other spoken languages,
 		  it can write code snippets too. Code snippets that actually work after trying giving the model some feedback in some cases. </p>
-		
+
+	  
+	  
+	 <p>Let's ask the model to write some code of our narrow idea of integrating GPT-2 <dt-cite key="stiennon2020learning"></dt-cite> with LDA <dt-cite key="stiennon2020learning"></dt-cite> </p> 
+	  
+	  
+	  	  	 <p class="noteBoxes type4"  align="center">  
+
+write some python code integrating GPT-2 with LDA  
+				 
+
+</p>  
+	  
+	  
+	  
+	  
+<dt-code block language="python">
+# Install the transformers and gensim libraries
+!pip install transformers
+!pip install gensim
+
+# Import the necessary modules
+import transformers
+import gensim
+
+# Load the GPT-2 model
+model = transformers.GPT2Model.from_pretrained("gpt2")
+
+# Tokenize the texts and remove stop words and other irrelevant words
+def preprocess_texts(texts):
+  # Tokenize the texts
+  tokenized_texts = [model.tokenizer.encode(text, add_special_tokens=True) for text in texts]
+
+  # Remove stop words and other irrelevant words
+  filtered_texts = []
+  for text in tokenized_texts:
+    filtered_text = [word for word in text if word not in model.tokenizer.stop_words]
+    filtered_texts.append(filtered_text)
+  
+  return filtered_texts
+
+# Generate vectors for the texts using GPT-2
+def generate_vectors(texts):
+  # Generate vectors for the texts
+  vectors = model.encode(texts, max_length=512)
+  
+  return vectors
+
+# Use LDA to identify the main topics in the texts
+def identify_topics(vectors):
+  # Convert the vectors to a gensim corpus
+  corpus = gensim.matutils.Dense2Corpus(vectors)
+  
+  # Fit an LDA model to the corpus
+  lda_model = gensim.models.LdaModel(corpus, num_topics=10, id2word=model.tokenizer.decoder)
+  
+  return lda_model
+
+# Extract topics from a set of texts
+def extract_topics(texts):
+  # Preprocess the texts
+  filtered_texts = preprocess_texts(texts)
+
+  # Generate vectors for the texts
+  vectors = generate_vectors(filtered_texts)
+
+  # Identify the main topics in the texts
+  lda_model = identify_topics(vectors)
+  
+  return lda_model
+
+# Example: Extract topics from a set of short texts
+texts = [
+    "This is a short text about topic A.",
+    "This is another short text about topic B.",
+    "This is a third short text about topic A."
+]
+
+topics = extract_topics(texts)
+
+# Print the identified topics
+for topic_id, topic in topics:
+  print("Topic", topic_id, ":", topic)
+	  
+</dt-code>	  
+	  
+	  <p> Unfortunately, the code is not usable but we can tell without giving specific prompts the model will 
+		  not able to write some code that has never been seen before. 
+		  However, in general cases, the code is executable as shown next example with LaTeX code. </p>	  
+	 
 	  	 <p class="noteBoxes type4"  align="center">  
 
 
