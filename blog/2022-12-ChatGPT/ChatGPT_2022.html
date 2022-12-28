@@ -241,8 +241,7 @@ rank those outputs to create different combination of the ranked outputs. The ou
 
 
 The model is then  fine-tuned  (supervised) on human prompts with Proximal Policy 
-Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO model, 
-and the PPO generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. 
+Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO to generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. 
 
 </p>
 
@@ -309,10 +308,10 @@ and the PPO generates a reward value. The PPO model is then iteratively fine-tun
 
 <h2>Discussion</h2>
 
-	  The resulting InstructGPT models are much better at following instructions than GPT-3. 
+	  
 	  
 <p>   The resulting output shows that only 1.3B parameter instructGPT models are much better at following 
-	instructions than GPT-3  and preferred by labelers (humans) despite having 100x fewer parameters
+	instructions than GPT-3  and preferred by labelers (humans) despite having 100x fewer parameters.
 	
 	Also, the model hallucinates less than GPT3 and generates 25% less toxic  output than GPT3. 
 	Therefore, GPTchat uses the same approach as instructGPT but with different data collection setup as we described above. Next, let's discuss some usable cases of ChatGPT:
@@ -530,9 +529,7 @@ En efecto, 1 huevo es una cantidad muy pequeña para hacer tortitas de patatas. 
 
 <p>  Like other Language models, ChatGPT may produce inaccurate toxic content and the knowledge is bounded and constrained to the training data.
 	
-
-	
-	Also, finding the correct prompt and re-running it until the model generate something close to the desired output 
+	Also, finding the correct prompt and re-running it until the model generates something close to the desired output 
 	is a long prompt engineering process.	
 	
 </p>
@@ -594,6 +591,20 @@ However, as a language model, I am not programmed to engage in discussions about
 
 <h2>Final thought</h2>
 
+<p>The GPTChat training process that makes the model generate answers that follow user intent is the beginning of an era that the 
+	language models with fewer parameters (low cost) can perform sublimely while intractably with humans. 
+	Also, as GPTChat is a language model and does not present various sources of information, it would not replace the 
+	traditional search engine -dense retrieval-  but it could assist narrow and re-rank the search result.
+	
+
+</p>
+
+<!--
+<h2> Comparison to GPT-3 <h2> 
+
+
+
+-->
 <!--radix_placeholder_article_footer-->
 
 
