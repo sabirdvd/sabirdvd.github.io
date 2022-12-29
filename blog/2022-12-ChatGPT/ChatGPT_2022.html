@@ -187,8 +187,8 @@ inside the model and how it's different from the rest of the GPT family.</p>
 <p> 	  
 Large Language Models (LM) like the GPT family are often used to follow instructions (prompt) to execute the user’s tasks.
 	However, quite often, these models generate: (1) less explicit intentions as following instructions, 
-	and (2) outputs untruthful information or harmful. The main reason behind this that the LM objective is to 
-	predict the next token (autoregressive), which is different from following the user's instruction. 
+	and (2) outputs untruthful information or harmful. The main reason behind this is that the LM objective is to 
+	predict the next token  <strong> autoregressive behavior</strong> (\( \Pi_{t=1}^T P\left(X_{t+1} \mid X_t, X_{t-1}, \ldots, X_1, X_0\right))\), which is different from following the user's instruction. 
 	The solution to this problem proposed by openAI is to fine-tune the user intent with human feedback.
 
 	
