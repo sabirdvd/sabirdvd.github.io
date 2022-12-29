@@ -188,7 +188,7 @@ inside the model and how it's different from the rest of the GPT family.</p>
 Large Language Models (LM) like the GPT family are often used to follow instructions (prompt) to execute the user’s tasks.
 	However, quite often, these models generate: (1) less explicit intentions as following instructions, 
 	and (2) outputs untruthful information or harmful. The main reason behind this is that the LM objective is to 
-	predict the next token  <strong> autoregressive behavior</strong> (\( \Pi_{t=1}^T P\left(X_{t+1} \mid X_t, X_{t-1}, \ldots, X_1, X_0\right))\), which is different from following the user's instruction. 
+	predict the next token autoregressive behavior (\( \Pi_{t=1}^T P\left(X_{t+1} \mid X_t, X_{t-1}, \ldots, X_1, X_0\right))\), which is different from following the user's instruction. 
 	The solution to this problem proposed by openAI is to fine-tune the user intent with human feedback.
 
 	
@@ -223,8 +223,9 @@ prompts used for GPT  and asked labelers  to write down the correct output.
 	    <p>
 <strong> Reward Model Training (RM).  </strong>  Then, they generate multiple outputs from the model for each of the prompts and asked labelers to 
 rank those outputs to create different combination of the ranked outputs. The output results are used to train a Reward Model 
-		    <dt-cite key="stiennon2020learning"></dt-cite>. The main idea there is to train a reward model that predicts 
-		    the human-preferred output. The RM loss to predict \(y \in\left\{y_0, y_1\right\}\), which is a prompt better judged by human given input prompt can be written:
+		    <dt-cite key="stiennon2020learning"></dt-cite>. The main idea here is to train a reward model that predicts 
+		    the human-preferred output. The RM loss to predict \(y \in\left\{y_0, y_1\right\}\), 
+		    which is a prompt better judged by human given input prompt, and it can be written:
 
 \[ \small
 \operatorname{loss}\left(r_\theta\right)=-E_{\left(x, y_0, y_1, i\right) \sim D}\left[\log \left(\sigma\left(r_\theta\left(x, y_i\right)-r_\theta\left(x, y_{1-i}\right)\right)\right)\right]
@@ -260,13 +261,13 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 	  
 	  
 	  <h2>Dataset</h2>
-<p> As we mentioned before in the previous section, the ChatGPT model is trained by employing different techniques on different datasets:
+<p> As we mentioned before in the previous section, the ChatGPT model is trained by employing various techniques on different datasets:
 </p>
 
 <p> <strong> Prompt data.</strong> (1) prompts are submitted to OpenAI API, and (2) manually written dataset by labelers as shown in Table 1.
 
 
-  <p> <strong> Others dataset. </strong> For each model we described before, the model is trained on different datasets. 
+  <p> <strong> Others dataset. </strong> For each model we described before, each model is trained on different datasets. 
     For the first stage <strong> SFT</strong> a labeler demonstration example dataset is used, 
       <strong> RM</strong>: labelers ranking output dataset, and finally, the <strong> PPO</strong> 
       model is trained without human labels.  
@@ -314,13 +315,14 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 	instructions than GPT-3  and preferred by labelers (humans) despite having 100x fewer parameters.
 	
 	Also, the model hallucinates less than GPT3 and generates 25% less toxic  output than GPT3. 
-	Therefore, GPTchat uses the same approach as instructGPT but with different data collection setup as we described above. Next, let's discuss some usable cases of ChatGPT:
+	Therefore, GPTchat uses the same approach as instructGPT but with different data collection setup 
+	as we described above. Next, let's discuss some usable cases of ChatGPT:
 
 </p>
 
 	  <p><strong>Explore ideas.</strong> Brainstorming is about creating and exploring different ideas to solve a problem. 
 		  Problem solving can be divided into two stages: First, extract a wide range of ideas, which don't get value immediately. Secondly,
-		  narrow the solution to the specific problem. 
+		  narrow the solution to the specific problem. Let's ask the model about a general idea: 
 	  
 	  </p>
 	  
@@ -476,9 +478,12 @@ topics = extract_topics(texts)
 for topic_id, topic in topics:
   print("Topic", topic_id, ":", topic)
 	  
-</dt-code>	  
+</dt-code>	
 	  
-	  <p> Unfortunately, the code is not usable, but we can observe that without giving specific prompts, the model will not able to write some 
+	  <p> Unfortunately, the code is generated randomly by using the keywords (i.e., GPT and LDA) as context but
+	  <p style="color:red;"> and is not usable or fixable</p>.
+	  
+	  However, we can observe that without giving specific prompts, the model will not able to write some 
 		  code that has never seen before. The result after giving the model multiple exact prompts: 
 	  
 	  </p>
@@ -647,7 +652,7 @@ En efecto, 1 huevo es una cantidad muy pequeña para hacer tortitas de patatas. 
 	
 		
 	<p> Now, let's ask the same question but in Japanese: 
-		How do you make a Japanese omelet (tamagoyaki) ?  </p>
+		How do you make a Japanese omelette (tamagoyaki) ?  </p>
 
 
 	 <p class="noteBoxes type4"  align="center">  
