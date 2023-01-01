@@ -521,9 +521,10 @@ for topic_id, topic in topics:
 	  
 </dt-code>	
 	  
-	  <p> Unfortunately, the code is generated randomly by using the keywords (i.e., GPT and LDA) as context and therefore 
+	  <p> Unfortunately, the code is generated randomly by using the keywords from the question (i.e., GPT and LDA) as context and therefore 
 		  the code is eiter usable or fixable. However, we can observe that without giving specific prompts, 
-		  the model will not able to write some  code that has never seen before. The result after giving the model multiple exact prompts: 
+		  the model will not able to write some  code that has never seen before. Here, 
+		  the result after giving the model multiple exact prompts: 
 	  
 	  </p>
 		  
@@ -626,7 +627,8 @@ meta=value,
 	  
 <h2>Other Languages</h2>	  
 	  
-	  <p> Next, let's test the model and ask the ChatGPT in a different language, Spanish. How do you make a Spanish omelette (tortitas de patatas)? </p>
+	  <p> Next, let's test the model and ask the ChatGPT in a different 
+		  language, e.g., Spanish. How do you make a Spanish omelette (tortitas de patatas)? </p>
 
 	 <p class="noteBoxes type3"  align="center">  
 
@@ -683,7 +685,7 @@ En efecto, 1 huevo es una cantidad muy pequeña para hacer tortitas de patatas. 
 	
 	</p>
 	
-	<p>Therefore, the feedback helps the model to correct itself. However, 
+	<p>The feedback helps the model to correct itself. However, 
 		while the model can generate responses like humans, 
 		it can not understand the complexity of the process. 
 		
