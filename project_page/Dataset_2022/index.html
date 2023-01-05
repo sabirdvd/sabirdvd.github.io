@@ -111,11 +111,13 @@
   <h2>Overview</h2>
     <table border="0" align="left">
       <tr><td width="1000" align="justify"> 
-        <p align="justify"> We enrich COCO-caption with textual Visual Context information. We use ResNet152, CLIP and Faster R-CNN to extract object information for each COCO-caption image. We use three filter 
-        approaches to ensure quality of the dataset (1) Threshold: to filter out predictions where the object classifier is not confident enough, and (2) semantic alignment to with semantic similarity 
-        to remove duplicated object. (3) semantic relatedness score as soft-label: to grantee the visual context and caption have strong relation, we use Sentence RoBERTa-SBERT uses siamese network to 
-        derive meaningfully sentence embedding that can be compared via cosine similarity to give a soft label via cosine similarity with threshold to annotate the final label (if th > 0.2, 0.3, 0.4 then 1,0). 
-        Finally, to take advantage of the overlapping between the visual context and the caption, and to extract global information from each visual, we use BERT followed by a shallow CNN (Kim, 2014).
+        <p align="justify"> We enrich COCO-caption with textual Visual Context information. We use ResNet152, CLIP,
+          and Faster R-CNN to extract object information for each COCO-caption image. We use three filter approaches to ensure 
+          the quality of the dataset (1) Threshold: to filter out predictions where the object classifier is not confident enough, 
+          and (2) semantic alignment with semantic similarity to remove duplicated objects. (3) semantic relatedness score as soft-label: 
+          to guarantee the visual context and caption have strong relation. In partiular, we use Sentence RoBERTa-SBERT via cosine similarity 
+          to give a soft score  and we use a threshold to annotate the final label (if th > 0.2, 0.3, 0.4 then 1,0). Finally, to take advantage of the visual overlape object between the caption and visual context, 
+          and to extract global information from each visual, we use BERT followed by a shallow CNN (Kim, 2014). 
        </br>
   
         <!--
