@@ -117,10 +117,10 @@
           to ensure the quality of the dataset (1) Threshold: to filter out predictions where the object classifier 
           is not confident enough,  and (2) semantic alignment with semantic similarity to remove duplicated objects. 
           (3) semantic relatedness score as soft-label: to guarantee the visual context and caption have a strong 
-          relation. In particular, we use Sentence RoBERTa-SBERT via cosine similarity to give a soft score, and then 
+          relation. In particular, we use Sentence-RoBERTa via cosine similarity to give a soft score, and then 
           we use a threshold to annotate the final label (if th > 0.2, 0.3, 0.4 then 1,0). Finally, to take advantage 
           of the visual overlap  between caption and visual context,  
-          and to extract global information, we use BERT followed by a shallow CNN (Kim, 2014
+          and to extract global information, we use BERT followed by a shallow CNN (<a href="Kim, 2014">https://arxiv.org/abs/1408.5882</a>).
        </br>
         </br>
         
@@ -130,7 +130,7 @@
     -->
         For quick start please have a look at the <a href="https://github.com/ahmedssabir/Textual-Visual-Semantic-Dataset/blob/main/BERT_CNN_Visual_re_ranker_demo.ipynb">demo</a></tr>
 
-        
+       
         
     
     
