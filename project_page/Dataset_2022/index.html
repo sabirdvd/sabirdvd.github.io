@@ -118,7 +118,7 @@
           is not confident enough,  and (2) semantic alignment with semantic similarity to remove duplicated objects. 
           (3) semantic relatedness score as soft-label: to guarantee the visual context and caption have a strong 
           relation. In particular, we use Sentence-RoBERTa via cosine similarity to give a soft score, and then 
-          we use a threshold to annotate the final label (if th > 0.2, 0.3, 0.4 then 1,0). Finally, to take advantage 
+          we use a threshold to annotate the final label (if th &ge; 0.2, 0.3, 0.4 then 1,0). Finally, to take advantage 
           of the visual overlap  between caption and visual context,  
           and to extract global information, we use BERT followed by a shallow CNN (<a href="https://arxiv.org/abs/1408.5882">Kim, 2014</a>)
           to estimate the visual relatedness score. 
