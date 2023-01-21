@@ -8,10 +8,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href="style.css" rel="stylesheet" type="text/css" />
-
+  
 <script type="text/javascript" src="../js/hidebib.js"></script>
-
-
 
 </head>
 
@@ -25,8 +23,6 @@
   </table>
   </br>
   
-
-
 
 
   <p align="center"> <img src="overview_bias.png" width="700" align="middle" /></p>
@@ -99,12 +95,6 @@
 
 
 
-
-
-
-
-
-
 </div>
 
 </br>
@@ -117,20 +107,18 @@
     <p style="text-align:left">
       In this paper, we investigate the impact of objects on gender bias in image caption systems. Our results show that only gender-specific objects have a strong gender bias (e.g., <em>woman-lipstick</em>). 
       In addition, we present a visual semantic-based gender score that measures the degree of bias  and can be used as a plug-in for any image captioning system. Our experiments demonstrate the utility of 
-      the gender score, since we observe that our score can measure the bias relation between a caption and its related gender better than the existing approach Object Gender Co-Occurrence.
-    
+      the gender score, since we observe that our score can measure the bias relation between a caption and its related gender better than the existing approach Object Gender Co-Occurrence.    
 </div>
 
 </br>
 
     
-      <tr><td width="1000" align="left"> 
+      <tr><td width="1000" align="center"> 
         <div class="paper" id="ap_agent">
           <h2>Proposed Approach</h2>
           <p>
             In this work, we proposed two object to gender scores: (1) direct gender score and gender score estimation. The model uses the visual context to predict the gender and thus predict the object related bias.
              Also, inspired by Mask Language Model, the model can estimate the Mask gender using the object context in the sentence.
-
           </p>
           <h3>Gender Score:</h3>
           <p align="center"> <img src="COCO_val2014_000000175024.jpg" width="300" align="middle" /></p>
@@ -145,8 +133,7 @@
             <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">Gender Score<sub>man/woman</sub> </a>
             <pre >
               a ____ riding amotorcycle on a road - man --> score 
-              a ____ riding amotorcycle on a road - woman --> score 
-             
+              a ____ riding amotorcycle on a road - woman --> score          
             </pre>       
           </div>
 
@@ -192,7 +179,7 @@
     <P>Examples of Gender Score Estimation and
       Cosine Distance. The result shows that (Top) the score
       balances the bias (as man/woman have a similar bias
-      with sport tennis), and (Bottom) adjusts the woman bias</P>
+      with sport tennis), and (Bottom) adjusts the woman bias. </P>
     <p align="center"> <img src="gender.png" width="500" align="middle" /></p>
    
     <!--
@@ -214,7 +201,8 @@
 
     <h3><strong>Comparison against GPT-2 and Cosine Score</strong></h3>
     <p align="justify"> Comparison result on the test set of the Gender Score bias. (toward  women <span style="color: #f5c6c6">■</span> and men <span style="color: #7ebcd6">■</span>)  between  three  different  models  in  trainingdataset size BLIP129M (unsupervised) and VilBERT3.5M andT ransformer 550K.
-      Our proposed gender score <span style="color: #f5b87e">■</span> balance the amplified bias as the model getting bigger, the more amplified bias against man or woman. </p>
+      Our proposed gender score <span style="color: #f5b87e">■</span> balance the amplified bias as the model getting bigger, 
+      the more amplified bias against man or woman. </p>
     <p align="center"> <img src="man_BLIP.png" width="300" align="middle" /></p>
     <p align="center"> <img src="man_Vilbert.png" width="300" align="middle" /></p>
     <p align="center"> <img src="man_Transformer.png" width="300" align="middle" /></p>
