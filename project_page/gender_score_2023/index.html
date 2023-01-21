@@ -20,12 +20,14 @@
 <div class="container">
   <table border="0" align="center">
     <tr><td width="623" align="center" valign="middle"><h2>Women Wearing Lipstick: Measuring the Bias Between Object and Its Related Gender</h2></td></tr>
-<tr><td width="300" align="center" valign="middle">   <a href="https://www.cs.upc.edu/~asabir/">Ahmed Sabir</a>,  <a href="https://pmadhyastha.github.io">Pranava Madhyastha</a>, <a href="https://www.cs.upc.edu/~padro/">Lluís Padró</a></td></tr>  
+    <tr><td width="300" align="center" valign="middle">   <a href="https://www.cs.upc.edu/~asabir/">Ahmed Sabir</a> and <a href="https://www.cs.upc.edu/~padro/">Lluís Padró</a></td></tr>
   </table>
   </br>
   
 
-  
+
+
+
   <p align="center"> <img src="overview_bias.png" width="700" align="middle" /></p>
 
 
@@ -96,6 +98,12 @@
 
 
 
+
+
+
+
+
+
 </div>
 
 </br>
@@ -106,65 +114,24 @@
   
 
     <p style="text-align:left">
-      In this paper, we investigate the impact of objects on gender bias in image caption systems.
-      Our results show that only gender-specific objects have a strong gender bias (e.g., <em>woman-lipstick</em>). 
-      In addition, we present a visual semantic-based gender score that measures the degree of bias  and can be used as 
-      a plug-in for any image captioning system. Our experiments demonstrate the utility of 
-      the gender score, since we observe that our score can measure the bias relation between a caption and 
-      its related gender better than the existing approach Object Gender Co-Occurrence.
+      In this paper, we investigate the impact of objects on gender bias in image caption systems. Our results show that only gender-specific objects have a strong gender bias (e.g., <em>woman-lipstick</em>). 
+      In addition, we present a visual semantic-based gender score that measures the degree of bias  and can be used as a plug-in for any image captioning system. Our experiments demonstrate the utility of 
+      the gender score, since we observe that our score can measure the bias relation between a caption and its related gender better than the existing approach Object Gender Co-Occurrence.
     
 </div>
 
 </br>
 
-
-
-<!-- <div class="container" text-align="left">
-  <h2>Visual Re-ranking with Belief Revision</h2>
-    <table border="0" align="left">
-      <tr><td width="1000" align="left">  The <a href="https://www.aaai.org/Papers/Symposia/Spring/2003/SS-03-05/SS03-05-005.pdf">Belief revision</a>  is 
-        a conditional probability model which assumes that the preliminary probability finding is 
-revised to the extent warranted by the hypothesis proof.  
-       </br>
-        </br>
-        <img src="https://render.githubusercontent.com/render/math?math=\text{P}(w \mid c)=\text{P}(w)^{\alpha}"> 
-      </br>
-      </br>
-        where the main components of hypothesis revision as caption visual semantics re-ranker:
-      </br>
-    </br>
-        1. Hypothesis (caption candidates beam search) <img src="https://render.githubusercontent.com/render/math?math=\text{P}(w)"> initialized by common observation (i.e., language model) 
-      </br>
-    </br>     
-        2. Informativeness  <img src="https://render.githubusercontent.com/render/math?math=1-\text{P}(c)"> of the visual context from the image
-      </br>
-    </br>   
-        3. Similarities <img src="https://render.githubusercontent.com/render/math?math=\alpha=\left[\frac{1 - \text{sim}(w, c)}{1%2B\text{sim}(w, c)}\right]^{1-\text{P}(c)}"> the relatedness between the two concepts (visual context and hypothesis) with respect to the informativeness of the visual information.
-      </br>
-    </br>
-        
-    Here is a  <a href="https://github.com/">Notebook</a> to show the Visual Re-ranking based Belief Revision </td></tr>
-      
--->
-  
-
-
-
     
       <tr><td width="1000" align="left"> 
         <div class="paper" id="ap_agent">
-          <h2>Example</h2>
-         
-          
-          <p> 
-            Example of our proposed Gender Score and Gender Score Estimation. The model uses the visual context to predict the gender and thus 
-            predict the object related bias. Also, inspired by Mask Language Model,  the model can estimate the Mask gender using the 
-            object context in the sentence. 
-            
+          <h2>Proposed Approach</h2>
+          <p>
+            In this work, we proposed two object to gender scores: (1) direct gender score and gender score estimation. The model uses the visual context to predict the gender and thus predict the object related bias.
+             Also, inspired by Mask Language Model, the model can estimate the Mask gender using the object context in the sentence.
+
           </p>
-      
-          
-          
+          <h3>Gender Score:</h3>
           <p align="center"> <img src="COCO_val2014_000000175024.jpg" width="300" align="middle" /></p>
           <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Visual Classifier<sub>ResNet/CLIP</sub></a>
           <pre xml:space="preserve">
@@ -184,6 +151,7 @@ revised to the extent warranted by the hypothesis proof.
 
       <tr><td width="1000" align="left"> 
         <div class="paper" id="ap_agent">
+          <h3>Gender Score Estimation:</h3>
           <p align="center"> <img src="COCO_val2014_000000437325.jpg" width="300" align="middle" /></p>
           <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Visual Classifier<sub>ResNet/CLIP</sub></a>
           <pre xml:space="preserve">
@@ -195,25 +163,13 @@ revised to the extent warranted by the hypothesis proof.
            <div class="paper" id="ap_role_scenario1">
              <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">Gender Score Estimation<sub>MASK</sub> </a>
              <pre >
-               a [<em> MASK </em>] playing a video game in a living room (man/woman)
+               a <em> [MASK] </em> playing a video game in a living room (man/woman)
              </pre>    
 
 
+            
 
-
-
-
-
-          <h2>Results</h2>
-          <p align="justify"> Comparison result on the test set of the Gender Score bias. (toward  women <span style="color: #f5c6c6">■</span> and men <span style="color: #7ebcd6">■</span>)  between  three  different  models  in  training dataset size BLIP 129M (unsupervised) and VilBERT 3.5M and Transformer 550K.
-            Our proposed gender score <span style="color: #f5b87e">■</span> balance the amplified bias as the model getting bigger, the more amplified bias against man or woman. </p>
-          <p align="center"> <img src="man_BLIP.png" width="300" align="middle" /></p>
-          <p align="center"> <img src="man_Vilbert.png" width="300" align="middle" /></p>
-          <p align="center"> <img src="man_Transformer.png" width="300" align="middle" /></p>
-          <p align="center"> <img src="woman_BLIP.png" width="300" align="middle" /></p>
-          <p align="center"> <img src="woman_Vilbert.png" width="300" align="middle" /></p>
-          <p align="center"> <img src="woman_Transformer.png" width="300" align="middle" /></p>
-
+       
           <!--
                  <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Beam Search<sub>baseline</sub></a>
              <pre xml:space="preserve">
@@ -223,11 +179,59 @@ revised to the extent warranted by the hypothesis proof.
 
       
 
-      
-    </table> 
+  
 </div>
 
-/br>
+</br>
+
+
+<tr><td width="1000" align="left"> 
+  <div class="paper" id="ap_agent">
+    <h3><strong>Examples</strong></h3>
+    <P>Examples of Gender Score Estimation and
+      Cosine Distance. The result shows that (Top) the score
+      balances the bias (as man/woman have a similar bias
+      with sport tennis), and (Bottom) adjusts the woman bias</P>
+    <p align="center"> <img src="gender.png" width="500" align="middle" /></p>
+   
+    <!--
+           <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Beam Search<sub>baseline</sub></a>
+       <pre xml:space="preserve">
+     s
+</td></tr>
+-->
+
+</table> 
+</div>
+
+
+</br>
+
+
+<tr><td width="1000" align="left"> 
+  <div class="paper" id="ap_agent">
+
+    <h3><strong>Comparison against GPT-2 and Cosine Score</strong></h3>
+    <p align="justify"> Comparison result on the test set of the Gender Score bias. (toward  women <span style="color: #f5c6c6">■</span> and men <span style="color: #7ebcd6">■</span>)  between  three  different  models  in  trainingdataset size BLIP129M (unsupervised) and VilBERT3.5M andT ransformer 550K.
+      Our proposed gender score <span style="color: #f5b87e">■</span> balance the amplified bias as the model getting bigger, the more amplified bias against man or woman. </p>
+    <p align="center"> <img src="man_BLIP.png" width="300" align="middle" /></p>
+    <p align="center"> <img src="man_Vilbert.png" width="300" align="middle" /></p>
+    <p align="center"> <img src="man_Transformer.png" width="300" align="middle" /></p>
+    <p align="center"> <img src="woman_BLIP.png" width="300" align="middle" /></p>
+    <p align="center"> <img src="woman_Vilbert.png" width="300" align="middle" /></p>
+    <p align="center"> <img src="woman_Transformer.png" width="300" align="middle" /></p>
+
+    <!--
+           <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Beam Search<sub>baseline</sub></a>
+       <pre xml:space="preserve">
+     s
+</td></tr>
+-->
+
+</table> 
+</div>
+
+</br>
 
 <div style="text-align: left;" class="containersmall">
   <h3>Citation</h3>
@@ -247,8 +251,7 @@ hideallbibs();
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
 </script>
-
-
+</script>
 
 </body>
 </html>
