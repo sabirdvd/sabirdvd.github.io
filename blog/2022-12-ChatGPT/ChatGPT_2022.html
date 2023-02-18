@@ -294,9 +294,7 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 
 	
 </p>
-	  
-	
-	  
+	    
 	  <p>  To constrain the RL fine-tuning to not generate gibberish to get a higher reward, Kullback-Leibler (KL) 
 		  divergence is used to penalize the model when the distributions are far from each other. 
 	  
@@ -312,7 +310,7 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 	  
 	  </p>
 	  
-	  
+	<!--  
 	  <p> Finally, the rewards are combined to match the original human distribution as: </p>
 	 
 	
@@ -322,6 +320,7 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 & \gamma E_{x \sim D_{\text{pretrain}}}\left[\log \left(\pi_\phi^{\mathrm{RL}}(x)\right)\right]
 \end{aligned}
 	 \]
+-->
 	
 	
 	  
