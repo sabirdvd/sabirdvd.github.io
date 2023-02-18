@@ -287,9 +287,15 @@ prompts used for GPT  and asked labelers  to write down the correct output.
 	
 	The model is then  fine-tuned  (supervised) on human prompts with Proximal Policy 
 Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO to 
-	generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. 	
+	generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. In particular, as the 
+	PPO is an algorithm that applies constraints on the gradient to ensure the right update, the reward 
+	is only updated with the current batch of data (ie., generated prompts).
+	
+
+	
 </p>
 	  
+	
 	  
 	  <p>  To constrain the RL fine-tuning to not generate gibberish to get a higher reward, Kullback-Leibler (KL) 
 		  divergence is used to penalize the model when the distributions are far from each other. 
