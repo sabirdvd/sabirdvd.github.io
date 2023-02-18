@@ -256,14 +256,18 @@ Large Language Models (LM) like the GPT family are often used to follow instruct
 	  
 
 	   <p>
-<strong> Supervised fine-tuning (SFT). </strong> They started by a pre-trained GPT-3 <dt-cite key="brown2020language"></dt-cite> model trained on  Internet data. Then sampled typical human 
+<strong> Supervised fine-tuning (SFT). </strong> They started by a pre-trained GPT-3 (initial language model)  <dt-cite key="brown2020language"></dt-cite> model trained on  Internet data. Then sampled typical human 
 prompts used for GPT  and asked labelers  to write down the correct output.
 
   </p>
 
 	    <p>
-<strong> Reward Model Training (RM).  </strong>  Then, they generate multiple outputs from the model for each of the prompts and asked labelers to 
-rank those outputs to create different combination of the ranked outputs. The output results are used to train a Reward Model 
+<strong> Reward Model Training (RM).  </strong>  Then, they generate multiple outputs from the initial language model 
+		    for each of the prompts and asked labelers to rank those outputs to create different combination of the ranked outputs. 
+		    Note that, the model RM training relies on prompts-based data,  which is smaller than the original pretraining dataset.  
+		    
+		    
+		    The output results are used to train a Reward Model or Human Preference Reward Model (also a transformer based LM)  
 		    <dt-cite key="stiennon2020learning"></dt-cite>. The main idea here is to train a reward model that predicts 
 		    the human-preferred output. The RM loss to predict \(y \in\left\{y_0, y_1\right\}\), 
 		    which is a prompt better judged by human given input prompt, and it can be written:
@@ -280,13 +284,41 @@ rank those outputs to create different combination of the ranked outputs. The ou
 		    
 <p> 
 <strong>RL via proximal policy optimization (PPO) on RM. </strong>
-
-
-The model is then  fine-tuned  (supervised) on human prompts with Proximal Policy 
-Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO to generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. 
-
+	
+	The model is then  fine-tuned  (supervised) on human prompts with Proximal Policy 
+Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO to 
+	generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. 	
 </p>
+	  
+	  
+	  <p>  To constrain the RL fine-tuning to not generate gibberish to get a higher reward, Kullback-Leibler (KL) 
+		  divergence is used to penalize the model when the distributions are far from each other. 
+	  
+	  </p>
+	  
+	  \[ \small
+	  -\lambda_{\mathrm{KL}} D_{\mathrm{KL}}\left(\pi_{\mathrm{PPO}}(y \mid x) \| \pi_{\text {base}}(y \mid x)\right)
 
+	  \]
+	  
+	  <p> where the \(\pi \operatorname{PPO}(y \mid x)\) is the fine-tuned language model  with RL policy 
+		  and \(\pi_{\text {base }}(y \mid x)\) is the inital language model (SFT). 
+	  
+	  </p>
+	  
+	  
+	  </p> Finally, the rewards are combined to match the original human distribution as: <p>
+	 
+	
+	\[ \small
+	\begin{aligned}
+\operatorname{objective}(\phi)= & E_{(x, y) \sim D_{\pi_\phi^{\mathrm{RL}}}}\left[r_\theta(x, y)-\beta \log \left(\pi_\phi^{\mathrm{RL}}(y \mid x) / \pi^{\mathrm{SFT}}(y \mid x)\right)\right]+ \\
+& \gamma E_{x \sim D_{\text {pretrain }}}\left[\log \left(\pi_\phi^{\mathrm{RL}}(x)\right)\right]
+\end{aligned}
+	 \]
+	
+	
+	  
 	  <p> Figure 2 below shows the training process of ChatGPT which is similar to Figure 1 instructGPT.  </p>
 
 <figure align="center">
