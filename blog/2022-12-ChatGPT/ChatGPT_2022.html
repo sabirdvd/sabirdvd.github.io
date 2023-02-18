@@ -271,6 +271,8 @@ prompts used for GPT  and asked labelers  to write down the correct output.
 		    <dt-cite key="stiennon2020learning"></dt-cite>. The main idea here is to train a reward model that predicts 
 		    the human-preferred output. The RM loss to predict \(y \in\left\{y_0, y_1\right\}\), 
 		    which is a prompt better judged by human given input prompt, and it can be written:
+		    
+		    
 
 \[ \small
 \operatorname{loss}\left(r_\theta\right)=-E_{\left(x, y_0, y_1, i\right) \sim D}\left[\log \left(\sigma\left(r_\theta\left(x, y_i\right)-r_\theta\left(x, y_{1-i}\right)\right)\right)\right]
@@ -287,11 +289,10 @@ prompts used for GPT  and asked labelers  to write down the correct output.
 	
 	The model is then  fine-tuned  (supervised) on human prompts with Proximal Policy 
 Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO to 
-	generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. In particular, since the 
-	PPO is an algorithm that applies constraints on the gradient to ensure the only current update without looking at previous , the reward 
-	is only updated with the current batch of data (ie., generated prompts).
-	
-
+	generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. In particular, since the  PPO is 
+	an algorithm that applies constraints on the gradient to ensure small updates in a single step, 
+	the reward is only updated with the current batch of data (ie., generated prompts).
+  
 	
 </p>
 	    
@@ -299,7 +300,9 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 		  divergence is used to penalize per token the model when the distributions are far from SFT and to avoid 
 		  over-optimizing the reward with human preference data.  
 		 
-	  
+	
+		  optimization problems
+		  
 	  </p>
 	  
 	  \[ \small
