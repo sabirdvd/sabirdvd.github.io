@@ -300,7 +300,7 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 </p>
 	    
 	  <p>  To constrain the RL fine-tuning not generating gibberish to get a higher reward, Kullback-Leibler (KL) 
-		  divergence is used to penalize per token the model when the distributions are far from SFT and to avoid 
+		  divergence is used to penalize the model per token when the distributions are far from SFT, and to avoid 
 		  over-optimizing the reward with human preference data.  
 		 
 	
@@ -332,28 +332,32 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 	
 	
 	  
-	  <p> Figure 2 below shows the training process of ChatGPT which is similar to Figure 1 instructGPT.  </p>
+	  <p> Figure 2 below shows the training process of ChatGPT, which we described above. </p>
 
 	  
-	  <figure align="center">
-           
-            <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/rlhf/rlhf.png" width="650" />
-            <figcaption> Figure 2. Illustration of the training process of  ChatGPT. Figure from ChatGPT . 
-		    Figure from  <dt-cite key="lambert2022illustrating"></dt-cite>
-                 </figcaption>
-
-          </figure>
-	  
-	  
-	
+	<!-- 	
+  <p> Figure 2 below shows the training process of ChatGPT which is similar to Figure 1 instructGPT.  </p>
 <figure align="center">
-           
+      
             <img src="https://cdn.openai.com/chatgpt/draft-20221129c/ChatGPT_Diagram.svg" alt="Trulli" style="width:95%">
             <figcaption> Figure 2. Illustration of the training process of  ChatGPT. Figure from ChatGPT <dt-cite key="openAI:22"></dt-cite>.  
                  </figcaption>
 
           </figure>
-        
+        -->
+	  
+	  
+	  <figure align="center">
+           
+            <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/rlhf/rlhf.png" width="650" />
+            <figcaption> Figure 2. Illustration of the training process of  ChatGPT.
+		    Figure from huggingface blog <dt-cite key="lambert2022illustrating"></dt-cite>
+                 </figcaption>
+
+          </figure>
+	  
+	  
+
 	  
 	
 	  
