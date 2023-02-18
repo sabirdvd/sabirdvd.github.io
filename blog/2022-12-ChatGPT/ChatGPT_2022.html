@@ -290,7 +290,7 @@ prompts used for GPT  and asked labelers  to write down the correct output.
 	The model is then  fine-tuned  (supervised) on human prompts with Proximal Policy 
 Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, where the prompt is used as input to the PPO to 
 	generates a reward value. The PPO model is then iteratively fine-tuned using the rewards and the prompts. In particular, since the  PPO is 
-	an algorithm that applies constraints on the gradient to ensure small updates in a single step <dt-fn> Note that, a large policy update in a single step will results in optimization problems in some senario.</dt-fn>, 
+	an algorithm that applies constraints on the gradient to ensure small updates in a single step <dt-fn> Note that, a large or inconsistent policy updates in a single step will results in optimization problems.</dt-fn>, 
 	the reward is only updated with the current batch of data (ie., generated prompts).
   
 	
@@ -301,7 +301,7 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 		  over-optimizing the reward with human preference data.  
 		 
 	
-		  optimization problems
+		 
 		  
 	  </p>
 	  
