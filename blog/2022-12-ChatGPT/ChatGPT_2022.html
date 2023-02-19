@@ -283,7 +283,7 @@ prompts used for GPT  and asked labelers  to write down the correct output.
 \]	  
 
 <p> where \(r_\theta(x, y)\) is the scalar output of the reward model for input prompt \(x\) and label \(y\) with 
-  parameters \(\theta\), and \(D\) is the training data of human judgments. 
+  parameters \(\theta\), and \(D\) is the training data of human preference. 
 <p> 
 
 		    
@@ -319,8 +319,8 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 	  </p>
 	  
 	 
-	  <p> Finally, the objective function of the RL should be similar to InstructGPT, therefore  
-		  the rewards are combined to match the original human distribution \(D_{\text {pretrain}}\) (pretrain) as: </p>
+	  <p> Finally, the objective function of the RL should be similar to InstructGPT, 
+		  the rewards are combined to match the original human distribution \(D_{\text {pretrain}}\) as: </p>
 	 
 	
 	\[ \small
