@@ -318,8 +318,9 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 	  
 	  </p>
 	  
-	<!--  
-	  <p> Finally, the rewards are combined to match the original human distribution as: </p>
+	 
+	  <p> Finally, the objective function of the RL should be similar to InstructGPT, therefore  
+		  the rewards are combined to match the original human distribution \(D_{\text {pretrain}}\) (pretrain) as: </p>
 	 
 	
 	\[ \small
@@ -328,8 +329,17 @@ Optimization algorithm (PPO) <dt-cite key="schulman2017proximal"></dt-cite>, whe
 & \gamma E_{x \sim D_{\text{pretrain}}}\left[\log \left(\pi_\phi^{\mathrm{RL}}(x)\right)\right]
 \end{aligned}
 	 \]
--->
+
+	  
 	
+	  <p>  where \(\pi_\phi^{\mathrm{RL}}\) is the learned RL policy, \(\pi^{\mathrm{SFT}}\) is the inital language model,
+		  and \(D_{\text {pretrain}}\) is the pretraining human based distribution. The KL reward coefficient, \(\beta\), and the pretraining
+		  loss coefficient, \(\gamma\), control the KL penalty and pretraining gradients respectively. 
+		 
+		  
+		
+	  
+	  </p>
 	
 	    <p> Figure 2 below shows the training process of ChatGPT which is similar to Figure 1 instructGPT.  
 		    The model is iteratively fine-tuned using the rewards and the prompt.  </p>
