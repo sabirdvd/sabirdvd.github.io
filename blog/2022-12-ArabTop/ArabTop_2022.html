@@ -264,9 +264,22 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 		  
 	</p>
 		
-	  <p> <strong> Diacritics Removal and Normalization </strong>
+	  <p> <strong> Diacritics Removal and Normalization </strong>  The diacritic in the Arabic language 
+		  represents short vowels (Tashkeel)  which can be added to the string (), and similar to the accent in other Latin 
+		  languages e.g., in Spanish (España es un país).   However, unlike other Latin languages such as Spanish, Catalan, etc., removing the diacritics will not be a problem for
+ formal writing such as newspapers and books for native speakers. However, it will result in word ambiguity as shown in this example:
+		  
 	  </p>
-		
+	  
+ <p>
+(1) I sat on the <strong> north </strong> side of the bridge.  جلستُ "شَمال" الجسر : شَمال أي إتجاه الشمال
+	 (2) I sat on the <strong> left </strong> side of the bridge. جلستُ "شِمال" الجسر: شِمال أي إتجاه اليسار
+   </p>
+	
+	  
+	  <p>In the first sentence (1) the word  "شَمال" means north side of the bridge, 
+		  while in the second sentence "شِمال" refers to the left side of the bridge. However, to  </p>
+	  </p>
 		
 		
 	  <p> <strong> Lemmatization and Tokenization </strong> </p>
