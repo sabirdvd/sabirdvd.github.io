@@ -244,10 +244,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	
 	  
 	  
-	  
 	
-	  
-	  
 	  <h2>Text Mining in Arabic Language</h2>
 	  
 	  <p> Non-MSA Arabic text is heavily based on social media, more specifically Twitter. The short text comes in varieties 
@@ -289,11 +286,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 		  while in the second sentence "شِمال" refers to the "left" direction of the bridge. Therefore, each word will
 		  be treated as diffrent token and thus result on diffrent length. Therefore, to 
 		  reduce the sparsity and complexity, the diacritics can be completely eliminated from the text.
-		 
-		  
-		  
-	  
-	  
+		   
 	  </p>
 	  </p>
 		
@@ -340,8 +333,6 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 <center>  
 <table align="center">
    <tr>
-
-
        <td style="text-align:left">　Profile Name</td>
        <td style="text-align:center">　Profile label</td>
        <td style="text-align:center">　Location</td>
@@ -370,7 +361,8 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
  
 
    <caption>
-       <font color="#6e6e6f"> <small> <small> Table 1.  Sample of ArabGender dataset extracting profile name, profile data, and location. <small>  <small></font> </caption>
+       <font color="#6e6e6f"> <small> <small> Table 1.  Sample of ArabGender dataset 
+	       extracting profile name, profile data, and location. <small>  <small></font> </caption>
 
 </table>
 
@@ -381,18 +373,18 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	
 	
 	   <h2>Topic Modeling with BERT</h2>
-	<p><strong>BERT</strong><dt-cite key="Jacob:19"></dt-cite>. Unlike the most popular ChatGPT next-word prediction autoregressive language model, 
+	<p><strong>BERT</strong> <dt-cite key="Jacob:19"></dt-cite>. Unlike the most popular ChatGPT next-word prediction autoregressive language model, 
 	BERT learns bidirectional contextualized representation for each text fragment or token. 
 	This is done by selecting 15% of tokens for (1) 80% masking, (2) 10% randomly replaced, and (3) the rest 10% untouched (original token). 
 	The model is trained to predict the missing words based on the surrounding context.	
 	</p>
 
+	       
 <p> This first pretext task objective of BERT is Mask Language Modeling (MLM). However, MLM is a token-level objective and 
 still, there is the need to learn sentences level representation. To learn these, a Next Sentence Prediction
 	(NSP) is proposed as the second objective to trained BERT. However, the authors of RoBERTa <dt-cite key="liu2019roberta"></dt-cite>
 		 argue that NSP objectives do not help the downstream task. Note that, RoBERTa uses data augmentation like for masking strategies  
-via dynamic masking while the model is in the training mode and unlike BERT where the Mask is prepared during the pre-processing stage.
-	 
+via dynamic masking while the model is in the training mode and unlike BERT where the Mask is prepared during the pre-processing stage.	 
 </p>
 	<!--
 	We already know the words we mask before passing to BERT so the 
@@ -400,33 +392,26 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 	passed to a softmax layer which converts the masked word's vector into another embedding 
 	(size will be similar to input word vector's size). Then we can calculate
 	cross entropy loss between the input vector and the one we got after softmax layer.
-
 	-->
 	
 
-	<p><strong>Arabic BERT</strong><dt-cite key="antoun2020arabert"></dt-cite>. ArabBERT is a pre-trained Arabic 
-		language model based on the same BERT we mentioned above. However, since the Arabic wiki Dumps are smaller
+	<p><strong>Arabic BERT </strong> <dt-cite key="antoun2020arabert"> </dt-cite>. ArabBERT is a pre-trained Arabic 
+		language model based on the same BERT we mentioned above. The original BERT was trained using 3.3 
+		Billion words total with 2.5B from Wikipedia and 0.8B from BooksCorpus. However, since the Arabic  Wikipedia are smaller
          than the English ones, the authors of ArabBERT used a combination of different Arabic corpora to train the model as follows:
 
         </p>
 
 
         <ul>
-        <li> ∼1.5 billion words Arabic Corpus <dt-cite key=""></dt-cite>. </li>
-        <li> ∼3.5 million articles (∼1B tokens) from (OSIAN) the Open Source International Arabic News Corpus <dt-cite key=""></dt-cite>.</li>
+        <li> ∼1.5 billion words Arabic Corpus <dt-cite key="el20161"></dt-cite>. </li>
+        <li> ∼3.5 million articles (∼1B tokens) from (OSIAN) the Open Source International Arabic News Corpus <dt-cite key=""></dt-cite>. </li>
         <li> Manually scraped Arabic news websites for articles. </li>
-            
             </ul>
         
-
-		
 		
 	       </p>
-	
-	
-	<p><strong>BERTopic</strong><dt-cite key="grootendorst2022bertopic"></dt-cite>.
-	       
-	       
+	<p><strong>BERTopic</strong> <dt-cite key="grootendorst2022bertopic"></dt-cite>.
 	       </p>
 	  
 
@@ -436,13 +421,9 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 </div>
 	       
 	       
-	       
-
+	   
 <dt-appendix>
 </dt-appendix>
-
-
-
 
 
 
@@ -544,6 +525,15 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
   booktitle={Proceedings of the 24th International Conference on Machine Learning},
   pages={33--40},
   year={2007},
+}
+
+@inproceedings{zeroual2019osian,
+  title={OSIAN: Open source international Arabic news corpus-preparation and integration into the CLARIN-infrastructure},
+  author={Zeroual, Imad and Goldhahn, Dirk and Eckart, Thomas and Lakhouaja, Abdelhak},
+  booktitle={Proceedings of the fourth arabic natural language processing workshop},
+  pages={175--182},
+  year={2019},
+  url={https://aclanthology.org/W19-4619.pdf}
 }
 
 @book{Gusfield:97,
@@ -688,8 +678,6 @@ pages={}
   pages={},
   year={2014}
 }
-
-
 
 
 @article{Andreas:16,
@@ -867,6 +855,13 @@ pages={}
   year={2008},
   organization={ACM}
 }
+
+@article{el20161,
+    title={1.5 billion words arabic corpus},
+    author={El-Khair, Ibrahim Abu},
+    journal={arXiv preprint arXiv:1611.04033},
+    year={2016}
+  }
 
 }
 @article{Samuel:15,
