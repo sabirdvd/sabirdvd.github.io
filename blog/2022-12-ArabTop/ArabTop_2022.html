@@ -330,11 +330,13 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
         The dataset is significantly imbalanced with a ratio of 85% tweet written by men.  We use only use men tweet 
 			for the purpose of this blog. However, in a real scenario, we could either be collecting more women data or change
         the loss function to account for the imbalance (e.g., Balanced Cross Entropy <dt-cite key="zhang2018balanced"></dt-cite> or Focal loss <dt-cite key="lin2017focal"></dt-cite>). Focal loss 
-        is a loss function that is used to address the class imbalance problem in classification. For example, the focal loss achieves this by down-weighting techniques that focus on the hard examples and 
-        reduces the influence from the easy examples.
+        is a loss function that is used to address the class imbalance problem in classification. For example, the focal loss achieves 
+			this by down-weighting techniques that focus on the hard examples (e.g., woman tweet) and 
+        reduces the influence from the easy examples (e.g., man tweet).
        
 	</p>
-		 
+		
+	(e.g., man tweet)
 <center>  
 <table align="center">
    <tr>
@@ -379,8 +381,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	
 	
 	   <h2>Topic Modeling with BERT</h2>
-	<p><strong>BERT</strong></p><dt-cite key="devlin2018bert"></dt-cite> 
-       <p> Unlike the most popular ChatGPT next-word prediction autoregressive language model, 
+	<p><strong>BERT</strong><dt-cite key="devlin2018bert"></dt-cite>. Unlike the most popular ChatGPT next-word prediction autoregressive language model, 
 	BERT learns bidirectional contextualized representation for each text fragment or token. 
 	This is done by selecting 15% of tokens for (1) 80% masking, (2) 10% randomly replaced, and (3) the rest 10% untouched (original token). 
 	The model is trained to predict the missing words based on the surrounding context.	
@@ -402,10 +403,18 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 
 	-->
 	
-	<p><strong>Arabic BERT</strong></p><dt-cite key="antoun2020arabert"></dt-cite> 
+	<p><strong>Arabic BERT</strong><dt-cite key="antoun2020arabert"></dt-cite>.
+		
+		
+		
+	       </p>
 	
 	
-	<p><strong>BERTopic</strong></p>
+	<p><strong>BERTopic</strong><dt-cite key="antoun2020arabert"></dt-cite>.
+	       
+	       
+	       </p>
+	  
 
 	<p> BERTtopic is just freamework that leavarage different topic modeling </p>
 		 
