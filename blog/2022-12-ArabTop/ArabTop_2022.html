@@ -336,22 +336,20 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	
 	   <h2>Topic Modeling with BERT</h2>
 	
-	<p>BERT</p> <dt-cite key=""></dt-cite> Unlike the most popuplar ChatGPT next word prediction autoregressive language model, BERT
-	learn bidirectional contextualized represenation for each text fregnet or token. This is done by selecting 15% of tokens for (1) 80% masking, (2) 10%
-	randonly replaces, and (3) the rest 10% are untouched. The model is is trained to predict the missing words based on the surrounding context.
+	<p>BERT</p> <dt-cite key=""></dt-cite> 
+	Unlike the most popular ChatGPT next-word prediction autoregressive language model, 
+	BERT learns bidirectional contextualized representation for each text fragment or token. 
+	This is done by selecting 15% of tokens for (1) 80% masking, (2) 10% randomly replaced, and (3) the rest 10% untouched. 
+	The model is trained to predict the missing words based on the surrounding context.	
 	</p>
 
+
 <p> This first pretext task objective of BERT is Mask Language Modeling (MLM). However, MLM is a token-level objective and 
-still, there is the need to learn sentences level representation. To learn these, a Next sentence prediction
+still, there is the need to learn sentences level representation. To learn these, a Next Sentence Prediction
 	(NSP) is proposed as the second objective to trained BERT. However, the authors of RoBERTa <dt-cite key="liu2019roberta"></dt-cite>
-		 argue that NSP objectives do not help the downstream task. RoBERTa uses data augmentation like for masking strategies  
+		 argue that NSP objectives do not help the downstream task. Note that, RoBERTa uses data augmentation like for masking strategies  
 via dynamic masking while the model is in the training model and unlike BERT where the Mask is prepared during the pre-processing stage.
 	 
-	
-
-	
-	
-	
 </p>
 	
 	
