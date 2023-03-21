@@ -326,10 +326,14 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	<figcaption>  ArabGend data extraction via profile gender and location. </figcaption>
 		 </figure>
 
-	<p>
-		The dataset is significantly imbalanced with a ratio of 85% twitte written by man.  
-	</p>
-		 
+		<p>
+        The dataset is significantly imbalanced with a ratio of 85% twitte written by men.  We use only men twitte for the purpose of this blog. However, in a real scenario, we could either be collecting more data or change
+        the loss function to account for the imbalance (e.g., Balanced Cross Entropy <dt-cite key="zhang2018balanced"></dt-cite> or Focal loss <dt-cite key="lin2017focal"></dt-cite>). Focal loss 
+        is a loss function that is used to address the class imbalance problem in classification. For example, the focal loss achieves this by down-weighting techniques that focus on the hard examples and 
+        reduces the influence from the easy examples.
+       
+
+	</p> 
 <center>  
 <table align="center">
    <tr>
@@ -342,11 +346,19 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 
    </tr>
    <tr>
-       <td style="text-align:left">　Ahmed Azhar</td>
-       <td style="text-align:center">Very simple person</td>
-       <td style="text-align:center">Jeddah</td>
-       <td style="text-align:center">M
-
+       <td style="text-align:left">　Safia Alshehi</td>   
+       <td style="text-align:center">journalist (f)</td>
+       <td style="text-align:center">Dubai</td>
+       <td style="text-align:center">F</td>
+<tr>
+       <td style="text-align:left">　صفيه الشحي</td>
+       <td style="text-align:center">كاتبه</td>
+       <td style="text-align:center">دبي</td>
+       <td style="text-align:center">م</td>
+   </tr>
+   <tr>
+   
+</tr>
 
    
        <td></td>
@@ -366,15 +378,12 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	
 	
 	   <h2>Topic Modeling with BERT</h2>
-	
 	<p><strong>BERT</strong></p><dt-cite key="devlin2018bert"></dt-cite> 
-	
        <p> Unlike the most popular ChatGPT next-word prediction autoregressive language model, 
 	BERT learns bidirectional contextualized representation for each text fragment or token. 
 	This is done by selecting 15% of tokens for (1) 80% masking, (2) 10% randomly replaced, and (3) the rest 10% untouched (original token). 
 	The model is trained to predict the missing words based on the surrounding context.	
 	</p>
-
 
 <p> This first pretext task objective of BERT is Mask Language Modeling (MLM). However, MLM is a token-level objective and 
 still, there is the need to learn sentences level representation. To learn these, a Next Sentence Prediction
@@ -401,6 +410,9 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 		 
 <div class="d-appendix">
 </div>
+	       
+	       
+	       
 
 <dt-appendix>
 </dt-appendix>
