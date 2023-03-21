@@ -328,7 +328,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 
 		<p>
         The dataset is significantly imbalanced with a ratio of 85% tweet written by men.  We will only use men's 
-			tweets for the purpose of this blog. for the purpose of this blog. However, in a real scenario, we could either be collecting more women data or change
+			tweets for the purpose of this blog. However, in a real scenario, we could either be collecting more women tweet or change
         the loss function to account for the imbalance (e.g., Balanced Cross Entropy <dt-cite key="zhang2018balanced"></dt-cite> or Focal loss <dt-cite key="lin2017focal"></dt-cite>). Focal loss 
         is a loss function that is used to address the class imbalance problem in classification. For example, the focal loss achieves 
 			this by down-weighting techniques that focus on the hard examples (e.g., woman tweets) and 
@@ -381,7 +381,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	
 	
 	   <h2>Topic Modeling with BERT</h2>
-	<p><strong>BERT</strong><dt-cite key="devlin2018bert"></dt-cite>. Unlike the most popular ChatGPT next-word prediction autoregressive language model, 
+	<p><strong>BERT</strong><dt-cite key="Jacob:19"></dt-cite>. Unlike the most popular ChatGPT next-word prediction autoregressive language model, 
 	BERT learns bidirectional contextualized representation for each text fragment or token. 
 	This is done by selecting 15% of tokens for (1) 80% masking, (2) 10% randomly replaced, and (3) the rest 10% untouched (original token). 
 	The model is trained to predict the missing words based on the surrounding context.	
@@ -1153,6 +1153,13 @@ pages={}
   booktitle={Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization},
   pages={65--72},
   year={2005}
+}
+@article{grootendorst2022bertopic,
+  title={BERTopic: Neural topic modeling with a class-based TF-IDF procedure},
+  author={Grootendorst, Maarten},
+  journal={arXiv preprint arXiv:2203.05794},
+  year={2022},
+  url={https://arxiv.org/abs/2203.05794}
 }
 
 
