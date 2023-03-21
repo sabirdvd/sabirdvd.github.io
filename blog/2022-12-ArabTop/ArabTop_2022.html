@@ -301,7 +301,14 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 		
 	  <p> <strong> Lemmatization and Tokenization </strong> </p>
 		
-	 	  
+	 	  Lemmatization or dictionary form is the process of finding the original or base form of a word by considering its inflected forms.
+	For example removing 
+	
+	
+	<!--
+	While stemming tries to remove prefixes and suffixes from words that appear with inflections in free text,
+	lemmatization tries to replace word suffixes with (typically) different suffix to get its lemma.
+	---> 
 			 
 			 
 	  
@@ -310,10 +317,18 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 		
 
 	  <h2>Data</h2>
-	  
+	In this blog, we will use ArabGend dataset, a gender based Twitter dataset  <dt-cite key="mubarak2022arabgend"></dt-cite>.  
+	The Twitter dataset relies on the user's profile (labeled) and gender for annotation as shown in the Figure below:
 	
+	 <figure align="center">
+           
+            <img src="gender_annotation.png" alt="Trulli" style="width:95%">
+	  <figcaption>  ArabGend data extraction via profile gender and location. </figcaption>
 	  
-	  
+		 
+
+		 The dataset is significantly imbalanced with a ratio of 85% twitts by man.  
+		 
 <div class="d-appendix">
 </div>
 
@@ -379,6 +394,13 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
     year    = "2022",
     url       = {https://openai.com/blog/chatgpt/},
     
+}
+
+@article{mubarak2022arabgend,
+  title={ArabGend: Gender analysis and inference on Arabic Twitter},
+  author={Mubarak, Hamdy and Chowdhury, Shammur Absar and Alam, Firoj},
+  journal={arXiv preprint arXiv:2203.00271},
+  year={2022}
 }
 
 
