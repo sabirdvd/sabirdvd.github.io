@@ -412,11 +412,21 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 	       <p>The final size of the collected datast afrer pre-processing is 70 million sentences, corresponding to ∼24GB of text. </p>
 		
 	       </p>
-	<p><strong>BERTopic</strong> <dt-cite key="grootendorst2022bertopic"></dt-cite>.
-	       </p>
-	  
+	   
+	<p><strong>BERTopic</strong> <dt-cite key="grootendorst2022bertopic"></dt-cite>. BERTtopic is just a framework that leverage different topic modeling on top of BERT embedding (pre-trained BERT). The extracted 
+        embedding or dense representations  is being clustered using a variation of topic modeling techniques such as 
+        (Uniform Manifold Approximation and Projection for Dimension Reduction) UMAP  and HDBSCAN.    
+    </p>
 
-	<p> BERTtopic is just freamework that leavarage different topic modeling </p>
+
+    <p>  <strong>(Uniform Manifold Approximation and Projection for Dimension Reduction) UMAP</strong><dt-cite key="mcinnes2018umap"></dt-cite>.  is a dimensionality reduction technique 
+        that can be used for visualization similarly to t-SNE, but also for general non-linear dimension reduction. UMAP bulids 
+        a neighborhood graph in the original space of the data and tries to find a similar graph in the low dimensional space.
+        The main idea is to construct a graph and then map this graph to lower dimension. 
+    </p>
+
+
+	
 		 
 <div class="d-appendix">
 </div>
@@ -855,6 +865,14 @@ pages={}
   pages={},
   year={2008},
   organization={ACM}
+}
+
+@article{mcinnes2018umap,
+  title={Umap: Uniform manifold approximation and projection for dimension reduction},
+  author={McInnes, Leland and Healy, John and Melville, James},
+  journal={arXiv preprint arXiv:1802.03426},
+  year={2018},
+  url={arXiv preprint arXiv:1802.03426}
 }
 
 @article{el20161,
