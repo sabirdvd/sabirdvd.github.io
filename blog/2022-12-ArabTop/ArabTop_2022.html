@@ -471,19 +471,33 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
     </p>
 
 
-    <p>  <strong>(Uniform Manifold Approximation and Projection for Dimension Reduction) UMAP</strong><dt-cite key="mcinnes2018umap"></dt-cite>.  is a dimensionality reduction technique 
+    <p>  <strong>Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP)</strong><dt-cite key="mcinnes2018umap"></dt-cite>.  is a dimensionality reduction technique 
         that can be used for visualization similarly to t-SNE, but also for general non-linear dimension reduction. UMAP bulids 
         a neighborhood graph in the original space of the data and tries to find a similar graph in the low dimensional space.
         The main idea is to construct a graph and then map this graph to lower dimension. 
     </p>
 
 	  
-	   <p><strong> Density-Based Clustering Based on Hierarchical Density Estimates HDBSCAN</strong><dt-cite key="campello2013density"></dt-cite>.
+	   <p><strong> Density-Based Clustering Based on Hierarchical Density Estimates (HDBSCAN)</strong><dt-cite key="campello2013density"></dt-cite>.
 	   
 	   
 	   </p>	   
 
 	
+	       
+<h2>Implementation</h2>	       
+	       
+ <p> This blog post is inspired by the pilot study of applying BERTopic for MSA standard Arabic <dt-cite key="abuzayed2021bert"></dt-cite>. However, 
+	 here we will apply different  BERTtopic clustering based topic modeling techniques (HDBSCAN, UMAP) on the Arabic tweets dataset. 
+	 
+	 
+	 
+       
+       
+
+    </p>
+	       
+	       
 		 
 <div class="d-appendix">
 </div>
@@ -541,6 +555,17 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
   pages={160--172},
   year={2013},
   organization={Springer}
+}
+
+@article{abuzayed2021bert,
+  title={BERT for Arabic topic modeling: An experimental study on BERTopic technique},
+  author={Abuzayed, Abeer and Al-Khalifa, Hend},
+  journal={Procedia computer science},
+  volume={189},
+  pages={191--194},
+  year={2021},
+  publisher={Elsevier},
+  url={https://www.sciencedirect.com/sdfe/reader/pii/S1877050921012199/pdf}
 }
 
 
