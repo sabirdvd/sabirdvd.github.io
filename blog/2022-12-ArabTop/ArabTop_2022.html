@@ -531,7 +531,10 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 	        Not to mentioned, we apply our models to a real raw data extracted from twitter. 
 	       </p>
 
-	 
+	   <p>     For BERTopic we empoly AraBERT(L) (Twitter version)  that is trained on 60M Arabic dialects and tweets. The model uses 
+		   the same tokenizer (word-piece tokenizer) as the original BERT model. The authors proposed another Sub-Word Units Segmentation methods for Arabic. 
+    However, we will use the word-piece tokenizer based model for the sake of comparability with the pilot study.
+	       </p>
 	 
 <h2> Result and Discussion</h2>
 	       <p> We compared the performance of different BERTopic based topic modeling techniques (LDA, HDBSCAN and UMAP) 
