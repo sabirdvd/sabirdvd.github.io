@@ -489,18 +489,10 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
    This Clustering algorithm is based on the idea that the data points that are in a dense region are part of the same cluster. The algorithm starts with all the data points in a cluster of their own. 
    Then, it iterates over all the data points and merges them with the cluster to which they are most similar. The similarity between two clusters is defined as the minimum distance between any two data points in the two clusters.
    HDBSCAN is an improved version of DBSCAN. DBSCAN relies on the concept of  density to identify clusters. Unlike K-mean clustering, DBSCAN does not require the number of clusters to be specified beforehand.
-   In particular, DBSCAN relies on two parameters to identify clusters: (1) The redius of the circle around each core point (epsilon) and 
-  (2) the  minimum number of data points required inside the circle (minPoints).
-	  
-	  We explain this in more detail below as shown in Figure 3.
-  </p>
-
-   <ul>
-    <li> (A) If there is four points near the core point we condider this point as <strong>core point</strong>.</li>
-    <li> (B, C) If there is less than four points near the core point we condider this point as  <strong>border point</strong>.</li>
-    <li> (N) If there is no point near the core point, we consider this point as  <strong>noise</strong>.</li>
-        </ul>
-	       
+   In particular, DBSCAN relies on two parameters to identify clusters: (1) The redius of the circle around each core point ( \(\epsilon \) epsilon) and 
+  (2) the  minimum number of data points required inside the circle (minPoints). We explain this in more detail below (Figure 3).
+ 
+	        
 	       
 
 	 <figure align="center">   
@@ -508,13 +500,21 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 <figcaption> Fig 3. DBSCAN.  Figure from DBSCAN wikipedia. </figcaption>
 </figure>
 
+  </p>
 
+   <ul>
+    <li> (A) If there is four points near the core point we condider this point as <strong>core point</strong>.</li>
+    <li> (B, C) If there is less than four points near the core point we condider this point as  <strong>border point</strong>.</li>
+    <li> (N) If there is no point near the core point, we consider this point as  <strong>noise</strong>.</li>
+        </ul>
+	      
+	       
 	
 	       
 <h2>Implementation</h2>	       
 	       
  <p> This blog post is inspired by the pilot study <dt-cite key="abuzayed2021bert"></dt-cite>  of applying BERTopic for MSA standard Arabic. However, 
-	 here we will apply different  BERTtopic clustering based topic modeling techniques (HDBSCAN, UMAP) on the Arabic tweets dataset. 
+	 here we will apply different  BERTtopic clustering based topic modeling techniques (UMAP, HDBSCAN) on the Arabic tweets dataset. 
 	 
 
 	 
@@ -540,9 +540,6 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
            </tr>
            <tr>
             
-            
-            
-
             
           
             <td style="text-align:left">　الشرطة police </td>
