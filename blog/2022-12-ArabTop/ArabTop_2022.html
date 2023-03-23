@@ -316,7 +316,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	
 	 <figure align="center">   
             <img src="gender_annotation.png" alt="Trulli" style="width:85%">
-	<figcaption>  ArabGend data extraction via profile gender and location. Figure from <dt-cite key="mubarak2022arabgend"></dt-cite>. </figcaption>
+	<figcaption> Fig 2. ArabGend data extraction via profile gender and location. Figure from <dt-cite key="mubarak2022arabgend"></dt-cite>. </figcaption>
 		 </figure>
 
 		<p>
@@ -476,20 +476,33 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
         that can be used for visualization similarly to t-SNE, but also for general non-linear dimension reduction. UMAP bulids 
         a neighborhood graph in the original space of the data and tries to find a similar graph in the low dimensional space.
         The main idea is to construct a graph and then map this graph to lower dimension. 
+	    
     </p>
 
-	  
-	   <p><strong> Density-Based Clustering Based on Hierarchical Density Estimates (HDBSCAN)</strong><dt-cite key="campello2013density"></dt-cite>.
-		   is clu
-	   
-	   
-	   </p>	   
+	       
+	       
+	       
+	 
+	       
+  <p>Density-Based Clustering Based on Hierarchical Density Estimates (HDBSCAN) is a density-based clustering algorithm that is based on the density of the data points. The algorithm is based on the idea that the data points that are in a dense region are part of the same cluster. The algorithm starts with all the data points in a cluster of their own. Then, it iterates over all the data points and merges them with the cluster to which they are most similar. The similarity between two clusters is defined as the minimum distance between any two data points in the two clusters.
+   This Clustering algorithm is based on the idea that the data points that are in a dense region are part of the same cluster. The algorithm starts with all the data points in a cluster of their own. 
+   Then, it iterates over all the data points and merges them with the cluster to which they are most similar. The similarity between two clusters is defined as the minimum distance between any two data points in the two clusters.
+   HDBSCAN is an improved version of DBSCAN. DBSCAN relies on the concept of  density to identify clusters. Unlike K-mean clustering, DBSCAN does not require the number of clusters to be specified beforehand.
+   In particular, DBSCAN relies on two parameters to identify clusters: (1) the minimum number of points in a cluster 
+	  and the maximum distance between two points in a cluster. We explain this in more detail below as shown in Figure 3.
+
+
+   <ul>
+    <li> (N) If there is four points near the core points we condider this point as <strong>core point</strong>.</li>
+    <li> (A) If there is only one point near the core points we condider this point as  <strong>border point</strong>.</li>
+    <li> (B, C)If there is no point near the core point, we consider this point as  <strong>noise</strong>.</li>
+        </ul>
 	       
 	       
 
 	 <figure align="center">   
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/DBSCAN-Illustration.svg" alt="Trulli" style="width:80%">
-<figcaption>  DBSCAN. Figure from wikipedia. </figcaption>
+<figcaption> Fig 3. DBSCAN.  Figure from DBSCAN wikipedia. </figcaption>
 </figure>
 
 
