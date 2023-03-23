@@ -481,21 +481,22 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 
 	       
 	       
-	       
+	        
 	 
 	       
-  <p><strong> Density-Based Clustering Based on Hierarchical Density Estimates (HDBSCAN)</strong><dt-cite key="campello2013density"></dt-cite>.
+  <p><strong> Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN)</strong><dt-cite key="mcinnes2017hdbscan"></dt-cite>.
 	   is a density-based clustering algorithm that is based on the density of the data points. 
 	  The algorithm starts with all the data points in a cluster of their own. 
    Then, it iterates over all the data points and merges them with the cluster to which they are most similar. 
 	  The similarity between two clusters is defined as the minimum distance between any two data points in the two clusters.
-   HDBSCAN is an improved version of DBSCAN. DBSCAN relies on the concept of  density to identify clusters. Unlike K-mean clustering, DBSCAN does not require the number of clusters to be specified beforehand.
+   HDBSCAN is an improved version of Density-based spatial clustering of applications with noise (DBSCAN) </strong><dt-cite key="campello2013density"></dt-cite>. 
+	DBSCAN relies on the concept of  density to identify clusters. Unlike K-mean clustering, DBSCAN does not require the number of clusters to be specified beforehand.
    In particular, DBSCAN relies on two parameters to identify clusters: (1) The redius of the circle around each core point ( \(\epsilon \) epsilon) and 
   (2) the  minimum number of data points required inside the circle (minPoints). We explain this in more detail below while referring to Figure 3.
 	  
 	  
  
-	        
+	       
 	       
 
 	 <figure align="center">   
@@ -593,7 +594,7 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
    <caption>
        <font color="#6e6e6f"> <small> <small> Table 3. Comparsion Results with 
 	       different BERTopic based topic modeling techniques (LDA, HDBSCAN and UMAP).
-	       The combined model (HDBSCAN+UMAP) outperforms the other models 
+	       The combined model (HDBSCAN+UMAP) outperforms the other models.
 	       
 	       <small>  <small></font> </caption>
 
@@ -664,7 +665,11 @@ The first column shows the topic, and the second column shows the choherence sco
         
         </table>	   
 	   
-	       
+	
+		       
+		          <h2> Conclusion</h2>
+		       
+		       
 	       
 		 
 <div class="d-appendix">
@@ -689,6 +694,16 @@ The first column shows the topic, and the second column shows the choherence sco
   pages={993--1022},
   year={2003},
   url = {https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf},
+}
+
+@article{mcinnes2017hdbscan,
+  title={hdbscan: Hierarchical density based clustering.},
+  author={McInnes, Leland and Healy, John and Astels, Steve},
+  journal={J. Open Source Softw.},
+  volume={2},
+  number={11},
+  pages={205},
+  year={2017}
 }
 
 @article{mubarak2022arabgend,
