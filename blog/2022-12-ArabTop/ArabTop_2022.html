@@ -513,10 +513,10 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
         </ul>
 	      
 	   
-	       <p>However, using ( \(\epsilon \) as a radius to cut the tree-like point will result in lost points.  
-		       Therefore, this will result in noise which leads to false clustering. HDBSCAN relies on a different approach by 
-		       adding a parameter to control the cluster. This approach is more intuitive than clustering with ( \(\epsilon \) because you never know how big the cluster needs to be. 
-		       
+	       <p>
+		However, using \(\epsilon \) as a radius to cut the tree-like point will result in lost points and noise, 
+		which leads to false clustering. HDBSCAN relies on a different approach by adding a parameter to control the cluster.
+		 This approach is more intuitive than clustering with ( \(\epsilon \) because you never know how big the cluster needs to be.    
 	       </p>
 	      
 	       
@@ -531,6 +531,16 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 	 
 	 
 <h2> Result and Discussion</h2>
+	       <p> We compared the performance of different BERTopic based topic modeling techniques (LDA, HDBSCAN and UMAP) on the Arabic tweets dataset. 
+  The results are shown in Table 1.
+ 
+</p>
+	       
+<p>
+Table 4 shows the top 5 topics extracted from the tweets dataset using BERTopic via UMAP. 
+The first column shows the topic, and the second column shows the choherence score. 
+</p> 
+	   
 	       
 	     
 	       <center>  
