@@ -311,7 +311,9 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	  <h2>Data</h2>
 	<p> In this blog, we will use ArabGend dataset a gender based Twitter dataset  <dt-cite key="mubarak2022arabgend"></dt-cite>.  
 	The Twitter dataset relies on the user's profile (e.g., gender, occupation (f/m), location, etc.) as 
-		the main label for annotation as shown in the Figure below. The dataset extracted 28K unique locations that map only tweets in Arabic countries. 
+		the main label for annotation as shown in the Figure below. The dataset extracted 28K unique locations 
+		that map only tweets in Arabic countries(Saudi Arabia 54.8%, Egypt 9.3%, Kuwait 6.8%,
+		Yeman 3.5%, Arab Emirates 1.7%,  Jorden 1.3% Qatar 1.3%, etc)
          
 	</p>
 	
@@ -327,7 +329,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
         the loss function to account for the imbalance (e.g., Balanced Cross Entropy <dt-cite key="zhang2018balanced"></dt-cite> or Focal loss <dt-cite key="lin2017focal"></dt-cite>). Focal loss 
         is a loss function that is used to address the class imbalance problem in classification. For example, the focal loss achieves 
 			this by down-weighting techniques that focus on the hard examples (e.g., woman tweets) and 
-        reduces the influence from the easy examples (e.g., man tweets).
+        reduces the influence from the easy examples (e.g., man tweets). 
        
 	</p>
 		
