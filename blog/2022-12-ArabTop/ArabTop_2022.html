@@ -472,9 +472,12 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 		
 	       </p>
 	   
-	<p><strong>BERTopic</strong> <dt-cite key="grootendorst2022bertopic"></dt-cite>. BERTtopic is just a framework that leverage different topic modeling on top of BERT embedding (pre-trained BERT). The extracted 
+	<p><strong>BERTopic</strong> <dt-cite key="grootendorst2022bertopic"></dt-cite>. BERTtopic is just a framework that 
+		leverage different topic modeling on top of BERT embedding (pre-trained BERT). The extracted 
         embedding or dense representations  is being clustered using a variation of topic modeling techniques such as 
-        (Uniform Manifold Approximation and Projection for Dimension Reduction) UMAP  and HDBSCAN.    
+        (Uniform Manifold Approximation and Projection for Dimension Reduction) UMAP  and  Hierarchical 
+		Density-Based Spatial Clustering of Applications with Noise (HDBSCAN). Note that, in BERTopic, UMAP is 
+		used as dimensionality reduction technique before applying any clustering approach (i.e., BSCAN, HDBSCAN, etc.). 
     </p>
 
 
@@ -551,7 +554,18 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
  
 </p>
 	       
-
+	       <p> <strong>Evaluation Metric.</strong> We use three coherence metrics as follows: </dt-cite>
+		          
+		       
+	       </p>
+	 
+	
+	       <ul>
+        <li>  \( C_{V} \) <dt-cite key="el20161"></dt-cite>. </li>
+        <li>  \( C_{UM_mass} \) <dt-cite key="mimno2011optimizing"></dt-cite>. </li>
+        <li>  \( C_{NPMI} \) <dt-cite key="aletras2013evaluating"></dt-cite>. </li>
+            </ul>
+	       
 
 
       
@@ -774,6 +788,15 @@ The first column shows the topic, and the second column shows the choherence sco
   pages={993--1022},
   year={2003},
   url = {https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf},
+}
+
+@inproceedings{mimno2011optimizing,
+  title={Optimizing semantic coherence in topic models},
+  author={Mimno, David and Wallach, Hanna and Talley, Edmund and Leenders, Miriam and McCallum, Andrew},
+  booktitle={Proceedings of the 2011 conference on empirical methods in natural language processing},
+  pages={262--272},
+  year={2011},
+  url{https://aclanthology.org/D11-1024.Pdf}
 }
 
 @article{mcinnes2017hdbscan,
@@ -1274,6 +1297,16 @@ pages={}
   organization={IEEE}
 }
 
+@inproceedings{roder2015exploring,
+  title={Exploring the space of topic coherence measures},
+  author={R{\"o}der, Michael and Both, Andreas and Hinneburg, Alexander},
+  booktitle={Proceedings of the eighth ACM international conference on Web search and data mining},
+  pages={399--408},
+  year={2015},
+  url={https://svn.aksw.org/papers/2015/WSDM_Topic_Evaluation/public.pdf},
+}
+
+
 @article{Sepp:97,
   title={Long short-term memory},
   author={Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
@@ -1360,6 +1393,15 @@ pages={}
   booktitle={Proceedings of the 27th international conference on machine learning (ICML-10)},
   pages={},
   year={2010}
+}
+
+@inproceedings{aletras2013evaluating,
+  title={Evaluating topic coherence using distributional semantics},
+  author={Aletras, Nikolaos and Stevenson, Mark},
+  booktitle={Proceedings of the 10th international conference on computational semantics (IWCS 2013)--Long Papers},
+  pages={13--22},
+  year={2013},
+  url={https://aclanthology.org/W13-0102.pdf}
 }
 
 @article{Sergey:15,
