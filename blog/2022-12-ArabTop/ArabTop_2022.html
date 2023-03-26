@@ -385,8 +385,8 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	
 	
 <p> 
-     The cleaned pre-processed dataset (i.e., w/o diacritics, lemmatization,  w/o emoji, etc.) is (100K) 108053 lines and (3M) 3175755 tokens. As shown in Table 2 below
-	two tweet samples related to coronaviruse.
+     The results pre-processed dataset (i.e., w/o diacritics, lemmatization,  w/o emoji, etc.) is (100K) 108053 line and (3M) 3175755 tokens. As shown in Table 2 below
+	two tweet samples related to coronavirus.
 </p>
 	
 
@@ -449,8 +449,8 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	       
 <p> This first pretext task objective of BERT is Mask Language Modeling (MLM). However, MLM is a token-level objective and 
 still, there is the need to learn sentences level representation. To learn these, a Next Sentence Prediction
-	(NSP) is proposed as the second objective to trained BERT. However, the authors of RoBERTa <dt-cite key="liu2019roberta"></dt-cite>
-		 argue that NSP objectives do not help the downstream task. Note that, RoBERTa uses data augmentation like for masking strategies  
+	(NSP) is proposed as the second objective to train BERT. However, the authors of RoBERTa <dt-cite key="liu2019roberta"></dt-cite>
+		 argue that NSP objectives do not help the downstream task. Note that, RoBERTa uses data augmentation-like for masking strategies  
 via dynamic masking while the model is in the training mode and unlike BERT where the Mask is prepared during the pre-processing stage.	 
 </p>
 	<!--
@@ -476,24 +476,24 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
         <li> Manually scraped Arabic news websites for articles. </li>
             </ul>
         
-	       <p>The final size of the collected datast afrer pre-processing is 70 million sentences, corresponding to ∼24GB of text. </p>
+	       <p>The final size of the collected dataset afrer pre-processing is 70 million sentences, corresponding to ∼24GB of text. </p>
 		
 	       </p>
 	   
 	<p><strong>BERTopic</strong> <dt-cite key="grootendorst2022bertopic"></dt-cite>. BERTtopic is just a framework that 
-		leverage different topic modeling on top of BERT embedding (pre-trained BERT). The extracted 
+		leverages different topic modeling on top of BERT embedding (pre-trained BERT). The extracted 
         embedding or dense representations  is being clustered using a variation of topic modeling techniques such as 
         (Uniform Manifold Approximation and Projection for Dimension Reduction) UMAP  and  Hierarchical 
 		Density-Based Spatial Clustering of Applications with Noise (HDBSCAN). Note that, in BERTopic, UMAP is 
-		used as dimensionality reduction technique before applying any clustering approach (i.e., BSCAN, HDBSCAN, etc.). 
+		used as a dimensionality reduction technique before applying any clustering approach (i.e., BSCAN, HDBSCAN, etc.). 
     </p>
 
 
     <p>  <strong>Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP)</strong><dt-cite key="mcinnes2018umap"></dt-cite>.  
 	    is a dimensionality reduction technique 
-        that can be used for visualization similarly to t-SNE, but also for general non-linear dimension reduction. UMAP bulids 
+        that can be used for visualization similarly to t-SNE, but also for general non-linear dimension reduction. UMAP builds 
         a neighborhood graph in the original space of the data and tries to find a similar graph in the low dimensional space.
-        The main idea is to construct a graph and then map this graph to lower dimension. 
+        The main idea is to construct a graph and then map this graph to a lower dimension. 
 	    
     </p>
 
@@ -509,7 +509,7 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 	  The similarity between two clusters is defined as the minimum distance between any two data points in the two clusters.
    HDBSCAN is an improved version of Density-based spatial clustering of applications with noise (DBSCAN) </strong><dt-cite key="campello2013density"></dt-cite>. 
 	DBSCAN relies on the concept of  density to identify clusters. Unlike K-mean clustering, DBSCAN does not require the number of clusters to be specified beforehand.
-   In particular, DBSCAN relies on two parameters to identify clusters: (1) The redius of the circle around each core point ( \(\epsilon \) epsilon) and 
+   In particular, DBSCAN relies on two parameters to identify clusters: (1) The radius of the circle around each core point ( \(\epsilon \) epsilon) and 
   (2) the  minimum number of data points required inside the circle (minPoints). We explain this in more detail below while referring to Figure 3.
 	  
 	  
@@ -527,8 +527,8 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 
 	       <p>DBSCAN establishes a cluster using the minPoint as follows:</p>
    <ul>
-    <li> (A) If there is four points near the core point we condider this point as <strong>core point</strong>.</li>
-    <li> (B, C) If there is less than four points near the core point we condider this point as  <strong>border point</strong>.</li>
+    <li> (A) If there are four points near the core point we consider this point as <strong>core point</strong>.</li>
+    <li> (B, C) If there is  fewer than four points near the core point we consider  this point as  <strong>border point</strong>.</li>
     <li> (N) If there is no point near the core point, we consider this point as  <strong>noise</strong>.</li>
         </ul>
 	      
@@ -545,27 +545,28 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 <h2>Implementation</h2>	       
 	       <p>
   This blog post is inspired by the pilot study <dt-cite key="abuzayed2021bert"></dt-cite>  of applying BERTopic for MSA standard Arabic. 
-  However,  here we will apply different clustering techniques (e.g., HDBSCAN) on the Arabic tweets dataset. 
-  In addition, unlike the pilot study, we present a comparsion result between different model. 
-	        Not to mentioned, we apply our models to a real raw data extracted from twitter. 
+  However,  here we will apply different clustering techniques (e.g., HDBSCAN) to the Arabic tweets dataset. 
+  In addition, unlike the pilot study, we present a comparison result between different models. 
+	                Not to mention, we apply our models to real raw data extracted from Twitter. 
 	       </p>
 
 
-      <p> Since the dataset is extracted from twitter, we heavily pre-process it to remove the tweets that are not in Arabic language 
-        and emoji and other non-ASCII characters. In addition, as we mentioned before, 
+      <p> Since the dataset is extracted from Twitter, we heavily pre-process the data to 
+	      remove the tweets (1) that are not Arabic language, emoji and other non-ASCII characters. In addition, as we mentioned before, 
        we normalize the tweets by removing diacritics  (e.g., "ة", "ه"). 
       </p>
 	       
 	       
 	       
-	   <p>     For BERTopic we empoly AraBERT(L) (Twitter version)  that is trained on 60M Arabic dialects and tweets. The model uses 
-		   the same tokenizer (word-piece tokenizer) as the original BERT model. The authors proposed another Sub-Word Units Segmentation methods for Arabic. 
-    However, we will use the word-piece tokenizer based model for the sake of comparability with the pilot study.
+	   <p>  For BERTopic we employ AraBERT(L) (Twitter version) which is trained on 60M Arabic dialects and tweets. The model uses 
+		   the same tokenizer (word-piece tokenizer) as the original BERT model. The authors proposed another Sub-Word Units Segmentation method for Arabic. 
+    However, we will use the word-piece tokenizer-based model for the sake of comparability with the pilot study.
 	       </p>
 	 
 <h2> Result and Discussion</h2>
-	       <p> We compared the performance of different BERTopic based topic modeling techniques (LDA, HDBSCAN and UMAP) 
-		       on the Arabic tweets dataset. Table 3 shows the results on diffrent BERTopic based topic modeling techniques, and the improvment of 
+	       <p> We compared the performance of different BERTopic based topic modeling techniques (LDA, HDBSCAN, and UMAP) 
+		       on the Arabic tweets dataset. Table 3 shows the results of different BERTopic based topic modeling techniques
+		       and the improvement  of 
   using HDBSCAN and UMAP on the LDA model. Also, the combined model (HDBSCAN+UMAP) outperforms the other models. 
  
 </p>
@@ -639,9 +640,8 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
  
 
    <caption>
-       <font color="#6e6e6f"> <small> <small> Table 3. Comparsion Results with 
-	       different BERTopic based topic modeling techniques (LDA, HDBSCAN and UMAP).
-	       The combined model (HDBSCAN+UMAP) outperforms the other models.
+       <font color="#6e6e6f"> <small> <small> Table 3. Comparison Results with different BERTopic based topic modeling techniques 
+	       (LDA, HDBSCAN, and UMAP). The combined model (HDBSCAN+UMAP) outperforms the other models.
 	       
 	       <small>  <small></font> </caption>
 
@@ -655,7 +655,7 @@ via dynamic masking while the model is in the training mode and unlike BERT wher
 	   
 <p>
 Table 4 shows the top 5 topics extracted from the tweets dataset using BERTopic via UMAP. 
-The first column shows the topic, and the second column shows the choherence score. 
+	The first column shows the topic, and the second column shows the coherence score. 
 </p> 
 	   
 	       
@@ -777,7 +777,7 @@ The first column shows the topic, and the second column shows the choherence sco
 		       
 	 <figure align="center">   
     <img src="word_cloud.jpeg" alt="Trulli" style="width:80%">
-<figcaption> Fig 4. Wordcloud of topic=200, which related to stock market investment and companies (Boing and Starbucks) (max_word =10). </figcaption>
+<figcaption> Fig 4. Wordcloud of topic=200, which is related to stock market investment and companies (Boing and Starbucks) (max_word =10). </figcaption>
 		 
 		 
 </figure>
@@ -790,7 +790,7 @@ The first column shows the topic, and the second column shows the choherence sco
 
        In this short blog, we discuss Arabic language processing and how to apply BERTopic on the Arabic tweets dataset.
     We also present a comparison result between different models. Arabic tweets dataset is a good resource for Arabic NLP research. However,
-    we believe that the Arabic tweets dataset is not ideal for language modeling. The reason is that the tweets dataset is noisy and it is not 
+    we believe that the Arabic tweets or short text dataset are not ideal for processing text to extract useful information (e.g., language modeling). The reason is that the tweets dataset is noisy and it is not 
     representative of the Arabic language. For future work, we will use a larger Arabic dataset extracted from the wiki dump to 
 	fine-tined a better model. In addition, we plan to apply different families of language models
 	such as GPT-2 and BART to the Arabic tweets dataset.
