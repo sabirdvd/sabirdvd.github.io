@@ -164,8 +164,9 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	 <p>
 	  Topic modeling is a task that makes data more interpretable by 
 	  applying probabilistic learning methods in an unsupervised way. These probabilistic models can take  
-	  advantage of statistical techniques to gather a short condenss representation of  
-	  large data and highlight hidden relations (e.g., Latent Semantic Analysis <dt-cite key="hofmann1999probabilistic"></dt-cite>, Latent Dirichlet Allocation <dt-cite key="blei2003latent"></dt-cite>, etc.). More specificly, topic modelings are 
+	  advantage of statistical techniques to gather a short condensed  representation of  
+	  large data to highlight hidden relations (e.g., Latent Semantic Analysis <dt-cite key="hofmann1999probabilistic"></dt-cite>, 
+		 Latent Dirichlet Allocation <dt-cite key="blei2003latent"></dt-cite>, etc.). More  specifically, topic modelings are 
 	  useful in learning hidden relations between documents by capturing the probability distribution over terms within a document.  As 
 		 topic modeling can capture latent patterns in an unsupervised way, is the perfect tool to examine web text data such as Twitter data. 
 		 In particular, by learning the emergence of topics and themes, the model can capture the interest of the average user or  
@@ -203,8 +204,8 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	  
 	 
 	  <p><strong>Dialectal Arabic "لهجة".</strong>  The everyday settings used language and the language of social media.
-		  Each region in the Arab world have a different dialect (ie., true mother tongue) as shown in the figure 1 below. However,
-		  in this blog we only exmanin the Gulf Arabic (Figure 1 (17)). 
+		  Each region in the Arab world has a different dialect (ie., true mother tongue) as shown in Figure 1 below. However,
+		  in this blog, we only examine the Gulf Arabic (region 17 on the map Figure 1). 
 		  
 	  
 
@@ -236,7 +237,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	Social media (e.g., Twitter, Facebook, etc.) and Broadcast New platforms have served as rich sources for researchers to build dialect-specific
 		tools (dialect detection <dt-cite key="alsarsour2018dart"></dt-cite>, dialect gender 
 		classification <dt-cite key="mubarak2022arabgend"></dt-cite>, etc.). 
-		In this blog, we employ the Gulf Arabic dialect for topic modeling and gender classification. 
+		In this blog, we employ topic modeling techniques on the Gulf Arabic dialect extracted from Twitter. 
 		
 		
 	  </p>
@@ -251,7 +252,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 		  of Arabic targeting different populations (ie., regional dialects) as shown the figure 1.  For worthwhile text processing
 		  such as topic modeling (this blog), sentiment analysis, etc.,  preprocessing is an essential 
 		  task to filter out uninformative information (e.g., stopwords, emoji, etc.). 
-		  We summarized the basic preprocessing for arabic text mining as follows:
+		  We summarized the basic preprocessing for Arabic text mining as follows:
 	  </p>
 		  
 		
@@ -261,7 +262,7 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	</p>
 		
 	  <p> <strong> Diacritics Removal and Normalization </strong>  The diacritic in the Arabic language 
-		  represents short vowels (Tashkeel)  which can be added to the string (), and similar to the accent in other Latin 
+		  represents short vowels (Tashkeel)  which can be added to the string (بـُـومة boomah = an owl), and is similar to the accent in other Latin 
 		  languages e.g., in Spanish (España es un país).   However, unlike other Latin languages such as Spanish, Catalan, etc., removing the diacritics will not be a problem for
  formal writing such as newspapers and books for native speakers. However, it will result in word ambiguity as shown in this example:
 		  
@@ -284,11 +285,11 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 	  
 	  <p>In the first sentence (1) the word  "شَمال" means "north" side of the bridge, 
 		  while in the second sentence "شِمال" refers to the "left" direction of the bridge. Therefore, each word will
-		  be treated as diffrent token and thus result on diffrent length. Therefore, to 
+		  be treated as a different token and thus result in different lengths. Therefore, to 
 		  reduce the sparsity and complexity, the diacritics can be completely eliminated from the text.
 		   
 	  </p>
-	  </p>
+	  
 	
 	
 	
@@ -330,14 +331,18 @@ GPT-2 is also a transformer-based model, but it was designed for a different pur
 		 </figure>
 
 		<p>
-        The dataset is significantly imbalanced with a ratio of 85% tweet written by men.  We will only use men's 
-			tweets for the purpose of this blog. However, in a real scenario, we could either be collecting more women tweet or change
-        the loss function to account for the imbalance (e.g., Balanced Cross Entropy <dt-cite key="zhang2018balanced"></dt-cite> or Focal loss <dt-cite key="lin2017focal"></dt-cite>). Focal loss 
-        is a loss function that is used to address the class imbalance problem in classification. For example, the focal loss achieves 
-			this by down-weighting techniques that focus on the hard examples (e.g., woman tweets) and 
-        reduces the influence from the easy examples (e.g., man tweets). 
+        The dataset is significantly imbalanced with a ratio of 85% of tweets written by men.  We will only use men's 
+			tweets for the purpose of this blog. However, in a real scenario, we could either be collecting more women's tweets or change
+        the loss function to account for the imbalance (e.g., Focal loss <dt-cite key="lin2017focal"></dt-cite>). Focal loss 
+        is a modified version of the cross-entropy loss that is used to address the class imbalance problem in classification. For example, the focal loss achieves 
+			this by down-weighting techniques that focus on the hard examples i.e., instances that the model struggles with e.g., woman tweets and 
+        reduces the influence from the easy examples  (i.e., instances that the model can predict correctly with high confidence) e.g., man tweets. 
+			</p>
+	
+
+			
        
-	</p>
+	
 		
 
 <center>  
@@ -2194,6 +2199,16 @@ pages={}
   pages={392--395},
   year={2015}
 }
+
+@inproceedings{lin2017focal,
+  title={Focal loss for dense object detection},
+  author={Lin, Tsung-Yi and Goyal, Priya and Girshick, Ross and He, Kaiming and Doll{\'a}r, Piotr},
+  booktitle={Proceedings of the IEEE international conference on computer vision},
+  pages={2980--2988},
+  year={2017},
+  url ={https://openaccess.thecvf.com/content_ICCV_2017/papers/Lin_Focal_Loss_for_ICCV_2017_paper.pdf}
+}
+
 
 @inproceedings{shetty2017speaking,
   title={Speaking the same language: Matching machine to human captions by adversarial training},
