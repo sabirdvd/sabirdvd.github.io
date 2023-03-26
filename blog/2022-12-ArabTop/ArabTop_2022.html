@@ -813,9 +813,28 @@ Table 4 shows the random topic extracted from the tweets dataset using BERTopic 
        <p> Prompting is a technique that can be used to guide the model to generate a specific output. We 
        can use the prompt to guide the model to generate a specific topic. For example, we can prompt the model 
        to generate a topic about the COVID-19 pandemic. However, in this blog post we extract topics from the tweets dataset and therefore
-       we want to employ the model to generate a topic from a given set of tweets. To do so, we can use the following prompt as :
+       we want to employ the model to generate a topic from a given set of tweets. To do so, we can use the following prompt as template :
 
       </p>  	       
+			   
+			   
+	   	  
+ <p class="noteBoxes type2"  align="center">  
+
+
+<strong> To Guide the model: </strong> I have topic that contains the following documents: <br>
+	 
+	 Input Text  
+	 
+<br>
+<strong> To Guide the model: </strong> Based on the information above, extract a short topic label in the following format:
+	 <br>
+<strong> Example of the desired output:</strong> topic: <topic label>
+ 
+
+</p>
+	   
+			   
 		       
 	   
 	   	  
