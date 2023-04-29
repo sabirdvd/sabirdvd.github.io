@@ -120,10 +120,12 @@
           is not confident enough,  and (2) semantic alignment with semantic similarity to remove duplicated objects. 
           (3) semantic relatedness score as soft-label: to guarantee the visual context and caption have a strong 
           relation. In particular, we use Sentence-RoBERTa via cosine similarity to give a soft score, and then 
-          we use a threshold to annotate the final label (if th &ge; 0.2, 0.3, 0.4 then 1,0). Finally, to take advantage 
+          we use a threshold to annotate the final label (if th &ge; 0.2, 0.3, 0.4 then 1,0). 
+          
+          <!-- Finally, to take advantage 
           of the visual overlap  between caption and visual context,  
           and to extract global information, we use BERT followed by a shallow CNN (<a href="https://arxiv.org/abs/1408.5882">Kim, 2014</a>)
-          to estimate the visual relatedness score. 
+          to estimate the visual relatedness using the caption description. -->
        </br>
         </br>
 
@@ -143,8 +145,12 @@
       <tr><td width="1000" align="left"> 
         <div class="paper" id="ap_agent">
           <h3>Resulting Dataset and Proposed Approach</h3>
-          <p>  We also proposed strategy to estimate the most closely related/not-related visual
-concepts using the caption description.
+          <p>  We also propose a strategy to estimate the most closely related/not-related visual concepts using the caption description via BERT-CNN.
+            <!--
+            We also propose a strategy to estimate the most closely related/not-related visual
+concepts using the caption description. In partuoular, We employ BERT followed by a shallow CNN
+          to estimate the visual relatedness using the caption description.
+-->
             
             
       <!--      We also proposed a data filtering strategy and visual semantic model to
