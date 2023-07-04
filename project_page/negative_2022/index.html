@@ -1,0 +1,745 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Women Wearing Lipstick: Measuring the BiasBetween Object and Its Related Gender</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+
+
+
+</head>
+
+
+
+<body> 
+
+<div class="container">
+  <table border="0" align="center">
+    <tr><td width="623" align="center" valign="middle"><h2>Word to Sentence Visual Semantic Similarity for Caption Generation: Lessons Learned</h2></td></tr>
+    <tr><td width="300" align="center" valign="middle">   <a href="https://www.cs.upc.edu/~asabir/">Ahmed Sabir</a> </td></tr>
+  </table>
+  </br>
+  
+<!-- <html>
+<head>
+   <style>
+      a:link {
+         color: greenyellow;
+         background-color: transparent;
+         text-decoration: none;
+      }
+      a:visited {
+         color: deepskyblue;
+         background-color: transparent;
+         text-decoration: none;
+      }
+      a:active {
+         color: yellow;
+         background-color: transparent;
+      }
+   </style>
+</head>
+<body> -->
+
+
+
+  <p align="center"> <img src="main.png" width="700" align="middle" /></p>
+
+
+  <!--
+</table>
+<table width="400px" align="center">
+  <tr>
+    <td align=center width=100px>
+      <center>
+        <span style="font-size:15px"><a href="https://arxiv.org/.pdf">[Paper]</a></span>
+      </center>
+    </td>
+    <td align=center width=200px>
+      <center>
+        <span style="font-size:15px"><a href="https://github.com">[Code]</a></span>
+      </center>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:15px"><a href="https://github.com">[Demo]</a></span>
+        </center>
+    </td>
+</table>
+-->
+  
+</table>
+<table width="400px" align="center">
+  <tr>
+    <td align=center width=100px>
+      <center>
+        <ul class="nav">
+          <li class="nav-item text-center">
+              <a href="https://arxiv.org/" class="nav-link" title="Temp link">
+                  <svg style="width:30px;height:30px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z" />
+                  </svg><br>
+                  Paper
+              </a>
+      </center>
+    </td>
+   
+      <td align=center width=100px>
+        <center>
+          <ul class="nav">
+          <li class="nav-item text-center">
+            <a href="https://huggingface.co/datasets/AhmedSSabir/Textual-Image-Caption-Dataset" class="nav-link">
+              <svg style="width:30px;height:30px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88
+                 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 
+                 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z" />
+              </svg><br>
+              Poster
+            </a>
+                  </ul>
+        </center>
+    </td>
+    <td align=center width=100px>
+      <center>
+        
+        <ul class="nav">
+        <li class="nav-item text-center">
+          <a href="https://youtu.be/dEUA5_Ptg1M" class="nav-link" title="Temp link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16"> <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 
+              1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 
+              1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 
+              0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 
+              0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/> </svg><br>
+                video 
+           
+              
+          </a>
+        </ul>
+      </center>
+    </td>
+</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</br>
+
+<div class="container">
+  <h2>Abstract</h2>
+
+  
+
+    <p style="text-align:left">
+      This paper focuses on enhancing the captions generated by image captioning systems. We propose an approach  
+      for improving caption generation systems by choosing the most closely related output to the image rather than 
+      the most likely output produced by the model. Our model revises the language generation output beam search from 
+      a visual context perspective. We employ a  visual semantic measure in a word and sentence level manner to match the proper caption 
+      to the related information in the image. This approach  can be applied to any caption system as a post-processing method.
+    
+</div>
+
+</br>
+
+    
+      <tr><td width="1000" align="left"> 
+        <div style="text-align: left;" class="containersmall">
+          <h2>Architecture</h2>
+          <p>We introduce semantic relations between the visual context in the image and the caption at the word and sentence levels.
+             We propose a joint BERT [<a href="https://arxiv.org/abs/1810.04805" >9</a>] with GloVe [<a href="https://aclanthology.org/D14-1162.pdf" >28</a>] to capture visual semantic similarity. The main components of the proposed Architecture:</p>
+          <p align="center"> <img src="Overview_all.png" width="600" align="middle" /></p>
+
+          
+          
+          
+
+
+          <!-- <h3>
+            <strong>Word Level Model</strong>
+          </h3>
+          <p>To enable word-level semantics with GloVe, we extract keyphrases [23] from the caption, and we employ the confidence of the clas- sifier in the image to convert the similarity into a probability [29].</p>
+          <p align="center"> <img src="glove_prob.png" width="650" align="middle" /></p>
+        
+          <h3>
+          <strong>Sentence Level Model</strong>
+        </h3>
+        <p>We fine-tuned BERT on the Caption dataset, incorpo- rating the top-k 3 visual context information extracted from each image [11], where target is the semantic relatedness between the visual and the candidates caption.</p>
+        <p align="center"> <img src="BERT_Score.png" width="650" align="middle" /></p>
+
+        <h3>
+          <strong>Fusion Layers</strong>
+        </h3>
+        <p>Inspired by Products of Experts [12], we merged the two ex- perts through a Fusion layer. As this work aims to retrieve the closest candi- date caption with the highest probability, the normalization step is unneces- sary.</p>
+        <p align="center"> <img src="combined.png" width="650" align="middle" /></p> -->
+
+
+            
+</div>
+
+</br>
+
+
+
+
+<tr><td width="1000" align="left"> 
+  <div style="text-align: left;" class="containersmall">
+    <!-- <h2>Architecture</h2>
+    <p>We introduce semantic relations between the visual context in the image and the caption at the word and sentence levels.
+       We propose a joint BERT [9] with GloVe [27] to capture visual semantic similarity. The main components of the proposed Architecture:</p>
+    <p align="center"> <img src="Overview_all.png" width="600" align="middle" /></p>
+
+    <h3> -->
+      <h3>
+      <strong>Word Level Model</strong>
+    </h3>
+    <p>To enable word-level semantics with GloVe, we extract keyphrases [<a href="https://memray.me/uploads/acl17-keyphrase-generation.pdf" >24</a>] from the caption, and we employ the confidence of the classifier in the image to convert the similarity into a probability [<a href="https://arxiv.org/pdf/1810.12738.pdf" >30</a>].</p>
+    <p align="center"> <img src="glove_prob.png" width="650" align="middle" /></p>
+    <!-- <p align="center"> <img src="heatmap.png" width="650" align="middle" /></p> -->
+    <h3>
+
+      
+      
+
+    <!-- <strong>Sentence Level Model</strong>
+  </h3>
+  <p>We fine-tuned BERT on the Caption dataset, incorpo- rating the top-k 3 visual context information extracted from each image [11], where target is the semantic relatedness between the visual and the candidates caption.</p>
+  <p align="center"> <img src="BERT_Score.png" width="650" align="middle" /></p>
+
+  <h3>
+    <strong>Fusion Layers</strong>
+  </h3>
+  <p>Inspired by Products of Experts [12], we merged the two ex- perts through a Fusion layer. As this work aims to retrieve the closest candi- date caption with the highest probability, the normalization step is unneces- sary.</p>
+  <p align="center"> <img src="combined.png" width="650" align="middle" /></p> -->
+
+  <strong>Sentence Level Model</strong>
+</h3>
+<p>We fine-tuned BERT on the Caption datasets (Flick8k [<a href="https://www.ijcai.org/Proceedings/15/Papers/593.pdf" >13</a>] for
+  less data senario, and COCO [<a href="https://arxiv.org/abs/1405.0312" >18</a>] for regular model e.g., Trasnformer) incorporating the top-k 3 visual context information extracted from each image [<a href="https://arxiv.org/abs/1512.03385" >11</a>], where the target is the semantic relatedness between the visual and the candidates caption.</p>
+<p align="center"> <img src="BERT_Score.png" width="650" align="middle" /></p>
+      
+<h3> <strong>Fusion Layers</strong>
+</h3>
+<p>Inspired by Products of Experts [<a href="https://www.cs.toronto.edu/~hinton/absps/icann-99.pdf" >12</a>], we merged the two experts through a Late Fusion layer. As this work aims to retrieve the closest candidate caption (with its visual context) with the highest probability, the normalization step is unnecessary.</p>
+<p align="center"> <img src="combined.png" width="650" align="middle" /></p>
+
+</div>
+
+
+
+
+
+
+
+<!--           
+
+<tr><td width="1000" align="left"> 
+  <div class="paper" id="ap_agent">
+   <h2>Architecture</h2>
+    <p>We introduce semantic relations between the visual context in the image and the caption at the word and sentence levels.
+       We propose a joint BERT [9] with GloVe [27] to capture visual semantic similarity. The main components of the proposed Architecture:</p>
+    <p align="center"> <img src="Overview_all.png" width="600" align="middle" /></p>
+
+    <h3>
+      <strong>Word Level Model</strong>
+    </h3>
+    <p>To enable word-level semantics with GloVe, we extract keyphrases [23] from the caption, and we employ the confidence of the clas- sifier in the image to convert the similarity into a probability [29].</p>
+    <p align="center"> <img src="glove_prob.png" width="650" align="middle" /></p>
+
+    <h3> -->
+    <!-- <strong>Sentence Level Model</strong>
+  </h3>
+  <p>We fine-tuned BERT on the Caption dataset, incorpo- rating the top-k 3 visual context information extracted from each image [11], where target is the semantic relatedness between the visual and the candidates caption.</p>
+  <p align="center"> <img src="BERT_Score.png" width="650" align="middle" /></p>
+
+</div>
+
+</br>
+
+<tr><td width="1000" align="left"> 
+  <div class="paper" id="ap_agent">
+  <h3> <strong>Fusion Layers</strong>
+  </h3>
+  <p>Inspired by Products of Experts [12], we merged the two ex- perts through a Fusion layer. As this work aims to retrieve the closest candi- date caption with the highest probability, the normalization step is unneces- sary.</p>
+  <p align="center"> <img src="combined.png" width="650" align="middle" /></p>
+
+
+      
+</div> -->
+
+</br>
+
+<tr><td width="1000" align="left"> 
+  <div style="text-align: left;" class="containersmall">
+    <!-- <h2>Architecture</h2>
+    <p>We introduce semantic relations between the visual context in the image and the caption at the word and sentence levels.
+       We propose a joint BERT [9] with GloVe [27] to capture visual semantic similarity. The main components of the proposed Architecture:</p>
+    <p align="center"> <img src="Overview_all.png" width="600" align="middle" /></p>
+
+    <h3>
+      <strong>Word Level Model</strong>
+    </h3>
+    <p>To enable word-level semantics with GloVe, we extract keyphrases [23] from the caption, and we employ the confidence of the clas- sifier in the image to convert the similarity into a probability [29].</p>
+    <p align="center"> <img src="glove_prob.png" width="650" align="middle" /></p>
+   
+    <h3>
+    <strong>Sentence Level Model</strong>
+  </h3>
+  <p>We fine-tuned BERT on the Caption dataset, incorpo- rating the top-k 3 visual context information extracted from each image [11], where target is the semantic relatedness between the visual and the candidates caption.</p>
+  <p align="center"> <img src="BERT_Score.png" width="650" align="middle" /></p> -->
+
+  <!-- <h2>
+    <strong>Result</strong>
+  </h2> -->
+
+  <h2>
+Results
+  </h2>
+  <p>We evaluate the proposed approach on two different size datasets. The idea is to evaluate our approach with (1) a shallow model CNN-LSTM (i.e., less data scenario), and on a system that is trained on a huge amount of data (i.e. VilBERT and Transformer).
+    Our re-ranker yielded mixed result (+) improving model accuracy, (−) struggles when dealing with less diverse captions e.g., Transformer baseline
+  </p>
+  <p align="center"> <img src="heatmap.png" width="650" align="middle" /></p>
+
+
+      
+</div>
+
+</br>
+
+
+          <!-- <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Visual Classifier<sub>ResNet/CLIP</sub></a>
+          <pre xml:space="preserve">
+            visual_context_label = 'motor scooter'
+            visual_context_prob = 0.2183
+          </pre>       
+        </div>
+        <tr><td width="1000" align="left"> 
+          <div class="paper" id="ap_role_scenario1">
+            <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">Gender Score<sub>man/woman</sub> </a>
+            <pre > -->
+  
+             
+            </pre>       
+          </div>
+        </td></tr>
+      <tr><td width="1000" align="left"> 
+        <div style="text-align: left;" class="containersmall">
+          <h3><strong>Ablation Study.</strong></h3>
+          <p>
+            We performed an ablation study with our worst model (i.e., Transformer baseline) to investigate the effectiveness of each expert. In this experiment, we trained each model separately. 
+            The GloVe as a stand-alone performed better than the combined model (and thus, the combined model breaks the accuracy).
+             To investigate this even further we visualized each expert before the fusion layers as shown in the Figure below. The color represents in the Figure 
+             below ♣ and shown in the Table that  <font color="#f5acad">BERT</font> is not contributing, as <font color="#ccdfc0">GloVe</font>, to the final score.
+             The GloVe is dominating to become the expert to the final score for two reasons: (1) short caption, and (2) less diverse beam.
+
+
+            
+          </p>
+          <!-- <p align="center"> <img src="Overview_all.png" width="600" align="middle" /></p> -->
+          <p align="center"> <img src="Trasnformer_fig.png" width="400" align="middle" /></p>
+
+        <style>
+          .geeks {
+              caption-side: bottom;
+          }
+          tr:first-child {
+  border-top: none;
+}
+tr:last-child {
+  border-bottom: none;
+}
+      </style>
+<!-- 
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  tr { 
+    border: solid;
+    border-width: 1px 0;
+  }
+  </style> -->
+
+<style>
+  .table td, .table th {
+      font-size: 1px;
+  }
+  
+</style>
+
+<style type="text/css">
+  td {
+    padding: 0 4px;
+  }
+</style>
+
+<tr class="border_bottom">
+  <td colspan="6"></td>
+</tr>
+
+<!-- <center>
+  
+<table>
+  <tr>
+      <td>Model</td>
+      <td>B-1</td>
+      <td>B-2</td>
+      <td>B -3</td>
+      <td>B-4</td>
+      <td>M</td>
+      <td>R</td>
+      <td>C</td>
+      <td>B-S</td>
+  </tr>
+  <tr>
+      <td>♠ Tell-BeamS </td>
+      <td> <strong>0.331 <strong> </td>
+      <td><strong>0.159<strong></td>
+      <td>0.071</td>
+      <td>0.035</td>
+      <td>0.093</td>
+      <td>0.270</td>
+      <td>0.035</td>
+      <td><strong>0.8871<strong></td>
+  </tr>
+  <tr>
+      <td>Tell+VR_V1-BERT-Glove</td>
+      <td>0.330</td>
+      <td>0.158</td>
+      <td>0.069</td>
+      <td>0.035</td>
+      <td>0.095</td>
+      <td>0.273</td>
+      <td>0.036</td>
+      <td>0.8855</td>
+  </tr>
+  <tr>
+      <td>Tell+VR_V2-BERT-Glove</td>
+      <td>0.320</td>
+      <td>0.154</td>
+
+      <td><strong> 0.073 <strong></td>
+      <td><strong> 0.037<strong></td>
+      <td>0.099</td>
+      <td><strong>0.277<strong></td>
+      <td><strong>0.041<strong></td>
+      <td>0.8850</td>
+  </tr>
+  <tr>
+      <td>Tell+VR_V1-RoBERTa-Glove (sts)</td>
+      <td>0.313</td>
+      <td>0.153</td>
+      <td>0.072</td>
+      <td><strong>0.037<strong></td>
+      <td><strong>0.101<strong></td>
+      <td>0.273</td>
+      <td>0.036</td>
+      <td>0.8839</td>
+  </tr>
+
+  <tr>
+      <td>Tell+VR_V2-RoBERTa-Glove (sts)</td>
+      <td>0.330</td>
+      <td>0.158</td>
+      <td>0.069</td>
+      <td>0.035</td>
+      <td>0.095</td>
+      <td>0.273</td>
+      <td>0.036</td>
+      <td>0.8869</td>
+  </tr>
+        <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+
+
+  <tr>
+      <td>♣ Vil-BeamS</td>
+      <td>0.739</td>
+      <td>0.577</td>
+      <td>0.440</td>
+      <td>0.336</td>
+      <td>0.271</td>
+      <td>0.543</td>
+      <td>1.027</td>
+      <td>0.9363</td>
+  </tr>
+
+  <tr>
+      <td>Vil+VR_V1-BERT-Glove</td>
+      <td>0.739</td>
+      <td>0.576</td>
+      <td>0.438</td>
+      <td>0.334</td>
+      <td><strong>0.273<strong></td>
+      <td>0.544</td>
+      <td>1.034</td>
+      <td><strong>0.9365<strong></td>
+  </tr>
+  <tr>
+      <td>Vil+VR_V2-BERT-Glove</td>
+      <td><strong>0.740<strong></td>
+      <td>0.578</td>
+      <td>0.439</td>
+      <td>0.334</td>
+      <td><strong>0.273<strong></td>
+      <td><strong>0.545<strong></td>
+      <td>1.034</td>
+      <td>0.9365</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td>Vil+VR_V1-RoBERTa-Glove (sts)</td>
+      <td>0.738</td>
+      <td>0.576</td>
+      <td>0.440</td>
+      <td>0.335</td>
+      <td><strong>0.273<strong></td>
+      <td>0.544</td>
+      <td>1.036</td>
+      <td>0.9365</td>
+  </tr>
+  <tr>
+      <td>Vil+VR_V2-RoBERTa-Glove (sts)</td>
+      <td><strong>0.740<strong></td>
+      <td><strong>0.579<strong></td>
+      <td><strong>0.442<strong></td>
+      <td><strong>0.338<strong></td>
+      <td>0.272</td>
+      <td><strong>0.545<strong></td>
+      <td><strong>1.040<strong></td>
+      <td><strong>0.9366<strong></td>
+  </tr>
+       <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+
+  <tr>
+      <td>♣ Trans-BeamS  </td>
+      <td><strong>0.780<strong></td>
+      <td><strong>0.631<strong></td>
+      <td><strong>0.491<strong></td>
+      <td><strong>0.374<strong></td>
+      <td><strong>0.278<strong></td>
+      <td><strong>0.569<strong></td>
+      <td><strong>1.153<strong></td>
+      <td><strong>0.9399<strong></td>
+  </tr>
+  <tr>
+      <td>Trans+VR_V1-BERT-Glove</td>
+      <td><strong>0.780<strong></td>
+      <td>0.629</td>
+      <td>0.487</td>
+      <td>0.371</td>
+      <td><strong>0.278<strong></td>
+      <td>0.567</td>
+      <td>1.149</td>
+      <td>0.9398</td>
+  </tr>
+  <tr>
+      <td>Trans+VR_V2-BERT-Glove</td>
+      <td><strong>0.780<strong></td>
+      <td>0.630</td>
+      <td>0.488</td>
+      <td>0.371</td>
+      <td><strong>0.278<strong></td>
+      <td>0.568</td>
+      <td>1.150</td>
+      <td><strong>0.9399<strong></td>
+  </tr>
+  <tr>
+      <td>Trans+VR_V1-RoBERTa-Glove (sts)</td>
+      <td>0.779</td>
+      <td>0.629</td>
+      <td>0.487</td>
+      <td>0.370</td>
+      <td>0.277</td>
+      <td>0.567</td>
+      <td>1.145</td>
+      <td>0.9395</td>
+  </tr>
+  <tr>
+      <td>Trans+VR_V2-RoBERTa-Glove(sts)</td>
+      <td>0.779</td>
+      <td>0.629</td>
+      <td>0.487</td>
+      <td>0.370</td>
+      <td>0.277</td>
+      <td>0.567</td>
+      <td>1.145</td>
+      <td>0.9395</td>
+  </tr>
+     <caption> <font color="#6e6e6f"> <small> <small> Table 1 Performance of compared baselines on the Karpathy test split. <small> <small></font> </caption>
+   <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The ♠ refers to the Fliker 1730 test set, ♣ refers to the COCO Karpathy 5K test set. <small> <small> </td></tr></tfoot> 
+</table> 
+
+-->
+
+
+<center>
+  <table>
+    <tr>
+
+
+          <td> Model</td>
+        <td style="text-align:center"> B-4</td>
+          <td style="text-align:center"> M</td>
+          <td style="text-align:center"> R</td>
+          <td style="text-align:center"> C</td>
+          <td style="text-align:center"> B-S</td>
+
+
+
+    </tr>
+    <tr>
+
+            <td> Transformer-BeamS</td>
+           <td style="text-align:center"> <strong>0.374<strong></td>
+        <td style="text-align:center"> <strong>0.278<strong></td>
+          <td style="text-align:center"> <strong>0.569<strong></td>
+          <td style="text-align:center"> <strong>1.153<strong></td>
+          <td style="text-align:center"> <strong>0.9399<strong></td>
+
+
+
+
+    </tr>
+    <tr>
+        <td>+VR-RoBERT-GloVe</td>
+
+          <td style="text-align:center"> 0.370</td>
+        <td style="text-align:center"> 0.277</td>
+          <td style="text-align:center"> 0.567</td>
+          <td style="text-align:center"> 1.145</td>
+          <td style="text-align:center"> 0.9395</td>
+    </tr>
+    <tr>
+
+        <td>+VR-BERT-GloVe</td>
+
+                <td style="text-align:center"> 0.370</td>
+        <td style="text-align:center">  <font color="#f5acad">0.371</font></td>
+          <td style="text-align:center"> <font color="#f5acad">0.278 </font></td>
+          <td style="text-align:center"> <font color="#f5acad">1.149 </font></td>
+          <td style="text-align:center"> 0.9398</td>
+
+
+
+    </tr>
+    <tr>
+
+
+
+
+
+        <td>+VR-RoBERT-BERT</td>
+         <td style="text-align:center">0.369</td>
+        <td style="text-align:center">0.278</td>
+          <td style="text-align:center">0.567</td>
+          <td style="text-align:center">1.144</td>
+          <td style="text-align:center">0.9395</td>
+    </tr>
+    <tr>
+        <td>+VR_V1-GloVe</td>
+
+           <td style="text-align:center">0.371</td>
+        <td style="text-align:center">0.278</td>
+          <td style="text-align:center">0.568</td>
+          <td style="text-align:center">1.148</td>
+          <td style="text-align:center">0.9398</td>
+    </tr>
+
+    </tr>
+
+    <tr>
+
+        <td>+VR_V2-GloVe</td>
+
+              <td style="text-align:center">0.371</td>
+        <td style="text-align:center"><font color="#ccdfc0">0.371</font></td>
+          <td style="text-align:center"> <font color="#ccdfc0">0.278</font></td>
+         <td style="text-align:center"> <font color="#ccdfc0">1.149</font></td>
+          <td style="text-align:center">0.9398</td>
+
+
+    </tr><caption> <font color="#6e6e6f"> <small> <small>  Table 2 Ablation study. We analyze the contribution of each Expert to the final accuracy. <small>  <small></font> </caption>
+      <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The color represents the actucal value <font color="#f5acad">BERT</font> and <font color="#ccdfc0">GloVe</font> on ♣ COCO dataset as show in the Figure above <small> <small> </td></tr></tfoot>
+  </table>
+
+</center>
+
+
+
+
+          <!-- <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Visual Classifier<sub>ResNet/CLIP</sub></a>
+          <pre xml:space="preserve">
+            visual_context_label = 'motor scooter'
+            visual_context_prob = 0.2183
+          </pre>       
+        </div>
+        <tr><td width="1000" align="left"> 
+          <div class="paper" id="ap_role_scenario1">
+            <a shape="rect" href="javascript:togglebib('ap_role_scenario1')" class="togglebib">Gender Score<sub>man/woman</sub> </a>
+            <pre > -->
+  
+             
+            </pre>       
+          </div>
+
+
+
+      
+
+      
+    </table> 
+</div>
+
+</br>
+
+<div style="text-align: left;" class="containersmall">
+  <h3>Citation</h3>
+<pre class='citation'>
+ @article{sabir2023,
+  title={Word to Sentence Visual Semantic Similarity for Caption Generation: Lessons Learned},
+  author={Sabir, Ahmed},
+  journal={arXiv preprint arXiv},
+  year={2023}
+}
+</div>
+<div style="text-align: center;" class="containersmall">
+  <p>Contact: <a href="mailto:asabir@cs.upc.edu">Ahmed Sabir</a></p>
+</div>
+<script xml:space="preserve" language="JavaScript">
+
+hideallbibs();
+</script>
+
+</body>
+</html>
