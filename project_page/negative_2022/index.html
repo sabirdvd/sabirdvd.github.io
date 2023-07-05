@@ -226,7 +226,7 @@
   <strong>Sentence Level Model</strong>
 </h3>
 <p>We fine-tuned BERT on the Caption datasets (Flickr8k [<a href="https://www.ijcai.org/Proceedings/15/Papers/593.pdf" >13</a>] for
-  less data senario, and COCO [<a href="https://arxiv.org/abs/1405.0312" >18</a>] for regular model <em>e.g.</em>  Trasnformer) incorporating the top-k 3 visual context information extracted from each image [<a href="https://arxiv.org/abs/1512.03385" >11</a>], where the target is the semantic relatedness between the visual and the candidates caption.</p>
+  less data senario, and COCO [<a href="https://arxiv.org/abs/1405.0312" >18</a>] for regular model <em>e.g.</em>  Trasnformer [<a href="https://arxiv.org/abs/1912.08226" >8</a>]) incorporating the top-k 3 visual context information extracted from each image [<a href="https://arxiv.org/abs/1512.03385" >11</a>], where the target is the semantic relatedness between the visual and the candidates caption.</p>
 <p align="center"> <img src="BERT_Score.png" width="650" align="middle" /></p>
       
 <h3> <strong>Fusion Layers</strong>
@@ -306,7 +306,7 @@
   <h2>
 Results
   </h2>
-  <p>We evaluate the proposed approach on two different size datasets. The idea is to evaluate our approach with (1) a shallow model CNN-LSTM (<em>i.e.</em> less data scenario), and on a system that is trained on a huge amount of data (VilBERT and Transformer).
+  <p>We evaluate the proposed approach on two different size datasets. The idea is to evaluate our approach with (1) a shallow model CNN-LSTM [<a href="https://arxiv.org/abs/1411.4555" >32</a>] (<em>i.e.</em> less data scenario), and on a system that is trained on a huge amount of data (VilBERT [<a href="https://arxiv.org/pdf/1912.02315.pdf" >21</a>] and Transformer[<a href="https://arxiv.org/abs/1912.08226" >8</a>]).
     Our re-ranker yielded mixed result (+) improving model accuracy, (−) struggles when dealing with less diverse captions <em>i.e.</em> Transformer baseline
   </p>
   <p align="center"> <img src="heatmap.png" width="650" align="middle" /></p>
@@ -620,7 +620,7 @@ tr:last-child {
     </tr>
     <tr>
 
-            <td> Transformer-BeamS</td>
+            <td> Transformer-BeamS [<a href="https://arxiv.org/abs/1912.08226" >8</a>]</td>
            <td style="text-align:center"> <strong>0.374<strong></td>
         <td style="text-align:center"> <strong>0.278<strong></td>
           <td style="text-align:center"> <strong>0.569<strong></td>
