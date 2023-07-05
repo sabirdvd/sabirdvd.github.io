@@ -225,8 +225,8 @@
 
   <strong>Sentence Level Model</strong>
 </h3>
-<p>We fine-tuned BERT on the Caption datasets (Flick8k [<a href="https://www.ijcai.org/Proceedings/15/Papers/593.pdf" >13</a>] for
-  less data senario, and COCO [<a href="https://arxiv.org/abs/1405.0312" >18</a>] for regular model e.g., Trasnformer) incorporating the top-k 3 visual context information extracted from each image [<a href="https://arxiv.org/abs/1512.03385" >11</a>], where the target is the semantic relatedness between the visual and the candidates caption.</p>
+<p>We fine-tuned BERT on the Caption datasets (Flickr8k [<a href="https://www.ijcai.org/Proceedings/15/Papers/593.pdf" >13</a>] for
+  less data senario, and COCO [<a href="https://arxiv.org/abs/1405.0312" >18</a>] for regular model <em>e.g.</em>  Trasnformer) incorporating the top-k 3 visual context information extracted from each image [<a href="https://arxiv.org/abs/1512.03385" >11</a>], where the target is the semantic relatedness between the visual and the candidates caption.</p>
 <p align="center"> <img src="BERT_Score.png" width="650" align="middle" /></p>
       
 <h3> <strong>Fusion Layers</strong>
@@ -306,8 +306,8 @@
   <h2>
 Results
   </h2>
-  <p>We evaluate the proposed approach on two different size datasets. The idea is to evaluate our approach with (1) a shallow model CNN-LSTM (i.e., less data scenario), and on a system that is trained on a huge amount of data (i.e. VilBERT and Transformer).
-    Our re-ranker yielded mixed result (+) improving model accuracy, (−) struggles when dealing with less diverse captions e.g., Transformer baseline
+  <p>We evaluate the proposed approach on two different size datasets. The idea is to evaluate our approach with (1) a shallow model CNN-LSTM (<em>i.e.</em> less data scenario), and on a system that is trained on a huge amount of data (VilBERT and Transformer).
+    Our re-ranker yielded mixed result (+) improving model accuracy, (−) struggles when dealing with less diverse captions <em>i.e.</em> Transformer baseline
   </p>
   <p align="center"> <img src="heatmap.png" width="650" align="middle" /></p>
 
@@ -335,9 +335,9 @@ Results
         </td></tr>
       <tr><td width="1000" align="left"> 
         <div style="text-align: left;" class="containersmall">
-          <h3><strong>Ablation Study.</strong></h3>
+          <h3><strong>Ablation Study</strong></h3>
           <p>
-            We performed an ablation study with our worst model (i.e., Transformer baseline) to investigate the effectiveness of each expert. In this experiment, we trained each model separately. 
+            We performed an ablation study with our worst model (<em>i.e.</em> Transformer baseline) to investigate the effectiveness of each expert. In this experiment, we trained each model separately. 
             The GloVe as a stand-alone performed better than the combined model (and thus, the combined model breaks the accuracy).
              To investigate this even further we visualized each expert before the fusion layers as shown in the Figure below. The color represents in the Figure 
              below ♣ and shown in the Table that  <font color="#f5acad">BERT</font> is not contributing, as <font color="#ccdfc0">GloVe</font>, to the final score.
@@ -690,8 +690,10 @@ tr:last-child {
 
 
     </tr><caption> <font color="#6e6e6f"> <small> <small>  Table 2 Ablation study. We analyze the contribution of each Expert to the final accuracy. <small>  <small></font> </caption>
-      <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The color represents the actucal value <font color="#f5acad">BERT</font> and <font color="#ccdfc0">GloVe</font> on ♣ COCO dataset as show in the Figure above <small> <small> </td></tr></tfoot>
+      <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The color represents the actual value <font color="#f5acad">BERT</font> and <font color="#ccdfc0">GloVe</font> on 5k ♣ COCO dataset Karpathy test set as shown in the Figure above <small> <small> </td></tr></tfoot>
   </table>
+
+
 
 </center>
 
