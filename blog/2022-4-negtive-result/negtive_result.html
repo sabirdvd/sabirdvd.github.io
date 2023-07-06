@@ -15,7 +15,7 @@
   - PUBLISHED Date
   affiliations:
   - Universitat Politècnica de Catalunya: https://www.upc.edu
-  -  10 Feb 2022
+  -  10 Dec 2022
 
 </script>
 <script type="text/javascript">
@@ -76,7 +76,9 @@
 <p> <strong>Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>.</strong>  RoBERTa is an improved version of BERT, and since RoBERTa Large is more robust, we rely on pre-trained SentenceRoBERTa-sts as its yields a better cosine score.<p>
 
 
-<p><strong>Fusion Similarity Expert.</strong>  Product of experts (PoE) <dt-cite key="hinton1999products"></dt-cite>  implies an effort into combining the expertise of each expert (model) in a collaborative manner. It allows each expert to specialize in analyzing one particular aspect of the problem and establishing a judgment based on that aspect. Inspired by PoE , we combined the two experts word and sentence level as last fusion as shown in Figure 1. PoE takes advantage of each expert and can produce much sharper distributions than a single model. The PoE is computed as follows:<p>
+<p><strong>Fusion Similarity Expert.</strong>  Product of experts (PoE) <dt-cite key="hinton1999products"></dt-cite>  implies an effort into combining the expertise of each expert (model) in a collaborative manner. 
+	It allows each expert to specialize in analyzing one particular aspect of the problem and establishing a judgment based on that aspect. Inspired by PoE , we combined the two experts word and sentence level as last fusion as shown in Figure 1.
+	PoE takes advantage of each expert and can produce much sharper distributions than a single model. The PoE is computed as follows:<p>
 
 
 
@@ -105,8 +107,9 @@
 <p> \[\arg  \max _{\mathbf{w}} {\Pi_{m} p_{m}\left(\mathbf{w} | \theta_{m}\right)}\]<p>
 
 
-<p> where, \(p_{m}\left(\mathbf{w} | \theta_{m}\right)\)  are the probabilities assigned by each expert to the candidate word \(\mathbf{w}\).
+<p> where, \(p_{m}\left(\mathbf{w} | \theta_{m}\right)\)  are the probabilities  (i.e., semantic relatedness score) assigned by each expert to the candidate caption \(\mathbf{w}\) with the semantic relation with the visual context of the image.
 
+	
 
 
   <h2 id="">Dataset<a hidden class="anchor" aria-hidden="true" href="">#</a></h2>
