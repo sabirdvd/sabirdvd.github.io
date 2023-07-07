@@ -63,7 +63,8 @@
 
     <figure>
     <img src="Figure_1.png" alt="Trulli" style="width:80%">
-  <figcaption>Fig.1 An overview of our visual semantic re-ranking. We employ the visual context in word and sentence level manners from the image to re-rank the most related caption to its visual context. An example, from caption Transformer generator, shows the visual re-ranker (Visual Beam)  uses the semantic relation to re-ranked the most descriptive caption.</figcaption>
+  <figcaption>Fig.1 An overview of our visual semantic re-ranking. We employ the visual context in word and sentence level manners from the image to re-rank the most related caption to its visual context. 
+	  An example from caption Transformer generator shows the visual re-ranker (Visual Beam)  uses the semantic relation to re-ranked the most descriptive caption.</figcaption>
 </figure>
 
 
@@ -154,7 +155,9 @@
 
 
       <h2 id="">Results and Analysis<a hidden class="anchor" aria-hidden="true" href="">#</a></h2>
-<p>We use visual semantic information to re-rank candidate captions produced by out-of-the-box state-of-the-art caption generators. We extract top-20 beam search candidate captions from three different architectures (1) standard CNN+LSTM model <dt-cite key="Oriol:15"></dt-cite>, (2) a pre-trained language and vision model VilBERT <dt-cite key="lu202012"></dt-cite>, fine-tuned on a total of 12 different vision and language datasets such as caption image retrieval, and (3) a specialized caption-based Transformer <dt-cite key="Marcella:20"></dt-cite>.<p>
+<p>We use visual semantic information to re-rank candidate captions produced by out-of-the-box state-of-the-art caption generators. We extract top-20 beam search candidate captions from three different architectures
+	(1) standard CNN+LSTM model <dt-cite key="Oriol:15"></dt-cite>, (2) a pre-trained language and vision model VilBERT <dt-cite key="lu202012"></dt-cite>, fine-tuned on a total of 12 different vision and language datasets such as caption image retrieval, 
+	and (3) a specialized caption-based Transformer <dt-cite key="Marcella:20"></dt-cite>.<p>
 
 
 
@@ -379,7 +382,8 @@
 
 
 
-   <p> Experiments applying different rerankers to each base system are shown in Table 1 (above). The tested rerankers are: (1) VR_BERT+GloVe, which uses BERT and GloVe similarity between the candidate caption and the visual context (top-k V_1 and V_2 during the inference) to obtain the reranked score. (2) VR_RoBERTa+GloVe, which carries out the same procedure using similarity produced by Sentence RoBERTa.<p>
+   <p> Experiments applying different re-rankers to each base system are shown in Table 1 (above). The tested re-rankers are: (1) VR_BERT+GloVe, which uses BERT and GloVe similarity between the candidate caption and the visual context (top-k V_1 and V_2 during the inference) 
+	   to obtain the re-ranked score. (2) VR_RoBERTa+GloVe, which carries out the same procedure using similarity produced by Sentence RoBERTa.<p>
 
 
 <p>Our re-ranker produced mixed results as the model struggles when the beam search is less diverse. The model is therefore not able to select the most closely related caption to its environmental context as shown in Figure 2, which is a visualization of the final visual beam re-ranking.<p>
