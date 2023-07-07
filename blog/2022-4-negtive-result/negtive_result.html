@@ -40,7 +40,10 @@
 	 These systems show promising results on benchmark datasets such as  Flikr <dt-cite key="young2014image"></dt-cite> and COCO  <dt-cite key="Tsung-Yi:14"></dt-cite> datasets. However, the generated caption lexical diversity remains a relatively unexplored research problem. Lexical diversity refers to how accurate the generated description is for a given image. An accurate caption should provide details about specific and relevant aspects of the image. Caption lexical diversity can be divided into three levels: word level (different words), syntactic level (word order), and semantic level (relevant concepts)  <dt-cite key="wang2019describing"></dt-cite>. In this work, we approach word-level diversity by learning the semantic correlation between the caption and its visual context, as shown in Figure 1 (below), where the visual information from the image is used to learn the semantic relation from the caption in a word and sentence manner.<p>
 
 
-  <p> <p><strong>Visual Context Image Captioning System.</strong>  Modern sophisticated image captioning systems focus heavily on visual grounding to capture real-world scenarios. Early works  <dt-cite key="fang2015captions"></dt-cite>  built a visual detector to guide and re-rank image captions with a global similarity. The work of  <dt-cite key="wang2018object"></dt-cite>  investigates the informativeness of object information (e.g., object frequency) in end-to-end caption generation. Cornia et al.  propose controlled caption language grounding through visual regions from the image <dt-cite key="cornia2019show"></dt-cite>. Chen et al.  rely on scene concept abstract (object, relationship, and attribute) grounded in the image to learn accurate semantics without labels for image caption <dt-cite key="gupta2020contrastive"></dt-cite>. More recently, Zhang et al.  incorporate different concepts such as scene graph, object, and attribute to learn correct linguistic and visual relevance for better caption language grounding <dt-cite key="zhang2021consensus"></dt-cite>. <p>
+  <p> <p><strong>Visual Context Image Captioning System.</strong>  Modern sophisticated image captioning systems focus heavily on visual grounding to capture real-world scenarios. Early works  <dt-cite key="fang2015captions"></dt-cite>  built a visual detector to guide and re-rank 
+	  image captions with a global similarity. The work of  <dt-cite key="wang2018object"></dt-cite>  investigates the informativeness of object information (e.g., object frequency) in end-to-end caption generation. Cornia et al. <dt-cite key="gupta2020contrastive"></dt-cite> propose controlled caption language grounding through visual 
+	  regions from the image <dt-cite key="cornia2019show"></dt-cite>. Chen et al. <dt-cite key="gupta2020contrastive"></dt-cite> rely on scene concept abstract (object, relationship, and attribute) grounded in the image to learn accurate semantics without labels for image caption.
+	  More recently, Zhang et al. <dt-cite key="zhang2021consensus"></dt-cite> incorporate different concepts such as scene graph, object, and attribute to learn correct linguistic and visual relevance for better caption language grounding. <p>
 
 
 
@@ -126,10 +129,11 @@
 <p> We evaluate the proposed approach on two different sized datasets. The idea is to evaluate our method on the most common caption dataset in two scenarios: (1) a shallow model CNN-LSTM (i.e. less data), as well as a system that is trained on a huge amount of data (i.e. Transformer).<p>
 
 
- <p> ♠ Flicker 8K <dt-cite key="young2014image"></dt-cite>. The dataset contains 8K images, each image has five human label annotated captions. We use this data to train the shallow model (6270 train/1730 test).<p>
+ <p> ♠ Flickr8k <dt-cite key="young2014image"></dt-cite>. The dataset contains 8k images, each image has five human label annotated captions. We use this data to train the shallow model (6270 train/1730 test).<p>
 
 
- <p> ♣ COCO <dt-cite key="Tsung-Yi:14"></dt-cite>. It contains around 120K images, and each image is annotated with five different human label captions. We use the most used split that is provided by (Karpathy test set) <dt-cite key="karpathy2015deep"></dt-cite>, where 5k images are used for testing and 5k for validation, and the rest for model training for the Transformer baseline.<p>
+ <p> ♣ COCO <dt-cite key="Tsung-Yi:14"></dt-cite>. It contains around 120k images, and each image is annotated with five different human label captions. We use the most used split that is 
+	 provided by (Karpathy test set) <dt-cite key="karpathy2015deep"></dt-cite>, where 5k images are used for testing and 5k for validation, and the rest for model training for the Transformer baseline.<p>
 
 
 
@@ -359,7 +363,7 @@
         <td>0.9395</td>
     </tr>
       <caption> <font color="#6e6e6f"> <small> <small> Table 1 Performance of compared baselines on the Karpathy test split. <small> <small></font> </caption>
-     <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The ♠ refers to the Fliker 1730 test set, ♣ refers to the COCO Karpathy 5K test set. <small> <small> </td></tr></tfoot>
+     <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The ♠ refers to the Fliker 1730 test set, ♣ refers to the COCO Karpathy 5k test set. <small> <small> </td></tr></tfoot>
 </table>
 
 </center>
