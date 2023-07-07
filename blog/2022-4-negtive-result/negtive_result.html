@@ -588,7 +588,16 @@
 
 
 
-    <p><strong>Limitation. </strong> In contrast to CNN-LSTM (♠ top Figure 3), where each expert is contributing to the final decisions, we observed that having a shorter caption (with less context) can influence the BERT similarity score negatively. Therefore, the GloVe dominates as the main expert as shown in Figure 3 (♣ Bottom).<p>
+    <p><strong>Limitation. </strong> In contrast to CNN-LSTM (♠ top Figure 3), where each expert is contributing to the final decisions, we observed that having a shorter caption 
+	    (with less context) can influence the BERT similarity score negatively. Therefore, the GloVe dominates as the main expert as shown in Figure 3 (♣ Bottom).
+	      
+	       Another limitation is the fluctuating of independent stand-alone word similarity score i.e., keyphrases from the caption and the visual <em>sim</em>(keyphrase, visual). Also, the visual classifier 
+	    struggles with complex backgrounds (i.e., misclassified and hallucinated objects), which results in an inaccurate semantic score.
+	      
+	      
+	      
+	      
+	      <p>
 
 
 
