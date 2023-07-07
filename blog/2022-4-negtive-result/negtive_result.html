@@ -53,7 +53,7 @@
 
 
 
-  <p>Beam search caption extraction — Baselines. We employ the three most common architectures for caption generation to extract the top beam search. The first baseline is based on the standard shallow CNN-LSTM model <dt-cite key="Oriol:15"></dt-cite>. The second, VilBERT  <dt-cite key="lu202012"></dt-cite>  is fine-tuned on a total of 12 different vision and language datasets such as caption image retrieval. Finally, the third baseline is a specialized Transformer based caption generator <dt-cite key="Marcella:20"></dt-cite>. <p>
+  <p>strong>Beam Search Caption Extraction. </strong> We employ the three most common architectures for caption generation to extract the top beam search. The first baseline is based on the standard shallow CNN-LSTM model <dt-cite key="Oriol:15"></dt-cite>. The second, VilBERT  <dt-cite key="lu202012"></dt-cite>  is fine-tuned on a total of 12 different vision and language datasets such as caption image retrieval. Finally, the third baseline is a specialized Transformer based caption generator <dt-cite key="Marcella:20"></dt-cite>. <p>
 
 
    <h2>Learning Word to Sentence Visual Semantic</h2>
@@ -84,7 +84,7 @@
 
 <p><strong>Fusion Similarity Expert.</strong>  Product of experts (PoE) <dt-cite key="hinton1999products"></dt-cite>  implies an effort into combining the expertise of each expert (model) in a collaborative manner. 
 	It allows each expert to specialize in analyzing one particular aspect of the problem and establishing a judgment based on that aspect. Inspired by PoE , we combined the two experts word and sentence level as last fusion as shown in Figure 1.
-	PoE takes advantage of each expert and can produce much sharper distributions than a single model. The PoE is computed as follows:<p>
+	PoE takes advantage of each expert and can produce much sharper distributions than a single model. The combined probability of a given candidate caption \(\mathbf{w}\), with the semantic relation with the visual context, can be written as: <p>
 
 
 
@@ -106,7 +106,7 @@
 </p>
 
 
-<p> where \(w\) is a data vector in the discrete space, \(θm\) are the parameters of each model \(m\), \(pm(w|θm)\) is the probability of \(w\) under model \(m\) and \(c\) are the indexes of all possible vector in the data space.
+<p> where \(w\) is a data vector in the discrete space, \(θm\) are the parameters of each model \(m\), \(pm(\mathbf{w}|θm)\) is the probability of \(\mathbf{w}\) under model \(m\) and \(c\) are the indexes of all possible vector in the data space.
 	
 	Since we are just interested in retrieving the candidate caption with higher probability after re-ranking, we do not need to normalize. Therefore, we compute: <p>
 	
