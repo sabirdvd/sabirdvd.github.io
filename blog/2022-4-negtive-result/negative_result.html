@@ -155,15 +155,15 @@
 	  An example from caption Transformer generator shows the visual re-ranker (Visual Beam) uses the semantic relation to re-ranked the most descriptive caption.</figcaption>
 </figure> -->
 
-
+<p class="centered">
 <figure>
-    <img src="Overview_all.png" alt="Trulli" style="width:80%">
+    <img src="Overview_all.png" alt="Trulli" style="width:90%">
   <figcaption>Fig.2 Architecture. Detail of the proposed architecture to estimate the semantic score between the candidate caption (provided by an off-the-shelf image caption system) and the context in the image. 
   We employ the visual context in word and sentence level manner from the image to re-rank the most related caption to its visual context. 
 	  An example from caption Transformer generator shows the visual re-ranker (Visual Beam) uses the semantic relation to re-ranked the most descriptive caption.
   </figcaption>
 </figure>
-		
+</p>
 
       <p><strong>Word level similarity.</strong>  To learn the semantic relation between a caption and its visual context in a word-level manner: first, we employ a bidirectional 
 	      LSTM based CopyRNN keyphrase extractor <dt-cite key="meng2017deep"></dt-cite>  to extract keyphrases<dt-fn>Note that, a pre-trained out-of-the-box model is also available such as KeyBERT.</dt-fn>  from the sentence as context. The model is trained on combined pre-processed datasets (1) wikidump 
