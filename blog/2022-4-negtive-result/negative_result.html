@@ -108,8 +108,10 @@
 	  
   <p>In this blog post, I will share with you some insight and lessons learned from our recent research idea <dt-cite key="sabir2022word"></dt-cite> that should work in theory (<em>i.e.</em> BERT+GloVe for Semantic Similarity), but in practice, it doesn’t work in our scenario.
     Recent state-of-the-art progress in pre-trained vision and language and image (<em>e.g.</em> captioning models) relies heavily on long training on abundant data. However, these accuracy improvements 
-	  depend on long iterations of training and the availability of computational resources (<em>i.e.</em> GPU, TPU, etc), which leads to time and
-	  energy consumption  <dt-cite key="strubell2019energy"></dt-cite>. In some cases, the improvements after re-training are less than 1 point in the benchmark dataset. In this work, we introduce an approach that can be applied to any caption system as a post-processing-based method that only needs to be trained once. In particular, we propose an approach for improving caption generation systems by choosing the most closely related output to the image rather than the most likely output produced by the model. Our model revises the language generation output beam search from a visual context perspective</p>
+	  depend on long iterations of training and the availability of computational resources (<em>i.e.</em> GPU, TPU, etc.), which leads to time and
+	  energy consumption  <dt-cite key="strubell2019energy"></dt-cite>. In some cases, the improvements after re-training are less than 1 point in the benchmark dataset. In this work, we introduce 
+	  an approach that can be applied to any caption system as a post-processing-based method that only needs to be trained once. In particular, we propose an approach for improving caption
+	  generation systems by choosing the most closely related output to the image rather than the most likely output produced by the model. Our model revises the language generation output beam search from a visual context perspective</p>
 
 <h2 id="">Introduction<a hidden class="anchor" aria-hidden="true" href="">#</a></h2>
 
@@ -129,11 +131,8 @@
 	  More recently, Zhang et al. <dt-cite key="zhang2021consensus"></dt-cite> incorporate different concepts such as scene graph, object, and attribute to learn correct linguistic and visual relevance for better caption language grounding. <p>
 
 
-
-
-
  <p> Inspired by these works,  <dt-cite key="fang2015captions"></dt-cite>  that uses re-ranking via visual information, Wang et al.<dt-cite key="cornia2019show"></dt-cite>  and  Cornia et al.  <dt-cite key="wang2018object"></dt-cite> 
-	 that explored the benefit of object information in image captioning, Gupta et al.  that benefits of language modeling to extract contextualized word representations <dt-cite key="gupta2020contrastive"></dt-cite> and the exploitation 
+	 that explored the benefit of object information in image captioning, Gupta et al. that benefits of language modeling to extract contextualized word representations <dt-cite key="gupta2020contrastive"></dt-cite> and the exploitation 
 	 of the semantic coherency in caption language grounding  <dt-cite key="zhang2021consensus"></dt-cite>, we propose a visual grounding-based object scorer to re-rank the most closely related caption with both static and contextualized semantic similarity. <p>
 
 
@@ -153,22 +152,18 @@
     <figure>
     <img src="Figure_1.png" alt="Trulli" style="width:80%">
   <figcaption>Fig.1 An overview of our visual semantic re-ranking. We employ the visual context in word and sentence level manner from the image to re-rank the most related caption to its visual context. 
-	  An example from caption Transformer generator shows the visual re-ranker (Visual Beam)  uses the semantic relation to re-ranked the most descriptive caption.</figcaption>
+	  An example from caption Transformer generator shows the visual re-ranker (Visual Beam) uses the semantic relation to re-ranked the most descriptive caption.</figcaption>
 </figure>
-
-
 
 
       <p><strong>Word level similarity.</strong>  To learn the semantic relation between a caption and its visual context in a word-level manner: first, we employ a bidirectional 
 	      LSTM based CopyRNN keyphrase extractor <dt-cite key="meng2017deep"></dt-cite>  to extract keyphrases from the sentence as context. The model is trained on combined pre-processed datasets (1) wikidump 
 	      (<em>i.e.</em> keyword, short sentence) and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications) <dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe <dt-cite key="Jeffrey:14"></dt-cite> is used to compute 
 	      the cosine similarity between the extracted context from the caption and its related visual context. 
+	      
 	      Lastly, following <dt-cite key="Ahmed:18"></dt-cite>  we use the object confidence score (<em>i.e.</em> visual context) in the image to convert the similarity to probability <dt-cite key="blok2003probability"></dt-cite>.
 	      For example, “<em>a woman in a red dress and a black skirt walks down a sidewalk</em>” the model will extract <em>dress</em> and <em>walks</em>, which are the highlights keywords of the caption. <p>
-
-
-
-
+		      
   <p><strong>Sentence level similarity.</strong> We fine-tune the BERT base model to learn the visual context information. The model learns a dictionary-like relation word-to-sentence paradigm. We use the visual data as context for the sentence via cosine distance. <p>
 
 
@@ -182,7 +177,6 @@
 <p><strong>Fusion Similarity Expert.</strong>  Product of experts (PoE) <dt-cite key="hinton1999products"></dt-cite>  implies an effort into combining the expertise of each expert (model) in a collaborative manner. 
 	It allows each expert to specialize in analyzing one particular aspect of the problem and establishing a judgment based on that aspect. Inspired by PoE, we combined the two experts word and sentence level as last fusion as shown in Figure 1.
 	PoE takes advantage of each expert and can produce much sharper distributions than a single model. The combined probability of a given candidate caption \(\mathbf{w}\), with the semantic relation with the visual context, can be written as:
-
 
 
 
@@ -493,8 +487,6 @@
 
 
 
-
-
      <p><strong>Evaluation of Lexical Diversity. </strong>  As shown in Table 2 (below), we evaluate the model from a lexical diversity perspective. We can conclude that we have (1) more vocabulary, and (2) the Unique 
 	     word per caption is also improved, even with a lower Type-Token Ratio TTR <dt-cite key="brown2005encyclopedia"></dt-cite> . (TTR is the number of unique words or types divided by the total number of tokens in a text fragment.).<p>
 
@@ -649,8 +641,6 @@
 
 
 
-
-
         <td>+VR-RoBERT-BERT</td>
          <td style="text-align:center">0.369</td>
         <td style="text-align:center">0.278</td>
@@ -686,7 +676,6 @@
   </table>
 
 </center>
-
 
 
     <p><strong>Limitation. </strong> In contrast to CNN-LSTM (♠ top Figure 3), where each expert is contributing to the final decisions, we observed that having a shorter caption 
