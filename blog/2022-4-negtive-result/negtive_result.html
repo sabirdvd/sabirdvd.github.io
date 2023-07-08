@@ -32,7 +32,7 @@
 	  
   <p>In this blog post, I will share with you some insight and lessons learned from our recent research idea <dt-cite key="sabir2022word"></dt-cite> that should work in theory (<em>i.e.</em> BERT+GloVe), but in practice, it doesn’t work in our scenario.
     Recent state-of-the-art progress in pre-trained vision and language and image (<em>e.g.</em> captioning models) relies heavily on long training on abundant data. However, these accuracy improvements 
-	  depend on long iterations of training and the availability of computational resources <em>i.e.</em> GPU, TPU, etc), which leads to time and
+	  depend on long iterations of training and the availability of computational resources (<em>i.e.</em> GPU, TPU, etc), which leads to time and
 	  energy consumption  <dt-cite key="strubell2019energy"></dt-cite>. In some cases, the improvements after re-training are less than 1 point in the benchmark dataset. In this work, we introduce an approach that can be applied to any caption system as a post-processing-based method that only needs to be trained once. In particular, we propose an approach for improving caption generation systems by choosing the most closely related output to the image rather than the most likely output produced by the model. Our model revises the language generation output beam search from a visual context perspective</p>
 
 <h2 id="">Introduction<a hidden class="anchor" aria-hidden="true" href="">#</a></h2>
@@ -85,7 +85,7 @@
 
       <p><strong>Word level similarity.</strong>  To learn the semantic relation between a caption and its visual context in a word-level manner: first, we employ a bidirectional 
 	      LSTM based CopyRNN keyphrase extractor <dt-cite key="meng2017deep"></dt-cite>  to extract keyphrases from the sentence as context. The model is trained on combined pre-processed datasets (1) wikidump 
-	      (i.e., keyword, short sentence) and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications) <dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe <dt-cite key="Jeffrey:14"></dt-cite> is used to compute 
+	      (<em>i.e.</em> keyword, short sentence) and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications) <dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe <dt-cite key="Jeffrey:14"></dt-cite> is used to compute 
 	      the cosine similarity between the visual context and its related context. 
 	      Lastly, following <dt-cite key="Ahmed:18"></dt-cite>  we use the object confidence score (<em>i.e.</em> visual context) in the image to convert the similarity to probability <dt-cite key="blok2003probability"></dt-cite>.
 	      For example, “<em>a woman in a red dress and a black skirt walks down a sidewalk</em>” the model will extract <em>dress</em> and <em>walks</em>, which are the highlights keywords of the caption. <p>
