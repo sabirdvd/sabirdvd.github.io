@@ -97,10 +97,10 @@
 
 
   <p> <strong>BERT <dt-cite key="Jacob:19"></dt-cite>.</strong>  BERT achieves remarkable results on many sentence level tasks and especially in the textual semantic similarity task (STS-B)<dt-cite key="conneau2017supervised"></dt-cite>. Therefore, 
-	  we fine-tuned BERT_base on the training dataset, (textual information, 460k captions: 373k for training and 87k for validation) <em>i.e.</em> visual, caption, label [semantically related or not related]), with a binary classification 
+	  we fine-tuned BERT-base on the training dataset, (textual information, 460k captions: 373k for training and 87k for validation) <em>i.e.</em> visual, caption, label ([semantically related or not related]), with a binary classification 
 	  cross-entropy loss function [0,1] where the target is the semantic similarity between the visual and the candidate caption.<p>
 
-<p> <strong>Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>.</strong>  RoBERTa is an improved version of BERT, and since RoBERTa Large is more robust, we rely on pre-trained Sentence-RoBERTa-sts as its yields a better cosine score.<p>
+<p> <strong>Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>.</strong> RoBERTa is an improved version of BERT, and since RoBERTa-Large is more robust, we rely on pre-trained Sentence-RoBERTa-sts as its yields a better cosine score.<p>
 
 
 <p><strong>Fusion Similarity Expert.</strong>  Product of experts (PoE) <dt-cite key="hinton1999products"></dt-cite>  implies an effort into combining the expertise of each expert (model) in a collaborative manner. 
@@ -155,15 +155,15 @@
 	that is trained on a huge amount of data (<em>e.g.</em> Transformer).<p>
 
 
- <p> ♠ Flickr8k <dt-cite key="young2014image"></dt-cite>. The dataset contains 8k images, each image has five human label annotated captions. We use this data to train the shallow model (6270 train/1730 test).<p>
+ <p> ♠ Flickr8k <dt-cite key="young2014image"></dt-cite>. The dataset contains 8k images, each image has five human label annotated captions. We use this data to train the shallow model CNN-LSTM (6270 train/1730 test).<p>
 
 
  <p> ♣ COCO <dt-cite key="Tsung-Yi:14"></dt-cite>. It contains around 120k images, and each image is annotated with five different human label captions. We use the most used split that is 
-	 provided by (Karpathy test set) <dt-cite key="karpathy2015deep"></dt-cite>, where 5k images are used for testing and 5k for validation, and the rest for model training for the Transformer baseline.<p>
+	 provided by Karpathy <em>et al.</em> test set <dt-cite key="karpathy2015deep"></dt-cite>, where 5k images are used for testing and 5k for validation, and the rest for model training for the Transformer baseline.<p>
 
 
 
- <p><strong>Visual Context Dataset. </strong> Since there are many public datasets for caption, they contain no textual visual information such as objects in the image. We enrich the two datasets, mentioned above, with textual visual context information. 
+ <p><strong>Visual Context Dataset. </strong> Since there are many public datasets for image captioning, they contain no textual visual information such as objects in the image. We enrich the two datasets, mentioned above, with textual visual context information. 
 	 In particular, to automate visual context generation and without the need for human labeling, we use ResNet-152 <dt-cite key="Kaiming:16"></dt-cite>  to extract top-k 3 visual context information for each image in the caption dataset.<p>
 
 
@@ -199,7 +199,7 @@
         <td>B-S</td>
     </tr>
     <tr>
-        <td>♠ Tell-BeamS <dt-cite key="Oriol:15"></dt-cite> </td>
+        <td>♠ Show and Tell-BeamS <dt-cite key="Oriol:15"></dt-cite> </td>
         <td> <strong>0.331 <strong> </td>
         <td><strong>0.159<strong></td>
         <td>0.071</td>
@@ -269,7 +269,7 @@
 
 
     <tr>
-        <td>♣ Vil-BeamS <dt-cite key="lu202012"></dt-cite></td>
+        <td>♣ VilBERT-BeamS <dt-cite key="lu202012"></dt-cite></td>
         <td>0.739</td>
         <td>0.577</td>
         <td>0.440</td>
@@ -338,7 +338,7 @@
     </tr>
 
     <tr>
-        <td>♣ Trans-BeamS <dt-cite key="Marcella:20"></dt-cite> </td>
+        <td>♣ Transformer-BeamS <dt-cite key="Marcella:20"></dt-cite> </td>
         <td><strong>0.780<strong></td>
         <td><strong>0.631<strong></td>
         <td><strong>0.491<strong></td>
@@ -392,7 +392,7 @@
         <td>1.145</td>
         <td>0.9395</td>
     </tr>
-      <caption> <font color="#6e6e6f"> <small> <small> Table 1 Performance of compared baselines on the Karpathy test split. <small> <small></font> </caption>
+      <caption> <font color="#6e6e6f"> <small> <small> Table 1 Performance of compared baselines on the ♠ Flikr and ♣ COCO test split. <small> <small></font> </caption>
      <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The ♠ refers to the Flikr 1730 test set, ♣ refers to the COCO Karpathy 5k test set. <small> <small> </td></tr></tfoot>
 </table>
 
