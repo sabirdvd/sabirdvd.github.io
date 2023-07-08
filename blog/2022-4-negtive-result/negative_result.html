@@ -86,7 +86,7 @@
       <p><strong>Word level similarity.</strong>  To learn the semantic relation between a caption and its visual context in a word-level manner: first, we employ a bidirectional 
 	      LSTM based CopyRNN keyphrase extractor <dt-cite key="meng2017deep"></dt-cite>  to extract keyphrases from the sentence as context. The model is trained on combined pre-processed datasets (1) wikidump 
 	      (<em>i.e.</em> keyword, short sentence) and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications) <dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe <dt-cite key="Jeffrey:14"></dt-cite> is used to compute 
-	      the cosine similarity between the visual context and its related context. 
+	      the cosine similarity between the extracted context from the caption and its related visual context. 
 	      Lastly, following <dt-cite key="Ahmed:18"></dt-cite>  we use the object confidence score (<em>i.e.</em> visual context) in the image to convert the similarity to probability <dt-cite key="blok2003probability"></dt-cite>.
 	      For example, “<em>a woman in a red dress and a black skirt walks down a sidewalk</em>” the model will extract <em>dress</em> and <em>walks</em>, which are the highlights keywords of the caption. <p>
 
