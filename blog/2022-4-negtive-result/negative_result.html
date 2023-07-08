@@ -148,17 +148,26 @@
 	and image captioning. The larger beam size allows the model to perform a better exploration of the search space compared to greedy decoding. Our goal is to leverage the visual context information of the image to 
 	re-rank the candidate sequences obtained through the beam search, thereby moving the most visually relevant candidate up in the list, as well as moving incorrect candidates down. <p>
 
-
+<!-- 
     <figure>
     <img src="Figure_1.png" alt="Trulli" style="width:80%">
   <figcaption>Fig.1 An overview of our visual semantic re-ranking. We employ the visual context in word and sentence level manner from the image to re-rank the most related caption to its visual context. 
 	  An example from caption Transformer generator shows the visual re-ranker (Visual Beam) uses the semantic relation to re-ranked the most descriptive caption.</figcaption>
-</figure>
+</figure> -->
 
+
+<figure>
+    <img src="Overview_all.png" alt="Trulli" style="width:80%">
+  <figcaption>Fig.2 Architecture. Detail of the proposed architecture to estimate the semantic score between the candidate caption (provided by an off-the-shelf image caption system) and the context in the image. 
+  We employ the visual context in word and sentence level manner from the image to re-rank the most related caption to its visual context. 
+	  An example from caption Transformer generator shows the visual re-ranker (Visual Beam) uses the semantic relation to re-ranked the most descriptive caption.
+  </figcaption>
+</figure>
+		
 
       <p><strong>Word level similarity.</strong>  To learn the semantic relation between a caption and its visual context in a word-level manner: first, we employ a bidirectional 
 	      LSTM based CopyRNN keyphrase extractor <dt-cite key="meng2017deep"></dt-cite>  to extract keyphrases<dt-fn>Note that, a pre-trained out-of-the-box model is also available such as KeyBERT.</dt-fn>  from the sentence as context. The model is trained on combined pre-processed datasets (1) wikidump 
-	      (<em>i.e.</em> keyword, short sentence) and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications) <dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe <dt-cite key="Jeffrey:14"></dt-cite> is used to compute 
+	      (<em>i.e.</em> keyword, short sentence)and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications) <dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe <dt-cite key="Jeffrey:14"></dt-cite> is used to compute 
 	      the cosine similarity between the extracted context from the caption and its related visual context. 
 	      
 	      Lastly, following <dt-cite key="Ahmed:18"></dt-cite>  we use the object confidence score (<em>i.e.</em> visual context) in the image to convert the similarity to probability <dt-cite key="blok2003probability"></dt-cite>.
@@ -173,6 +182,7 @@
 
 <p> <strong>Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>.</strong> RoBERTa is an improved version of BERT, and since RoBERTa-Large is more robust, we rely on pre-trained Sentence-RoBERTa-sts as its yields a better cosine score.<p>
 
+	
 
 <p><strong>Fusion Similarity Expert.</strong>  Product of experts (PoE) <dt-cite key="hinton1999products"></dt-cite>  implies an effort into combining the expertise of each expert (model) in a collaborative manner. 
 	It allows each expert to specialize in analyzing one particular aspect of the problem and establishing a judgment based on that aspect. Inspired by PoE, we combined the two experts word and sentence level as last fusion as shown in Figure 1.
