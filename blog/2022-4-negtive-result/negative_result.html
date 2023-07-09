@@ -173,17 +173,17 @@
 	      Lastly, following <dt-cite key="Ahmed:18"></dt-cite>  we use the object confidence score (<em>i.e.</em> visual context) in the image to convert the similarity to probability <dt-cite key="blok2003probability"></dt-cite><dt-fn>A conditional probability model 
 		      converts the similarity to probability by revising a given hypothesis if two conditions are satisfied. In our case,   hypothesis: the extracted keyphrases from the caption, and the condition to revise the hypothesis are : (1) the informativeness 
 		      of the visual context from the image (confidence score), and the degree of the semantic relatedness between them - similarity score (keyphrase, visual context. Note that, we employ a language model (<em>e.g.</em> unigram language model) 
-		      to initialized the hypothesis, which recommend by the authors. </dt-fn>.
+		      to initialize the hypothesis, which is recommended by the authors. </dt-fn>.
 	      For example, “<em>a woman in a red dress and a black skirt walks down a sidewalk</em>” the model will extract <em>dress</em> and <em>walks</em>, which are the highlights keywords of the caption. <p>
 		      
   <p><strong>Sentence level similarity.</strong> We fine-tune the BERT base model to learn the visual context information. The model learns a dictionary-like relation word-to-sentence paradigm. We use the visual data as context for the sentence via cosine distance. <p>
 
 
-  <p> <strong>BERT <dt-cite key="Jacob:19"></dt-cite>.</strong>  BERT achieves remarkable results on many sentence level tasks and especially in the textual semantic similarity task (STS-B)<dt-cite key="conneau2017supervised"></dt-cite>. Therefore, 
+  <p> <strong>BERT <dt-cite key="Jacob:19"></dt-cite>.</strong>  BERT achieves remarkable results on many sentence level tasks and especially in the semantic textual similarity task (STS-B)<dt-cite key="conneau2017supervised"></dt-cite>. Therefore, 
 	  we fine-tuned BERT-base on the training dataset, (textual information, 460k captions: 373k for training and 87k for validation) <em>i.e.</em> visual, caption, label ([semantically related or not related]), with a binary classification 
 	  cross-entropy loss function [0,1] where the target is the semantic similarity between the visual and the candidate caption.<p>
 
-<p> <strong>Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>.</strong> RoBERTa is an improved version of BERT, and since RoBERTa-Large is more robust, we rely on pre-trained Sentence-RoBERTa-sts as its yields a better cosine score.<p>
+<p> <strong>Sentence RoBERTa <dt-cite key="reimers2019sentence"></dt-cite>.</strong> RoBERTa is an improved version of BERT, and since RoBERTa-Large is more robust,  we rely on pre-trained Sentence-RoBERTa-sts (fined-tuned on the sts task) as it yields a better cosine score.<p>
 
 	
 
