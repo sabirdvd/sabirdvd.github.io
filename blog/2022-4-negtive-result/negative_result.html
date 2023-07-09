@@ -170,8 +170,9 @@
 	      (<em>i.e.</em> keyword, short sentence)and (2) SemEval 2017 Task 10 (Keyphrases from scientific publications) <dt-cite key="augenstein2017semeval"></dt-cite>. Secondly, GloVe <dt-cite key="Jeffrey:14"></dt-cite> is used to compute 
 	      the cosine similarity between the extracted context from the caption and its related visual context. 
 	      
-	      Lastly, following <dt-cite key="Ahmed:18"></dt-cite>  we use the object confidence score (<em>i.e.</em> visual context) in the image to convert the similarity to probability <dt-cite key="blok2003probability"></dt-cite><dt-fn>A conditional probability model which convert the similarity to probability by revised a given a hypothesis and two conditions (in our case,  hypothesis: the extracted keyphrases from the caption), 
-		      and the condition to revised the  hypothesis: (1) the Informativeness of the visual context from the image (confidence score), and the degree of the semantic relatedness between them - similarity score (keyphrase, visual context).</dt-fn>.
+	      Lastly, following <dt-cite key="Ahmed:18"></dt-cite>  we use the object confidence score (<em>i.e.</em> visual context) in the image to convert the similarity to probability <dt-cite key="blok2003probability"></dt-cite><dt-fn>A conditional probability model 
+		      converts the similarity to probability by revising a given hypothesis if two conditions are satisfied. In our case,   hypothesis: the extracted keyphrases from the caption, and the condition to revise the hypothesis are : (1) the informativeness 
+		      of the visual context from the image (confidence score), and the degree of the semantic relatedness between them - similarity score (keyphrase, visual context. Note that, that we employ a language model (<em>e.g.</em> unigram language model) to initialized the hypothesis, which recommend by the authors. </dt-fn>.
 	      For example, “<em>a woman in a red dress and a black skirt walks down a sidewalk</em>” the model will extract <em>dress</em> and <em>walks</em>, which are the highlights keywords of the caption. <p>
 		      
   <p><strong>Sentence level similarity.</strong> We fine-tune the BERT base model to learn the visual context information. The model learns a dictionary-like relation word-to-sentence paradigm. We use the visual data as context for the sentence via cosine distance. <p>
