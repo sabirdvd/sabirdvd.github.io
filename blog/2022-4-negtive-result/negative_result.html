@@ -136,7 +136,7 @@
 	 of the semantic coherency in caption language grounding  <dt-cite key="zhang2021consensus"></dt-cite>, we propose a visual grounding-based object scorer to re-rank the most closely related caption with both static and contextualized semantic similarity. <p>
 
 
-
+		
   <p><strong>Beam Search Caption Extraction. </strong> We employ the three most common architectures for caption generation to extract the top beam search. The first baseline is based 
 	  on the standard shallow CNN-LSTM model <dt-cite key="Oriol:15"></dt-cite>. The second, VilBERT  <dt-cite key="lu202012"></dt-cite> is fine-tuned on a total of 12 different vision and language datasets 
 	  such as caption image retrieval. Finally, the third baseline is a specialized Transformer based caption generator <dt-cite key="Marcella:20"></dt-cite>. <p>
@@ -172,7 +172,8 @@
 	      
 	      Lastly, following <dt-cite key="Ahmed:18"></dt-cite>  we use the object confidence score (<em>i.e.</em> visual context) in the image to convert the similarity to probability <dt-cite key="blok2003probability"></dt-cite><dt-fn>A conditional probability model 
 		      converts the similarity to probability by revising a given hypothesis if two conditions are satisfied. In our case,   hypothesis: the extracted keyphrases from the caption, and the condition to revise the hypothesis are : (1) the informativeness 
-		      of the visual context from the image (confidence score), and the degree of the semantic relatedness between them - similarity score (keyphrase, visual context. Note that, that we employ a language model (<em>e.g.</em> unigram language model) to initialized the hypothesis, which recommend by the authors. </dt-fn>.
+		      of the visual context from the image (confidence score), and the degree of the semantic relatedness between them - similarity score (keyphrase, visual context. Note that, we employ a language model (<em>e.g.</em> unigram language model) 
+		      to initialized the hypothesis, which recommend by the authors. </dt-fn>.
 	      For example, “<em>a woman in a red dress and a black skirt walks down a sidewalk</em>” the model will extract <em>dress</em> and <em>walks</em>, which are the highlights keywords of the caption. <p>
 		      
   <p><strong>Sentence level similarity.</strong> We fine-tune the BERT base model to learn the visual context information. The model learns a dictionary-like relation word-to-sentence paradigm. We use the visual data as context for the sentence via cosine distance. <p>
