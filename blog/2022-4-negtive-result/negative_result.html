@@ -282,7 +282,7 @@
 	and (3) a specialized caption-based Transformer <dt-cite key="Marcella:20"></dt-cite>.<p>
 
 
-
+<!-- 
         <style>
             .geeks {
                 caption-side: bottom;
@@ -500,8 +500,226 @@
      <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The ♠ refers to the Flikr 1730 test set, ♣ refers to the COCO Karpathy 5k test set. <small> <small> </td></tr></tfoot>
 </table>
 
-</center>
+</center> -->
 
+        <style>
+            .geeks {
+                caption-side: bottom;
+            }
+        </style>
+
+<center>
+<table>
+    <tr>
+        <td>Model</td>
+        <!-- <td>B-1</td>
+        <td>B-2</td>
+        <td>B -3</td> -->
+        <td>B-4</td>
+        <td>M</td>
+        <td>R</td>
+        <td>C</td>
+        <td>B-S</td>
+    </tr>
+    <tr>
+        <td>♠ Show and Tell-BeamS <dt-cite key="Oriol:15"></dt-cite> </td>
+        <!-- <td> <strong>0.331 <strong> </td>
+        <td><strong>0.159<strong></td>
+        <td>0.071</td> -->
+        <td>0.035</td>
+        <td>0.093</td>
+        <td>0.270</td>
+        <td>0.035</td>
+        <td><strong>0.8871<strong></td>
+    </tr>
+    <tr>
+        <td>Tell+VR_V1-BERT-Glove</td>
+        <!-- <td>0.330</td>
+        <td>0.158</td>
+        <td>0.069</td> -->
+        <td>0.035</td>
+        <td>0.095</td>
+        <td>0.273</td>
+        <td>0.036</td>
+        <td>0.8855</td>
+    </tr>
+    <tr>
+        <td>Tell+VR_V2-BERT-Glove</td>
+        <!-- <td>0.320</td>
+        <td>0.154</td>
+
+        <td><strong> 0.073 <strong></td> -->
+        <td><strong> 0.037<strong></td>
+        <td>0.099</td>
+        <td><strong>0.277<strong></td>
+        <td><strong>0.041<strong></td>
+        <td>0.8850</td>
+    </tr>
+    <tr>
+        <td>Tell+VR_V1-RoBERTa-Glove (sts)</td>
+        <!-- <td>0.313</td>
+        <td>0.153</td>
+        <td>0.072</td> -->
+        <td><strong>0.037<strong></td>
+        <td><strong>0.101<strong></td>
+        <td>0.273</td>
+        <td>0.036</td>
+        <td>0.8839</td>
+    </tr>
+
+    <tr>
+        <td>Tell+VR_V2-RoBERTa-Glove (sts)</td>
+        <!-- <td>0.330</td>
+        <td>0.158</td>
+        <td>0.069</td> -->
+        <td>0.035</td>
+        <td>0.095</td>
+        <td>0.273</td>
+        <td>0.036</td>
+        <td>0.8869</td>
+    </tr>
+          <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+
+    <tr>
+        <td>♣ VilBERT-BeamS <dt-cite key="lu202012"></dt-cite></td>
+        <!-- <td>0.739</td>
+        <td>0.577</td>
+        <td>0.440</td> -->
+        <td>0.336</td>
+        <td>0.271</td>
+        <td>0.543</td>
+        <td>1.027</td>
+        <td>0.9363</td>
+    </tr>
+
+    <tr>
+        <td>Vil+VR_V1-BERT-Glove</td>
+        <!-- <td>0.739</td>
+        <td>0.576</td>
+        <td>0.438</td> -->
+        <td>0.334</td>
+        <td><strong>0.273<strong></td>
+        <td>0.544</td>
+        <td>1.034</td>
+        <td><strong>0.9365<strong></td>
+    </tr>
+    <tr>
+        <td>Vil+VR_V2-BERT-Glove</td>
+        <!-- <td><strong>0.740<strong></td>
+        <td>0.578</td>
+        <td>0.439</td> -->
+        <td>0.334</td>
+        <td><strong>0.273<strong></td>
+        <td><strong>0.545<strong></td>
+        <td>1.034</td>
+        <td>0.9365</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Vil+VR_V1-RoBERTa-Glove (sts)</td>
+        <!-- <td>0.738</td>
+        <td>0.576</td>
+        <td>0.440</td> -->
+        <td>0.335</td>
+        <td><strong>0.273<strong></td>
+        <td>0.544</td>
+        <td>1.036</td>
+        <td>0.9365</td>
+    </tr>
+    <tr>
+        <td>Vil+VR_V2-RoBERTa-Glove (sts)</td>
+        <!-- <td><strong>0.740<strong></td>
+        <td><strong>0.579<strong></td>
+        <td><strong>0.442<strong></td> -->
+        <td><strong>0.338<strong></td>
+        <td>0.272</td>
+        <td><strong>0.545<strong></td>
+        <td><strong>1.040<strong></td>
+        <td><strong>0.9366<strong></td>
+    </tr>
+         <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>♣ Transformer-BeamS <dt-cite key="Marcella:20"></dt-cite> </td>
+        <!-- <td><strong>0.780<strong></td>
+        <td><strong>0.631<strong></td>
+        <td><strong>0.491<strong></td> -->
+        <td><strong>0.374<strong></td>
+        <td><strong>0.278<strong></td>
+        <td><strong>0.569<strong></td>
+        <td><strong>1.153<strong></td>
+        <td><strong>0.9399<strong></td>
+    </tr>
+    <tr>
+        <td>Trans+VR_V1-BERT-Glove</td>
+        <!-- <td><strong>0.780<strong></td>
+        <td>0.629</td>
+        <td>0.487</td> -->
+        <td>0.371</td>
+        <td><strong>0.278<strong></td>
+        <td>0.567</td>
+        <td>1.149</td>
+        <td>0.9398</td>
+    </tr>
+    <tr>
+        <td>Trans+VR_V2-BERT-Glove</td>
+        <!-- <td><strong>0.780<strong></td>
+        <td>0.630</td>
+        <td>0.488</td> -->
+        <td>0.371</td>
+        <td><strong>0.278<strong></td>
+        <td>0.568</td>
+        <td>1.150</td>
+        <td><strong>0.9399<strong></td>
+    </tr>
+    <tr>
+        <td>Trans+VR_V1-RoBERTa-Glove (sts)</td>
+        <!-- <td>0.779</td>
+        <td>0.629</td>
+        <td>0.487</td> -->
+        <td>0.370</td>
+        <td>0.277</td>
+        <td>0.567</td>
+        <td>1.145</td>
+        <td>0.9395</td>
+    </tr>
+    <tr>
+        <td>Trans+VR_V2-RoBERTa-Glove(sts)</td>
+        <!-- <td>0.779</td>
+        <td>0.629</td>
+        <td>0.487</td> -->
+        <td>0.370</td>
+        <td>0.277</td>
+        <td>0.567</td>
+        <td>1.145</td>
+        <td>0.9395</td>
+    </tr>
+      <caption> <font color="#6e6e6f"> <small> <small> Table 1 Performance of compared baselines on the ♠ Flikr and ♣ COCO test split. <small> <small></font> </caption>
+     <tfoot><tr><td colspan="5"> <font color="#6e6e6f"> <small> <small> The ♠ refers to the Flikr 1730 test set, ♣ refers to the COCO Karpathy 5k test set. <small> <small> </td></tr></tfoot>
+</table>
+
+</center>
 
 
    <p> Experiments applying different re-rankers to each base system are shown in Table 1 (above). The tested re-rankers are: (1) VR_BERT+GloVe, which uses BERT and GloVe similarity 
