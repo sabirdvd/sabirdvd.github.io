@@ -10,7 +10,12 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="../js/hidebib.js"></script>
-
+  
+<style> 
+  .image-spacing { 
+    margin-right: 10px; 
+  } 
+</style
   <style type="text/css">
   td {
     padding: 0 15px;
@@ -232,7 +237,29 @@ concepts using the caption description. In partuoular, We employ BERT followed b
             
          
 </p>
-         
+
+    <tr><td width="1000" align="left"> 
+    <div class="paper" id="ap_agent">
+  
+      <h3><strong>Comparison against GPT-2 and Cosine Score</strong></h3>
+      <p align="justify"> Comparison result on the test set of the Gender Score bias. (toward  women <span style="color: #f5c6c6">■</span> and men <span style="color: #7ebcd6">■</span>)  between  three  different  models  in  training dataset size BLIP 129M (unsupervised) and VilBERT 3.5M and Caption Transformer 550K.
+        Our proposed gender score <span style="color: #f5b87e">■</span> balance the amplified bias as the model getting bigger, the more amplified bias against man or woman. </p>
+      <p align="center"> <img src="man_BLIP.png" width="300" align="middle"   class="image-spacing" />
+    <img src="man_Vilbert.png" width="300" align="middle" /></p>
+      <!-- <p align="center"> <img src="man_Transformer.png" width="300" align="middle" /></p> -->
+      <p align="center"> <img src="woman_BLIP.png" width="300" align="middle" class="image-spacing" 
+       align="center"> <img src="woman_Vilbert.png" width="300" align="middle" /></p>
+      <!-- <p align="center"> <img src="woman_Transformer.png" width="300" align="middle" /></p> -->
+  
+      <!--
+             <a shape="rect" href="javascript:togglebib('ap_agent')" class="togglebib">Beam Search<sub>baseline</sub></a>
+         <pre xml:space="preserve">
+       s
+  </td></tr>
+  -->
+  
+  </table> 
+  </div>
 
 <!---      
 <p align="center"> <img src="BERT-CNN.png" width="300" align="middle" /></p>
