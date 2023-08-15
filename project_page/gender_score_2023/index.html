@@ -240,6 +240,10 @@ concepts using the caption description. In partuoular, We employ BERT followed b
   
       <div class="paper" id="ap_agent">
         <h3><strong>Experiments & Results </strong></h3>
+
+
+
+        
         <P> (Right) The proposed score uses the correlation between the visual and
           its related gender. As shown in the figure, there is equal
           distribution of object-gender(man/woman), which indicate that not all
@@ -256,6 +260,13 @@ concepts using the caption description. In partuoular, We employ BERT followed b
     <p align="center"> <img src="gender.png" width="370" align="middle" /></p>
    
      -->
+
+     <P> The Table below shows that our score has similar results (bias ratio) to the existing Object Gender
+      Co-Occ approach on the most biased objects toward men. TraCLIPS-Reward inherit biases 
+      from CLIPS and thus shows distinct high/low gender biases (i.e. baseball).</P>
+    <p align="center"> <img src="tabel_all.png" width="630" align="middle" /></p>
+    
+    
 
      <h3><strong>Comparison against GPT-2 and Cosine Score</strong></h3>
      <p align="justify"> Comparison result on the test set of the Gender Score bias. (toward  women <span style="color: #f5c6c6">■</span> or men <span style="color: #7ebcd6">■</span>)  between  two  different  pre-trained models  in  training dataset size BLIP 129M (unsupervised) and VilBERT 3.5M.
