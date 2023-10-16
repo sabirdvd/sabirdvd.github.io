@@ -136,14 +136,7 @@ pre, code{
         the gender score, since we observe that our score can measure the bias relation between a caption and its related gender better than the existing approach Object Gender Co-Occurrence.
 
   
-      <!-- Modern image captaining relies heavily on extracting knowledge, from images such as objects,
-      to capture the concept of a static story in an image. 
-      In this paper, we propose a textual visual context dataset for captioning, where the publicly available 
-      dataset COCO Captions (<a href="https://arxiv.org/pdf/1405.0312.pdf">Lin et al., 2014</a>) 
-      has been extended with information about the scene (such as objects in the image). Since this information has textual form, 
-      it can be used to leverage any NLP task, such as text similarity or semantic relation methods, into captioning systems, 
-      either as an end-to-end training strategy or a post-processing based approach.
-      --> 
+    
       
   </a></tr>
 </div>
@@ -186,22 +179,7 @@ pre, code{
           <h3>Proposed Approach</h3>
            <p> The direct Gender Score and the Gender Estimation Score rely on the visual information to predict the related gender as follows: </p>
             <!--
-            We also propose a strategy to estimate the most closely related/not-related visual
-concepts using the caption description. In partuoular, We employ BERT followed by a shallow CNN
-          to estimate the visual relatedness using the caption description.
--->
-            
-            
-      <!--      We also proposed a data filtering strategy and visual semantic model to
-   
-            estimate the degree of the relatedness between the caption and its related visual context in the image. 
 
---> 
-            
-<!--
-     In this work, we also propose a visual context-based COCO dataset and visual context 
-            baseline that can measure the degree of the relatedness between the caption and its related visual context in the image. 
- -->
             
             
  <p><strong>Gender Score:</strong></p>
@@ -245,10 +223,9 @@ concepts using the caption description. In partuoular, We employ BERT followed b
 
 
         
-        <P> The proposed score uses the correlation between the visual and its related gender. As shown in the (Left) figure, there is equal distribution of object-gender(man/woman),
+        <P> The proposed score uses the correlation between the visual and its related gender. As shown in the (Left) figure, there is equal distribution of object-gender (man and woman),
           which indicate that not all object has a strong bias toward a specific gender. (Right) the figure shows examples of Gender Score 
-          Estimation and Cosine Distance. The result shows that (Top) the score 
-          balances the bias (as men/women have a similar bias with sport tennis), and (Bottom) adjusts the woman bias.
+          Estimation and Cosine Distance. The result shows that (Top) the score  balances the bias (as men and women have a similar bias with sport tennis), and (Bottom) adjusts the woman bias.
         
         </P>
         <p align="center"> <img src="dist_figure.png" width="270" align="middle" 
@@ -260,8 +237,12 @@ concepts using the caption description. In partuoular, We employ BERT followed b
      -->
   <h3><strong>Examples </strong></h3>
      <P> The Table below shows that our score has similar results (bias ratio) to the existing Object Gender
-      Co-Occ approach on the most biased objects toward men. TraCLIPS-Reward inherits biases 
-      from CLIPS and thus shows distinct high/low gender biases (i.e. baseball).</P>
+      Co-Occ approach on the most biased objects toward men. Note that TraCLIPS-Reward (CLIPS+CIDEr) inherits biases from RL-CLIPS, resulting in distinct gender predictions and generates caption w/o a specific gender _i.e._ person, baseball player, _etc_.
+     
+     </P>
+
+
+          
     <p align="center"> <img src="tabel_all.png" width="630" align="middle" /></p>
     
     
