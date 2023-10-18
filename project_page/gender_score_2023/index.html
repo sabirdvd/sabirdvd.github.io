@@ -220,7 +220,7 @@ pre, code{
 
  <h3><strong>Experiments & Results </strong></h3> 
 
-   Comparison result (<em>i.e.</em> baseline gender output) between Object Gender Co-Occ and our gender score estimation on Karpathy split. The proposed score measures gender bias more accurately, particularly when the classifier misrecognized the gender.
+   Comparison result (<em>i.e.</em> baseline gender output) between Object Gender Co-Occ and our gender score estimation on the Karpathy split. The proposed score measures gender bias more accurately, particularly when the classifier misrecognized the gender.
 </P>
      <p align="center"> <img src="gender_score.png" width="380"   align="middle" /></p>
      
@@ -234,7 +234,8 @@ pre, code{
         
         <P> The proposed score uses the correlation between the visual and its related gender. As shown in the (Left) figure, there is equal distribution of object-gender (man and woman),
           which indicate that not all object has a strong bias toward a specific gender. (Right) the figure shows examples of Gender Score 
-          Estimation and Cosine Distance. The result shows that (Top) the score  balances the bias (as men and women have a similar bias with sport tennis), and (Bottom) adjusts the woman bias.
+          Estimation and Cosine Distance. The result shows that (Top) the score  balances the bias (as men and women have a similar bias with sport tennis), and (Bottom) adjusts the woman bias while maintaining the strong
+bias towards men.
         
         </P>
         <p align="center"> <img src="dist_figure.png" width="270" align="middle" 
@@ -258,7 +259,7 @@ pre, code{
 
      <h3><strong>Comparison against GPT-2 and Cosine Distance Score</strong></h3>
      <p align="justify"> Comparison result on the test set of the Gender Score bias. (toward  women <span style="color: #f5c6c6">■</span> or men <span style="color: #7ebcd6">■</span>)  between  two  different  pre-trained models  in  training dataset size BLIP 129M (unsupervised) and VilBERT 3.5M.
-       Our proposed Belief Revision  (BR) based Gender Score <span style="color: #f5b87e">■</span> balance the amplified bias as the model getting bigger, the more amplified bias against man or woman. </p>
+       Our proposed visual bias likelihood revision aka Belief Revision  (BR) based Gender Score <span style="color: #f5b87e">■</span> balance the amplified bias as the model getting bigger, the more amplified bias against man or woman. </p>
      <p align="center"> <img src="man_BLIP.png" width="300" align="middle"   class="image-spacing" />
    <img src="man_Vilbert.png" width="300" align="middle" /></p>
      <!-- <p align="center"> <img src="man_Transformer.png" width="300" align="middle" /></p> -->
@@ -273,7 +274,7 @@ pre, code{
       We also apply our proposed gender score to general tasks such as short text Twitter, we utilized a subset of the Twitter user  <a href="https://www.kaggle.com/datasets/crowdflower/twitter-user-gender-classification">gender classification dataset</a>. We use a BERT based keyword extractor to extract the biased context from the sentence (<em>e.g.</em> travel-man, woman-family), and we then employ
 the cloze probability to extract the probability of the context. We observe that some keywords have a strong
 bias: women are associated with keywords such as novel, beauty, and hometown. Meanwhile, men are more frequently related to words such as gaming, coffee, and inspiration. The table below shows the Gender Bias score (highlighted in
-<span style="color: red;">red</span> color) for each Tweet.
+<span style="color: red;">red</span> color) for each Tweet (X posts).
 
 
    
