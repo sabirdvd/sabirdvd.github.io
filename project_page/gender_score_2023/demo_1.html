@@ -54,10 +54,6 @@ visual_context_label = <span class="hljs-string">'motor scooter'</span>
 </code></pre><pre><code class="python hljs"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image
 Image(filename=<span class="hljs-string">"COCO_val2014_000000175024.jpg"</span>)
 </code></pre><p><img src="https://ahmed.jp/project_page/gender_score_2023/COCO_val2014_000000175024.jpg" alt="" loading="lazy"></p><pre><code class="python hljs"><span class="hljs-comment"># Caption Baseline - Transformer </span>
-
-
-
-	
 <span class="hljs-comment">#caption_man = 'a [MASK] riding a motorcycle on a road'</span>
 <span class="hljs-comment">#caption_woman =  'a [MASK] riding a motorcycle on a road'</span>
 caption_man = <span class="hljs-string">'a man riding a motorcycle on a road'</span>
@@ -122,7 +118,11 @@ plt.pie(sections, labels=labels, colors=colors,
 
 plt.title(<span class="hljs-string">'Cosine Distance (gender, motorcycle)'</span>)
 plt.show()
-</code></pre><p><img src="https://hackmd.io/_uploads/rkckFYbMT.png" alt="" loading="lazy"></p><pre><code class="python hljs"><span class="hljs-comment"># Plot Gender Score Estimation gender bias ratio (gender, motorcycle) </span>
+</code></pre><p><img src="https://ahmed.jp/project_page/gender_score_2023/output_15_0.png" alt="" loading="lazy"></p><pre><code class="python hljs"><span class="hljs-comment"># Plot Gender Score Estimation gender bias ratio (gender, motorcycle) </span>
+
+
+
+	
 <span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
 labels = <span class="hljs-string">'man'</span>, <span class="hljs-string">'woman'</span>
 
@@ -137,7 +137,7 @@ plt.pie(sections, labels=labels, colors=colors,
 
 plt.title(<span class="hljs-string">'Gender Score Estimation (gender, motorcycle)'</span>)
 plt.show()
-</code></pre><p><img src="https://hackmd.io/_uploads/Hy9JYtWM6.png" alt="" loading="lazy"></p></div>
+</code></pre><p><img src="https://ahmed.jp/project_page/gender_score_2023/output_16_0.png" alt="" loading="lazy"></p></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
             <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
