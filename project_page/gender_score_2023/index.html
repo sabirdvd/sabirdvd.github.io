@@ -150,9 +150,9 @@ pre, code{
     <table border="0" align="left">
       <tr><td width="1000" align="justify"> 
         <p align="justify"> 
-            In this work, we proposed two object-to-gender bias scores: (1) direct Gender Score, and (2) a [ MASK ]  based Gender Score Estimation.
-            For the direct score, the model uses the visual context to predict the gender and thus predict the object related bias.
-             Also, inspired by the Mask Language Model, the model can estimate the Mask gender using the object context in the sentence.
+            In this work, we proposed two object-to-gender bias scores: (1) a direct Gender Score, and (2) a [ MASK ]  based Gender Score Estimation.
+            For the direct score, the model uses the visual context to predict the degree of related object bias.
+             Additionally, inspired by the Mask Language Model, the model can estimate the Mask gender using the relation between the caption and object information from the image.
 
           
        </br>
@@ -174,7 +174,7 @@ pre, code{
       <tr><td width="1000" align="left"> 
         <div class="paper" id="ap_agent">
           <h3>Proposed Approach</h3>
-           <p> The direct Gender Score and the Gender Estimation Score rely on the visual information to predict the related gender as follows: </p>
+           <p> The direct Gender Score and the Gender Estimation Score rely on the visual information to predict the related gender or degree of bias as follows: </p>
        
 
             
@@ -220,7 +220,7 @@ pre, code{
 
  <h3><strong>Experiments & Results </strong></h3> 
 
-   Comparison result (<em>i.e.</em> baseline gender output) between Object Gender Co-Occ and our gender score estimation on the Karpathy split. The proposed score measures gender bias more accurately, particularly when there is a strong gender-to-object relation.
+   Comparison result (<em>i.e.</em> baseline gender output) between Object Gender Co-Occ and our Gender Score Estimation on the Karpathy split. The proposed score measures gender bias more accurately, particularly when there is a strong gender-to-object relation.
 
          
 </P>
@@ -229,10 +229,7 @@ pre, code{
 
         
  <h3><strong>Qualitative results </strong></h3>
-
-        
-        
-
+  
         
         <P> The proposed score uses the correlation between the visual and its related gender. As shown in the (Left) figure, there is an equal distribution of object-gender (man and woman),
           which indicate that not all object has a strong bias toward a specific gender. (Right) the figure shows examples of Gender Score 
