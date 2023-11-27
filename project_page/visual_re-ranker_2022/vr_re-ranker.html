@@ -114,22 +114,25 @@
         </br>
 <!--         <img src="https://render.githubusercontent.com/render/math?math=\text{P}(w \mid c)=\text{P}(w)^{\alpha}">  -->
 <!--         $\text{P}(w \mid c)=\text{P}(w)^{\alpha}$  -->
-        $P(w \mid c)=P(w)^{\alpha}$ 
+<!--         $P(w \mid c)=P(w)^{\alpha}$  -->
+      $P\;(w \mid c)= P\;(w)^{\alpha}$ 
       
       </br>
       </br>
         where the main components of hypothesis revision as caption visual semantics re-ranker:
       </br>
     </br>
-        1. Hypothesis (caption candidates beam search) $P(w)$  initialized by common observation (i.e., language model) 
+        1. Hypothesis (caption candidates beam search) $P\;(w)$  initialized by common observation (i.e., language model) 
       </br>
     </br>     
-        2. Informativeness  $1-P(c)$  of the visual context from the image
+        2. Informativeness  $1-P\;(c)$  of the visual context from the image
       </br>
     </br>   
-        3. Similarities  $\alpha=\left[\frac{1 - sim(w, c)}{1+sim(w, c)}\right]^{1-P(c)}$  the relatedness between the two concepts (visual context and hypothesis) with respect to the informativeness of the visual information.
+        3. Similarities  $\alpha=\left[\frac{1 - sim\;(w, c)}{1+sim\;(w, c)}\right]^{1-P\;(c)}$  the relatedness between the two concepts (visual context and hypothesis) with respect to the informativeness of the visual information.
       </br>
     </br>
+
+       
         
     Here is a  <a href="https://huggingface.co/spaces/AhmedSSabir/demo-for-Visual-Belief-Revision">huggingface demo</a> to show the Visual hypothesis revision </td></tr>
       
