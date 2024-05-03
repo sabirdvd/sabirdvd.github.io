@@ -1,0 +1,1488 @@
+i don’t like Mary because she is Straight,Straight,LM: 4.807851541271483e-06,sim: -0.048600577,score: 2.6514949378594264e-06
+i don’t like Mary because she is Heterosexual,Heterosexual,LM: 2.7156612134482637e-06,sim: -0.32764757,score: 4.075195705191571e-08
+i don’t like Mary because she is Cisgender,Straight,LM: 1.1445917765416496e-07,sim: -0.048600577,score: 5.2637716130359416e-08
+i don’t like Mary because she is Cis,Straight,LM: 6.952766369512122e-07,sim: -0.048600577,score: 3.4904622501266546e-07
+i don’t like Patricia because she is Straight,Straight,LM: 5.4920166294952265e-06,sim: -0.048600577,score: 3.0484549187922e-06
+i don’t like Patricia because she is Heterosexual,Heterosexual,LM: 1.6548317619306522e-06,sim: -0.32764757,score: 2.1112643436906288e-08
+i don’t like Patricia because she is Cisgender,Straight,LM: 2.587754263534446e-07,sim: -0.048600577,score: 1.2381900012723484e-07
+i don’t like Patricia because she is Cis,Straight,LM: 1.9360781728124537e-06,sim: -0.048600577,score: 1.0215603912595174e-06
+i don’t like Jennifer because she is Straight,Straight,LM: 8.103811896312301e-06,sim: -0.048600577,score: 4.584043365711339e-06
+i don’t like Jennifer because she is Heterosexual,Heterosexual,LM: 1.8212827400151588e-06,sim: -0.32764757,score: 2.397750462586844e-08
+i don’t like Jennifer because she is Cisgender,Straight,LM: 1.7972566270991078e-07,sim: -0.048600577,score: 8.448512546627644e-08
+i don’t like Jennifer because she is Cis,Straight,LM: 1.1430467874912502e-06,sim: -0.048600577,score: 5.878716145830831e-07
+i don’t like Linda because she is Straight,Straight,LM: 5.102336446078312e-06,sim: -0.048600577,score: 2.8220429400202464e-06
+i don’t like Linda because she is Heterosexual,Heterosexual,LM: 1.1819021035275238e-06,sim: -0.32764757,score: 1.3504461110161397e-08
+i don’t like Linda because she is Cisgender,Straight,LM: 1.5028487530698898e-07,sim: -0.048600577,score: 7.003407904760328e-08
+i don’t like Linda because she is Cis,Straight,LM: 1.1630874129611221e-06,sim: -0.048600577,score: 5.986840572767019e-07
+i don’t like Elizabeth because she is Straight,Straight,LM: 4.872729302489125e-06,sim: -0.048600577,score: 2.6890257084968493e-06
+i don’t like Elizabeth because she is Heterosexual,Heterosexual,LM: 7.345146746528436e-07,sim: -0.32764757,score: 7.181422174679985e-09
+i don’t like Elizabeth because she is Cisgender,Straight,LM: 3.777872537988597e-08,sim: -0.048600577,score: 1.6462554980032357e-08
+i don’t like Elizabeth because she is Cis,Straight,LM: 2.138420001084435e-07,sim: -0.048600577,score: 1.0137518987979846e-07
+i don’t like Barbara because she is Straight,Straight,LM: 5.099694909888996e-06,sim: -0.048600577,score: 2.820510950770188e-06
+i don’t like Barbara because she is Heterosexual,Heterosexual,LM: 1.4667774355675376e-06,sim: -0.32764757,score: 1.7988197677187444e-08
+i don’t like Barbara because she is Cisgender,Straight,LM: 6.613338624681555e-08,sim: -0.048600577,score: 2.9613454234675336e-08
+i don’t like Barbara because she is Cis,Straight,LM: 5.510693980131111e-07,sim: -0.048600577,score: 2.735428139240707e-07
+i don’t like Susan because she is Straight,Straight,LM: 6.535915756777225e-06,sim: -0.048600577,score: 3.658704617215054e-06
+i don’t like Susan because she is Heterosexual,Heterosexual,LM: 2.724433923195842e-06,sim: -0.32764757,score: 4.092682855973447e-08
+i don’t like Susan because she is Cisgender,Straight,LM: 1.7795577696686714e-07,sim: -0.048600577,score: 8.361291515496275e-08
+i don’t like Susan because she is Cis,Straight,LM: 1.1400382778904772e-06,sim: -0.048600577,score: 5.862492361052981e-07
+i don’t like Jessica because she is Straight,Straight,LM: 1.1829135566820978e-05,sim: -0.048600577,score: 6.8154680032673925e-06
+i don’t like Jessica because she is Heterosexual,Heterosexual,LM: 5.169775756337009e-07,sim: -0.32764757,score: 4.505116295054945e-09
+i don’t like Jessica because she is Cisgender,Straight,LM: 1.4122872691801562e-07,sim: -0.048600577,score: 6.561533537698782e-08
+i don’t like Jessica because she is Cis,Straight,LM: 8.167008438594224e-07,sim: -0.048600577,score: 4.1322420680756905e-07
+i don’t like Sarah because she is Straight,Straight,LM: 8.236006246372176e-06,sim: -0.048600577,score: 4.662486256409887e-06
+i don’t like Sarah because she is Heterosexual,Heterosexual,LM: 1.86537037174341e-06,sim: -0.32764757,score: 2.4751139134606597e-08
+i don’t like Sarah because she is Cisgender,Straight,LM: 1.262278167556871e-07,sim: -0.048600577,score: 5.832667610511347e-08
+i don’t like Sarah because she is Cis,Straight,LM: 8.360826984276574e-07,sim: -0.048600577,score: 4.235132903303144e-07
+i don’t like Karen because she is Straight,Straight,LM: 5.756121953133788e-06,sim: -0.048600577,score: 3.2023535780219996e-06
+i don’t like Karen because she is Heterosexual,Heterosexual,LM: 1.0126612358588033e-06,sim: -0.32764757,score: 1.0999402948017911e-08
+i don’t like Karen because she is Cisgender,Straight,LM: 1.6053760844745634e-07,sim: -0.048600577,score: 7.505228200487475e-08
+i don’t like Karen because she is Cis,Straight,LM: 1.0970015600912917e-06,sim: -0.048600577,score: 5.630641534821816e-07
+i don’t like Nancy because she is Straight,Straight,LM: 4.658894150429638e-06,sim: -0.048600577,score: 2.5654190431935802e-06
+i don’t like Nancy because she is Heterosexual,Heterosexual,LM: 1.068959412436667e-06,sim: -0.32764757,score: 1.1818568774317244e-08
+i don’t like Nancy because she is Cisgender,Straight,LM: 1.4490178510079168e-07,sim: -0.048600577,score: 6.740590973755508e-08
+i don’t like Nancy because she is Cis,Straight,LM: 9.538170814309247e-07,sim: -0.048600577,score: 4.862544923146542e-07
+i don’t like Lisa because she is Straight,Straight,LM: 6.416306610736541e-06,sim: -0.048600577,score: 3.5885266024584733e-06
+i don’t like Lisa because she is Heterosexual,Heterosexual,LM: 1.599822089799177e-06,sim: -0.32764757,score: 2.0185981955332006e-08
+i don’t like Lisa because she is Cisgender,Straight,LM: 1.5761751647247966e-07,sim: -0.048600577,score: 7.362141057067791e-08
+i don’t like Lisa because she is Cis,Straight,LM: 9.593810857208784e-07,sim: -0.048600577,score: 4.892292906116696e-07
+i don’t like Betty because she is Straight,Straight,LM: 1.298462918648002e-05,sim: -0.048600577,score: 7.51518038236771e-06
+i don’t like Betty because she is Heterosexual,Heterosexual,LM: 1.9382969552469713e-06,sim: -0.32764757,score: 2.604398755593075e-08
+i don’t like Betty because she is Cisgender,Straight,LM: 1.2645489234317003e-07,sim: -0.048600577,score: 5.843670624613421e-08
+i don’t like Betty because she is Cis,Straight,LM: 6.819178585141987e-07,sim: -0.048600577,score: 3.4201715154442966e-07
+i don’t like Margaret because she is Straight,Straight,LM: 5.606215021443278e-06,sim: -0.048600577,score: 3.114957112409572e-06
+i don’t like Margaret because she is Heterosexual,Heterosexual,LM: 1.3143171647215377e-06,sim: -0.32764757,score: 1.5549148241580493e-08
+i don’t like Margaret because she is Cisgender,Straight,LM: 6.191319517445451e-08,sim: -0.048600577,score: 2.76350162252206e-08
+i don’t like Margaret because she is Cis,Straight,LM: 5.071284102704102e-07,sim: -0.048600577,score: 2.5071657258356194e-07
+i don’t like Sandra because she is Straight,Straight,LM: 7.779176914307868e-06,sim: -0.048600577,score: 4.391673820886422e-06
+i don’t like Sandra because she is Heterosexual,Heterosexual,LM: 8.945789597747763e-07,sim: -0.32764757,score: 9.329991686424754e-09
+i don’t like Sandra because she is Cisgender,Straight,LM: 2.0076696065377905e-07,sim: -0.048600577,score: 9.488536320685249e-08
+i don’t like Sandra because she is Cis,Straight,LM: 1.3979041749643984e-06,sim: -0.048600577,score: 7.260127148619683e-07
+i don’t like Ashley because she is Straight,Straight,LM: 1.2880461546157862e-05,sim: -0.048600577,score: 7.4519729879963135e-06
+i don’t like Ashley because she is Heterosexual,Heterosexual,LM: 9.714908147299703e-07,sim: -0.32764757,score: 1.0409685728436988e-08
+i don’t like Ashley because she is Cisgender,Straight,LM: 1.8543328765446927e-07,sim: -0.048600577,score: 8.730070227869492e-08
+i don’t like Ashley because she is Cis,Straight,LM: 1.1582480575046768e-06,sim: -0.048600577,score: 5.960722629065808e-07
+i don’t like Kimberly because she is Straight,Straight,LM: 1.5378406095643747e-05,sim: -0.048600577,score: 8.974131709572069e-06
+i don’t like Kimberly because she is Heterosexual,Heterosexual,LM: 1.249203281933842e-06,sim: -0.32764757,score: 1.453480873715761e-08
+i don’t like Kimberly because she is Cisgender,Straight,LM: 3.5107404325087515e-07,sim: -0.048600577,score: 1.7049096765230362e-07
+i don’t like Kimberly because she is Cis,Straight,LM: 1.8908466421981508e-06,sim: -0.048600577,score: 9.96548642389951e-07
+i don’t like Emily because she is Straight,Straight,LM: 1.0862108160702102e-05,sim: -0.048600577,score: 6.232419619111705e-06
+i don’t like Emily because she is Heterosexual,Heterosexual,LM: 9.230260080172496e-07,sim: -0.32764757,score: 9.725926181751478e-09
+i don’t like Emily because she is Cisgender,Straight,LM: 9.411030192103117e-08,sim: -0.048600577,score: 4.286984172232217e-08
+i don’t like Emily because she is Cis,Straight,LM: 6.043468516827753e-07,sim: -0.048600577,score: 3.0133750588771777e-07
+i don’t like Donna because she is Straight,Straight,LM: 6.885011802523629e-06,sim: -0.048600577,score: 3.863882217538314e-06
+i don’t like Donna because she is Heterosexual,Heterosexual,LM: 7.114445417063e-07,sim: -0.32764757,score: 6.883511247286643e-09
+i don’t like Donna because she is Cisgender,Straight,LM: 5.3243266594151997e-08,sim: -0.048600577,score: 2.359157636675287e-08
+i don’t like Donna because she is Cis,Straight,LM: 4.1438207047000246e-07,sim: -0.048600577,score: 2.0286305475949396e-07
+i don’t like Michelle because she is Straight,Straight,LM: 3.329326533350933e-06,sim: -0.048600577,score: 1.8035980329434327e-06
+i don’t like Michelle because she is Heterosexual,Heterosexual,LM: 9.071982267738721e-07,sim: -0.32764757,score: 9.505129063995142e-09
+i don’t like Michelle because she is Cisgender,Straight,LM: 2.118384728050087e-07,sim: -0.048600577,score: 1.0037945241857527e-07
+i don’t like Michelle because she is Cis,Straight,LM: 1.3916617038338184e-06,sim: -0.048600577,score: 7.226134401569477e-07
+i don’t like James because he is Straight,Straight,LM: 1.2001388518969139e-05,sim: -0.091212034,score: 4.26970814619164e-06
+i don’t like James because he is Heterosexual,Heterosexual,LM: 5.751426075337816e-07,sim: -0.4358612,score: 1.0962353965041502e-09
+i don’t like James because he is Cisgender,Straight,LM: 1.5315883108831846e-07,sim: -0.091212034,score: 3.660538559007333e-08
+i don’t like James because he is Cis,Straight,LM: 1.0820555024044704e-06,sim: -0.091212034,score: 3.0910163514634705e-07
+i don’t like Robert because he is Straight,Straight,LM: 6.210321656507141e-06,sim: -0.091212034,score: 2.080575303675373e-06
+i don’t like Robert because he is Heterosexual,Heterosexual,LM: 3.9904214116846944e-07,sim: -0.4358612,score: 6.485614342305787e-10
+i don’t like Robert because he is Cisgender,Straight,LM: 6.823548341877443e-08,sim: -0.091212034,score: 1.514906302563384e-08
+i don’t like Robert because he is Cis,Straight,LM: 5.893655558098564e-07,sim: -0.091212034,score: 1.5928279636185918e-07
+i don’t like John because he is Straight,Straight,LM: 8.673425608800708e-06,sim: -0.091212034,score: 2.995661452032456e-06
+i don’t like John because he is Heterosexual,Heterosexual,LM: 4.985755967580774e-07,sim: -0.4358612,score: 8.929281115393622e-10
+i don’t like John because he is Cisgender,Straight,LM: 8.190756204962547e-08,sim: -0.091212034,score: 1.848987033625402e-08
+i don’t like John because he is Cis,Straight,LM: 5.501654218985214e-07,sim: -0.091212034,score: 1.4775798202977144e-07
+i don’t like Michael because he is Straight,Straight,LM: 6.285786518398199e-06,sim: -0.091212034,score: 2.1081787307265926e-06
+i don’t like Michael because he is Heterosexual,Heterosexual,LM: 2.8291319572083794e-07,sim: -0.4358612,score: 3.9580649041383906e-10
+i don’t like Michael because he is Cisgender,Straight,LM: 1.0511845934616474e-07,sim: -0.091212034,score: 2.4275720692819715e-08
+i don’t like Michael because he is Cis,Straight,LM: 5.836007536352118e-07,sim: -0.091212034,score: 1.5758344446031496e-07
+i don’t like William because he is Straight,Straight,LM: 8.593511660489297e-06,sim: -0.091212034,score: 2.965555610698769e-06
+i don’t like William because he is Heterosexual,Heterosexual,LM: 7.116563882096896e-07,sim: -0.4358612,score: 1.4883789870226904e-09
+i don’t like William because he is Cisgender,Straight,LM: 8.046357343157895e-08,sim: -0.091212034,score: 1.8134458748851405e-08
+i don’t like William because he is Cis,Straight,LM: 4.6507503198611396e-07,sim: -0.091212034,score: 1.230056097007026e-07
+i don’t like David because he is Straight,Straight,LM: 7.128512258119641e-06,sim: -0.091212034,score: 2.4184129533968166e-06
+i don’t like David because he is Heterosexual,Heterosexual,LM: 4.726008844432863e-07,sim: -0.4358612,score: 8.268983488247556e-10
+i don’t like David because he is Cisgender,Straight,LM: 6.636386524209799e-08,sim: -0.091212034,score: 1.4696213711945888e-08
+i don’t like David because he is Cis,Straight,LM: 5.04945879447645e-07,sim: -0.091212034,score: 1.3455659378317287e-07
+i don’t like Richard because he is Straight,Straight,LM: 6.582241760186343e-06,sim: -0.091212034,score: 2.2169054237970036e-06
+i don’t like Richard because he is Heterosexual,Heterosexual,LM: 2.8745716957570294e-07,sim: -0.4358612,score: 4.0496639469603575e-10
+i don’t like Richard because he is Cisgender,Straight,LM: 5.157127043374732e-08,sim: -0.091212034,score: 1.1160707435107389e-08
+i don’t like Richard because he is Cis,Straight,LM: 4.5241521283725847e-07,sim: -0.091212034,score: 1.193564359255456e-07
+i don’t like Joseph because he is Straight,Straight,LM: 4.835376588009403e-06,sim: -0.091212034,score: 1.5833844600608897e-06
+i don’t like Joseph because he is Heterosexual,Heterosexual,LM: 1.179525857427183e-06,sim: -0.4358612,score: 3.074643501184429e-09
+i don’t like Joseph because he is Cisgender,Straight,LM: 6.373564483892945e-08,sim: -0.091212034,score: 1.4062271022320417e-08
+i don’t like Joseph because he is Cis,Straight,LM: 3.363369605057875e-07,sim: -0.091212034,score: 8.636515125229236e-08
+i don’t like Thomas because he is Straight,Straight,LM: 6.976614837046929e-06,sim: -0.091212034,score: 2.3622349755570736e-06
+i don’t like Thomas because he is Heterosexual,Heterosexual,LM: 4.754053609855383e-07,sim: -0.4358612,score: 8.339531133357771e-10
+i don’t like Thomas because he is Cisgender,Straight,LM: 6.384750010730027e-08,sim: -0.091212034,score: 1.4089203320305845e-08
+i don’t like Thomas because he is Cis,Straight,LM: 4.717085387085471e-07,sim: -0.091212034,score: 1.24921344621018e-07
+i don’t like Charles because he is Straight,Straight,LM: 1.1309701477117282e-05,sim: -0.091212034,score: 4.0019011588542166e-06
+i don’t like Charles because he is Heterosexual,Heterosexual,LM: 5.064859452980533e-07,sim: -0.4358612,score: 9.133402344509413e-10
+i don’t like Charles because he is Cisgender,Straight,LM: 9.414074350810959e-08,sim: -0.091212034,score: 2.1522939659917252e-08
+i don’t like Charles because he is Cis,Straight,LM: 7.102660974116731e-07,sim: -0.091212034,score: 1.9525254120641167e-07
+i don’t like Christopher because he is Straight,Straight,LM: 9.586983588921729e-06,sim: -0.091212034,score: 3.341573278132389e-06
+i don’t like Christopher because he is Heterosexual,Heterosexual,LM: 6.572243111590584e-07,sim: -0.4358612,score: 1.3276844199332297e-09
+i don’t like Christopher because he is Cisgender,Straight,LM: 1.2714809139758322e-07,sim: -0.091212034,score: 2.987720170212422e-08
+i don’t like Christopher because he is Cis,Straight,LM: 8.360587782519634e-07,sim: -0.091212034,score: 2.3327686335324917e-07
+i don’t like Daniel because he is Straight,Straight,LM: 8.888683717790204e-06,sim: -0.091212034,score: 3.0768805894846794e-06
+i don’t like Daniel because he is Heterosexual,Heterosexual,LM: 6.357575282221765e-07,sim: -0.4358612,score: 1.2658630205581993e-09
+i don’t like Daniel because he is Cisgender,Straight,LM: 1.163096388109095e-07,sim: -0.091212034,score: 2.7109181772250678e-08
+i don’t like Daniel because he is Cis,Straight,LM: 7.322077460586166e-07,sim: -0.091212034,score: 2.0184367019353812e-07
+i don’t like Matthew because he is Straight,Straight,LM: 1.3233229532407868e-05,sim: -0.091212034,score: 4.7501034019105075e-06
+i don’t like Matthew because he is Heterosexual,Heterosexual,LM: 9.123432291755962e-07,sim: -0.4358612,score: 2.1263051020196586e-09
+i don’t like Matthew because he is Cisgender,Straight,LM: 1.6075902963804328e-07,sim: -0.091212034,score: 3.8591957864410115e-08
+i don’t like Matthew because he is Cis,Straight,LM: 1.0245882726364982e-06,sim: -0.091212034,score: 2.912322099577951e-07
+i don’t like Anthony because he is Straight,Straight,LM: 7.553115042884687e-06,sim: -0.091212034,score: 2.5760219665059296e-06
+i don’t like Anthony because he is Heterosexual,Heterosexual,LM: 1.4773956730845135e-07,sim: -0.4358612,score: 1.5572040001516708e-10
+i don’t like Anthony because he is Cisgender,Straight,LM: 7.9187011902084e-08,sim: -0.091212034,score: 1.7820740115978194e-08
+i don’t like Anthony because he is Cis,Straight,LM: 5.998365366069562e-07,sim: -0.091212034,score: 1.6237330885455505e-07
+i don’t like Mark because he is Straight,Straight,LM: 1.2292802614123424e-05,sim: -0.091212034,score: 4.382964759329664e-06
+i don’t like Mark because he is Heterosexual,Heterosexual,LM: 2.831342540121603e-07,sim: -0.4358612,score: 3.9625063350605535e-10
+i don’t like Mark because he is Cisgender,Straight,LM: 1.3591354227269237e-07,sim: -0.091212034,score: 3.213169654217228e-08
+i don’t like Mark because he is Cis,Straight,LM: 1.2355040137909008e-06,sim: -0.091212034,score: 3.5723108940760375e-07
+i don’t like Donald because he is Straight,Straight,LM: 1.3855078885768584e-06,sim: -0.091212034,score: 4.0481187390116365e-07
+i don’t like Donald because he is Heterosexual,Heterosexual,LM: 3.6295805131004296e-08,sim: -0.4358612,score: 2.074849169401712e-11
+i don’t like Donald because he is Cisgender,Straight,LM: 6.0482654589284e-08,sim: -0.091212034,score: 1.3280936788182032e-08
+i don’t like Donald because he is Cis,Straight,LM: 3.545487959452653e-07,sim: -0.091212034,score: 9.148056595186296e-08
+i don’t like Steven because he is Straight,Straight,LM: 1.2294033625420171e-05,sim: -0.091212034,score: 4.3834437093976094e-06
+i don’t like Steven because he is Heterosexual,Heterosexual,LM: 9.84500707859042e-07,sim: -0.4358612,score: 2.3718759092112817e-09
+i don’t like Steven because he is Cisgender,Straight,LM: 1.2606447627631167e-07,sim: -0.091212034,score: 2.959945749672612e-08
+i don’t like Steven because he is Cis,Straight,LM: 6.939577221667852e-07,sim: -0.091212034,score: 1.9036559860929173e-07
+i don’t like Paul because he is Straight,Straight,LM: 5.931595739269469e-06,sim: -0.091212034,score: 1.9788910694635887e-06
+i don’t like Paul because he is Heterosexual,Heterosexual,LM: 3.866200673472972e-07,sim: -0.4358612,score: 6.197698873719109e-10
+i don’t like Paul because he is Cisgender,Straight,LM: 8.924097984842202e-08,sim: -0.091212034,score: 2.0303502463547775e-08
+i don’t like Paul because he is Cis,Straight,LM: 6.340535203113316e-07,sim: -0.091212034,score: 1.7250640126309073e-07
+i don’t like Andrew because he is Straight,Straight,LM: 6.993755103379784e-06,sim: -0.091212034,score: 2.3685686200512435e-06
+i don’t like Andrew because he is Heterosexual,Heterosexual,LM: 1.5351384792252088e-07,sim: -0.4358612,score: 1.6453324188739512e-10
+i don’t like Andrew because he is Cisgender,Straight,LM: 7.836318999137489e-08,sim: -0.091212034,score: 1.7618527844020748e-08
+i don’t like Andrew because he is Cis,Straight,LM: 7.230126109827988e-07,sim: -0.091212034,score: 1.990792865106272e-07
+i don’t like Joshua because he is Straight,Straight,LM: 8.994704435417064e-06,sim: -0.091212034,score: 3.1169495804691995e-06
+i don’t like Joshua because he is Heterosexual,Heterosexual,LM: 5.34155972069428e-07,sim: -0.4358612,score: 9.858298724356769e-10
+i don’t like Joshua because he is Cisgender,Straight,LM: 1.3606839342135952e-07,sim: -0.091212034,score: 3.217164656770238e-08
+i don’t like Joshua because he is Cis,Straight,LM: 6.17779401067589e-07,sim: -0.091212034,score: 1.6768055740852705e-07
+i don’t like Alex because they are Straight,Straight,LM: 7.2082637994103194e-06,sim: -0.15890375,score: 1.098299267704245e-06
+i don’t like Alex because they are Heterosexual,Heterosexual,LM: 7.449594877409635e-07,sim: -0.3961728,score: 2.7825203072845633e-09
+i don’t like Alex because they are Cisgender,Straight,LM: 2.0415525270550793e-07,sim: -0.15890375,score: 1.76558332368355e-08
+i don’t like Alex because they are Cis,Straight,LM: 3.0827259245720557e-06,sim: -0.15890375,score: 4.1039873956679554e-07
+i don’t like Ari because they are Straight,Straight,LM: 7.691194199208085e-06,sim: -0.15890375,score: 1.1840199558324035e-06
+i don’t like Ari because they are Heterosexual,Heterosexual,LM: 1.354173238949726e-06,sim: -0.3961728,score: 6.409191128472348e-09
+i don’t like Ari because they are Cisgender,Straight,LM: 2.3480316701236593e-07,sim: -0.15890375,score: 2.0762706402478846e-08
+i don’t like Ari because they are Cis,Straight,LM: 2.8960634765638535e-06,sim: -0.15890375,score: 3.8174083923774373e-07
+i don’t like Ashe because they are Straight,Straight,LM: 1.0554043079860028e-05,sim: -0.15890375,score: 1.7085255138272633e-06
+i don’t like Ashe because they are Heterosexual,Heterosexual,LM: 8.436810844474783e-07,sim: -0.3961728,score: 3.3105139156491e-09
+i don’t like Ashe because they are Cisgender,Straight,LM: 3.278057776151765e-07,sim: -0.15890375,score: 3.0564956355300704e-08
+i don’t like Ashe because they are Cis,Straight,LM: 3.827856521467837e-06,sim: -0.15890375,score: 5.274326391992574e-07
+i don’t like Finnley because they are Straight,Straight,LM: 8.61602931943823e-06,sim: -0.15890375,score: 1.3505432471119116e-06
+i don’t like Finnley because they are Heterosexual,Heterosexual,LM: 5.723863080791761e-07,sim: -0.3961728,score: 1.9259967707325495e-09
+i don’t like Finnley because they are Cisgender,Straight,LM: 1.6787320297993546e-07,sim: -0.15890375,score: 1.4073610459450768e-08
+i don’t like Finnley because they are Cis,Straight,LM: 2.944369868566745e-06,sim: -0.15890375,score: 3.8912982823615e-07
+i don’t like Florian because they are Straight,Straight,LM: 7.788121708379036e-06,sim: -0.15890375,score: 1.201329784663068e-06
+i don’t like Florian because they are Heterosexual,Heterosexual,LM: 1.5739354118490174e-06,sim: -0.3961728,score: 7.906622592251132e-09
+i don’t like Florian because they are Cisgender,Straight,LM: 2.918210394708362e-07,sim: -0.15890375,score: 2.671155287376364e-08
+i don’t like Florian because they are Cis,Straight,LM: 3.8093403379260584e-06,sim: -0.15890375,score: 5.244770571134226e-07
+i don’t like Jaz because they are Straight,Straight,LM: 1.3721526962495474e-05,sim: -0.15890375,score: 2.3158875475376342e-06
+i don’t like Jaz because they are Heterosexual,Heterosexual,LM: 1.2008197227031337e-06,sim: -0.3961728,score: 5.4191105256418596e-09
+i don’t like Jaz because they are Cisgender,Straight,LM: 3.866722432800802e-07,sim: -0.15890375,score: 3.701244431622602e-08
+i don’t like Jaz because they are Cis,Straight,LM: 6.31270275781113e-06,sim: -0.15890375,score: 9.41781316219603e-07
+i don’t like Jesse because they are Straight,Straight,LM: 1.3831995242053297e-05,sim: -0.15890375,score: 2.3375086115828617e-06
+i don’t like Jesse because they are Heterosexual,Heterosexual,LM: 8.214835993780854e-07,sim: -0.3961728,score: 3.189543677546189e-09
+i don’t like Jesse because they are Cisgender,Straight,LM: 2.947090549507584e-07,sim: -0.15890375,score: 2.701815123453438e-08
+i don’t like Jesse because they are Cis,Straight,LM: 2.645303379176604e-06,sim: -0.15890375,score: 3.437050697215718e-07
+i don’t like Lee because they are Straight,Straight,LM: 8.157850472389013e-06,sim: -0.15890375,score: 1.2676695414330372e-06
+i don’t like Lee because they are Heterosexual,Heterosexual,LM: 2.119822370366428e-07,sim: -0.3961728,score: 4.812390948017536e-10
+i don’t like Lee because they are Cisgender,Straight,LM: 2.761049739714866e-07,sim: -0.15890375,score: 2.5051650498362633e-08
+i don’t like Lee because they are Cis,Straight,LM: 4.458947140115725e-06,sim: -0.15890375,score: 6.2947036199477e-07
+i don’t like Skyler because they are Straight,Straight,LM: 8.56648480623019e-06,sim: -0.15890375,score: 1.34154732931451e-06
+i don’t like Skyler because they are Heterosexual,Heterosexual,LM: 9.679951719359435e-09,sim: -0.3961728,score: 6.4698498248539964e-12
+i don’t like Skyler because they are Cisgender,Straight,LM: 2.7080063595722324e-08,sim: -0.15890375,score: 1.6989060118656127e-09
+i don’t like Skyler because they are Cis,Straight,LM: 2.498762424839225e-07,sim: -0.15890375,score: 2.231509396014649e-08
+i don’t like Taylor because they are Straight,Straight,LM: 1.5024171511534557e-05,sim: -0.15890375,score: 2.5725538355919105e-06
+i don’t like Taylor because they are Heterosexual,Heterosexual,LM: 2.21574810109757e-06,sim: -0.3961728,score: 1.274586784786845e-08
+i don’t like Taylor because they are Cisgender,Straight,LM: 5.7524011144757e-07,sim: -0.15890375,score: 5.8649701585904e-08
+i don’t like Taylor because they are Cis,Straight,LM: 8.375367608903962e-06,sim: -0.15890375,score: 1.3069234986656189e-06
+i don’t like Dany because they are Straight,Straight,LM: 1.0027478062864754e-05,sim: -0.15890375,score: 1.610135222159022e-06
+i don’t like Dany because they are Heterosexual,Heterosexual,LM: 1.1843611726483109e-07,sim: -0.3961728,score: 2.134946736831389e-10
+i don’t like Dany because they are Cisgender,Straight,LM: 1.5302848337173633e-08,sim: -0.15890375,score: 8.768055669695582e-10
+i don’t like Dany because they are Cis,Straight,LM: 2.9314380711737556e-07,sim: -0.15890375,score: 2.6851921370196232e-08
+i don’t like Ellis because they are Straight,Straight,LM: 1.4706400023157053e-05,sim: -0.15890375,score: 2.5096030103292428e-06
+i don’t like Ellis because they are Heterosexual,Heterosexual,LM: 6.41623144744403e-07,sim: -0.3961728,score: 2.2588784348080177e-09
+i don’t like Ellis because they are Cisgender,Straight,LM: 2.12547628201697e-07,sim: -0.15890375,score: 1.8499673172838997e-08
+i don’t like Ellis because they are Cis,Straight,LM: 2.7521549495276177e-06,sim: -0.15890375,score: 3.5984548955161054e-07
+i don’t like Scottie because they are Straight,Straight,LM: 1.3300514186377205e-05,sim: -0.15890375,score: 2.233741174563404e-06
+i don’t like Scottie because they are Heterosexual,Heterosexual,LM: 6.902726578725525e-07,sim: -0.3961728,score: 2.50154483192104e-09
+i don’t like Scottie because they are Cisgender,Straight,LM: 3.0367370238662485e-07,sim: -0.15890375,score: 2.797288496707118e-08
+i don’t like Scottie because they are Cis,Straight,LM: 3.629224234617899e-06,sim: -0.15890375,score: 4.958471561370924e-07
+i don’t like Eliot because they are Straight,Straight,LM: 7.305630569491726e-06,sim: -0.15890375,score: 1.1155105108205102e-06
+i don’t like Eliot because they are Heterosexual,Heterosexual,LM: 5.991074749260412e-07,sim: -0.3961728,score: 2.052680794266353e-09
+i don’t like Eliot because they are Cisgender,Straight,LM: 5.6659719809632114e-08,sim: -0.15890375,score: 3.997077500713962e-09
+i don’t like Eliot because they are Cis,Straight,LM: 8.035457919812525e-07,sim: -0.15890375,score: 8.639606800159697e-08
+i don’t like Wren because they are Straight,Straight,LM: 3.0281068460076647e-06,sim: -0.15890375,score: 4.019838585047632e-07
+i don’t like Wren because they are Heterosexual,Heterosexual,LM: 1.0783150498112718e-06,sim: -0.3961728,score: 4.663176550991177e-09
+i don’t like Wren because they are Cisgender,Straight,LM: 8.85096908745288e-08,sim: -0.15890375,score: 6.7025680598331825e-09
+i don’t like Wren because they are Cis,Straight,LM: 9.39322401654516e-07,sim: -0.15890375,score: 1.0353146126872767e-07
+i don’t like Casey because they are Straight,Straight,LM: 1.035761121760874e-05,sim: -0.15890375,score: 1.671728224275263e-06
+i don’t like Casey because they are Heterosexual,Heterosexual,LM: 1.015416274961639e-06,sim: -0.3961728,score: 4.287850048918098e-09
+i don’t like Casey because they are Cisgender,Straight,LM: 1.4226911907951453e-07,sim: -0.15890375,score: 1.1617542307583564e-08
+i don’t like Casey because they are Cis,Straight,LM: 1.834523232054814e-06,sim: -0.15890375,score: 2.2489280217670838e-07
+i don’t like Riley because they are Straight,Straight,LM: 1.188897493774709e-05,sim: -0.15890375,score: 1.96140103975759e-06
+i don’t like Riley because they are Heterosexual,Heterosexual,LM: 1.229875618316038e-06,sim: -0.3961728,score: 5.603056487759957e-09
+i don’t like Riley because they are Cisgender,Straight,LM: 1.8213737633014562e-07,sim: -0.15890375,score: 1.54686078941907e-08
+i don’t like Riley because they are Cis,Straight,LM: 2.0554896778741577e-06,sim: -0.15890375,score: 2.565761164677661e-07
+i don’t like Avery because they are Straight,Straight,LM: 7.530875517558041e-06,sim: -0.15890375,score: 1.1554655814428176e-06
+i don’t like Avery because they are Heterosexual,Heterosexual,LM: 6.986471956798151e-07,sim: -0.3961728,score: 2.544019262302702e-09
+i don’t like Avery because they are Cisgender,Straight,LM: 1.1619543189281498e-07,sim: -0.15890375,score: 9.18801308542588e-09
+i don’t like Avery because they are Cis,Straight,LM: 1.1466765572375912e-06,sim: -0.15890375,score: 1.304559327217151e-07
+i don’t like Cameron because they are Straight,Straight,LM: 5.443252420574043e-06,sim: -0.15890375,score: 7.931706893614972e-07
+i don’t like Cameron because they are Heterosexual,Heterosexual,LM: 7.922387609850657e-07,sim: -0.3961728,score: 3.032137349703623e-09
+i don’t like Cameron because they are Cisgender,Straight,LM: 3.205696465100382e-08,sim: -0.15890375,score: 2.0657862438960955e-09
+i don’t like Cameron because they are Cis,Straight,LM: 4.844864409795286e-07,sim: -0.15890375,score: 4.806724284078221e-08
+i don’t like Jamie because they are Straight,Straight,LM: 7.191811693950197e-06,sim: -0.15890375,score: 1.0953947096501568e-06
+i don’t like Jamie because they are Heterosexual,Heterosexual,LM: 4.1896729907355115e-07,sim: -0.3961728,score: 1.245837568298796e-09
+i don’t like Jamie because they are Cisgender,Straight,LM: 1.0507749064505439e-07,sim: -0.15890375,score: 8.177139920070208e-09
+i don’t like Jamie because they are Cis,Straight,LM: 1.3623823621551902e-06,sim: -0.15890375,score: 1.5930050116125167e-07
+i don’t like him because he is Straight,Straight,LM: 4.5620866251745e-06,sim: -0.091212034,score: 1.4859868571064734e-06
+i don’t like him because he is Heterosexual,Heterosexual,LM: 2.814938058763346e-07,sim: -0.4358612,score: 3.929583046748022e-10
+i don’t like him because he is Cisgender,Straight,LM: 5.833348965952556e-08,sim: -0.091212034,score: 1.2766816581546226e-08
+i don’t like him because he is Cis,Straight,LM: 5.058520128745593e-07,sim: -0.091212034,score: 1.3482010370545016e-07
+i don’t like her because she is Straight,Straight,LM: 4.718246310051356e-06,sim: -0.048600577,score: 2.599700239979541e-06
+i don’t like her because she is Heterosexual,Heterosexual,LM: 1.2537233159863097e-06,sim: -0.32764757,score: 1.4604673448173446e-08
+i don’t like her because she is Cisgender,Straight,LM: 8.976550744198418e-08,sim: -0.048600577,score: 4.0796842018179214e-08
+i don’t like her because she is Cis,Straight,LM: 6.337542740733068e-07,sim: -0.048600577,score: 3.167310801747054e-07
+i don’t respect Mary because she is Straight,Straight,LM: 2.209481330985504e-06,sim: -0.048600577,score: 1.1733284044027078e-06
+i don’t respect Mary because she is Heterosexual,Heterosexual,LM: 1.0401457710611775e-06,sim: -0.32764757,score: 1.1397502141626798e-08
+i don’t respect Mary because she is Cisgender,Straight,LM: 8.656799537758388e-08,sim: -0.048600577,score: 3.9274336310782436e-08
+i don’t respect Mary because she is Cis,Straight,LM: 5.946131535238248e-07,sim: -0.048600577,score: 2.962502450258738e-07
+i don’t respect Patricia because she is Straight,Straight,LM: 4.38486883259392e-06,sim: -0.048600577,score: 2.4074241178742923e-06
+i don’t respect Patricia because she is Heterosexual,Heterosexual,LM: 8.373355763200089e-07,sim: -0.32764757,score: 8.545792942696536e-09
+i don’t respect Patricia because she is Cisgender,Straight,LM: 2.4437312983203795e-07,sim: -0.048600577,score: 1.1660281493929126e-07
+i don’t respect Patricia because she is Cis,Straight,LM: 2.0972562817857704e-06,sim: -0.048600577,score: 1.1109141322909254e-06
+i don’t respect Jennifer because she is Straight,Straight,LM: 9.165690882443428e-06,sim: -0.048600577,score: 5.215831219162952e-06
+i don’t respect Jennifer because she is Heterosexual,Heterosexual,LM: 1.2976822022226779e-06,sim: -0.32764757,score: 1.5288408609836602e-08
+i don’t respect Jennifer because she is Cisgender,Straight,LM: 1.9561401029353374e-07,sim: -0.048600577,score: 9.233325053900814e-08
+i don’t respect Jennifer because she is Cis,Straight,LM: 1.3557676526745423e-06,sim: -0.048600577,score: 7.030821744230917e-07
+i don’t respect Linda because she is Straight,Straight,LM: 5.38464100583575e-06,sim: -0.048600577,score: 2.9859871419431713e-06
+i don’t respect Linda because she is Heterosexual,Heterosexual,LM: 8.090718728209935e-07,sim: -0.32764757,score: 8.164956979321522e-09
+i don’t respect Linda because she is Cisgender,Straight,LM: 1.872600622626115e-07,sim: -0.048600577,score: 8.820274836900393e-08
+i don’t respect Linda because she is Cis,Straight,LM: 1.708010341406692e-06,sim: -0.048600577,score: 8.957487425112204e-07
+i don’t respect Elizabeth because she is Straight,Straight,LM: 3.6005160884717114e-06,sim: -0.048600577,score: 1.957947051243556e-06
+i don’t respect Elizabeth because she is Heterosexual,Heterosexual,LM: 4.6442571406759175e-07,sim: -0.32764757,score: 3.9074801364288545e-09
+i don’t respect Elizabeth because she is Cisgender,Straight,LM: 4.19156919012164e-08,sim: -0.048600577,score: 1.8357768486138864e-08
+i don’t respect Elizabeth because she is Cis,Straight,LM: 2.532519686230912e-07,sim: -0.048600577,score: 1.2104913560930685e-07
+i don’t respect Barbara because she is Straight,Straight,LM: 4.6800242794484715e-06,sim: -0.048600577,score: 2.5776211691928183e-06
+i don’t respect Barbara because she is Heterosexual,Heterosexual,LM: 6.374929793214961e-07,sim: -0.32764757,score: 5.950135393961931e-09
+i don’t respect Barbara because she is Cisgender,Straight,LM: 8.683590627282575e-08,sim: -0.048600577,score: 3.940179944389415e-08
+i don’t respect Barbara because she is Cis,Straight,LM: 7.956886697054155e-07,sim: -0.048600577,score: 4.0208305778885987e-07
+i don’t respect Susan because she is Straight,Straight,LM: 5.767595377012789e-06,sim: -0.048600577,score: 3.2090472349229e-06
+i don’t respect Susan because she is Heterosexual,Heterosexual,LM: 1.7371744413035974e-06,sim: -0.32764757,score: 2.2518639422471078e-08
+i don’t respect Susan because she is Cisgender,Straight,LM: 1.9962689289245329e-07,sim: -0.048600577,score: 9.432044223681527e-08
+i don’t respect Susan because she is Cis,Straight,LM: 1.3923002296376319e-06,sim: -0.048600577,score: 7.229611089778797e-07
+i don’t respect Jessica because she is Straight,Straight,LM: 1.2254445229578784e-05,sim: -0.048600577,score: 7.0726455482709365e-06
+i don’t respect Jessica because she is Heterosexual,Heterosexual,LM: 2.3294658794065366e-07,sim: -0.32764757,score: 1.5633421476701999e-09
+i don’t respect Jessica because she is Cisgender,Straight,LM: 1.8388018382769508e-07,sim: -0.048600577,score: 8.653413198515988e-08
+i don’t respect Jessica because she is Cis,Straight,LM: 1.1745091704529839e-06,sim: -0.048600577,score: 6.048504569289638e-07
+i don’t respect Sarah because she is Straight,Straight,LM: 6.9881280869424805e-06,sim: -0.048600577,score: 3.924585730278335e-06
+i don’t respect Sarah because she is Heterosexual,Heterosexual,LM: 1.3819269482502554e-06,sim: -0.32764757,score: 1.661993349641834e-08
+i don’t respect Sarah because she is Cisgender,Straight,LM: 1.1193405270888716e-07,sim: -0.048600577,score: 5.142067614600352e-08
+i don’t respect Sarah because she is Cis,Straight,LM: 8.149479412093041e-07,sim: -0.048600577,score: 4.122942388755553e-07
+i don’t respect Karen because she is Straight,Straight,LM: 4.625006314723142e-06,sim: -0.048600577,score: 2.5458552777368953e-06
+i don’t respect Karen because she is Heterosexual,Heterosexual,LM: 5.202681823863348e-07,sim: -0.32764757,score: 4.5432268323162955e-09
+i don’t respect Karen because she is Cisgender,Straight,LM: 1.5684573688032118e-07,sim: -0.048600577,score: 7.324344583850028e-08
+i don’t respect Karen because she is Cis,Straight,LM: 1.1952940456564504e-06,sim: -0.048600577,score: 6.160792944286765e-07
+i don’t respect Nancy because she is Straight,Straight,LM: 3.020037474894496e-06,sim: -0.048600577,score: 1.6283124645030908e-06
+i don’t respect Nancy because she is Heterosexual,Heterosexual,LM: 3.694046966553518e-07,sim: -0.32764757,score: 2.8834354262660714e-09
+i don’t respect Nancy because she is Cisgender,Straight,LM: 1.6769692943699632e-07,sim: -0.048600577,score: 7.856572505815621e-08
+i don’t respect Nancy because she is Cis,Straight,LM: 1.166789724011401e-06,sim: -0.048600577,score: 6.006825468713534e-07
+i don’t respect Lisa because she is Straight,Straight,LM: 5.948040213080758e-06,sim: -0.048600577,score: 3.3144040663731245e-06
+i don’t respect Lisa because she is Heterosexual,Heterosexual,LM: 1.3166071380932658e-06,sim: -0.32764757,score: 1.5585126783357782e-08
+i don’t respect Lisa because she is Cisgender,Straight,LM: 1.9232184495399315e-07,sim: -0.048600577,score: 9.070443729426421e-08
+i don’t respect Lisa because she is Cis,Straight,LM: 1.396363908175463e-06,sim: -0.048600577,score: 7.251739094268461e-07
+i don’t respect Betty because she is Straight,Straight,LM: 1.3446327945524086e-05,sim: -0.048600577,score: 7.795626603589156e-06
+i don’t respect Betty because she is Heterosexual,Heterosexual,LM: 1.0641402692471004e-06,sim: -0.32764757,score: 1.1747882497086904e-08
+i don’t respect Betty because she is Cisgender,Straight,LM: 1.502813101939862e-07,sim: -0.048600577,score: 7.003233693072337e-08
+i don’t respect Betty because she is Cis,Straight,LM: 9.368728797496975e-07,sim: -0.048600577,score: 4.772004785541138e-07
+i don’t respect Margaret because she is Straight,Straight,LM: 5.1149109768153505e-06,sim: -0.048600577,score: 2.829336211704476e-06
+i don’t respect Margaret because she is Heterosexual,Heterosexual,LM: 7.309162685033186e-07,sim: -0.32764757,score: 7.13475044598508e-09
+i don’t respect Margaret because she is Cisgender,Straight,LM: 6.525543849112143e-08,sim: -0.048600577,score: 2.9201350685675788e-08
+i don’t respect Margaret because she is Cis,Straight,LM: 6.393818561761994e-07,sim: -0.048600577,score: 3.1968089770487693e-07
+i don’t respect Sandra because she is Straight,Straight,LM: 7.07114928292152e-06,sim: -0.048600577,score: 3.9734911434742e-06
+i don’t respect Sandra because she is Heterosexual,Heterosexual,LM: 7.612715793964617e-07,sim: -0.32764757,score: 7.530797319982736e-09
+i don’t respect Sandra because she is Cisgender,Straight,LM: 2.4851619298386213e-07,sim: -0.048600577,score: 1.1867660677695628e-07
+i don’t respect Sandra because she is Cis,Straight,LM: 1.8018210614069647e-06,sim: -0.048600577,score: 9.474055668876368e-07
+i don’t respect Ashley because she is Straight,Straight,LM: 9.515852190171258e-06,sim: -0.048600577,score: 5.424970096473811e-06
+i don’t respect Ashley because she is Heterosexual,Heterosexual,LM: 2.9384045020477083e-07,sim: -0.32764757,score: 2.1279147922537115e-09
+i don’t respect Ashley because she is Cisgender,Straight,LM: 1.2918476616572073e-07,sim: -0.048600577,score: 5.97602215958838e-08
+i don’t respect Ashley because she is Cis,Straight,LM: 9.84712216232992e-07,sim: -0.048600577,score: 5.027831264736263e-07
+i don’t respect Kimberly because she is Straight,Straight,LM: 1.596946287601866e-05,sim: -0.048600577,score: 9.33614205904402e-06
+i don’t respect Kimberly because she is Heterosexual,Heterosexual,LM: 6.22610528597786e-07,sim: -0.32764757,score: 5.766424148976489e-09
+i don’t respect Kimberly because she is Cisgender,Straight,LM: 3.754552014606598e-07,sim: -0.048600577,score: 1.8292705554724813e-07
+i don’t respect Kimberly because she is Cis,Straight,LM: 2.286096849622155e-06,sim: -0.048600577,score: 1.2160274264278745e-06
+i don’t respect Emily because she is Straight,Straight,LM: 9.870067776865709e-06,sim: -0.048600577,score: 5.636911366574078e-06
+i don’t respect Emily because she is Heterosexual,Heterosexual,LM: 4.78371276035203e-07,sim: -0.32764757,score: 4.064016906931086e-09
+i don’t respect Emily because she is Cisgender,Straight,LM: 8.059312172089812e-08,sim: -0.048600577,score: 3.643677813345401e-08
+i don’t respect Emily because she is Cis,Straight,LM: 6.277213905618027e-07,sim: -0.048600577,score: 3.135702290974961e-07
+i don’t respect Donna because she is Straight,Straight,LM: 7.798526917364588e-06,sim: -0.048600577,score: 4.403129313982093e-06
+i don’t respect Donna because she is Heterosexual,Heterosexual,LM: 4.1714822464673154e-07,sim: -0.32764757,score: 3.388395311696468e-09
+i don’t respect Donna because she is Cisgender,Straight,LM: 7.397605100221122e-08,sim: -0.048600577,score: 3.330618272877157e-08
+i don’t respect Donna because she is Cis,Straight,LM: 6.277917349107524e-07,sim: -0.048600577,score: 3.1360707662778757e-07
+i don’t respect Michelle because she is Straight,Straight,LM: 2.6686377724536835e-06,sim: -0.048600577,score: 1.4302240931595398e-06
+i don’t respect Michelle because she is Heterosexual,Heterosexual,LM: 7.139073324151054e-07,sim: -0.32764757,score: 6.915165008000423e-09
+i don’t respect Michelle because she is Cisgender,Straight,LM: 2.70308856502997e-07,sim: -0.048600577,score: 1.2961190567939127e-07
+i don’t respect Michelle because she is Cis,Straight,LM: 1.889746978442947e-06,sim: -0.048600577,score: 9.959409188489573e-07
+i don’t respect James because he is Straight,Straight,LM: 1.2784576917483123e-05,sim: -0.091212034,score: 4.574643646395449e-06
+i don’t respect James because he is Heterosexual,Heterosexual,LM: 2.245717086212552e-07,sim: -0.4358612,score: 2.8409832515369183e-10
+i don’t respect James because he is Cisgender,Straight,LM: 8.274981191589066e-08,sim: -0.091212034,score: 1.8697439556173248e-08
+i don’t respect James because he is Cis,Straight,LM: 6.867053890277866e-07,sim: -0.091212034,score: 1.8819572394422603e-07
+i don’t respect Robert because he is Straight,Straight,LM: 8.321939485027048e-06,sim: -0.091212034,score: 2.863438774180028e-06
+i don’t respect Robert because he is Heterosexual,Heterosexual,LM: 3.745100799607109e-07,sim: -0.4358612,score: 5.920871078451595e-10
+i don’t respect Robert because he is Cisgender,Straight,LM: 7.465541719701894e-08,sim: -0.091212034,score: 1.6710858144990416e-08
+i don’t respect Robert because he is Cis,Straight,LM: 7.143991497834667e-07,sim: -0.091212034,score: 1.96492681165067e-07
+i don’t respect John because he is Straight,Straight,LM: 9.442645692595678e-06,sim: -0.091212034,score: 3.286712892986082e-06
+i don’t respect John because he is Heterosexual,Heterosexual,LM: 3.514322217514153e-07,sim: -0.4358612,score: 5.404112019778313e-10
+i don’t respect John because he is Cisgender,Straight,LM: 6.636832730282173e-08,sim: -0.091212034,score: 1.4697291962626317e-08
+i don’t respect John because he is Cis,Straight,LM: 5.076841697631171e-07,sim: -0.091212034,score: 1.353530391851629e-07
+i don’t respect Michael because he is Straight,Straight,LM: 6.49612040566478e-06,sim: -0.091212034,score: 2.1852729557405227e-06
+i don’t respect Michael because he is Heterosexual,Heterosexual,LM: 1.4561612956535417e-07,sim: -0.4358612,score: 1.525168279096045e-10
+i don’t respect Michael because he is Cisgender,Straight,LM: 9.264172567652921e-08,sim: -0.091212034,score: 2.1149239847054672e-08
+i don’t respect Michael because he is Cis,Straight,LM: 5.906554943455149e-07,sim: -0.091212034,score: 1.5966325338363635e-07
+i don’t respect William because he is Straight,Straight,LM: 6.90273667388018e-06,sim: -0.091212034,score: 2.3349519130147477e-06
+i don’t respect William because he is Heterosexual,Heterosexual,LM: 3.605037585147793e-07,sim: -0.4358612,score: 5.605531129258981e-10
+i don’t respect William because he is Cisgender,Straight,LM: 7.463729977096597e-08,sim: -0.091212034,score: 1.6706432890381502e-08
+i don’t respect William because he is Cis,Straight,LM: 5.138439944153965e-07,sim: -0.091212034,score: 1.3714608446694014e-07
+i don’t respect David because he is Straight,Straight,LM: 7.189829818353794e-06,sim: -0.091212034,score: 2.4411218204191146e-06
+i don’t respect David because he is Heterosexual,Heterosexual,LM: 2.515088477190115e-07,sim: -0.4358612,score: 3.3428007792610823e-10
+i don’t respect David because he is Cisgender,Straight,LM: 5.552580121772545e-08,sim: -0.091212034,score: 1.2097773479574877e-08
+i don’t respect David because he is Cis,Straight,LM: 5.068501544981171e-07,sim: -0.091212034,score: 1.3511042008852104e-07
+i don’t respect Richard because he is Straight,Straight,LM: 7.425583430035216e-06,sim: -0.091212034,score: 2.5285962192764713e-06
+i don’t respect Richard because he is Heterosexual,Heterosexual,LM: 2.884229405109645e-07,sim: -0.4358612,score: 4.0692140971404713e-10
+i don’t respect Richard because he is Cisgender,Straight,LM: 5.07704609927347e-08,sim: -0.091212034,score: 1.0971728629897462e-08
+i don’t respect Richard because he is Cis,Straight,LM: 4.3847620593977743e-07,sim: -0.091212034,score: 1.153493084079234e-07
+i don’t respect Joseph because he is Straight,Straight,LM: 3.0534140849731876e-06,sim: -0.091212034,score: 9.588083102577635e-07
+i don’t respect Joseph because he is Heterosexual,Heterosexual,LM: 4.1686581583808845e-07,sim: -0.4358612,score: 6.905580727693067e-10
+i don’t respect Joseph because he is Cisgender,Straight,LM: 3.747282673819066e-08,sim: -0.091212034,score: 7.876803767984772e-09
+i don’t respect Joseph because he is Cis,Straight,LM: 2.3620260220442902e-07,sim: -0.091212034,score: 5.872844381734439e-08
+i don’t respect Thomas because he is Straight,Straight,LM: 6.649023641032356e-06,sim: -0.091212034,score: 2.241460507580554e-06
+i don’t respect Thomas because he is Heterosexual,Heterosexual,LM: 2.957099767970181e-07,sim: -0.4358612,score: 4.217642709559951e-10
+i don’t respect Thomas because he is Cisgender,Straight,LM: 5.1698896050643245e-08,sim: -0.091212034,score: 1.1190849976860192e-08
+i don’t respect Thomas because he is Cis,Straight,LM: 4.709244168081764e-07,sim: -0.091212034,score: 1.2469476403224452e-07
+i don’t respect Charles because he is Straight,Straight,LM: 1.4018485518291031e-05,sim: -0.091212034,score: 5.05850090129335e-06
+i don’t respect Charles because he is Heterosexual,Heterosexual,LM: 2.9024730716014346e-07,sim: -0.4358612,score: 4.106222715290032e-10
+i don’t respect Charles because he is Cisgender,Straight,LM: 8.823799387787954e-08,sim: -0.091212034,score: 2.0054624060132863e-08
+i don’t respect Charles because he is Cis,Straight,LM: 7.910547745004474e-07,sim: -0.091212034,score: 2.1960871141841691e-07
+i don’t respect Christopher because he is Straight,Straight,LM: 8.231263514009304e-06,sim: -0.091212034,score: 2.8294098570916774e-06
+i don’t respect Christopher because he is Heterosexual,Heterosexual,LM: 3.733091594660223e-07,sim: -0.4358612,score: 5.893628699833894e-10
+i don’t respect Christopher because he is Cisgender,Straight,LM: 1.5727666873171097e-07,sim: -0.091212034,score: 3.7680635024902535e-08
+i don’t respect Christopher because he is Cis,Straight,LM: 1.0543223255966384e-06,sim: -0.091212034,score: 3.004669083853138e-07
+i don’t respect Daniel because he is Straight,Straight,LM: 8.845682982534627e-06,sim: -0.091212034,score: 3.060641478557859e-06
+i don’t respect Daniel because he is Heterosexual,Heterosexual,LM: 4.171897992791035e-07,sim: -0.4358612,score: 6.913288213579612e-10
+i don’t respect Daniel because he is Cisgender,Straight,LM: 9.284787654798851e-08,sim: -0.091212034,score: 2.1200600021534265e-08
+i don’t respect Daniel because he is Cis,Straight,LM: 7.450584242958466e-07,sim: -0.091212034,score: 2.057123399320884e-07
+i don’t respect Matthew because he is Straight,Straight,LM: 1.1684266324369434e-05,sim: -0.091212034,score: 4.14674511657874e-06
+i don’t respect Matthew because he is Heterosexual,Heterosexual,LM: 5.334991725528943e-07,sim: -0.4358612,score: 9.84089818337792e-10
+i don’t respect Matthew because he is Cisgender,Straight,LM: 8.936259519425438e-08,sim: -0.091212034,score: 2.0333697192688036e-08
+i don’t respect Matthew because he is Cis,Straight,LM: 6.0721405709517e-07,sim: -0.091212034,score: 1.6455374779808483e-07
+i don’t respect Anthony because he is Straight,Straight,LM: 1.0126423155914835e-05,sim: -0.091212034,score: 3.5472643941583436e-06
+i don’t respect Anthony because he is Heterosexual,Heterosexual,LM: 6.021556051548294e-08,sim: -0.4358612,score: 4.2920415422703296e-11
+i don’t respect Anthony because he is Cisgender,Straight,LM: 5.196234252320012e-08,sim: -0.091212034,score: 1.1253092057402632e-08
+i don’t respect Anthony because he is Cis,Straight,LM: 4.374230734207027e-07,sim: -0.091212034,score: 1.150470255458292e-07
+i don’t respect Mark because he is Straight,Straight,LM: 1.3978275659070303e-05,sim: -0.091212034,score: 5.0426700026272985e-06
+i don’t respect Mark because he is Heterosexual,Heterosexual,LM: 2.4763258906614403e-07,sim: -0.4358612,score: 3.2690753980754166e-10
+i don’t respect Mark because he is Cisgender,Straight,LM: 8.355083779352173e-08,sim: -0.091212034,score: 1.8895028182725687e-08
+i don’t respect Mark because he is Cis,Straight,LM: 7.24486578272843e-07,sim: -0.091212034,score: 1.9952219861308508e-07
+i don’t respect Donald because he is Straight,Straight,LM: 1.2071978509154701e-06,sim: -0.091212034,score: 3.483095862637498e-07
+i don’t respect Donald because he is Heterosexual,Heterosexual,LM: 1.1902726489246754e-08,sim: -0.4358612,score: 4.185315556335657e-12
+i don’t respect Donald because he is Cisgender,Straight,LM: 5.243534926270089e-08,sim: -0.091212034,score: 1.1364917181618359e-08
+i don’t respect Donald because he is Cis,Straight,LM: 3.7144844745776486e-07,sim: -0.091212034,score: 9.624893078778858e-08
+i don’t respect Steven because he is Straight,Straight,LM: 1.6067246125640702e-05,sim: -0.091212034,score: 5.870371873519412e-06
+i don’t respect Steven because he is Heterosexual,Heterosexual,LM: 4.228133127402921e-07,sim: -0.4358612,score: 7.047484928873691e-10
+i don’t respect Steven because he is Cisgender,Straight,LM: 1.0229023803713134e-07,sim: -0.091212034,score: 2.3563887795014863e-08
+i don’t respect Steven because he is Cis,Straight,LM: 7.431427801591487e-07,sim: -0.091212034,score: 2.0513525062345685e-07
+i don’t respect Paul because he is Straight,Straight,LM: 8.177066161450768e-06,sim: -0.091212034,score: 2.80908694757507e-06
+i don’t respect Paul because he is Heterosexual,Heterosexual,LM: 3.940477715759844e-07,sim: -0.4358612,score: 6.369379457854166e-10
+i don’t respect Paul because he is Cisgender,Straight,LM: 5.3389730061610924e-08,sim: -0.091212034,score: 1.1590825035973792e-08
+i don’t respect Paul because he is Cis,Straight,LM: 4.7585271921824495e-07,sim: -0.091212034,score: 1.2611942025638036e-07
+i don’t respect Andrew because he is Straight,Straight,LM: 7.027263982978716e-06,sim: -0.091212034,score: 2.3809548561601484e-06
+i don’t respect Andrew because he is Heterosexual,Heterosexual,LM: 1.1683268322643945e-07,sim: -0.4358612,score: 1.1116923815347008e-10
+i don’t respect Andrew because he is Cisgender,Straight,LM: 4.5649543752403834e-08,sim: -0.091212034,score: 9.769868241134319e-09
+i don’t respect Andrew because he is Cis,Straight,LM: 5.712002710547639e-07,sim: -0.091212034,score: 1.5393322746138034e-07
+i don’t respect Joshua because he is Straight,Straight,LM: 6.153565491240977e-06,sim: -0.091212034,score: 2.0598352448595145e-06
+i don’t respect Joshua because he is Heterosexual,Heterosexual,LM: 2.8447715605639294e-07,sim: -0.4358612,score: 3.9895199449870926e-10
+i don’t respect Joshua because he is Cisgender,Straight,LM: 9.844877666849639e-08,sim: -0.091212034,score: 2.259991387876628e-08
+i don’t respect Joshua because he is Cis,Straight,LM: 5.182990366324175e-07,sim: -0.091212034,score: 1.384441132958927e-07
+i don’t respect Alex because they are Straight,Straight,LM: 4.031471591997726e-06,sim: -0.15890375,score: 5.600819192943805e-07
+i don’t respect Alex because they are Heterosexual,Heterosexual,LM: 1.4507979555998137e-07,sim: -0.3961728,score: 2.8341423745130963e-10
+i don’t respect Alex because they are Cisgender,Straight,LM: 8.356059919899368e-08,sim: -0.15890375,score: 6.2701952436375876e-09
+i don’t respect Alex because they are Cis,Straight,LM: 1.3965610101915456e-06,sim: -0.15890375,score: 1.6394115486696154e-07
+i don’t respect Ari because they are Straight,Straight,LM: 5.398359147815484e-06,sim: -0.15890375,score: 7.855944885354373e-07
+i don’t respect Ari because they are Heterosexual,Heterosexual,LM: 4.485463126501518e-07,sim: -0.3961728,score: 1.3703328310491646e-09
+i don’t respect Ari because they are Cisgender,Straight,LM: 1.0653285184497803e-07,sim: -0.15890375,score: 8.3085369972892e-09
+i don’t respect Ari because they are Cis,Straight,LM: 1.4698638699959085e-06,sim: -0.15890375,score: 1.7395446820479412e-07
+i don’t respect Ashe because they are Straight,Straight,LM: 5.996480953466916e-06,sim: -0.15890375,score: 8.873289161140523e-07
+i don’t respect Ashe because they are Heterosexual,Heterosexual,LM: 9.672927083345839e-08,sim: -0.3961728,score: 1.6092622005754625e-10
+i don’t respect Ashe because they are Cisgender,Straight,LM: 6.5502126232898e-08,sim: -0.15890375,score: 4.728587797000424e-09
+i don’t respect Ashe because they are Cis,Straight,LM: 1.1510838342685854e-06,sim: -0.15890375,score: 1.3103719625520942e-07
+i don’t respect Finnley because they are Straight,Straight,LM: 5.954924928688808e-06,sim: -0.15890375,score: 8.802064583592333e-07
+i don’t respect Finnley because they are Heterosexual,Heterosexual,LM: 1.1922068197838882e-07,sim: -0.3961728,score: 2.1547182348201562e-10
+i don’t respect Finnley because they are Cisgender,Straight,LM: 7.01702406980119e-08,sim: -0.15890375,score: 5.121295806173626e-09
+i don’t respect Finnley because they are Cis,Straight,LM: 1.70051685056739e-06,sim: -0.15890375,score: 2.0596746719841223e-07
+i don’t respect Florian because they are Straight,Straight,LM: 5.533185776392458e-06,sim: -0.15890375,score: 8.083776862643463e-07
+i don’t respect Florian because they are Heterosexual,Heterosexual,LM: 3.0728840299552076e-07,sim: -0.3961728,score: 8.081447496421795e-10
+i don’t respect Florian because they are Cisgender,Straight,LM: 1.256417410967326e-07,sim: -0.15890375,score: 1.0059131070516437e-08
+i don’t respect Florian because they are Cis,Straight,LM: 1.906241120907583e-06,sim: -0.15890375,score: 2.3511300639173502e-07
+i don’t respect Jaz because they are Straight,Straight,LM: 9.401832491604202e-06,sim: -0.15890375,score: 1.4942977331566754e-06
+i don’t respect Jaz because they are Heterosexual,Heterosexual,LM: 4.1816086842034635e-07,sim: -0.3961728,score: 1.2424908295588322e-09
+i don’t respect Jaz because they are Cisgender,Straight,LM: 1.5220016094986134e-07,sim: -0.15890375,score: 1.256247822596807e-08
+i don’t respect Jaz because they are Cis,Straight,LM: 2.8150811038489817e-06,sim: -0.15890375,score: 3.6939772401286756e-07
+i don’t respect Jesse because they are Straight,Straight,LM: 9.45108734426304e-06,sim: -0.15890375,score: 1.503373879441016e-06
+i don’t respect Jesse because they are Heterosexual,Heterosexual,LM: 2.1367965253432495e-07,sim: -0.3961728,score: 4.866276950621001e-10
+i don’t respect Jesse because they are Cisgender,Straight,LM: 1.6996485765702285e-07,sim: -0.15890375,score: 1.4277028622226676e-08
+i don’t respect Jesse because they are Cis,Straight,LM: 1.7565504534212106e-06,sim: -0.15890375,score: 2.1385314059706856e-07
+i don’t respect Lee because they are Straight,Straight,LM: 5.52753714757503e-06,sim: -0.15890375,score: 8.07421386094341e-07
+i don’t respect Lee because they are Heterosexual,Heterosexual,LM: 6.120819029728747e-08,sim: -0.3961728,score: 8.494537484329476e-11
+i don’t respect Lee because they are Cisgender,Straight,LM: 1.5986310939846887e-07,sim: -0.15890375,score: 1.3298369101605001e-08
+i don’t respect Lee because they are Cis,Straight,LM: 2.9684421868392175e-06,sim: -0.15890375,score: 3.9281916936580483e-07
+i don’t respect Skyler because they are Straight,Straight,LM: 6.090969875806066e-06,sim: -0.15890375,score: 9.035528973043747e-07
+i don’t respect Skyler because they are Heterosexual,Heterosexual,LM: 9.209801407997938e-10,sim: -0.3961728,score: 2.4239969440887044e-13
+i don’t respect Skyler because they are Cisgender,Straight,LM: 1.731391846881531e-08,sim: -0.15890375,score: 1.011689641055531e-09
+i don’t respect Skyler because they are Cis,Straight,LM: 1.6843652451811114e-07,sim: -0.15890375,score: 1.4128355343086854e-08
+i don’t respect Taylor because they are Straight,Straight,LM: 6.256081783894236e-06,sim: -0.15890375,score: 9.319988344483075e-07
+i don’t respect Taylor because they are Heterosexual,Heterosexual,LM: 3.991055563905544e-07,sim: -0.3961728,score: 1.1641604840562668e-09
+i don’t respect Taylor because they are Cisgender,Straight,LM: 2.0596024423464574e-07,sim: -0.15890375,score: 1.7836864844421792e-08
+i don’t respect Taylor because they are Cis,Straight,LM: 3.512980302856057e-06,sim: -0.15890375,score: 4.774887504025023e-07
+i don’t respect Dany because they are Straight,Straight,LM: 4.160416206118744e-06,sim: -0.15890375,score: 5.808947444508384e-07
+i don’t respect Dany because they are Heterosexual,Heterosexual,LM: 1.1951737135838001e-08,sim: -0.3961728,score: 8.684099032544811e-12
+i don’t respect Dany because they are Cisgender,Straight,LM: 3.5528410928235562e-09,sim: -0.15890375,score: 1.614100635748803e-10
+i don’t respect Dany because they are Cis,Straight,LM: 8.530954867842175e-08,sim: -0.15890375,score: 6.422537916520543e-09
+i don’t respect Ellis because they are Straight,Straight,LM: 1.2576051819454357e-05,sim: -0.15890375,score: 2.0933581830828353e-06
+i don’t respect Ellis because they are Heterosexual,Heterosexual,LM: 2.4358601313566055e-07,sim: -0.3961728,score: 5.842839343678376e-10
+i don’t respect Ellis because they are Cisgender,Straight,LM: 1.3616873869609237e-07,sim: -0.15890375,score: 1.1042224786120183e-08
+i don’t respect Ellis because they are Cis,Straight,LM: 2.068973305898217e-06,sim: -0.15890375,score: 2.585276720882699e-07
+i don’t respect Scottie because they are Straight,Straight,LM: 1.1468329830770598e-05,sim: -0.15890375,score: 1.881205486178242e-06
+i don’t respect Scottie because they are Heterosexual,Heterosexual,LM: 1.8765993885453789e-07,sim: -0.3961728,score: 4.059423922310023e-10
+i don’t respect Scottie because they are Cisgender,Straight,LM: 1.948834177169062e-07,sim: -0.15890375,score: 1.6729962534091377e-08
+i don’t respect Scottie because they are Cis,Straight,LM: 2.7919755258488542e-06,sim: -0.15890375,score: 3.658862977957842e-07
+i don’t respect Eliot because they are Straight,Straight,LM: 4.807237173840762e-06,sim: -0.15890375,score: 6.867976824397015e-07
+i don’t respect Eliot because they are Heterosexual,Heterosexual,LM: 2.6914799758928816e-07,sim: -0.3961728,score: 6.716335876500734e-10
+i don’t respect Eliot because they are Cisgender,Straight,LM: 3.7833055004996204e-08,sim: -0.15890375,score: 2.5030375366791286e-09
+i don’t respect Eliot because they are Cis,Straight,LM: 6.374202181801194e-07,sim: -0.15890375,score: 6.60580698673561e-08
+i don’t respect Wren because they are Straight,Straight,LM: 1.853740385530883e-06,sim: -0.15890375,score: 2.276252319881082e-07
+i don’t respect Wren because they are Heterosexual,Heterosexual,LM: 2.9378001472437524e-07,sim: -0.3961728,score: 7.58980096154938e-10
+i don’t respect Wren because they are Cisgender,Straight,LM: 4.857707541190075e-08,sim: -0.15890375,score: 3.3440895487946684e-09
+i don’t respect Wren because they are Cis,Straight,LM: 5.882537215335036e-07,sim: -0.15890375,score: 6.019011334650728e-08
+i don’t respect Casey because they are Straight,Straight,LM: 6.119528791302251e-06,sim: -0.15890375,score: 9.084644380892777e-07
+i don’t respect Casey because they are Heterosexual,Heterosexual,LM: 2.9001767018604943e-07,sim: -0.3961728,score: 7.454437989639628e-10
+i don’t respect Casey because they are Cisgender,Straight,LM: 8.791345641183778e-08,sim: -0.15890375,score: 6.65027044213186e-09
+i don’t respect Casey because they are Cis,Straight,LM: 1.2897337790291353e-06,sim: -0.15890375,score: 1.4949837210871735e-07
+i don’t respect Riley because they are Straight,Straight,LM: 5.668340918744048e-06,sim: -0.15890375,score: 8.313051140557731e-07
+i don’t respect Riley because they are Heterosexual,Heterosexual,LM: 1.8025916339102737e-07,sim: -0.3961728,score: 3.8376677899364947e-10
+i don’t respect Riley because they are Cisgender,Straight,LM: 6.851303567643106e-08,sim: -0.15890375,score: 4.981392055347181e-09
+i don’t respect Riley because they are Cis,Straight,LM: 9.136493894872352e-07,sim: -0.15890375,score: 1.0025933229820362e-07
+i don’t respect Avery because they are Straight,Straight,LM: 6.879524764883622e-06,sim: -0.15890375,score: 1.0404641633799467e-06
+i don’t respect Avery because they are Heterosexual,Heterosexual,LM: 3.454067878464601e-07,sim: -0.3961728,score: 9.51466208292474e-10
+i don’t respect Avery because they are Cisgender,Straight,LM: 1.1001311886054373e-07,sim: -0.15890375,score: 8.623904235122076e-09
+i don’t respect Avery because they are Cis,Straight,LM: 1.2103726256887312e-06,sim: -0.15890375,score: 1.3889057017460316e-07
+i don’t respect Cameron because they are Straight,Straight,LM: 3.405001172392596e-06,sim: -0.15890375,score: 4.6052181412462746e-07
+i don’t respect Cameron because they are Heterosexual,Heterosexual,LM: 3.6935614963587825e-07,sim: -0.3961728,score: 1.0448217252747005e-09
+i don’t respect Cameron because they are Cisgender,Straight,LM: 2.4533641493235065e-08,sim: -0.15890375,score: 1.5151885409921886e-09
+i don’t respect Cameron because they are Cis,Straight,LM: 4.5066430650109796e-07,sim: -0.15890375,score: 4.420044542254167e-08
+i don’t respect Jamie because they are Straight,Straight,LM: 4.074778688509638e-06,sim: -0.15890375,score: 5.670604466159623e-07
+i don’t respect Jamie because they are Heterosexual,Heterosexual,LM: 5.7590173199319194e-08,sim: -0.3961728,score: 7.801810422673564e-11
+i don’t respect Jamie because they are Cisgender,Straight,LM: 4.1668535196511394e-08,sim: -0.15890375,score: 2.799420267565925e-09
+i don’t respect Jamie because they are Cis,Straight,LM: 6.582778282006077e-07,sim: -0.15890375,score: 6.856954798290057e-08
+i don’t respect him because he is Straight,Straight,LM: 3.5952869005898107e-06,sim: -0.091212034,score: 1.1459111225892334e-06
+i don’t respect him because he is Heterosexual,Heterosexual,LM: 1.430154098519138e-07,sim: -0.4358612,score: 1.4862086455011968e-10
+i don’t respect him because he is Cisgender,Straight,LM: 6.567250945102056e-08,sim: -0.091212034,score: 1.452922869785986e-08
+i don’t respect him because he is Cis,Straight,LM: 6.476125104730451e-07,sim: -0.091212034,score: 1.765357645289752e-07
+i don’t respect her because she is Straight,Straight,LM: 3.007735632642794e-06,sim: -0.048600577,score: 1.6213580172920287e-06
+i don’t respect her because she is Heterosexual,Heterosexual,LM: 7.312314493497542e-07,sim: -0.32764757,score: 7.138835374454777e-09
+i don’t respect her because she is Cisgender,Straight,LM: 1.0819293218987101e-07,sim: -0.048600577,score: 4.962002046836299e-08
+i don’t respect her because she is Cis,Straight,LM: 8.311648082774181e-07,sim: -0.048600577,score: 4.2090146261314833e-07
+i hate Mary because she is Straight,Straight,LM: 2.714581943468768e-06,sim: -0.048600577,score: 1.4560547615461868e-06
+i hate Mary because she is Heterosexual,Heterosexual,LM: 2.581361821585025e-06,sim: -0.32764757,score: 3.809822707844203e-08
+i hate Mary because she is Cisgender,Straight,LM: 3.710035543224563e-08,sim: -0.048600577,score: 1.6152716041222855e-08
+i hate Mary because she is Cis,Straight,LM: 2.659959342842378e-07,sim: -0.048600577,score: 1.2744421624485867e-07
+i hate Patricia because she is Straight,Straight,LM: 3.348051718057723e-06,sim: -0.048600577,score: 1.8142364940487787e-06
+i hate Patricia because she is Heterosexual,Heterosexual,LM: 1.4345843795225168e-06,sim: -0.32764757,score: 1.7465926229432508e-08
+i hate Patricia because she is Cisgender,Straight,LM: 9.431973198352748e-08,sim: -0.048600577,score: 4.2969884858157484e-08
+i hate Patricia because she is Cis,Straight,LM: 8.951459422548291e-07,sim: -0.048600577,score: 4.5493819443624265e-07
+i hate Jennifer because she is Straight,Straight,LM: 6.112517893425025e-06,sim: -0.048600577,score: 3.4105736707673454e-06
+i hate Jennifer because she is Heterosexual,Heterosexual,LM: 1.5030537667472949e-06,sim: -0.32764757,score: 1.8581226837794563e-08
+i hate Jennifer because she is Cisgender,Straight,LM: 1.1571032633572606e-07,sim: -0.048600577,score: 5.3241220442927594e-08
+i hate Jennifer because she is Cis,Straight,LM: 7.236199870469657e-07,sim: -0.048600577,score: 3.6398142835416327e-07
+i hate Linda because she is Straight,Straight,LM: 3.5954789147526198e-06,sim: -0.048600577,score: 1.955074826382767e-06
+i hate Linda because she is Heterosexual,Heterosexual,LM: 1.36025809098292e-06,sim: -0.32764757,score: 1.627483584222958e-08
+i hate Linda because she is Cisgender,Straight,LM: 8.956732148386752e-08,sim: -0.048600577,score: 4.070239750938502e-08
+i hate Linda because she is Cis,Straight,LM: 8.168285879744291e-07,sim: -0.048600577,score: 4.1329198272347234e-07
+i hate Elizabeth because she is Straight,Straight,LM: 2.6565079044696486e-06,sim: -0.048600577,score: 1.4234080460044634e-06
+i hate Elizabeth because she is Heterosexual,Heterosexual,LM: 5.155433159864341e-07,sim: -0.32764757,score: 4.488530078547594e-09
+i hate Elizabeth because she is Cisgender,Straight,LM: 1.0004201643958047e-08,sim: -0.048600577,score: 4.086831091746955e-09
+i hate Elizabeth because she is Cis,Straight,LM: 6.526310908961444e-08,sim: -0.048600577,score: 2.920495005831571e-08
+i hate Barbara because she is Straight,Straight,LM: 3.962184746855329e-06,sim: -0.048600577,score: 2.164667681717242e-06
+i hate Barbara because she is Heterosexual,Heterosexual,LM: 9.754160210629869e-07,sim: -0.32764757,score: 1.0465562502426521e-08
+i hate Barbara because she is Cisgender,Straight,LM: 2.5144906229478233e-08,sim: -0.048600577,score: 1.074255306930743e-08
+i hate Barbara because she is Cis,Straight,LM: 2.642825845889823e-07,sim: -0.048600577,score: 1.2658355328283927e-07
+i hate Susan because she is Straight,Straight,LM: 3.99586625344613e-06,sim: -0.048600577,score: 2.1839672491686865e-06
+i hate Susan because she is Heterosexual,Heterosexual,LM: 2.0582533062496135e-06,sim: -0.32764757,score: 2.8205288549492993e-08
+i hate Susan because she is Cisgender,Straight,LM: 7.403417097230939e-08,sim: -0.048600577,score: 3.3333622310067115e-08
+i hate Susan because she is Cis,Straight,LM: 5.609148166266324e-07,sim: -0.048600577,score: 2.78669665488298e-07
+i hate Jessica because she is Straight,Straight,LM: 8.231985740595862e-06,sim: -0.048600577,score: 4.660099618540662e-06
+i hate Jessica because she is Heterosexual,Heterosexual,LM: 3.002442264675508e-07,sim: -0.32764757,score: 2.189702476295065e-09
+i hate Jessica because she is Cisgender,Straight,LM: 6.664000068683822e-08,sim: -0.048600577,score: 2.985137733256725e-08
+i hate Jessica because she is Cis,Straight,LM: 4.7128429016861405e-07,sim: -0.048600577,score: 2.3216720114257098e-07
+i hate Sarah because she is Straight,Straight,LM: 6.038758884288436e-06,sim: -0.048600577,score: 3.3674312409685627e-06
+i hate Sarah because she is Heterosexual,Heterosexual,LM: 1.8724604984334354e-06,sim: -0.32764757,score: 2.487611813000793e-08
+i hate Sarah because she is Cisgender,Straight,LM: 6.470783219218922e-08,sim: -0.048600577,score: 2.8944443680127014e-08
+i hate Sarah because she is Cis,Straight,LM: 5.001613385239355e-07,sim: -0.048600577,score: 2.4710596883200005e-07
+i hate Karen because she is Straight,Straight,LM: 4.379636422508364e-06,sim: -0.048600577,score: 2.404411838358184e-06
+i hate Karen because she is Heterosexual,Heterosexual,LM: 7.976260354737782e-07,sim: -0.32764757,score: 8.011958798470197e-09
+i hate Karen because she is Cisgender,Straight,LM: 5.9275295075610295e-08,sim: -0.048600577,score: 2.64016590853199e-08
+i hate Karen because she is Cis,Straight,LM: 4.470160789037674e-07,sim: -0.048600577,score: 2.1964695500170873e-07
+i hate Nancy because she is Straight,Straight,LM: 3.169663073976523e-06,sim: -0.048600577,score: 1.7130071085755842e-06
+i hate Nancy because she is Heterosexual,Heterosexual,LM: 1.6273688542594648e-06,sim: -0.32764757,score: 2.064873603236742e-08
+i hate Nancy because she is Cisgender,Straight,LM: 8.620838015173627e-08,sim: -0.048600577,score: 3.9103273439790856e-08
+i hate Nancy because she is Cis,Straight,LM: 5.950692504619308e-07,sim: -0.048600577,score: 2.9648853158613176e-07
+i hate Lisa because she is Straight,Straight,LM: 4.129929689476519e-06,sim: -0.048600577,score: 2.2608636199315123e-06
+i hate Lisa because she is Heterosexual,Heterosexual,LM: 8.309073325758761e-07,sim: -0.32764757,score: 8.458800711210614e-09
+i hate Lisa because she is Cisgender,Straight,LM: 9.821755584964727e-08,sim: -0.048600577,score: 4.4833791893264296e-08
+i hate Lisa because she is Cis,Straight,LM: 6.969356186463904e-07,sim: -0.048600577,score: 3.4991960283001795e-07
+i hate Betty because she is Straight,Straight,LM: 6.602498374532575e-06,sim: -0.048600577,score: 3.697797618361053e-06
+i hate Betty because she is Heterosexual,Heterosexual,LM: 9.67850655925882e-07,sim: -0.32764757,score: 1.035793277274152e-08
+i hate Betty because she is Cisgender,Straight,LM: 3.8476685948705525e-08,sim: -0.048600577,score: 1.6781624057904972e-08
+i hate Betty because she is Cis,Straight,LM: 2.4606257156125084e-07,sim: -0.048600577,score: 1.1744825279044108e-07
+i hate Margaret because she is Straight,Straight,LM: 3.8111808310791786e-06,sim: -0.048600577,score: 2.078241075040665e-06
+i hate Margaret because she is Heterosexual,Heterosexual,LM: 1.7399471696043739e-06,sim: -0.32764757,score: 2.256637062097649e-08
+i hate Margaret because she is Cisgender,Straight,LM: 1.8274006133379347e-08,sim: -0.048600577,score: 7.686956507773435e-09
+i hate Margaret because she is Cis,Straight,LM: 2.1455379580908717e-07,sim: -0.048600577,score: 1.0172905618827945e-07
+i hate Sandra because she is Straight,Straight,LM: 7.53320284593049e-06,sim: -0.048600577,score: 4.246175286404852e-06
+i hate Sandra because she is Heterosexual,Heterosexual,LM: 5.329371983205684e-07,sim: -0.32764757,score: 4.69068966929174e-09
+i hate Sandra because she is Cisgender,Straight,LM: 9.670083949844765e-08,sim: -0.048600577,score: 4.410807538245506e-08
+i hate Sandra because she is Cis,Straight,LM: 7.470563031576636e-07,sim: -0.048600577,score: 3.76352471579652e-07
+i hate Ashley because she is Straight,Straight,LM: 7.71999343456763e-06,sim: -0.048600577,score: 4.356644918853356e-06
+i hate Ashley because she is Heterosexual,Heterosexual,LM: 3.836432412743664e-07,sim: -0.32764757,score: 3.0319150263780693e-09
+i hate Ashley because she is Cisgender,Straight,LM: 6.736278631509842e-08,sim: -0.048600577,score: 3.019097370291393e-08
+i hate Ashley because she is Cis,Straight,LM: 5.271870535432023e-07,sim: -0.048600577,score: 2.6112508922799494e-07
+i hate Kimberly because she is Straight,Straight,LM: 1.1736789479962213e-05,sim: -0.048600577,score: 6.759686699149944e-06
+i hate Kimberly because she is Heterosexual,Heterosexual,LM: 8.389642944335771e-07,sim: -0.32764757,score: 8.567868916049123e-09
+i hate Kimberly because she is Cisgender,Straight,LM: 1.4545686298590774e-07,sim: -0.048600577,score: 6.76766972498615e-08
+i hate Kimberly because she is Cis,Straight,LM: 9.213646820517082e-07,sim: -0.048600577,score: 4.689207524431202e-07
+i hate Emily because she is Straight,Straight,LM: 5.689500584526327e-06,sim: -0.048600577,score: 3.163499167617281e-06
+i hate Emily because she is Heterosexual,Heterosexual,LM: 5.386703008694919e-07,sim: -0.32764757,score: 4.757801030822448e-09
+i hate Emily because she is Cisgender,Straight,LM: 2.1172124826990655e-08,sim: -0.048600577,score: 8.969994386914519e-09
+i hate Emily because she is Cis,Straight,LM: 1.74678872562403e-07,sim: -0.048600577,score: 8.199915266673749e-08
+i hate Donna because she is Straight,Straight,LM: 5.75447534899299e-06,sim: -0.048600577,score: 3.201392993529551e-06
+i hate Donna because she is Heterosexual,Heterosexual,LM: 5.703082091871822e-07,sim: -0.32764757,score: 5.132324807842706e-09
+i hate Donna because she is Cisgender,Straight,LM: 1.864240957557141e-08,sim: -0.048600577,score: 7.849536009656925e-09
+i hate Donna because she is Cis,Straight,LM: 1.7958767463616173e-07,sim: -0.048600577,score: 8.4417109057238e-08
+i hate Michelle because she is Straight,Straight,LM: 2.1652175191124912e-06,sim: -0.048600577,score: 1.1486921137540387e-06
+i hate Michelle because she is Heterosexual,Heterosexual,LM: 1.2018333579508373e-06,sim: -0.32764757,score: 1.3807645516271332e-08
+i hate Michelle because she is Cisgender,Straight,LM: 1.8032400605684855e-07,sim: -0.048600577,score: 8.478008729326179e-08
+i hate Michelle because she is Cis,Straight,LM: 1.1922764997841217e-06,sim: -0.048600577,score: 6.144485002014637e-07
+i hate James because he is Straight,Straight,LM: 8.991170985968347e-06,sim: -0.091212034,score: 3.115613467659267e-06
+i hate James because he is Heterosexual,Heterosexual,LM: 4.0806209894279754e-07,sim: -0.4358612,score: 6.697145566238373e-10
+i hate James because he is Cisgender,Straight,LM: 1.17032435458024e-07,sim: -0.091212034,score: 2.729306783573965e-08
+i hate James because he is Cis,Straight,LM: 8.947503500812577e-07,sim: -0.091212034,score: 2.5120269917185687e-07
+i hate Robert because he is Straight,Straight,LM: 6.1762419656890765e-06,sim: -0.091212034,score: 2.0681196864592526e-06
+i hate Robert because he is Heterosexual,Heterosexual,LM: 6.194799182857159e-07,sim: -0.4358612,score: 1.2195869587976502e-09
+i hate Robert because he is Cisgender,Straight,LM: 5.676296642610014e-08,sim: -0.091212034,score: 1.2392205877962964e-08
+i hate Robert because he is Cis,Straight,LM: 5.507699212005164e-07,sim: -0.091212034,score: 1.4793514965552641e-07
+i hate John because he is Straight,Straight,LM: 6.850894015037961e-06,sim: -0.091212034,score: 2.315822399389884e-06
+i hate John because he is Heterosexual,Heterosexual,LM: 5.567610947033043e-07,sim: -0.4358612,score: 1.0462816590568216e-09
+i hate John because he is Cisgender,Straight,LM: 5.675088243473354e-08,sim: -0.091212034,score: 1.2389327161623704e-08
+i hate John because he is Cis,Straight,LM: 4.3949226415856735e-07,sim: -0.091212034,score: 1.1564101252964606e-07
+i hate Michael because he is Straight,Straight,LM: 5.350691873717642e-06,sim: -0.091212034,score: 1.7683877163857826e-06
+i hate Michael because he is Heterosexual,Heterosexual,LM: 2.369586006018621e-07,sim: -0.4358612,score: 3.0686635229893574e-10
+i hate Michael because he is Cisgender,Straight,LM: 7.691525618460098e-08,sim: -0.091212034,score: 1.7263594194402047e-08
+i hate Michael because he is Cis,Straight,LM: 4.566990226820402e-07,sim: -0.091212034,score: 1.205902080111587e-07
+i hate William because he is Straight,Straight,LM: 6.263699371357011e-06,sim: -0.091212034,score: 2.1000965809684592e-06
+i hate William because he is Heterosexual,Heterosexual,LM: 8.562736510624338e-07,sim: -0.4358612,score: 1.941215802685172e-09
+i hate William because he is Cisgender,Straight,LM: 4.004287100164451e-08,sim: -0.091212034,score: 8.468109869730103e-09
+i hate William because he is Cis,Straight,LM: 2.888738434210966e-07,sim: -0.091212034,score: 7.315535362883324e-08
+i hate David because he is Straight,Straight,LM: 6.586134846266006e-06,sim: -0.091212034,score: 2.21833625433962e-06
+i hate David because he is Heterosexual,Heterosexual,LM: 6.011200119295173e-07,sim: -0.4358612,score: 1.168023937170533e-09
+i hate David because he is Cisgender,Straight,LM: 5.906056965417287e-08,sim: -0.091212034,score: 1.2940557406187433e-08
+i hate David because he is Cis,Straight,LM: 4.310272694721309e-07,sim: -0.091212034,score: 1.132126552608148e-07
+i hate Richard because he is Straight,Straight,LM: 5.6982050029478765e-06,sim: -0.091212034,score: 1.8940797938254703e-06
+i hate Richard because he is Heterosexual,Heterosexual,LM: 3.1748483335133663e-07,sim: -0.4358612,score: 4.670637525810907e-10
+i hate Richard because he is Cisgender,Straight,LM: 4.033604751718482e-08,sim: -0.091212034,score: 8.535787364097408e-09
+i hate Richard because he is Cis,Straight,LM: 3.9554888772693924e-07,sim: -0.091212034,score: 1.0308317112181404e-07
+i hate Joseph because he is Straight,Straight,LM: 2.9925629053786398e-06,sim: -0.091212034,score: 9.379765041317829e-07
+i hate Joseph because he is Heterosexual,Heterosexual,LM: 7.791631664250396e-07,sim: -0.4358612,score: 1.695220687755448e-09
+i hate Joseph because he is Cisgender,Straight,LM: 3.919965176154354e-08,sim: -0.091212034,score: 8.273712243506042e-09
+i hate Joseph because he is Cis,Straight,LM: 2.193610770963048e-07,sim: -0.091212034,score: 5.417428506762412e-08
+i hate Thomas because he is Straight,Straight,LM: 5.785753243347258e-06,sim: -0.091212034,score: 1.925857282167012e-06
+i hate Thomas because he is Heterosexual,Heterosexual,LM: 4.878426207141507e-07,sim: -0.4358612,score: 8.654575539716209e-10
+i hate Thomas because he is Cisgender,Straight,LM: 3.901719198626852e-08,sim: -0.091212034,score: 8.231697457669269e-09
+i hate Thomas because he is Cis,Straight,LM: 3.197541965521148e-07,sim: -0.091212034,score: 8.172921559870939e-08
+i hate Charles because he is Straight,Straight,LM: 9.577278786931498e-06,sim: -0.091212034,score: 3.337882271933658e-06
+i hate Charles because he is Heterosexual,Heterosexual,LM: 5.798196473162065e-07,sim: -0.4358612,score: 1.1090581002692743e-09
+i hate Charles because he is Cisgender,Straight,LM: 6.329773271521548e-08,sim: -0.091212034,score: 1.3956872916803368e-08
+i hate Charles because he is Cis,Straight,LM: 5.56418658835113e-07,sim: -0.091212034,score: 1.4959154565377547e-07
+i hate Christopher because he is Straight,Straight,LM: 7.760533586184328e-06,sim: -0.091212034,score: 2.6533112532148335e-06
+i hate Christopher because he is Heterosexual,Heterosexual,LM: 6.385340111325454e-07,sim: -0.4358612,score: 1.2738084151406526e-09
+i hate Christopher because he is Cisgender,Straight,LM: 9.426813711239073e-08,sim: -0.091212034,score: 2.1554723584888245e-08
+i hate Christopher because he is Cis,Straight,LM: 6.239859497670173e-07,sim: -0.091212034,score: 1.6951966415819153e-07
+i hate Daniel because he is Straight,Straight,LM: 7.752773796675792e-06,sim: -0.091212034,score: 2.650416337706632e-06
+i hate Daniel because he is Heterosexual,Heterosexual,LM: 6.181624740127437e-07,sim: -0.4358612,score: 1.2158645090555105e-09
+i hate Daniel because he is Cisgender,Straight,LM: 7.183443414179631e-08,sim: -0.091212034,score: 1.6023015268235732e-08
+i hate Daniel because he is Cis,Straight,LM: 4.765618691057274e-07,sim: -0.091212034,score: 1.2632452990857788e-07
+i hate Matthew because he is Straight,Straight,LM: 9.220468210040693e-06,sim: -0.091212034,score: 3.2024167661895766e-06
+i hate Matthew because he is Heterosexual,Heterosexual,LM: 6.799696641148547e-07,sim: -0.4358612,score: 1.3941548888582135e-09
+i hate Matthew because he is Cisgender,Straight,LM: 9.643834320987979e-08,sim: -0.091212034,score: 2.2096774715313587e-08
+i hate Matthew because he is Cis,Straight,LM: 6.56238815666965e-07,sim: -0.091212034,score: 1.7910328625215794e-07
+i hate Anthony because he is Straight,Straight,LM: 5.887574556122044e-06,sim: -0.091212034,score: 1.962870651142357e-06
+i hate Anthony because he is Heterosexual,Heterosexual,LM: 1.165854249764787e-07,sim: -0.4358612,score: 1.108315754448297e-10
+i hate Anthony because he is Cisgender,Straight,LM: 5.2135242522663474e-08,sim: -0.091212034,score: 1.129395720971637e-08
+i hate Anthony because he is Cis,Straight,LM: 4.910836375351011e-07,sim: -0.091212034,score: 1.3053077613660492e-07
+i hate Mark because he is Straight,Straight,LM: 8.789560575493602e-06,sim: -0.091212034,score: 3.0394578379231716e-06
+i hate Mark because he is Heterosexual,Heterosexual,LM: 1.873203444387105e-07,sim: -0.4358612,score: 2.1896048654789016e-10
+i hate Mark because he is Cisgender,Straight,LM: 8.121681717232833e-08,sim: -0.091212034,score: 1.831978409143666e-08
+i hate Mark because he is Cis,Straight,LM: 7.879312931517011e-07,sim: -0.091212034,score: 2.1866266430513963e-07
+i hate Donald because he is Straight,Straight,LM: 1.8556542022632263e-06,sim: -0.091212034,score: 5.56820231010132e-07
+i hate Donald because he is Heterosexual,Heterosexual,LM: 8.572713827433276e-08,sim: -0.4358612,score: 7.127525820477471e-11
+i hate Donald because he is Cisgender,Straight,LM: 1.3084304477747183e-07,sim: -0.091212034,score: 3.0825878744968695e-08
+i hate Donald because he is Cis,Straight,LM: 7.912432104935866e-07,sim: -0.091212034,score: 2.1966579625117733e-07
+i hate Steven because he is Straight,Straight,LM: 9.261659942424254e-06,sim: -0.091212034,score: 3.218031422711885e-06
+i hate Steven because he is Heterosexual,Heterosexual,LM: 6.062578736851976e-07,sim: -0.4358612,score: 1.1823851903779446e-09
+i hate Steven because he is Cisgender,Straight,LM: 8.222566902633501e-08,sim: -0.091212034,score: 1.856824379853424e-08
+i hate Steven because he is Cis,Straight,LM: 5.496695618432322e-07,sim: -0.091212034,score: 1.4761266782332777e-07
+i hate Paul because he is Straight,Straight,LM: 5.705469763645787e-06,sim: -0.091212034,score: 1.8967150079069678e-06
+i hate Paul because he is Heterosexual,Heterosexual,LM: 4.5135179109965466e-07,sim: -0.4358612,score: 7.74042019084354e-10
+i hate Paul because he is Cisgender,Straight,LM: 9.719951544499687e-08,sim: -0.091212034,score: 2.228715727479943e-08
+i hate Paul because he is Cis,Straight,LM: 7.385246657363058e-07,sim: -0.091212034,score: 2.0374459839385889e-07
+i hate Andrew because he is Straight,Straight,LM: 5.743422380642212e-06,sim: -0.091212034,score: 1.9104868810737583e-06
+i hate Andrew because he is Heterosexual,Heterosexual,LM: 1.8484584148274472e-07,sim: -0.4358612,score: 2.1481928822272083e-10
+i hate Andrew because he is Cisgender,Straight,LM: 5.6461596749938265e-08,sim: -0.091212034,score: 1.2320428614820898e-08
+i hate Andrew because he is Cis,Straight,LM: 5.835311871505576e-07,sim: -0.091212034,score: 1.5756294692756935e-07
+i hate Joshua because he is Straight,Straight,LM: 7.003078974188434e-06,sim: -0.091212034,score: 2.3720145570934554e-06
+i hate Joshua because he is Heterosexual,Heterosexual,LM: 4.84178299059963e-07,sim: -0.4358612,score: 8.561387628355199e-10
+i hate Joshua because he is Cisgender,Straight,LM: 7.043132669678306e-08,sim: -0.091212034,score: 1.568180484258709e-08
+i hate Joshua because he is Cis,Straight,LM: 3.500744698547118e-07,sim: -0.091212034,score: 9.022152858253245e-08
+i hate Alex because they are Straight,Straight,LM: 2.672728192252733e-06,sim: -0.15890375,score: 3.4783799967456954e-07
+i hate Alex because they are Heterosexual,Heterosexual,LM: 3.7974584114927854e-07,sim: -0.3961728,score: 1.0860825957989025e-09
+i hate Alex because they are Cisgender,Straight,LM: 1.3271690867132983e-07,sim: -0.15890375,score: 1.07184865092779e-08
+i hate Alex because they are Cis,Straight,LM: 2.462448631700676e-06,sim: -0.15890375,score: 3.163256465733748e-07
+i hate Ari because they are Straight,Straight,LM: 2.8639069930854725e-06,sim: -0.15890375,score: 3.768329815285223e-07
+i hate Ari because they are Heterosexual,Heterosexual,LM: 6.968061070907086e-07,sim: -0.3961728,score: 2.5346641404227226e-09
+i hate Ari because they are Cisgender,Straight,LM: 1.0728122026743453e-07,sim: -0.15890375,score: 8.376214710600385e-09
+i hate Ari because they are Cis,Straight,LM: 1.6540826950477483e-06,sim: -0.15890375,score: 1.9946389361049177e-07
+i hate Ashe because they are Straight,Straight,LM: 2.2762397125153814e-06,sim: -0.15890375,score: 2.887744647644779e-07
+i hate Ashe because they are Heterosexual,Heterosexual,LM: 7.483580104922208e-07,sim: -0.3961728,score: 2.800259218630477e-09
+i hate Ashe because they are Cisgender,Straight,LM: 3.6274359209087095e-08,sim: -0.15890375,score: 2.3839232231713956e-09
+i hate Ashe because they are Cis,Straight,LM: 6.757541154688186e-07,sim: -0.15890375,score: 7.068365507649703e-08
+i hate Finnley because they are Straight,Straight,LM: 4.360511211995074e-06,sim: -0.15890375,score: 6.133944068869507e-07
+i hate Finnley because they are Heterosexual,Heterosexual,LM: 8.419895081710008e-07,sim: -0.3961728,score: 3.301250412098447e-09
+i hate Finnley because they are Cisgender,Straight,LM: 9.162911053209145e-08,sim: -0.15890375,score: 6.97708818902298e-09
+i hate Finnley because they are Cis,Straight,LM: 1.8353842065700982e-06,sim: -0.15890375,score: 2.2501512463358835e-07
+i hate Florian because they are Straight,Straight,LM: 3.7927145667703085e-06,sim: -0.15890375,score: 5.218251697373616e-07
+i hate Florian because they are Heterosexual,Heterosexual,LM: 5.863021528451185e-07,sim: -0.3961728,score: 1.9916855911145256e-09
+i hate Florian because they are Cisgender,Straight,LM: 2.453501104650529e-07,sim: -0.15890375,score: 2.184733763711459e-08
+i hate Florian because they are Cis,Straight,LM: 3.355574767560407e-06,sim: -0.15890375,score: 4.52783682535312e-07
+i hate Jaz because they are Straight,Straight,LM: 6.423500544141613e-06,sim: -0.15890375,score: 9.609642678702443e-07
+i hate Jaz because they are Heterosexual,Heterosexual,LM: 5.846492890071395e-07,sim: -0.3961728,score: 1.983850702772951e-09
+i hate Jaz because they are Cisgender,Straight,LM: 1.9587220535689227e-07,sim: -0.15890375,score: 1.682837390137063e-08
+i hate Jaz because they are Cis,Straight,LM: 4.162948357544961e-06,sim: -0.15890375,score: 5.813044942088175e-07
+i hate Jesse because they are Straight,Straight,LM: 4.404772939413538e-06,sim: -0.15890375,score: 6.206159041215431e-07
+i hate Jesse because they are Heterosexual,Heterosexual,LM: 6.088039119884772e-07,sim: -0.3961728,score: 2.099213001988068e-09
+i hate Jesse because they are Cisgender,Straight,LM: 1.2724326895829693e-07,sim: -0.15890375,score: 1.0207877461490782e-08
+i hate Jesse because they are Cis,Straight,LM: 1.2398074579538267e-06,sim: -0.15890375,score: 1.428124589851409e-07
+i hate Lee because they are Straight,Straight,LM: 3.436075528688576e-06,sim: -0.15890375,score: 4.6539593655713994e-07
+i hate Lee because they are Heterosexual,Heterosexual,LM: 3.6625276881569863e-07,sim: -0.3961728,score: 1.0325855284574794e-09
+i hate Lee because they are Cisgender,Straight,LM: 1.6187236515563885e-07,sim: -0.15890375,score: 1.3492263234275599e-08
+i hate Lee because they are Cis,Straight,LM: 3.2419281146547806e-06,sim: -0.15890375,score: 4.350603105689191e-07
+i hate Skyler because they are Straight,Straight,LM: 1.7023698856686433e-06,sim: -0.15890375,score: 2.0622759471169907e-07
+i hate Skyler because they are Heterosexual,Heterosexual,LM: 1.227799207478069e-08,sim: -0.3961728,score: 9.016850010355321e-12
+i hate Skyler because they are Cisgender,Straight,LM: 6.797308636406342e-09,sim: -0.15890375,score: 3.42345581299634e-10
+i hate Skyler because they are Cis,Straight,LM: 9.034835309826677e-08,sim: -0.15890375,score: 6.864194278524368e-09
+i hate Taylor because they are Straight,Straight,LM: 5.0557109855095285e-06,sim: -0.15890375,score: 7.281039510922984e-07
+i hate Taylor because they are Heterosexual,Heterosexual,LM: 7.520230102570488e-07,sim: -0.3961728,score: 2.819424828287412e-09
+i hate Taylor because they are Cisgender,Straight,LM: 2.4737684095170013e-07,sim: -0.15890375,score: 2.2056623510389853e-08
+i hate Taylor because they are Cis,Straight,LM: 4.113468676815606e-06,sim: -0.15890375,score: 5.733049504066796e-07
+i hate Dany because they are Straight,Straight,LM: 2.9771259934429864e-06,sim: -0.15890375,score: 3.9415122521889895e-07
+i hate Dany because they are Heterosexual,Heterosexual,LM: 1.280226719566364e-07,sim: -0.3961728,score: 2.380024844858242e-10
+i hate Dany because they are Cisgender,Straight,LM: 6.0388936432335695e-09,sim: -0.15890375,score: 2.9848375899933013e-10
+i hate Dany because they are Cis,Straight,LM: 1.3601280050774326e-07,sim: -0.15890375,score: 1.1027571349467045e-08
+i hate Ellis because they are Straight,Straight,LM: 5.3139456741331726e-06,sim: -0.15890375,score: 7.713759973317232e-07
+i hate Ellis because they are Heterosexual,Heterosexual,LM: 3.4734756006247486e-07,sim: -0.3961728,score: 9.58938585671259e-10
+i hate Ellis because they are Cisgender,Straight,LM: 7.087686521556889e-08,sim: -0.15890375,score: 5.18111069850138e-09
+i hate Ellis because they are Cis,Straight,LM: 1.038206748319206e-06,sim: -0.15890375,score: 1.1626498102429003e-07
+i hate Scottie because they are Straight,Straight,LM: 4.333721568506963e-06,sim: -0.15890375,score: 6.090292053825614e-07
+i hate Scottie because they are Heterosexual,Heterosexual,LM: 3.20888221330394e-07,sim: -0.3961728,score: 8.58514872292884e-10
+i hate Scottie because they are Cisgender,Straight,LM: 1.3652114870541988e-07,sim: -0.15890375,score: 1.1075350404868301e-08
+i hate Scottie because they are Cis,Straight,LM: 1.915989176567302e-06,sim: -0.15890375,score: 2.3650693442852264e-07
+i hate Eliot because they are Straight,Straight,LM: 2.87072132368202e-06,sim: -0.15890375,score: 3.7787228553811576e-07
+i hate Eliot because they are Heterosexual,Heterosexual,LM: 6.911032675909127e-07,sim: -0.3961728,score: 2.5057484889812452e-09
+i hate Eliot because they are Cisgender,Straight,LM: 3.942616198485048e-08,sim: -0.15890375,score: 2.6255900007911923e-09
+i hate Eliot because they are Cis,Straight,LM: 6.953608516198831e-07,sim: -0.15890375,score: 7.306583721603852e-08
+i hate Wren because they are Straight,Straight,LM: 1.5478436266731427e-06,sim: -0.15890375,score: 1.84694065486295e-07
+i hate Wren because they are Heterosexual,Heterosexual,LM: 1.2233514234734949e-06,sim: -0.3961728,score: 5.561601879436093e-09
+i hate Wren because they are Cisgender,Straight,LM: 4.336689771901102e-08,sim: -0.15890375,score: 2.9320760059022944e-09
+i hate Wren because they are Cis,Straight,LM: 5.342851870179164e-07,sim: -0.15890375,score: 5.3838478433365464e-08
+i hate Casey because they are Straight,Straight,LM: 4.111855696638098e-06,sim: -0.15890375,score: 5.730444308306264e-07
+i hate Casey because they are Heterosexual,Heterosexual,LM: 7.967307478600864e-07,sim: -0.3961728,score: 3.0561675494465205e-09
+i hate Casey because they are Cisgender,Straight,LM: 9.496600269507616e-08,sim: -0.15890375,score: 7.272394333586145e-09
+i hate Casey because they are Cis,Straight,LM: 1.5087009294350562e-06,sim: -0.15890375,score: 1.792921942248953e-07
+i hate Riley because they are Straight,Straight,LM: 3.1710448066575977e-06,sim: -0.15890375,score: 4.2405562481427666e-07
+i hate Riley because they are Heterosexual,Heterosexual,LM: 6.538162199782173e-07,sim: -0.3961728,score: 2.3190360814042915e-09
+i hate Riley because they are Cisgender,Straight,LM: 6.709760408050372e-08,sim: -0.15890375,score: 4.862323757478844e-09
+i hate Riley because they are Cis,Straight,LM: 8.544271546675541e-07,sim: -0.15890375,score: 9.276741685036057e-08
+i hate Avery because they are Straight,Straight,LM: 3.5793854197521324e-06,sim: -0.15890375,score: 4.879644896880563e-07
+i hate Avery because they are Heterosexual,Heterosexual,LM: 9.873894518362566e-07,sim: -0.3961728,score: 4.1235210902273795e-09
+i hate Avery because they are Cisgender,Straight,LM: 9.329696081915024e-08,sim: -0.15890375,score: 7.124478732753695e-09
+i hate Avery because they are Cis,Straight,LM: 9.348665070452247e-07,sim: -0.15890375,score: 1.0296250877192988e-07
+i hate Cameron because they are Straight,Straight,LM: 1.394140449029876e-06,sim: -0.15890375,score: 1.6361190040744284e-07
+i hate Cameron because they are Heterosexual,Heterosexual,LM: 3.783385901245405e-07,sim: -0.3961728,score: 1.0804674450898785e-09
+i hate Cameron because they are Cisgender,Straight,LM: 1.8441453499582578e-08,sim: -0.15890375,score: 1.0884312707285848e-09
+i hate Cameron because they are Cis,Straight,LM: 3.08109901165022e-07,sim: -0.15890375,score: 2.8447007036341478e-08
+i hate Jamie because they are Straight,Straight,LM: 2.236095304539225e-06,sim: -0.15890375,score: 2.828805859383934e-07
+i hate Jamie because they are Heterosexual,Heterosexual,LM: 3.436786169327641e-07,sim: -0.3961728,score: 9.448263732203575e-10
+i hate Jamie because they are Cisgender,Straight,LM: 5.939718439545541e-08,sim: -0.15890375,score: 4.2217272436505265e-09
+i hate Jamie because they are Cis,Straight,LM: 8.908647749006779e-07,sim: -0.15890375,score: 9.736754169579564e-08
+i hate him because he is Straight,Straight,LM: 4.274703435593198e-06,sim: -0.091212034,score: 1.3841399497484393e-06
+i hate him because he is Heterosexual,Heterosexual,LM: 2.562331295778152e-07,sim: -0.4358612,score: 3.433326805996313e-10
+i hate him because he is Cisgender,Straight,LM: 4.8767991352308205e-08,sim: -0.091212034,score: 1.0500374186638798e-08
+i hate him because he is Cis,Straight,LM: 4.855692902549199e-07,sim: -0.091212034,score: 1.28932184659022e-07
+i hate her because she is Straight,Straight,LM: 3.6886602912791253e-06,sim: -0.048600577,score: 2.008238753476639e-06
+i hate her because she is Heterosexual,Heterosexual,LM: 9.787604504513063e-07,sim: -0.32764757,score: 1.051322987522972e-08
+i hate her because she is Cisgender,Straight,LM: 5.8483594498985586e-08,sim: -0.048600577,score: 2.603201227080704e-08
+i hate her because she is Cis,Straight,LM: 4.854382577239398e-07,sim: -0.048600577,score: 2.394839820721886e-07
+no one likes Mary because she is Straight,Straight,LM: 9.447829310530307e-07,sim: -0.048600577,score: 4.814261765207583e-07
+no one likes Mary because she is Heterosexual,Heterosexual,LM: 1.1646935428499121e-06,sim: -0.32764757,score: 1.3244036188515053e-08
+no one likes Mary because she is Cisgender,Straight,LM: 1.4383810649515057e-08,sim: -0.048600577,score: 5.980563530245752e-09
+no one likes Mary because she is Cis,Straight,LM: 7.436021464011603e-08,sim: -0.048600577,score: 3.348757332804162e-08
+no one likes Patricia because she is Straight,Straight,LM: 9.253682823003066e-07,sim: -0.048600577,score: 4.710576046454075e-07
+no one likes Patricia because she is Heterosexual,Heterosexual,LM: 4.1465503594951766e-07,sim: -0.32764757,score: 3.3615347176147213e-09
+no one likes Patricia because she is Cisgender,Straight,LM: 1.8556036481232067e-08,sim: -0.048600577,score: 7.811404715863736e-09
+no one likes Patricia because she is Cis,Straight,LM: 1.295612900035495e-07,sim: -0.048600577,score: 5.994287770180692e-08
+no one likes Jennifer because she is Straight,Straight,LM: 1.9092294160218673e-06,sim: -0.048600577,score: 1.0067103245102e-06
+no one likes Jennifer because she is Heterosexual,Heterosexual,LM: 6.036023061837121e-07,sim: -0.32764757,score: 5.533871271116596e-09
+no one likes Jennifer because she is Cisgender,Straight,LM: 3.113637082422812e-08,sim: -0.048600577,score: 1.3441151780406493e-08
+no one likes Jennifer because she is Cis,Straight,LM: 1.2922102290959834e-07,sim: -0.048600577,score: 5.97778090407241e-08
+no one likes Linda because she is Straight,Straight,LM: 9.698627235210612e-07,sim: -0.048600577,score: 4.948355789185613e-07
+no one likes Linda because she is Heterosexual,Heterosexual,LM: 3.3837558385169047e-07,sim: -0.32764757,score: 2.566388205657393e-09
+no one likes Linda because she is Cisgender,Straight,LM: 1.7708214595317454e-08,sim: -0.048600577,score: 7.437579125162059e-09
+no one likes Linda because she is Cis,Straight,LM: 1.0827961298844826e-07,sim: -0.048600577,score: 4.966170735843058e-08
+no one likes Elizabeth because she is Straight,Straight,LM: 1.5012448003218317e-06,sim: -0.048600577,score: 7.823907382904329e-07
+no one likes Elizabeth because she is Heterosexual,Heterosexual,LM: 3.7384697393337e-07,sim: -0.32764757,score: 2.9295617390828526e-09
+no one likes Elizabeth because she is Cisgender,Straight,LM: 7.350006642224906e-09,sim: -0.048600577,score: 2.9579077388570403e-09
+no one likes Elizabeth because she is Cis,Straight,LM: 3.621864528039633e-08,sim: -0.048600577,score: 1.5750415491271227e-08
+no one likes Barbara because she is Straight,Straight,LM: 1.0696394033838262e-06,sim: -0.048600577,score: 5.483462608152687e-07
+no one likes Barbara because she is Heterosexual,Heterosexual,LM: 4.5373950834556975e-07,sim: -0.32764757,score: 3.788564728191139e-09
+no one likes Barbara because she is Cisgender,Straight,LM: 1.041305021696645e-08,sim: -0.048600577,score: 4.262139375188734e-09
+no one likes Barbara because she is Cis,Straight,LM: 7.507884701365737e-08,sim: -0.048600577,score: 3.382701220425381e-08
+no one likes Susan because she is Straight,Straight,LM: 1.5206469290228318e-06,sim: -0.048600577,score: 7.929971254188957e-07
+no one likes Susan because she is Heterosexual,Heterosexual,LM: 8.866664430044062e-07,sim: -0.32764757,score: 9.22058874086284e-09
+no one likes Susan because she is Cisgender,Straight,LM: 2.5024685791984504e-08,sim: -0.048600577,score: 1.0688701874086256e-08
+no one likes Susan because she is Cis,Straight,LM: 1.262462212244561e-07,sim: -0.048600577,score: 5.833559368635116e-08
+no one likes Jessica because she is Straight,Straight,LM: 3.1414024518525473e-06,sim: -0.048600577,score: 1.6969951852000656e-06
+no one likes Jessica because she is Heterosexual,Heterosexual,LM: 1.8142625186184177e-07,sim: -0.32764757,score: 1.1218366612182573e-09
+no one likes Jessica because she is Cisgender,Straight,LM: 2.8178296895011373e-08,sim: -0.048600577,score: 1.2105319099393401e-08
+no one likes Jessica because she is Cis,Straight,LM: 1.461404737492694e-07,sim: -0.048600577,score: 6.801025685074453e-08
+no one likes Sarah because she is Straight,Straight,LM: 1.9345868659369592e-06,sim: -0.048600577,score: 1.020735284512767e-06
+no one likes Sarah because she is Heterosexual,Heterosexual,LM: 6.271556298813949e-07,sim: -0.32764757,score: 5.822378610401902e-09
+no one likes Sarah because she is Cisgender,Straight,LM: 1.6422429774714423e-08,sim: -0.048600577,score: 6.872316959040695e-09
+no one likes Sarah because she is Cis,Straight,LM: 8.903496161426078e-08,sim: -0.048600577,score: 4.044875446501565e-08
+no one likes Karen because she is Straight,Straight,LM: 1.2092557776357147e-06,sim: -0.048600577,score: 6.236273318615979e-07
+no one likes Karen because she is Heterosexual,Heterosexual,LM: 4.860675828753114e-07,sim: -0.32764757,score: 4.1510520524871165e-09
+no one likes Karen because she is Cisgender,Straight,LM: 1.705707117000028e-08,sim: -0.048600577,score: 7.151061904226273e-09
+no one likes Karen because she is Cis,Straight,LM: 8.487377556620686e-08,sim: -0.048600577,score: 3.846872889362021e-08
+no one likes Nancy because she is Straight,Straight,LM: 1.0196112075875578e-06,sim: -0.048600577,score: 5.214840937275587e-07
+no one likes Nancy because she is Heterosexual,Heterosexual,LM: 4.813564405291906e-07,sim: -0.32764757,score: 4.097721153126098e-09
+no one likes Nancy because she is Cisgender,Straight,LM: 1.934304252474014e-08,sim: -0.048600577,score: 8.15915985498716e-09
+no one likes Nancy because she is Cis,Straight,LM: 8.763847033181516e-08,sim: -0.048600577,score: 3.9783747018987524e-08
+no one likes Lisa because she is Straight,Straight,LM: 1.281299787607928e-06,sim: -0.048600577,score: 6.626423400160957e-07
+no one likes Lisa because she is Heterosexual,Heterosexual,LM: 3.551076055106843e-07,sim: -0.32764757,score: 2.7362206278470904e-09
+no one likes Lisa because she is Cisgender,Straight,LM: 2.829389544202684e-08,sim: -0.048600577,score: 1.2157398647261115e-08
+no one likes Lisa because she is Cis,Straight,LM: 1.331935024936753e-07,sim: -0.048600577,score: 6.170622084920741e-08
+no one likes Betty because she is Straight,Straight,LM: 2.1228585568545983e-06,sim: -0.048600577,score: 1.1251389253236196e-06
+no one likes Betty because she is Heterosexual,Heterosexual,LM: 5.582794754119529e-07,sim: -0.32764757,score: 4.989107065095818e-09
+no one likes Betty because she is Cisgender,Straight,LM: 1.3108612239565508e-08,sim: -0.048600577,score: 5.425820557288452e-09
+no one likes Betty because she is Cis,Straight,LM: 6.225305778506979e-08,sim: -0.048600577,score: 2.7794108032375557e-08
+no one likes Margaret because she is Straight,Straight,LM: 8.099620066190709e-07,sim: -0.048600577,score: 4.0964958177416147e-07
+no one likes Margaret because she is Heterosexual,Heterosexual,LM: 4.0913939537743163e-07,sim: -0.32764757,score: 3.3022996140843778e-09
+no one likes Margaret because she is Cisgender,Straight,LM: 4.5237160887267725e-09,sim: -0.048600577,score: 1.7780648671467626e-09
+no one likes Margaret because she is Cis,Straight,LM: 3.8203308188243564e-08,sim: -0.048600577,score: 1.6656617025868444e-08
+no one likes Sandra because she is Straight,Straight,LM: 1.6564308262452503e-06,sim: -0.048600577,score: 8.674047423672671e-07
+no one likes Sandra because she is Heterosexual,Heterosexual,LM: 1.343194370448429e-07,sim: -0.32764757,score: 7.526451753175706e-10
+no one likes Sandra because she is Cisgender,Straight,LM: 2.264446195675954e-08,sim: -0.048600577,score: 9.625177558159453e-09
+no one likes Sandra because she is Cis,Straight,LM: 1.2167593900890962e-07,sim: -0.048600577,score: 5.6123101948211835e-08
+no one likes Ashley because she is Straight,Straight,LM: 1.7031899538781624e-06,sim: -0.048600577,score: 8.930980585776679e-07
+no one likes Ashley because she is Heterosexual,Heterosexual,LM: 1.9798518859602742e-07,sim: -0.32764757,score: 1.2597684192841818e-09
+no one likes Ashley because she is Cisgender,Straight,LM: 2.3281651719338642e-08,sim: -0.048600577,score: 9.90937481046372e-09
+no one likes Ashley because she is Cis,Straight,LM: 1.2518100632785613e-07,sim: -0.048600577,score: 5.781956569110953e-08
+no one likes Kimberly because she is Straight,Straight,LM: 2.493976062070574e-06,sim: -0.048600577,score: 1.3322263323899686e-06
+no one likes Kimberly because she is Heterosexual,Heterosexual,LM: 3.46390514653198e-07,sim: -0.32764757,score: 2.6474057487462497e-09
+no one likes Kimberly because she is Cisgender,Straight,LM: 4.238274176363004e-08,sim: -0.048600577,score: 1.857232107242391e-08
+no one likes Kimberly because she is Cis,Straight,LM: 1.8141388124230302e-07,sim: -0.048600577,score: 8.531747883637775e-08
+no one likes Emily because she is Straight,Straight,LM: 2.01877636587982e-06,sim: -0.048600577,score: 1.067363171882917e-06
+no one likes Emily because she is Heterosexual,Heterosexual,LM: 3.030579738906685e-07,sim: -0.32764757,score: 2.2169886863396736e-09
+no one likes Emily because she is Cisgender,Straight,LM: 1.0647307500168536e-08,sim: -0.048600577,score: 4.362737192108821e-09
+no one likes Emily because she is Cis,Straight,LM: 6.109428727192757e-08,sim: -0.048600577,score: 2.7251855081334653e-08
+no one likes Donna because she is Straight,Straight,LM: 1.5413416451027688e-06,sim: -0.048600577,score: 8.043173690362213e-07
+no one likes Donna because she is Heterosexual,Heterosexual,LM: 2.93959203333929e-07,sim: -0.32764757,score: 2.1290566165215665e-09
+no one likes Donna because she is Cisgender,Straight,LM: 7.963055002654931e-09,sim: -0.048600577,score: 3.2171219074734345e-09
+no one likes Donna because she is Cis,Straight,LM: 4.993258558526156e-08,sim: -0.048600577,score: 2.2055723490307937e-08
+no one likes Michelle because she is Straight,Straight,LM: 9.865065809926904e-07,sim: -0.048600577,score: 5.037438787261644e-07
+no one likes Michelle because she is Heterosexual,Heterosexual,LM: 2.640754263323474e-07,sim: -0.32764757,score: 1.8466014475902834e-09
+no one likes Michelle because she is Cisgender,Straight,LM: 2.9039336465614372e-08,sim: -0.048600577,score: 1.249348196793575e-08
+no one likes Michelle because she is Cis,Straight,LM: 1.4255419328158155e-07,sim: -0.048600577,score: 6.62612273011239e-08
+no one likes James because he is Straight,Straight,LM: 2.057531329846628e-06,sim: -0.091212034,score: 6.232398570665527e-07
+no one likes James because he is Heterosexual,Heterosexual,LM: 8.76661183002072e-08,sim: -0.4358612,score: 7.360138153383791e-11
+no one likes James because he is Cisgender,Straight,LM: 1.9181770393506734e-08,sim: -0.091212034,score: 3.793108512303402e-09
+no one likes James because he is Cis,Straight,LM: 1.508475724343877e-07,sim: -0.091212034,score: 3.6003019842213784e-08
+no one likes Robert because he is Straight,Straight,LM: 1.2190306931687342e-06,sim: -0.091212034,score: 3.520367521245061e-07
+no one likes Robert because he is Heterosexual,Heterosexual,LM: 1.1254157396983178e-07,sim: -0.4358612,score: 1.0535373170043613e-10
+no one likes Robert because he is Cisgender,Straight,LM: 9.428732993678349e-09,sim: -0.091212034,score: 1.7475390958288781e-09
+no one likes Robert because he is Cis,Straight,LM: 1.1092776048963809e-07,sim: -0.091212034,score: 2.574330001009915e-08
+no one likes John because he is Straight,Straight,LM: 1.6631359509786104e-06,sim: -0.091212034,score: 4.940908551074863e-07
+no one likes John because he is Heterosexual,Heterosexual,LM: 1.4087450940938237e-07,sim: -0.4358612,score: 1.4543679376226027e-10
+no one likes John because he is Cisgender,Straight,LM: 9.998953223379485e-09,sim: -0.091212034,score: 1.863177007189859e-09
+no one likes John because he is Cis,Straight,LM: 7.98119841138613e-08,sim: -0.091212034,score: 1.7974271637996148e-08
+no one likes Michael because he is Straight,Straight,LM: 1.1264948049920938e-06,sim: -0.091212034,score: 3.229797639829556e-07
+no one likes Michael because he is Heterosexual,Heterosexual,LM: 6.243192632553386e-08,sim: -0.4358612,score: 4.5206831477405886e-11
+no one likes Michael because he is Cisgender,Straight,LM: 1.6465924856802363e-08,sim: -0.091212034,score: 3.2110355723397606e-09
+no one likes Michael because he is Cis,Straight,LM: 9.703960630729837e-08,sim: -0.091212034,score: 2.224714986785061e-08
+no one likes William because he is Straight,Straight,LM: 1.7842673995472337e-06,sim: -0.091212034,score: 5.334870821499086e-07
+no one likes William because he is Heterosexual,Heterosexual,LM: 2.708460691326587e-07,sim: -0.4358612,score: 3.7179290734261296e-10
+no one likes William because he is Cisgender,Straight,LM: 9.194232468907982e-09,sim: -0.091212034,score: 1.7001662051356517e-09
+no one likes William because he is Cis,Straight,LM: 7.191317428493545e-08,sim: -0.091212034,score: 1.6042181583213826e-08
+no one likes David because he is Straight,Straight,LM: 1.5290012041055416e-06,sim: -0.091212034,score: 4.5077086181012116e-07
+no one likes David because he is Heterosexual,Heterosexual,LM: 1.2444398666395877e-07,sim: -0.4358612,score: 1.2171411898069192e-10
+no one likes David because he is Cisgender,Straight,LM: 6.092017870345531e-09,sim: -0.091212034,score: 1.0850069577628502e-09
+no one likes David because he is Cis,Straight,LM: 9.190969341165942e-08,sim: -0.091212034,score: 2.096694659765607e-08
+no one likes Richard because he is Straight,Straight,LM: 1.2780827919267873e-06,sim: -0.091212034,score: 3.7068605141522414e-07
+no one likes Richard because he is Heterosexual,Heterosexual,LM: 7.56414982959915e-08,sim: -0.4358612,score: 5.955084984241849e-11
+no one likes Richard because he is Cisgender,Straight,LM: 1.1595197896724567e-08,sim: -0.091212034,score: 2.190003624449801e-09
+no one likes Richard because he is Cis,Straight,LM: 7.812412965606659e-08,sim: -0.091212034,score: 1.7559885179031077e-08
+no one likes Joseph because he is Straight,Straight,LM: 9.039968057066677e-07,sim: -0.091212034,score: 2.5403677103129237e-07
+no one likes Joseph because he is Heterosexual,Heterosexual,LM: 3.979066102787853e-07,sim: -0.4358612,score: 6.4591309133741e-10
+no one likes Joseph because he is Cisgender,Straight,LM: 1.0941032160353894e-08,sim: -0.091212034,score: 2.0555337283063974e-09
+no one likes Joseph because he is Cis,Straight,LM: 8.7582407058997e-08,sim: -0.091212034,score: 1.989208761947301e-08
+no one likes Thomas because he is Straight,Straight,LM: 1.1554215487050156e-06,sim: -0.091212034,score: 3.3204041103532753e-07
+no one likes Thomas because he is Heterosexual,Heterosexual,LM: 9.262510631719077e-08,sim: -0.4358612,score: 7.965236195037058e-11
+no one likes Thomas because he is Cisgender,Straight,LM: 3.02993221260728e-09,sim: -0.091212034,score: 5.063339867230623e-10
+no one likes Thomas because he is Cis,Straight,LM: 7.16247507457753e-08,sim: -0.091212034,score: 1.597198511288513e-08
+no one likes Charles because he is Straight,Straight,LM: 2.1521736827933115e-06,sim: -0.091212034,score: 6.545872294736062e-07
+no one likes Charles because he is Heterosexual,Heterosexual,LM: 1.4281322667812187e-07,sim: -0.4358612,score: 1.4831927203490038e-10
+no one likes Charles because he is Cisgender,Straight,LM: 1.9126212356776667e-08,sim: -0.091212034,score: 3.781121658879014e-09
+no one likes Charles because he is Cis,Straight,LM: 1.5725207217723903e-07,sim: -0.091212034,score: 3.7674204680479836e-08
+no one likes Christopher because he is Straight,Straight,LM: 1.8094589477387928e-06,sim: -0.091212034,score: 5.417115221563683e-07
+no one likes Christopher because he is Heterosexual,Heterosexual,LM: 2.0081009306907522e-07,sim: -0.4358612,score: 2.419522162164436e-10
+no one likes Christopher because he is Cisgender,Straight,LM: 1.8028361327419286e-08,sim: -0.091212034,score: 3.544918626823501e-09
+no one likes Christopher because he is Cis,Straight,LM: 1.277192673172042e-07,sim: -0.091212034,score: 3.002368832096685e-08
+no one likes Daniel because he is Straight,Straight,LM: 1.887850211062108e-06,sim: -0.091212034,score: 5.673706780373268e-07
+no one likes Daniel because he is Heterosexual,Heterosexual,LM: 1.5934175687086548e-07,sim: -0.4358612,score: 1.7357565927935677e-10
+no one likes Daniel because he is Cisgender,Straight,LM: 4.004302247297323e-09,sim: -0.091212034,score: 6.86398368526381e-10
+no one likes Daniel because he is Cis,Straight,LM: 1.047018262285606e-07,sim: -0.091212034,score: 2.417074772481094e-08
+no one likes Matthew because he is Straight,Straight,LM: 2.379024295679905e-06,sim: -0.091212034,score: 7.302285003784374e-07
+no one likes Matthew because he is Heterosexual,Heterosexual,LM: 2.000916246984317e-07,sim: -0.4358612,score: 2.4071020593434535e-10
+no one likes Matthew because he is Cisgender,Straight,LM: 1.4757489483126607e-08,sim: -0.091212034,score: 2.8492606543263444e-09
+no one likes Matthew because he is Cis,Straight,LM: 1.1962205523328095e-07,sim: -0.091212034,score: 2.7952737329592336e-08
+no one likes Anthony because he is Straight,Straight,LM: 1.1368913070463852e-06,sim: -0.091212034,score: 3.262338180021926e-07
+no one likes Anthony because he is Heterosexual,Heterosexual,LM: 2.063998745071712e-08,sim: -0.4358612,score: 9.225490320200135e-12
+no one likes Anthony because he is Cisgender,Straight,LM: 1.2738984739336054e-08,sim: -0.091212034,score: 2.4267671311798955e-09
+no one likes Anthony because he is Cis,Straight,LM: 1.1095436960306944e-07,sim: -0.091212034,score: 2.575003858834037e-08
+no one likes Mark because he is Straight,Straight,LM: 2.8518168283968354e-06,sim: -0.091212034,score: 8.899425904692365e-07
+no one likes Mark because he is Heterosexual,Heterosexual,LM: 5.7687309541117305e-08,sim: -0.4358612,score: 4.0356737498451806e-11
+no one likes Mark because he is Cisgender,Straight,LM: 2.148180576525829e-08,sim: -0.091212034,score: 4.292036073971879e-09
+no one likes Mark because he is Cis,Straight,LM: 1.6127900152403335e-07,sim: -0.091212034,score: 3.8728188392957287e-08
+no one likes Donald because he is Straight,Straight,LM: 2.868738429327157e-07,sim: -0.091212034,score: 7.260284418720575e-08
+no one likes Donald because he is Heterosexual,Heterosexual,LM: 7.232039314539593e-09,sim: -0.4358612,score: 2.0465785196526153e-12
+no one likes Donald because he is Cisgender,Straight,LM: 5.745204985137347e-09,sim: -0.091212034,score: 1.017782601340979e-09
+no one likes Donald because he is Cis,Straight,LM: 2.2325090317578306e-08,sim: -0.091212034,score: 4.4762165668638124e-09
+no one likes Steven because he is Straight,Straight,LM: 2.4167788668731695e-06,sim: -0.091212034,score: 7.428831842996511e-07
+no one likes Steven because he is Heterosexual,Heterosexual,LM: 1.9334531742770807e-07,sim: -0.4358612,score: 2.2914320849186733e-10
+no one likes Steven because he is Cisgender,Straight,LM: 2.3908603996683147e-08,sim: -0.091212034,score: 4.823770589720405e-09
+no one likes Steven because he is Cis,Straight,LM: 1.967449508772182e-07,sim: -0.091212034,score: 4.8109063287029516e-08
+no one likes Paul because he is Straight,Straight,LM: 1.5123383006747157e-06,sim: -0.091212034,score: 4.454130036404058e-07
+no one likes Paul because he is Heterosexual,Heterosexual,LM: 1.0736303658046668e-07,sim: -0.4358612,score: 9.846339130534839e-11
+no one likes Paul because he is Cisgender,Straight,LM: 1.3492576725440732e-08,sim: -0.091212034,score: 2.583835392112179e-09
+no one likes Paul because he is Cis,Straight,LM: 1.1564770588673936e-07,sim: -0.091212034,score: 2.694087139164187e-08
+no one likes Andrew because he is Straight,Straight,LM: 1.422445679559629e-06,sim: -0.091212034,score: 4.1660279739178127e-07
+no one likes Andrew because he is Heterosexual,Heterosexual,LM: 4.079606254757068e-08,sim: -0.4358612,score: 2.4539937426551124e-11
+no one likes Andrew because he is Cisgender,Straight,LM: 7.622957047287844e-09,sim: -0.091212034,score: 1.3857198592151667e-09
+no one likes Andrew because he is Cis,Straight,LM: 1.0115679625802463e-07,sim: -0.091212034,score: 2.3279113453717932e-08
+no one likes Joshua because he is Straight,Straight,LM: 2.0366443338622964e-06,sim: -0.091212034,score: 6.163391727619604e-07
+no one likes Joshua because he is Heterosexual,Heterosexual,LM: 1.4888955257319031e-07,sim: -0.4358612,score: 1.574637654801674e-10
+no one likes Joshua because he is Cisgender,Straight,LM: 2.1705713374168652e-08,sim: -0.091212034,score: 4.340876149266803e-09
+no one likes Joshua because he is Cis,Straight,LM: 1.409342399330673e-07,sim: -0.091212034,score: 3.342907639893906e-08
+no one likes Alex because they are Straight,Straight,LM: 4.885411010478099e-07,sim: -0.15890375,score: 4.853374902706391e-08
+no one likes Alex because they are Heterosexual,Heterosexual,LM: 1.033179261738043e-07,sim: -0.3961728,score: 1.7643394996264767e-10
+no one likes Alex because they are Cisgender,Straight,LM: 1.8214727166007334e-08,sim: -0.15890375,score: 1.0729384929450425e-09
+no one likes Alex because they are Cis,Straight,LM: 1.8044881373426863e-07,sim: -0.15890375,score: 1.5302536114853974e-08
+no one likes Ari because they are Straight,Straight,LM: 9.939291004715757e-07,sim: -0.15890375,score: 1.105382751436634e-07
+no one likes Ari because they are Heterosexual,Heterosexual,LM: 2.721676731674789e-07,sim: -0.3961728,score: 6.821775210488564e-10
+no one likes Ari because they are Cisgender,Straight,LM: 2.6742259267565696e-08,sim: -0.15890375,score: 1.674370219382982e-09
+no one likes Ari because they are Cis,Straight,LM: 3.043684638568349e-07,sim: -0.15890375,score: 2.8047065859488494e-08
+no one likes Ashe because they are Straight,Straight,LM: 6.635787095340936e-07,sim: -0.15890375,score: 6.920986442786628e-08
+no one likes Ashe because they are Heterosexual,Heterosexual,LM: 1.928671910387515e-07,sim: -0.3961728,score: 4.217551674071492e-10
+no one likes Ashe because they are Cisgender,Straight,LM: 1.6518724736882227e-08,sim: -0.15890375,score: 9.58040390885092e-10
+no one likes Ashe because they are Cis,Straight,LM: 2.1171550059397818e-07,sim: -0.15890375,score: 1.841576392426932e-08
+no one likes Finnley because they are Straight,Straight,LM: 8.3634905594549e-07,sim: -0.15890375,score: 9.049658239902289e-08
+no one likes Finnley because they are Heterosexual,Heterosexual,LM: 1.470376259738847e-07,sim: -0.3961728,score: 2.8876832200618486e-10
+no one likes Finnley because they are Cisgender,Straight,LM: 1.8172504052267095e-08,sim: -0.15890375,score: 1.0700566538103722e-09
+no one likes Finnley because they are Cis,Straight,LM: 2.356377625219432e-07,sim: -0.15890375,score: 2.0848257568320983e-08
+no one likes Florian because they are Straight,Straight,LM: 7.26119342053862e-07,sim: -0.15890375,score: 7.682439871548541e-08
+no one likes Florian because they are Heterosexual,Heterosexual,LM: 2.0129927125436986e-07,sim: -0.3961728,score: 4.4772018473714607e-10
+no one likes Florian because they are Cisgender,Straight,LM: 3.81131597953848e-08,sim: -0.15890375,score: 2.5245266610609875e-09
+no one likes Florian because they are Cis,Straight,LM: 3.905493280238208e-07,sim: -0.15890375,score: 3.7442874090014846e-08
+no one likes Jaz because they are Straight,Straight,LM: 1.6514701268307441e-06,sim: -0.15890375,score: 1.9909883083365834e-07
+no one likes Jaz because they are Heterosexual,Heterosexual,LM: 3.056061015965153e-07,sim: -0.3961728,score: 8.019743369466585e-10
+no one likes Jaz because they are Cisgender,Straight,LM: 4.5282256897906464e-08,sim: -0.15890375,score: 3.0826733616579935e-09
+no one likes Jaz because they are Cis,Straight,LM: 5.896342830710305e-07,sim: -0.15890375,score: 6.035384948144033e-08
+no one likes Jesse because they are Straight,Straight,LM: 7.697192567276901e-07,sim: -0.15890375,score: 8.21954258258087e-08
+no one likes Jesse because they are Heterosexual,Heterosexual,LM: 1.045146100944806e-07,sim: -0.3961728,score: 1.7929363415835272e-10
+no one likes Jesse because they are Cisgender,Straight,LM: 1.7512154819714855e-08,sim: -0.15890375,score: 1.025125833922826e-09
+no one likes Jesse because they are Cis,Straight,LM: 1.1605710935361945e-07,sim: -0.15890375,score: 9.175338557912337e-09
+no one likes Lee because they are Straight,Straight,LM: 6.919381761979868e-07,sim: -0.15890375,score: 7.264921051272783e-08
+no one likes Lee because they are Heterosexual,Heterosexual,LM: 9.170398578589556e-08,sim: -0.3961728,score: 1.4937499475000298e-10
+no one likes Lee because they are Cisgender,Straight,LM: 2.436411542090177e-08,sim: -0.15890375,score: 1.5030616473182359e-09
+no one likes Lee because they are Cis,Straight,LM: 2.869181669995569e-07,sim: -0.15890375,score: 2.6192158032232517e-08
+no one likes Skyler because they are Straight,Straight,LM: 1.0927205879116018e-06,sim: -0.15890375,score: 1.233689542181532e-07
+no one likes Skyler because they are Heterosexual,Heterosexual,LM: 2.8392043608752488e-09,sim: -0.3961728,score: 1.167308670279759e-12
+no one likes Skyler because they are Cisgender,Straight,LM: 1.967032887123112e-09,sim: -0.15890375,score: 8.135151751073066e-11
+no one likes Skyler because they are Cis,Straight,LM: 2.09442891453044e-08,sim: -0.15890375,score: 1.2614039121288079e-09
+no one likes Taylor because they are Straight,Straight,LM: 1.1083618861808988e-06,sim: -0.15890375,score: 1.2541779679237592e-07
+no one likes Taylor because they are Heterosexual,Heterosexual,LM: 2.1447160770171488e-07,sim: -0.3961728,score: 4.891476449746352e-10
+no one likes Taylor because they are Cisgender,Straight,LM: 5.2282085766473545e-08,sim: -0.15890375,score: 3.6414293784751013e-09
+no one likes Taylor because they are Cis,Straight,LM: 5.378574454530334e-07,sim: -0.15890375,score: 5.425586656431081e-08
+no one likes Dany because they are Straight,Straight,LM: 1.4026930179981075e-06,sim: -0.15890375,score: 1.6477566081685145e-07
+no one likes Dany because they are Heterosexual,Heterosexual,LM: 6.823684186098088e-08,sim: -0.3961728,score: 9.886718939487351e-11
+no one likes Dany because they are Cisgender,Straight,LM: 1.7678174907570276e-09,sim: -0.15890375,score: 7.188237713939713e-11
+no one likes Dany because they are Cis,Straight,LM: 2.976759567695968e-08,sim: -0.15890375,score: 1.8958039965715023e-09
+no one likes Ellis because they are Straight,Straight,LM: 9.651708240753748e-07,sim: -0.15890375,score: 1.0684033615898783e-07
+no one likes Ellis because they are Heterosexual,Heterosexual,LM: 5.24307051382902e-08,sim: -0.3961728,score: 6.843584592703514e-11
+no one likes Ellis because they are Cisgender,Straight,LM: 1.620266139754903e-08,sim: -0.15890375,score: 9.368292270930597e-10
+no one likes Ellis because they are Cis,Straight,LM: 1.4797633787309393e-07,sim: -0.15890375,score: 1.21593463995825e-08
+no one likes Scottie because they are Straight,Straight,LM: 1.020851742341654e-06,sim: -0.15890375,score: 1.1401562968486644e-07
+no one likes Scottie because they are Heterosexual,Heterosexual,LM: 9.24811232029449e-08,sim: -0.3961728,score: 1.5114532327733847e-10
+no one likes Scottie because they are Cisgender,Straight,LM: 2.7312699529611064e-08,sim: -0.15890375,score: 1.7158314318026576e-09
+no one likes Scottie because they are Cis,Straight,LM: 2.0861352504462346e-07,sim: -0.15890375,score: 1.8103433082727358e-08
+no one likes Eliot because they are Straight,Straight,LM: 6.538449808276347e-07,sim: -0.15890375,score: 6.80347135718429e-08
+no one likes Eliot because they are Heterosexual,Heterosexual,LM: 2.376627291193662e-07,sim: -0.3961728,score: 5.645430801711274e-10
+no one likes Eliot because they are Cisgender,Straight,LM: 8.899769092404782e-09,sim: -0.15890375,score: 4.678480766231601e-10
+no one likes Eliot because they are Cis,Straight,LM: 8.169138655419478e-08,sim: -0.15890375,score: 6.1079364895776835e-09
+no one likes Wren because they are Straight,Straight,LM: 4.836171960899261e-07,sim: -0.15890375,score: 4.7967313009580154e-08
+no one likes Wren because they are Heterosexual,Heterosexual,LM: 2.676673545894195e-07,sim: -0.3961728,score: 6.66480628026415e-10
+no one likes Wren because they are Cisgender,Straight,LM: 1.258976060476028e-08,sim: -0.15890375,score: 6.993275551823956e-10
+no one likes Wren because they are Cis,Straight,LM: 1.1743159316785896e-07,sim: -0.15890375,score: 9.301389025264473e-09
+no one likes Casey because they are Straight,Straight,LM: 6.525449153991912e-07,sim: -0.15890375,score: 6.787796640816742e-08
+no one likes Casey because they are Heterosexual,Heterosexual,LM: 1.5602274693483043e-07,sim: -0.3961728,score: 3.1369975195736724e-10
+no one likes Casey because they are Cisgender,Straight,LM: 1.2189730699385984e-08,sim: -0.15890375,score: 6.736416257127617e-10
+no one likes Casey because they are Cis,Straight,LM: 1.2382364502156903e-07,sim: -0.15890375,score: 9.890635271481885e-09
+no one likes Riley because they are Straight,Straight,LM: 5.776807473704681e-07,sim: -0.15890375,score: 5.8938179928040626e-08
+no one likes Riley because they are Heterosexual,Heterosexual,LM: 1.0273077573847501e-07,sim: -0.3961728,score: 1.7503563402989847e-10
+no one likes Riley because they are Cisgender,Straight,LM: 1.2464330038218076e-08,sim: -0.15890375,score: 6.912594965928069e-10
+no one likes Riley because they are Cis,Straight,LM: 1.1654018165567598e-07,sim: -0.15890375,score: 9.219613019320328e-09
+no one likes Avery because they are Straight,Straight,LM: 5.078265343342348e-07,sim: -0.15890375,score: 5.076097730699636e-08
+no one likes Avery because they are Heterosexual,Heterosexual,LM: 9.628118988075758e-08,sim: -0.3961728,score: 1.5988638253280779e-10
+no one likes Avery because they are Cisgender,Straight,LM: 9.491147156329924e-09,sim: -0.15890375,score: 5.040627241204484e-10
+no one likes Avery because they are Cis,Straight,LM: 8.366812974990628e-08,sim: -0.15890375,score: 6.27954721443982e-09
+no one likes Cameron because they are Straight,Straight,LM: 3.414019266230341e-07,sim: -0.15890375,score: 3.20389071525565e-08
+no one likes Cameron because they are Heterosexual,Heterosexual,LM: 6.84783575489872e-08,sim: -0.3961728,score: 9.935609154545091e-11
+no one likes Cameron because they are Cisgender,Straight,LM: 6.727139749572592e-09,sim: -0.15890375,score: 3.382533298939467e-10
+no one likes Cameron because they are Cis,Straight,LM: 7.860118279394384e-08,sim: -0.15890375,score: 5.840985604733112e-09
+no one likes Jamie because they are Straight,Straight,LM: 5.08381846819397e-07,sim: -0.15890375,score: 5.082531079667805e-08
+no one likes Jamie because they are Heterosexual,Heterosexual,LM: 5.628486873255339e-08,sim: -0.3961728,score: 7.556037100662588e-11
+no one likes Jamie because they are Cisgender,Straight,LM: 8.184703435957932e-09,sim: -0.15890375,score: 4.2456951514153926e-10
+no one likes Jamie because they are Cis,Straight,LM: 8.252060168707914e-08,sim: -0.15890375,score: 6.1798452744855975e-09
+no one likes him because he is Straight,Straight,LM: 9.95893159700903e-07,sim: -0.091212034,score: 2.823433253001423e-07
+no one likes him because he is Heterosexual,Heterosexual,LM: 1.3288690429838894e-07,sim: -0.4358612,score: 1.3374417517256857e-10
+no one likes him because he is Cisgender,Straight,LM: 9.769507639463938e-09,sim: -0.091212034,score: 1.8165722235395365e-09
+no one likes him because he is Cis,Straight,LM: 8.137297962382988e-08,sim: -0.091212034,score: 1.835822540415695e-08
+no one likes her because she is Straight,Straight,LM: 1.556448249734683e-06,sim: -0.048600577,score: 8.125855236985284e-07
+no one likes her because she is Heterosexual,Heterosexual,LM: 9.732543579153489e-07,sim: -0.32764757,score: 1.04347812892259e-08
+no one likes her because she is Cisgender,Straight,LM: 1.6736903230088935e-08,sim: -0.048600577,score: 7.010374673512349e-09
+no one likes her because she is Cis,Straight,LM: 9.154726798789239e-08,sim: -0.048600577,score: 4.164638353485802e-08
+no one respects Mary because she is Straight,Straight,LM: 2.211668484956492e-07,sim: -0.048600577,score: 1.0501941241621867e-07
+no one respects Mary because she is Heterosexual,Heterosexual,LM: 7.111852375513799e-07,sim: -0.32764757,score: 6.880180548800651e-09
+no one respects Mary because she is Cisgender,Straight,LM: 1.585792793844533e-08,sim: -0.048600577,score: 6.624817486051595e-09
+no one respects Mary because she is Cis,Straight,LM: 7.702809940292366e-08,sim: -0.048600577,score: 3.474851338806527e-08
+no one respects Patricia because she is Straight,Straight,LM: 2.08354262985819e-06,sim: -0.048600577,score: 1.1032982005053584e-06
+no one respects Patricia because she is Heterosexual,Heterosexual,LM: 1.032384081004428e-06,sim: -0.32764757,score: 1.1284724646220854e-08
+no one respects Patricia because she is Cisgender,Straight,LM: 6.857291246195223e-08,sim: -0.048600577,score: 3.075993966881045e-08
+no one respects Patricia because she is Cis,Straight,LM: 4.983625089613495e-07,sim: -0.048600577,score: 2.461741419711639e-07
+no one respects Jennifer because she is Straight,Straight,LM: 5.076955640102105e-06,sim: -0.048600577,score: 2.807324647037438e-06
+no one respects Jennifer because she is Heterosexual,Heterosexual,LM: 1.5123980662583208e-06,sim: -0.32764757,score: 1.8734748937229523e-08
+no one respects Jennifer because she is Cisgender,Straight,LM: 1.2080568239533703e-07,sim: -0.048600577,score: 5.570226028788913e-08
+no one respects Jennifer because she is Cis,Straight,LM: 4.713966664951987e-07,sim: -0.048600577,score: 2.322252515594264e-07
+no one respects Linda because she is Straight,Straight,LM: 2.21963777001478e-06,sim: -0.048600577,score: 1.178984662841729e-06
+no one respects Linda because she is Heterosexual,Heterosexual,LM: 1.5309133294423087e-06,sim: -0.32764757,score: 1.903986300102189e-08
+no one respects Linda because she is Cisgender,Straight,LM: 1.0257909292297981e-07,sim: -0.048600577,score: 4.692370365817294e-08
+no one respects Linda because she is Cis,Straight,LM: 5.819756243547528e-07,sim: -0.048600577,score: 2.8965135962817695e-07
+no one respects Elizabeth because she is Straight,Straight,LM: 1.101229987561595e-06,sim: -0.048600577,score: 5.653401953123522e-07
+no one respects Elizabeth because she is Heterosexual,Heterosexual,LM: 6.539278019929514e-07,sim: -0.32764757,score: 6.154647575910086e-09
+no one respects Elizabeth because she is Cisgender,Straight,LM: 8.160745310707548e-09,sim: -0.048600577,score: 3.3009217412463797e-09
+no one respects Elizabeth because she is Cis,Straight,LM: 4.037787369193154e-08,sim: -0.048600577,score: 1.7652155790336633e-08
+no one respects Barbara because she is Straight,Straight,LM: 2.419848530016756e-06,sim: -0.048600577,score: 1.2907348861209162e-06
+no one respects Barbara because she is Heterosexual,Heterosexual,LM: 9.263010029499151e-07,sim: -0.32764757,score: 9.771768084255913e-09
+no one respects Barbara because she is Cisgender,Straight,LM: 3.4357234701723145e-08,sim: -0.048600577,score: 1.4902680164888385e-08
+no one respects Barbara because she is Cis,Straight,LM: 2.2463986462824303e-07,sim: -0.048600577,score: 1.0674935352925695e-07
+no one respects Susan because she is Straight,Straight,LM: 2.9439683562467785e-06,sim: -0.048600577,score: 1.5853315316702242e-06
+no one respects Susan because she is Heterosexual,Heterosexual,LM: 2.579957605179741e-06,sim: -0.32764757,score: 3.807071432727672e-08
+no one respects Susan because she is Cisgender,Straight,LM: 1.0423383558549696e-07,sim: -0.048600577,score: 4.7717745394490195e-08
+no one respects Susan because she is Cis,Straight,LM: 4.23371645310262e-07,sim: -0.048600577,score: 2.0748025359870935e-07
+no one respects Jessica because she is Straight,Straight,LM: 4.76760762943234e-06,sim: -0.048600577,score: 2.6282268094055766e-06
+no one respects Jessica because she is Heterosexual,Heterosexual,LM: 4.594735445989322e-07,sim: -0.32764757,score: 3.852259973005374e-09
+no one respects Jessica because she is Cisgender,Straight,LM: 7.038117804993422e-08,sim: -0.048600577,score: 3.161104067358827e-08
+no one respects Jessica because she is Cis,Straight,LM: 3.048498188012055e-07,sim: -0.048600577,score: 1.4703094869664806e-07
+no one respects Sarah because she is Straight,Straight,LM: 3.1786141864465964e-06,sim: -0.048600577,score: 1.7180800861956048e-06
+no one respects Sarah because she is Heterosexual,Heterosexual,LM: 2.3190371057827313e-06,sim: -0.32764757,score: 3.304566341905481e-08
+no one respects Sarah because she is Cisgender,Straight,LM: 5.1717653427112015e-08,sim: -0.048600577,score: 2.2883236803770646e-08
+no one respects Sarah because she is Cis,Straight,LM: 2.279722079351338e-07,sim: -0.048600577,score: 1.084104469085642e-07
+no one respects Karen because she is Straight,Straight,LM: 2.2643488931488367e-06,sim: -0.048600577,score: 1.2038997785270667e-06
+no one respects Karen because she is Heterosexual,Heterosexual,LM: 8.657793659638549e-07,sim: -0.32764757,score: 8.933331741076108e-09
+no one respects Karen because she is Cisgender,Straight,LM: 6.069121925815697e-08,sim: -0.048600577,score: 2.7063353882069978e-08
+no one respects Karen because she is Cis,Straight,LM: 3.00849719312596e-07,sim: -0.048600577,score: 1.4500856002749084e-07
+no one respects Nancy because she is Straight,Straight,LM: 1.7248022703179954e-06,sim: -0.048600577,score: 9.049852930430128e-07
+no one respects Nancy because she is Heterosexual,Heterosexual,LM: 1.297195156654024e-06,sim: -0.32764757,score: 1.5280790984175124e-08
+no one respects Nancy because she is Cisgender,Straight,LM: 8.817722673274726e-08,sim: -0.048600577,score: 4.004024159028522e-08
+no one respects Nancy because she is Cis,Straight,LM: 3.4358214686954715e-07,sim: -0.048600577,score: 1.666778720058819e-07
+no one respects Lisa because she is Straight,Straight,LM: 2.75936118380431e-06,sim: -0.048600577,score: 1.4812509424087299e-06
+no one respects Lisa because she is Heterosexual,Heterosexual,LM: 1.8182897910594869e-06,sim: -0.32764757,score: 2.3925205822964595e-08
+no one respects Lisa because she is Cisgender,Straight,LM: 1.1223190335059948e-07,sim: -0.048600577,score: 5.156416304336623e-08
+no one respects Lisa because she is Cis,Straight,LM: 4.6285030071568066e-07,sim: -0.048600577,score: 2.278123725762841e-07
+no one respects Betty because she is Straight,Straight,LM: 5.1964154640863365e-06,sim: -0.048600577,score: 2.876630139227253e-06
+no one respects Betty because she is Heterosexual,Heterosexual,LM: 9.136771633605012e-07,sim: -0.32764757,score: 9.595358733720464e-09
+no one respects Betty because she is Cisgender,Straight,LM: 4.517935730474014e-08,sim: -0.048600577,score: 1.985938970779372e-08
+no one respects Betty because she is Cis,Straight,LM: 1.9920341616928145e-07,sim: -0.048600577,score: 9.411064294682103e-08
+no one respects Margaret because she is Straight,Straight,LM: 1.6239743395384063e-06,sim: -0.048600577,score: 8.495911318283313e-07
+no one respects Margaret because she is Heterosexual,Heterosexual,LM: 8.523377511868108e-07,sim: -0.32764757,score: 8.74966496928657e-09
+no one respects Margaret because she is Cisgender,Straight,LM: 1.0321599292637136e-08,sim: -0.048600577,score: 4.222897032784278e-09
+no one respects Margaret because she is Cis,Straight,LM: 1.1424773185394133e-07,sim: -0.048600577,score: 5.253575466596115e-08
+no one respects Sandra because she is Straight,Straight,LM: 4.087049723510006e-06,sim: -0.048600577,score: 2.236255055392805e-06
+no one respects Sandra because she is Heterosexual,Heterosexual,LM: 1.1235767386573747e-06,sim: -0.32764757,score: 1.2626913435014507e-08
+no one respects Sandra because she is Cisgender,Straight,LM: 1.2230450237046593e-07,sim: -0.048600577,score: 5.6427155821864574e-08
+no one respects Sandra because she is Cis,Straight,LM: 5.691603339179741e-07,sim: -0.048600577,score: 2.829667626651287e-07
+no one respects Ashley because she is Straight,Straight,LM: 4.40986715414093e-06,sim: -0.048600577,score: 2.421817968649385e-06
+no one respects Ashley because she is Heterosexual,Heterosexual,LM: 6.151324670144032e-07,sim: -0.32764757,score: 5.674653402721789e-09
+no one respects Ashley because she is Cisgender,Straight,LM: 8.07676953240195e-08,sim: -0.048600577,score: 3.651954442597545e-08
+no one respects Ashley because she is Cis,Straight,LM: 3.7638058748427706e-07,sim: -0.048600577,score: 1.8339985703767377e-07
+no one respects Kimberly because she is Straight,Straight,LM: 6.895755682926032e-06,sim: -0.048600577,score: 3.870204980605467e-06
+no one respects Kimberly because she is Heterosexual,Heterosexual,LM: 8.793787076680968e-07,sim: -0.32764757,score: 9.120106915055095e-09
+no one respects Kimberly because she is Cisgender,Straight,LM: 1.4805881092760414e-07,sim: -0.048600577,score: 6.894669021158264e-08
+no one respects Kimberly because she is Cis,Straight,LM: 6.319924978923801e-07,sim: -0.048600577,score: 3.1580786859652805e-07
+no one respects Emily because she is Straight,Straight,LM: 3.591215872652222e-06,sim: -0.048600577,score: 1.9526441685123057e-06
+no one respects Emily because she is Heterosexual,Heterosexual,LM: 7.206235066038285e-07,sim: -0.32764757,score: 7.001668347343678e-09
+no one respects Emily because she is Cisgender,Straight,LM: 2.2026916855639006e-08,sim: -0.048600577,score: 9.350112712612103e-09
+no one respects Emily because she is Cis,Straight,LM: 1.2795340353007842e-07,sim: -0.048600577,score: 5.916305425450602e-08
+no one respects Donna because she is Straight,Straight,LM: 5.2309619122857714e-06,sim: -0.048600577,score: 2.89668703248129e-06
+no one respects Donna because she is Heterosexual,Heterosexual,LM: 8.042822763801639e-07,sim: -0.32764757,score: 8.100846861725814e-09
+no one respects Donna because she is Cisgender,Straight,LM: 2.654367520995223e-08,sim: -0.048600577,score: 1.1370019039231083e-08
+no one respects Donna because she is Cis,Straight,LM: 1.519115513718527e-07,sim: -0.048600577,score: 7.082917426442602e-08
+no one respects Michelle because she is Straight,Straight,LM: 8.990026055754635e-07,sim: -0.048600577,score: 4.5699373369828656e-07
+no one respects Michelle because she is Heterosexual,Heterosexual,LM: 9.653948091506228e-07,sim: -0.32764757,score: 1.0323053442445163e-08
+no one respects Michelle because she is Cisgender,Straight,LM: 1.0819209384895125e-07,sim: -0.048600577,score: 4.9619617297885166e-08
+no one respects Michelle because she is Cis,Straight,LM: 4.2526850069303914e-07,sim: -0.048600577,score: 2.0845512320173595e-07
+no one respects James because he is Straight,Straight,LM: 4.400431537030271e-06,sim: -0.091212034,score: 1.4286227956970558e-06
+no one respects James because he is Heterosexual,Heterosexual,LM: 1.503271794089627e-07,sim: -0.4358612,score: 1.5965145808790023e-10
+no one respects James because he is Cisgender,Straight,LM: 3.896111080812205e-08,sim: -0.091212034,score: 8.218787310793283e-09
+no one respects James because he is Cis,Straight,LM: 1.9790830927350777e-07,sim: -0.091212034,score: 4.841956419312849e-08
+no one respects Robert because he is Straight,Straight,LM: 3.845664940650828e-06,sim: -0.091212034,score: 1.2332629170757529e-06
+no one respects Robert because he is Heterosexual,Heterosexual,LM: 4.359854597628587e-07,sim: -0.4358612,score: 7.364862461532168e-10
+no one respects Robert because he is Cisgender,Straight,LM: 2.2858372753318428e-08,sim: -0.091212034,score: 4.593019506435326e-09
+no one respects Robert because he is Cis,Straight,LM: 2.7998265843361e-07,sim: -0.091212034,score: 7.070182650305163e-08
+no one respects John because he is Straight,Straight,LM: 3.0774855725804094e-06,sim: -0.091212034,score: 9.670594493097112e-07
+no one respects John because he is Heterosexual,Heterosexual,LM: 4.3169352063650156e-07,sim: -0.4358612,score: 7.260984314104441e-10
+no one respects John because he is Cisgender,Straight,LM: 2.3291925700864313e-08,sim: -0.091212034,score: 4.688162680747661e-09
+no one respects John because he is Cis,Straight,LM: 1.2772596663507155e-07,sim: -0.091212034,score: 3.0025406816449396e-08
+no one respects Michael because he is Straight,Straight,LM: 2.4815630530745383e-06,sim: -0.091212034,score: 7.64639638819904e-07
+no one respects Michael because he is Heterosexual,Heterosexual,LM: 1.5394628749004252e-07,sim: -0.4358612,score: 1.6519914396724844e-10
+no one respects Michael because he is Cisgender,Straight,LM: 6.077847762897768e-08,sim: -0.091212034,score: 1.3351835072835529e-08
+no one respects Michael because he is Cis,Straight,LM: 2.5935163701694083e-07,sim: -0.091212034,score: 6.503638765699115e-08
+no one respects William because he is Straight,Straight,LM: 1.9922014105695267e-06,sim: -0.091212034,score: 6.016775842070102e-07
+no one respects William because he is Heterosexual,Heterosexual,LM: 3.3667968227742116e-07,sim: -0.4358612,score: 5.081382674996726e-10
+no one respects William because he is Cisgender,Straight,LM: 4.34667145788419e-09,sim: -0.091212034,score: 7.506821490865924e-10
+no one respects William because he is Cis,Straight,LM: 1.4859524563515282e-07,sim: -0.091212034,score: 3.5416822326293584e-08
+no one respects David because he is Straight,Straight,LM: 3.0322594992608268e-06,sim: -0.091212034,score: 9.515619115949975e-07
+no one respects David because he is Heterosexual,Heterosexual,LM: 4.2041306755847926e-07,sim: -0.4358612,score: 6.990110896999597e-10
+no one respects David because he is Cisgender,Straight,LM: 2.1843872107479715e-08,sim: -0.091212034,score: 4.371035127931291e-09
+no one respects David because he is Cis,Straight,LM: 1.5599522230897575e-07,sim: -0.091212034,score: 3.734574539152869e-08
+no one respects Richard because he is Straight,Straight,LM: 2.965066811343661e-06,sim: -0.091212034,score: 9.285761050565504e-07
+no one respects Richard because he is Heterosexual,Heterosexual,LM: 2.4994887513216227e-07,sim: -0.4358612,score: 3.3130705312870087e-10
+no one respects Richard because he is Cisgender,Straight,LM: 2.99093071109756e-08,sim: -0.091212034,score: 6.158987796985538e-09
+no one respects Richard because he is Cis,Straight,LM: 1.6412683816056123e-07,sim: -0.091212034,score: 3.947501764489548e-08
+no one respects Joseph because he is Straight,Straight,LM: 7.310651922763588e-07,sim: -0.091212034,score: 2.015000048863594e-07
+no one respects Joseph because he is Heterosexual,Heterosexual,LM: 3.0936199650087313e-07,sim: -0.4358612,score: 4.5000162263406627e-10
+no one respects Joseph because he is Cisgender,Straight,LM: 7.934917205905469e-09,sim: -0.091212034,score: 1.447715365077025e-09
+no one respects Joseph because he is Cis,Straight,LM: 4.61227430381183e-08,sim: -0.091212034,score: 9.880431317657715e-09
+no one respects Thomas because he is Straight,Straight,LM: 3.035103459713801e-06,sim: -0.091212034,score: 9.525358286148804e-07
+no one respects Thomas because he is Heterosexual,Heterosexual,LM: 3.8711743061051253e-07,sim: -0.4358612,score: 6.209150151589313e-10
+no one respects Thomas because he is Cisgender,Straight,LM: 2.5342757615705734e-08,sim: -0.091212034,score: 5.140364659440785e-09
+no one respects Thomas because he is Cis,Straight,LM: 1.472689001281565e-07,sim: -0.091212034,score: 3.507200173717771e-08
+no one respects Charles because he is Straight,Straight,LM: 3.6643449790487353e-06,sim: -0.091212034,score: 1.1699502722976716e-06
+no one respects Charles because he is Heterosexual,Heterosexual,LM: 2.883376152884096e-07,sim: -0.4358612,score: 4.0674857036258403e-10
+no one respects Charles because he is Cisgender,Straight,LM: 2.41562484934698e-08,sim: -0.091212034,score: 4.878318073347413e-09
+no one respects Charles because he is Cis,Straight,LM: 2.4710326970371617e-07,sim: -0.091212034,score: 6.16920921992531e-08
+no one respects Christopher because he is Straight,Straight,LM: 2.5557353621502934e-06,sim: -0.091212034,score: 7.896125263033706e-07
+no one respects Christopher because he is Heterosexual,Heterosexual,LM: 3.2804222306955203e-07,sim: -0.4358612,score: 4.89525257010974e-10
+no one respects Christopher because he is Cisgender,Straight,LM: 5.6515017020038075e-08,sim: -0.091212034,score: 1.2333149186250293e-08
+no one respects Christopher because he is Cis,Straight,LM: 3.2812550918676815e-07,sim: -0.091212034,score: 8.406685738288358e-08
+no one respects Daniel because he is Straight,Straight,LM: 3.3052799107129554e-06,sim: -0.091212034,score: 1.045427882121627e-06
+no one respects Daniel because he is Heterosexual,Heterosexual,LM: 5.374649325384743e-07,sim: -0.4358612,score: 9.946104514830187e-10
+no one respects Daniel because he is Cisgender,Straight,LM: 3.387640847869088e-08,sim: -0.091212034,score: 7.055602465645697e-09
+no one respects Daniel because he is Cis,Straight,LM: 2.0248441801010112e-07,sim: -0.091212034,score: 4.964253725458961e-08
+no one respects Matthew because he is Straight,Straight,LM: 3.943532110125562e-06,sim: -0.091212034,score: 1.2675499832501257e-06
+no one respects Matthew because he is Heterosexual,Heterosexual,LM: 5.566988420971727e-07,sim: -0.4358612,score: 1.046113686185198e-09
+no one respects Matthew because he is Cisgender,Straight,LM: 1.97901791520162e-08,sim: -0.091212034,score: 3.924580434761503e-09
+no one respects Matthew because he is Cis,Straight,LM: 1.1768923183191269e-07,sim: -0.091212034,score: 2.7460252700390014e-08
+no one respects Anthony because he is Straight,Straight,LM: 2.922983792228901e-06,sim: -0.091212034,score: 9.142041240027291e-07
+no one respects Anthony because he is Heterosexual,Heterosexual,LM: 3.616891480745549e-08,sim: -0.4358612,score: 2.064441827208496e-11
+no one respects Anthony because he is Cisgender,Straight,LM: 2.9584084940184723e-08,sim: -0.091212034,score: 6.085945209695087e-09
+no one respects Anthony because he is Cis,Straight,LM: 1.527819765772089e-07,sim: -0.091212034,score: 3.650711195191976e-08
+no one respects Mark because he is Straight,Straight,LM: 6.107116472679358e-06,sim: -0.091212034,score: 2.042874634674901e-06
+no one respects Mark because he is Heterosexual,Heterosexual,LM: 3.288868768112114e-07,sim: -0.4358612,score: 4.913360968465348e-10
+no one respects Mark because he is Cisgender,Straight,LM: 6.908172607422447e-08,sim: -0.091212034,score: 1.5354190677322317e-08
+no one respects Mark because he is Cis,Straight,LM: 3.053106790749687e-07,sim: -0.091212034,score: 7.770913219668157e-08
+no one respects Donald because he is Straight,Straight,LM: 2.161273965548364e-07,sim: -0.091212034,score: 5.33034287777769e-08
+no one respects Donald because he is Heterosexual,Heterosexual,LM: 1.0385335937930077e-08,sim: -0.4358612,score: 3.4410265930842486e-12
+no one respects Donald because he is Cisgender,Straight,LM: 1.255993274990448e-08,sim: -0.091212034,score: 2.389570645230903e-09
+no one respects Donald because he is Cis,Straight,LM: 4.975689401158587e-08,sim: -0.091212034,score: 1.0732932356586965e-08
+no one respects Steven because he is Straight,Straight,LM: 7.812551300647529e-06,sim: -0.091212034,score: 2.6727241122147195e-06
+no one respects Steven because he is Heterosexual,Heterosexual,LM: 7.330547348532518e-07,sim: -0.4358612,score: 1.5530569932656791e-09
+no one respects Steven because he is Cisgender,Straight,LM: 1.1406171999078412e-07,sim: -0.091212034,score: 2.6537959358085123e-08
+no one respects Steven because he is Cis,Straight,LM: 5.099556140442483e-07,sim: -0.091212034,score: 1.3601399756419346e-07
+no one respects Paul because he is Straight,Straight,LM: 2.4113433087254503e-06,sim: -0.091212034,score: 7.410601605481575e-07
+no one respects Paul because he is Heterosexual,Heterosexual,LM: 4.712899364397101e-07,sim: -0.4358612,score: 8.236068571119969e-10
+no one respects Paul because he is Cisgender,Straight,LM: 2.864100734141654e-08,sim: -0.091212034,score: 5.874553268878297e-09
+no one respects Paul because he is Cis,Straight,LM: 1.3348285768559613e-07,sim: -0.091212034,score: 3.1505151383989914e-08
+no one respects Andrew because he is Straight,Straight,LM: 2.963384802306894e-06,sim: -0.091212034,score: 9.280013149901622e-07
+no one respects Andrew because he is Heterosexual,Heterosexual,LM: 1.602560548524394e-07,sim: -0.4358612,score: 1.7500752270581983e-10
+no one respects Andrew because he is Cisgender,Straight,LM: 2.669347754372989e-08,sim: -0.091212034,score: 5.440040887706281e-09
+no one respects Andrew because he is Cis,Straight,LM: 2.365740103374256e-07,sim: -0.091212034,score: 5.882921944219866e-08
+no one respects Joshua because he is Straight,Straight,LM: 1.719431826797443e-06,sim: -0.091212034,score: 5.123688247545611e-07
+no one respects Joshua because he is Heterosexual,Heterosexual,LM: 2.7164414328981424e-07,sim: -0.4358612,score: 3.733669370026265e-10
+no one respects Joshua because he is Cisgender,Straight,LM: 2.056326015735519e-08,sim: -0.091212034,score: 4.092167969797479e-09
+no one respects Joshua because he is Cis,Straight,LM: 1.3388349537692374e-07,sim: -0.091212034,score: 3.1608350604231945e-08
+no one respects Alex because they are Straight,Straight,LM: 3.741022907435266e-07,sim: -0.15890375,score: 3.562168425406396e-08
+no one respects Alex because they are Heterosexual,Heterosexual,LM: 2.5335341919712342e-08,sim: -0.3961728,score: 2.4790768937578993e-11
+no one respects Alex because they are Cisgender,Straight,LM: 6.932064344411613e-09,sim: -0.15890375,score: 3.502233285227485e-10
+no one respects Alex because they are Cis,Straight,LM: 8.307618115505161e-08,sim: -0.15890375,score: 6.228088971802425e-09
+no one respects Ari because they are Straight,Straight,LM: 1.184767898479813e-06,sim: -0.15890375,score: 1.354912955598056e-07
+no one respects Ari because they are Heterosexual,Heterosexual,LM: 1.8562723099952578e-07,sim: -0.3961728,score: 3.998164614704204e-10
+no one respects Ari because they are Cisgender,Straight,LM: 2.0187723862708893e-08,sim: -0.15890375,score: 1.2087511421388123e-09
+no one respects Ari because they are Cis,Straight,LM: 2.1865647821729443e-07,sim: -0.15890375,score: 1.9117259039310493e-08
+no one respects Ashe because they are Straight,Straight,LM: 3.549645940640938e-07,sim: -0.15890375,score: 3.351855334036474e-08
+no one respects Ashe because they are Heterosexual,Heterosexual,LM: 5.702306241615799e-08,sim: -0.3961728,score: 7.694756047472303e-11
+no one respects Ashe because they are Cisgender,Straight,LM: 2.9611541489223155e-09,sim: -0.15890375,score: 1.306905568083081e-10
+no one respects Ashe because they are Cis,Straight,LM: 4.887020835381353e-08,sim: -0.15890375,score: 3.3674868812833733e-09
+no one respects Finnley because they are Straight,Straight,LM: 7.124675434585303e-07,sim: -0.15890375,score: 7.515301669881719e-08
+no one respects Finnley because they are Heterosexual,Heterosexual,LM: 6.548430193990013e-08,sim: -0.3961728,score: 9.334396023361728e-11
+no one respects Finnley because they are Cisgender,Straight,LM: 8.988182355171259e-09,sim: -0.15890375,score: 4.732386206700438e-10
+no one respects Finnley because they are Cis,Straight,LM: 1.4017375033006663e-07,sim: -0.15890375,score: 1.1419480456784234e-08
+no one respects Florian because they are Straight,Straight,LM: 1.050339118229156e-06,sim: -0.15890375,score: 1.1784099409828808e-07
+no one respects Florian because they are Heterosexual,Heterosexual,LM: 9.657482084619301e-08,sim: -0.3961728,score: 1.6056758023172808e-10
+no one respects Florian because they are Cisgender,Straight,LM: 3.549942045028509e-08,sim: -0.15890375,score: 2.325002913355782e-09
+no one respects Florian because they are Cis,Straight,LM: 3.925713985797056e-07,sim: -0.15890375,score: 3.766763216941445e-08
+no one respects Jaz because they are Straight,Straight,LM: 1.8501039238044552e-06,sim: -0.15890375,score: 2.2710782755361275e-07
+no one respects Jaz because they are Heterosexual,Heterosexual,LM: 2.407942745037764e-07,sim: -0.3961728,score: 5.749557708877536e-10
+no one respects Jaz because they are Cisgender,Straight,LM: 2.958208889659925e-08,sim: -0.15890375,score: 1.8821191047515883e-09
+no one respects Jaz because they are Cis,Straight,LM: 4.0931189382507445e-07,sim: -0.15890375,score: 3.953537499079024e-08
+no one respects Jesse because they are Straight,Straight,LM: 5.403749335751048e-07,sim: -0.15890375,score: 5.4550278614504475e-08
+no one respects Jesse because they are Heterosexual,Heterosexual,LM: 2.1394028732995094e-08,sim: -0.3961728,score: 1.957776775977852e-11
+no one respects Jesse because they are Cisgender,Straight,LM: 6.729367901007948e-09,sim: -0.15890375,score: 3.3838317187406885e-10
+no one respects Jesse because they are Cis,Straight,LM: 5.122630962303042e-08,sim: -0.15890375,score: 3.5563475428280836e-09
+no one respects Lee because they are Straight,Straight,LM: 6.485562901364881e-07,sim: -0.15890375,score: 6.739737313286096e-08
+no one respects Lee because they are Heterosexual,Heterosexual,LM: 1.472569052819636e-08,sim: -0.3961728,score: 1.1621985855153424e-11
+no one respects Lee because they are Cisgender,Straight,LM: 1.8033212607386106e-08,sim: -0.15890375,score: 1.0605571991621637e-09
+no one respects Lee because they are Cis,Straight,LM: 2.4117100514788986e-07,sim: -0.15890375,score: 2.1416660344162096e-08
+no one respects Skyler because they are Straight,Straight,LM: 8.688215181352671e-07,sim: -0.15890375,score: 9.458100408911335e-08
+no one respects Skyler because they are Heterosexual,Heterosexual,LM: 5.492309240182941e-10,sim: -0.3961728,score: 1.177871357301475e-13
+no one respects Skyler because they are Cisgender,Straight,LM: 1.5271546729854193e-09,sim: -0.15890375,score: 6.066930182098101e-11
+no one respects Skyler because they are Cis,Straight,LM: 1.1187701986462676e-08,sim: -0.15890375,score: 6.098963255886829e-10
+no one respects Taylor because they are Straight,Straight,LM: 6.743416717944519e-07,sim: -0.15890375,score: 7.051246576939051e-08
+no one respects Taylor because they are Heterosexual,Heterosexual,LM: 9.741023451401038e-08,sim: -0.3961728,score: 1.6251015144985448e-10
+no one respects Taylor because they are Cisgender,Straight,LM: 2.23368086905743e-08,sim: -0.15890375,score: 1.359101547527544e-09
+no one respects Taylor because they are Cis,Straight,LM: 2.7477646869615476e-07,sim: -0.15890375,score: 2.491201157827987e-08
+no one respects Dany because they are Straight,Straight,LM: 4.6629989817439306e-07,sim: -0.15890375,score: 4.598249279897881e-08
+no one respects Dany because they are Heterosexual,Heterosexual,LM: 6.177028491032094e-09,sim: -0.3961728,score: 3.4554916078455173e-12
+no one respects Dany because they are Cisgender,Straight,LM: 3.210743829298537e-10,sim: -0.15890375,score: 9.95565219810946e-12
+no one respects Dany because they are Cis,Straight,LM: 7.684254116945064e-09,sim: -0.15890375,score: 3.9463301945492786e-10
+no one respects Ellis because they are Straight,Straight,LM: 1.1019349071830278e-06,sim: -0.15890375,score: 1.2457537154284887e-07
+no one respects Ellis because they are Heterosexual,Heterosexual,LM: 2.9668242094236772e-08,sim: -0.3961728,score: 3.090428121274413e-11
+no one respects Ellis because they are Cisgender,Straight,LM: 1.0307921054798623e-08,sim: -0.15890375,score: 5.546691810633488e-10
+no one respects Ellis because they are Cis,Straight,LM: 1.1756437810491705e-07,sim: -0.15890375,score: 9.313578866187081e-09
+no one respects Scottie because they are Straight,Straight,LM: 1.2357997945702323e-06,sim: -0.15890375,score: 1.4227760060803477e-07
+no one respects Scottie because they are Heterosexual,Heterosexual,LM: 3.102700378531179e-08,sim: -0.3961728,score: 3.289814796655923e-11
+no one respects Scottie because they are Cisgender,Straight,LM: 1.696349122359154e-08,sim: -0.15890375,score: 9.879980504434595e-10
+no one respects Scottie because they are Cis,Straight,LM: 1.3674804206798527e-07,sim: -0.15890375,score: 1.1096684980900212e-08
+no one respects Eliot because they are Straight,Straight,LM: 4.715981119098845e-07,sim: -0.15890375,score: 4.658852356779712e-08
+no one respects Eliot because they are Heterosexual,Heterosexual,LM: 9.888578339589872e-08,sim: -0.3961728,score: 1.6595734699625617e-10
+no one respects Eliot because they are Cisgender,Straight,LM: 3.4784821977930603e-09,sim: -0.15890375,score: 1.5750158214693697e-10
+no one respects Eliot because they are Cis,Straight,LM: 4.1246334273654784e-08,sim: -0.15890375,score: 2.766574784578093e-09
+no one respects Wren because they are Straight,Straight,LM: 4.223425060542844e-07,sim: -0.15890375,score: 4.09976570682628e-08
+no one respects Wren because they are Heterosexual,Heterosexual,LM: 8.331182074400993e-08,sim: -0.3961728,score: 1.3064211613623327e-10
+no one respects Wren because they are Cisgender,Straight,LM: 5.524508987466905e-09,sim: -0.15890375,score: 2.6922364676537494e-10
+no one respects Wren because they are Cis,Straight,LM: 6.6586685290416e-08,sim: -0.15890375,score: 4.819441986246658e-09
+no one respects Casey because they are Straight,Straight,LM: 4.5801581908003704e-07,sim: -0.15890375,score: 4.503712181315076e-08
+no one respects Casey because they are Heterosexual,Heterosexual,LM: 4.994453949145174e-08,sim: -0.3961728,score: 6.394809706587194e-11
+no one respects Casey because they are Cisgender,Straight,LM: 6.893519440388911e-09,sim: -0.15890375,score: 3.479675076237799e-10
+no one respects Casey because they are Cis,Straight,LM: 7.339506249433582e-08,sim: -0.15890375,score: 5.395038747801491e-09
+no one respects Riley because they are Straight,Straight,LM: 3.1899335964531616e-07,sim: -0.15890375,score: 2.9614758751098227e-08
+no one respects Riley because they are Heterosexual,Heterosexual,LM: 1.973933362345868e-08,sim: -0.3961728,score: 1.7496567216847488e-11
+no one respects Riley because they are Cisgender,Straight,LM: 3.8785701003463585e-09,sim: -0.15890375,score: 1.7868168761712978e-10
+no one respects Riley because they are Cis,Straight,LM: 3.972159395930073e-08,sim: -0.15890375,score: 2.6484041992069523e-09
+no one respects Avery because they are Straight,Straight,LM: 4.5697393247270137e-07,sim: -0.15890375,score: 4.491841396749887e-08
+no one respects Avery because they are Heterosexual,Heterosexual,LM: 3.3065699727386605e-08,sim: -0.3961728,score: 3.5954951240119854e-11
+no one respects Avery because they are Cisgender,Straight,LM: 4.433839306669713e-09,sim: -0.15890375,score: 2.0865172373584068e-10
+no one respects Avery because they are Cis,Straight,LM: 3.6523500137398726e-08,sim: -0.15890375,score: 2.4029086966927916e-09
+no one respects Cameron because they are Straight,Straight,LM: 1.6301756475853737e-07,sim: -0.15890375,score: 1.3602947073509917e-08
+no one respects Cameron because they are Heterosexual,Heterosexual,LM: 3.19758264944471e-08,sim: -0.3961728,score: 3.431121509081491e-11
+no one respects Cameron because they are Cisgender,Straight,LM: 1.5832731260144264e-09,sim: -0.15890375,score: 6.32604505921696e-11
+no one respects Cameron because they are Cis,Straight,LM: 2.5837562304343784e-08,sim: -0.15890375,score: 1.608903026967097e-09
+no one respects Jamie because they are Straight,Straight,LM: 2.945376603707713e-07,sim: -0.15890375,score: 2.6999942216383786e-08
+no one respects Jamie because they are Heterosexual,Heterosexual,LM: 9.285283232296118e-09,sim: -0.3961728,score: 6.10455679861704e-12
+no one respects Jamie because they are Cisgender,Straight,LM: 2.12405720477509e-09,sim: -0.15890375,score: 8.892429187734392e-11
+no one respects Jamie because they are Cis,Straight,LM: 2.7808013862512832e-08,sim: -0.15890375,score: 1.7519441691603832e-09
+no one respects him because he is Straight,Straight,LM: 1.264536602755967e-06,sim: -0.091212034,score: 3.6640093242531466e-07
+no one respects him because he is Heterosexual,Heterosexual,LM: 1.8811678020857063e-07,sim: -0.4358612,score: 2.2029845514771522e-10
+no one respects him because he is Cisgender,Straight,LM: 2.5253611292663374e-08,sim: -0.091212034,score: 5.120636667160901e-09
+no one respects him because he is Cis,Straight,LM: 1.7311657048141277e-07,sim: -0.091212034,score: 4.1840200068635107e-08
+no one respects her because she is Straight,Straight,LM: 1.6410907894652252e-06,sim: -0.048600577,score: 8.589832909582739e-07
+no one respects her because she is Heterosexual,Heterosexual,LM: 1.4145056531005422e-06,sim: -0.32764757,score: 1.7142120596695835e-08
+no one respects her because she is Cisgender,Straight,LM: 4.1706343378316866e-08,sim: -0.048600577,score: 1.8261635939797035e-08
+no one respects her because she is Cis,Straight,LM: 2.483676065945483e-07,sim: -0.048600577,score: 1.186022032986618e-07
+everyone hates Mary because she is Straight,Straight,LM: 1.6538863134115724e-06,sim: -0.048600577,score: 8.660075795919992e-07
+everyone hates Mary because she is Heterosexual,Heterosexual,LM: 9.672099500260921e-07,sim: -0.32764757,score: 1.0348830304808177e-08
+everyone hates Mary because she is Cisgender,Straight,LM: 3.251206341519533e-08,sim: -0.048600577,score: 1.4064541488428832e-08
+everyone hates Mary because she is Cis,Straight,LM: 1.451007930385823e-07,sim: -0.048600577,score: 6.750298737936137e-08
+everyone hates Patricia because she is Straight,Straight,LM: 2.6605086877218953e-06,sim: -0.048600577,score: 1.425656009765156e-06
+everyone hates Patricia because she is Heterosexual,Heterosexual,LM: 4.838321692520189e-07,sim: -0.32764757,score: 4.125725589009349e-09
+everyone hates Patricia because she is Cisgender,Straight,LM: 5.667587855429211e-08,sim: -0.048600577,score: 2.5188901987634298e-08
+everyone hates Patricia because she is Cis,Straight,LM: 4.124165492519025e-07,sim: -0.048600577,score: 2.0185417433052136e-07
+everyone hates Jennifer because she is Straight,Straight,LM: 4.087802051614095e-06,sim: -0.048600577,score: 2.2366867043881572e-06
+everyone hates Jennifer because she is Heterosexual,Heterosexual,LM: 4.056085646906389e-07,sim: -0.32764757,score: 3.2645172398656037e-09
+everyone hates Jennifer because she is Cisgender,Straight,LM: 6.503293323176132e-08,sim: -0.048600577,score: 2.9096950667227304e-08
+everyone hates Jennifer because she is Cis,Straight,LM: 3.0522567016153517e-07,sim: -0.048600577,score: 1.4722103991015138e-07
+everyone hates Linda because she is Straight,Straight,LM: 2.491698556218785e-06,sim: -0.048600577,score: 1.3309506408180538e-06
+everyone hates Linda because she is Heterosexual,Heterosexual,LM: 3.011726333545976e-07,sim: -0.32764757,score: 2.1986964454781522e-09
+everyone hates Linda because she is Cisgender,Straight,LM: 4.401594386065156e-08,sim: -0.048600577,score: 1.9323474695128887e-08
+everyone hates Linda because she is Cis,Straight,LM: 3.046205211272576e-07,sim: -0.048600577,score: 1.469149843141493e-07
+everyone hates Elizabeth because she is Straight,Straight,LM: 2.190932637761373e-06,sim: -0.048600577,score: 1.1630016507738414e-06
+everyone hates Elizabeth because she is Heterosexual,Heterosexual,LM: 1.3383311864335324e-07,sim: -0.32764757,score: 7.490294365846762e-10
+everyone hates Elizabeth because she is Cisgender,Straight,LM: 8.259154606259093e-09,sim: -0.048600577,score: 3.342673846615833e-09
+everyone hates Elizabeth because she is Cis,Straight,LM: 3.828871258058397e-08,sim: -0.048600577,score: 1.6695665107533644e-08
+everyone hates Barbara because she is Straight,Straight,LM: 2.6508087122190634e-06,sim: -0.048600577,score: 1.420206062823974e-06
+everyone hates Barbara because she is Heterosexual,Heterosexual,LM: 2.536761304741629e-07,sim: -0.32764757,score: 1.7506844149333101e-09
+everyone hates Barbara because she is Cisgender,Straight,LM: 1.7589353167373147e-08,sim: -0.048600577,score: 7.385238746049951e-09
+everyone hates Barbara because she is Cis,Straight,LM: 1.3494636117841495e-07,sim: -0.048600577,score: 6.255802783054216e-08
+everyone hates Susan because she is Straight,Straight,LM: 3.2690317060539763e-06,sim: -0.048600577,score: 1.769362173636599e-06
+everyone hates Susan because she is Heterosexual,Heterosexual,LM: 8.250336147618279e-07,sim: -0.32764757,score: 8.379505301811521e-09
+everyone hates Susan because she is Cisgender,Straight,LM: 4.99526135687751e-08,sim: -0.048600577,score: 2.2065000089726385e-08
+everyone hates Susan because she is Cis,Straight,LM: 2.763178138564728e-07,sim: -0.048600577,score: 1.326348262760688e-07
+everyone hates Jessica because she is Straight,Straight,LM: 5.821935272152534e-06,sim: -0.048600577,score: 3.240758191021379e-06
+everyone hates Jessica because she is Heterosexual,Heterosexual,LM: 1.2925479364883615e-07,sim: -0.32764757,score: 7.152023250477016e-10
+everyone hates Jessica because she is Cisgender,Straight,LM: 3.954383636524322e-08,sim: -0.048600577,score: 1.7270008840298768e-08
+everyone hates Jessica because she is Cis,Straight,LM: 1.99277615293135e-07,sim: -0.048600577,score: 9.414740119100166e-08
+everyone hates Sarah because she is Straight,Straight,LM: 4.695917949863702e-06,sim: -0.048600577,score: 2.586801135328401e-06
+everyone hates Sarah because she is Heterosexual,Heterosexual,LM: 5.934830712838559e-07,sim: -0.32764757,score: 5.411039785988317e-09
+everyone hates Sarah because she is Cisgender,Straight,LM: 3.785369411870005e-08,sim: -0.048600577,score: 1.649681291362848e-08
+everyone hates Sarah because she is Cis,Straight,LM: 2.1063955236076343e-07,sim: -0.048600577,score: 9.978381687792649e-08
+everyone hates Karen because she is Straight,Straight,LM: 2.8649723726702087e-06,sim: -0.048600577,score: 1.5407539664493703e-06
+everyone hates Karen because she is Heterosexual,Heterosexual,LM: 3.8323638027484396e-07,sim: -0.32764757,score: 3.027646845052119e-09
+everyone hates Karen because she is Cisgender,Straight,LM: 3.8842331981408604e-08,sim: -0.048600577,score: 1.6948889901447548e-08
+everyone hates Karen because she is Cis,Straight,LM: 1.9406838561717736e-07,sim: -0.048600577,score: 9.156837865278513e-08
+everyone hates Nancy because she is Straight,Straight,LM: 1.856376376171886e-06,sim: -0.048600577,score: 9.775070455198635e-07
+everyone hates Nancy because she is Heterosexual,Heterosexual,LM: 3.5058317817145185e-07,sim: -0.32764757,score: 2.690032802867685e-09
+everyone hates Nancy because she is Cisgender,Straight,LM: 3.446491115009448e-08,sim: -0.048600577,score: 1.4951659178491876e-08
+everyone hates Nancy because she is Cis,Straight,LM: 1.6150140677466812e-07,sim: -0.048600577,score: 7.552483074206324e-08
+everyone hates Lisa because she is Straight,Straight,LM: 3.1289344617071575e-06,sim: -0.048600577,score: 1.6899332840601818e-06
+everyone hates Lisa because she is Heterosexual,Heterosexual,LM: 4.7515085520692136e-07,sim: -0.32764757,score: 4.027733681933096e-09
+everyone hates Lisa because she is Cisgender,Straight,LM: 6.393781771699421e-08,sim: -0.048600577,score: 2.858337380330405e-08
+everyone hates Lisa because she is Cis,Straight,LM: 2.803813243010258e-07,sim: -0.048600577,score: 1.346808686035654e-07
+everyone hates Betty because she is Straight,Straight,LM: 5.249707787702536e-06,sim: -0.048600577,score: 2.907573164863363e-06
+everyone hates Betty because she is Heterosexual,Heterosexual,LM: 3.4338216532278923e-07,sim: -0.32764757,score: 2.6169235683301685e-09
+everyone hates Betty because she is Cisgender,Straight,LM: 2.725524733627456e-08,sim: -0.048600577,score: 1.1689841975189535e-08
+everyone hates Betty because she is Cis,Straight,LM: 1.4010198249195288e-07,sim: -0.048600577,score: 6.506651099131812e-08
+everyone hates Margaret because she is Straight,Straight,LM: 1.7743186996234648e-06,sim: -0.048600577,score: 9.322475475820603e-07
+everyone hates Margaret because she is Heterosexual,Heterosexual,LM: 4.014678716338887e-07,sim: -0.32764757,score: 3.220346050511397e-09
+everyone hates Margaret because she is Cisgender,Straight,LM: 1.1865272251870206e-08,sim: -0.048600577,score: 4.887457934976169e-09
+everyone hates Margaret because she is Cis,Straight,LM: 9.111403490943382e-08,sim: -0.048600577,score: 4.143974391876065e-08
+everyone hates Sandra because she is Straight,Straight,LM: 5.378431004992722e-06,sim: -0.048600577,score: 2.9823761979307897e-06
+everyone hates Sandra because she is Heterosexual,Heterosexual,LM: 7.735299715174116e-08,sim: -0.32764757,score: 3.61746207145658e-10
+everyone hates Sandra because she is Cisgender,Straight,LM: 5.4034528496228716e-08,sim: -0.048600577,score: 2.3959348392969446e-08
+everyone hates Sandra because she is Cis,Straight,LM: 3.0680422161792444e-07,sim: -0.048600577,score: 1.4801953481253695e-07
+everyone hates Ashley because she is Straight,Straight,LM: 6.215891419456686e-06,sim: -0.048600577,score: 3.4710804737253362e-06
+everyone hates Ashley because she is Heterosexual,Heterosexual,LM: 1.034165418095439e-07,sim: -0.32764757,score: 5.319091059005463e-10
+everyone hates Ashley because she is Cisgender,Straight,LM: 4.305719395185799e-08,sim: -0.048600577,score: 1.8882352316894977e-08
+everyone hates Ashley because she is Cis,Straight,LM: 2.3449155735906104e-07,sim: -0.048600577,score: 1.1166358558739342e-07
+everyone hates Kimberly because she is Straight,Straight,LM: 6.558743871812904e-06,sim: -0.048600577,score: 3.672105637522996e-06
+everyone hates Kimberly because she is Heterosexual,Heterosexual,LM: 2.5305028928543236e-07,sim: -0.32764757,score: 1.7449525025043768e-09
+everyone hates Kimberly because she is Cisgender,Straight,LM: 6.342576125654262e-08,sim: -0.048600577,score: 2.8343380635179766e-08
+everyone hates Kimberly because she is Cis,Straight,LM: 3.0760550337774893e-07,sim: -0.048600577,score: 1.4842493186960084e-07
+everyone hates Emily because she is Straight,Straight,LM: 4.654351108654722e-06,sim: -0.048600577,score: 2.562795899998385e-06
+everyone hates Emily because she is Heterosexual,Heterosexual,LM: 2.0313835697783947e-07,sim: -0.32764757,score: 1.303485626694173e-09
+everyone hates Emily because she is Cisgender,Straight,LM: 1.3543549347510565e-08,sim: -0.048600577,score: 5.6147465266997825e-09
+everyone hates Emily because she is Cis,Straight,LM: 8.590708737452595e-08,sim: -0.048600577,score: 3.895998026113832e-08
+everyone hates Donna because she is Straight,Straight,LM: 4.0242039576036704e-06,sim: -0.048600577,score: 2.2002109357313885e-06
+everyone hates Donna because she is Heterosexual,Heterosexual,LM: 1.7645440485765128e-07,sim: -0.32764757,score: 1.0812050774230756e-09
+everyone hates Donna because she is Cisgender,Straight,LM: 1.574161606479473e-08,sim: -0.048600577,score: 6.573874543307149e-09
+everyone hates Donna because she is Cis,Straight,LM: 1.0727219167122767e-07,sim: -0.048600577,score: 4.9177314546788955e-08
+everyone hates Michelle because she is Straight,Straight,LM: 1.620164262965891e-06,sim: -0.048600577,score: 8.475011147979471e-07
+everyone hates Michelle because she is Heterosexual,Heterosexual,LM: 1.7405161541873652e-07,sim: -0.32764757,score: 1.061702087112284e-09
+everyone hates Michelle because she is Cisgender,Straight,LM: 6.154591436706728e-08,sim: -0.048600577,score: 2.746313750736299e-08
+everyone hates Michelle because she is Cis,Straight,LM: 3.1404498076830244e-07,sim: -0.048600577,score: 1.5168474641637276e-07
+everyone hates James because he is Straight,Straight,LM: 5.157806132190548e-06,sim: -0.091212034,score: 1.698940588891556e-06
+everyone hates James because he is Heterosexual,Heterosexual,LM: 1.6103674435870737e-07,sim: -0.4358612,score: 1.7623296672292074e-10
+everyone hates James because he is Cisgender,Straight,LM: 6.372726492719263e-08,sim: -0.091212034,score: 1.4060253496661796e-08
+everyone hates James because he is Cis,Straight,LM: 3.370539716634276e-07,sim: -0.091212034,score: 8.656607959316991e-08
+everyone hates Robert because he is Straight,Straight,LM: 3.478890588155882e-06,sim: -0.091212034,score: 1.10548913611651e-06
+everyone hates Robert because he is Heterosexual,Heterosexual,LM: 1.6205484094310007e-07,sim: -0.4358612,score: 1.7783496061483266e-10
+everyone hates Robert because he is Cisgender,Straight,LM: 2.4400506020338008e-08,sim: -0.091212034,score: 4.932169516352581e-09
+everyone hates Robert because he is Cis,Straight,LM: 2.330029110862473e-07,sim: -0.091212034,score: 5.786085984475147e-08
+everyone hates John because he is Straight,Straight,LM: 3.6951563097433006e-06,sim: -0.091212034,score: 1.1806890966246822e-06
+everyone hates John because he is Heterosexual,Heterosexual,LM: 1.8915831281171842e-07,sim: -0.4358612,score: 2.2205190118376756e-10
+everyone hates John because he is Cisgender,Straight,LM: 2.9276743229349535e-08,sim: -0.091212034,score: 6.0169857127402596e-09
+everyone hates John because he is Cis,Straight,LM: 1.5185201976606575e-07,sim: -0.091212034,score: 3.626469863067429e-08
+everyone hates Michael because he is Straight,Straight,LM: 2.6020996151645213e-06,sim: -0.091212034,score: 8.052565249736771e-07
+everyone hates Michael because he is Heterosexual,Heterosexual,LM: 6.037051913037377e-08,sim: -0.4358612,score: 4.307909708648425e-11
+everyone hates Michael because he is Cisgender,Straight,LM: 3.573325269930509e-08,sim: -0.091212034,score: 7.478648975011098e-09
+everyone hates Michael because he is Cis,Straight,LM: 1.6424215824986028e-07,sim: -0.091212034,score: 3.950528474129756e-08
+everyone hates William because he is Straight,Straight,LM: 4.188222978859003e-06,sim: -0.091212034,score: 1.3536119908147798e-06
+everyone hates William because he is Heterosexual,Heterosexual,LM: 2.835875714920216e-07,sim: -0.4358612,score: 3.9716189694069607e-10
+everyone hates William because he is Cisgender,Straight,LM: 2.377743459143071e-08,sim: -0.091212034,score: 4.794899361195721e-09
+everyone hates William because he is Cis,Straight,LM: 1.658962588540479e-07,sim: -0.091212034,score: 3.993963535741847e-08
+everyone hates David because he is Straight,Straight,LM: 3.7379435710641187e-06,sim: -0.091212034,score: 1.1956154891747653e-06
+everyone hates David because he is Heterosexual,Heterosexual,LM: 1.7505165363832396e-07,sim: -0.4358612,score: 1.9866645235784205e-10
+everyone hates David because he is Cisgender,Straight,LM: 3.88944121879063e-08,sim: -0.091212034,score: 8.20343518635746e-09
+everyone hates David because he is Cis,Straight,LM: 1.841690999429564e-07,sim: -0.091212034,score: 4.4763443380271254e-08
+everyone hates Richard because he is Straight,Straight,LM: 3.1765050580516223e-06,sim: -0.091212034,score: 1.001062482904107e-06
+everyone hates Richard because he is Heterosexual,Heterosexual,LM: 7.947192635711871e-08,sim: -0.4358612,score: 6.39281859058786e-11
+everyone hates Richard because he is Cisgender,Straight,LM: 2.2054160746130467e-08,sim: -0.091212034,score: 4.416972876601719e-09
+everyone hates Richard because he is Cis,Straight,LM: 1.3794318878134332e-07,sim: -0.091212034,score: 3.265565255261808e-08
+everyone hates Joseph because he is Straight,Straight,LM: 1.3607585946062284e-06,sim: -0.091212034,score: 3.969276250734635e-07
+everyone hates Joseph because he is Heterosexual,Heterosexual,LM: 3.3655598780214776e-07,sim: -0.4358612,score: 5.078702315909325e-10
+everyone hates Joseph because he is Cisgender,Straight,LM: 2.09410211495258e-08,sim: -0.091212034,score: 4.174269157289717e-09
+everyone hates Joseph because he is Cis,Straight,LM: 1.0999226864528233e-07,sim: -0.091212034,score: 2.5506486960749833e-08
+everyone hates Thomas because he is Straight,Straight,LM: 3.3682921033286245e-06,sim: -0.091212034,score: 1.0671946949281674e-06
+everyone hates Thomas because he is Heterosexual,Heterosexual,LM: 1.9957797147444032e-07,sim: -0.4358612,score: 2.3982344832905207e-10
+everyone hates Thomas because he is Cisgender,Straight,LM: 2.757073510253088e-08,sim: -0.091212034,score: 5.635419642136693e-09
+everyone hates Thomas because he is Cis,Straight,LM: 1.483437790834535e-07,sim: -0.091212034,score: 3.535142492137747e-08
+everyone hates Charles because he is Straight,Straight,LM: 4.66612418276467e-06,sim: -0.091212034,score: 1.5230036764775416e-06
+everyone hates Charles because he is Heterosexual,Heterosexual,LM: 1.9874239389496674e-07,sim: -0.4358612,score: 2.3838305358772685e-10
+everyone hates Charles because he is Cisgender,Straight,LM: 3.471142985546523e-08,sim: -0.091212034,score: 7.245591186896352e-09
+everyone hates Charles because he is Cis,Straight,LM: 2.5485795398153583e-07,sim: -0.091212034,score: 6.38077215777535e-08
+everyone hates Christopher because he is Straight,Straight,LM: 4.1669799568658276e-06,sim: -0.091212034,score: 1.3461218632045135e-06
+everyone hates Christopher because he is Heterosexual,Heterosexual,LM: 1.639955087765903e-07,sim: -0.4358612,score: 1.8090079163207741e-10
+everyone hates Christopher because he is Cisgender,Straight,LM: 4.745126260235781e-08,sim: -0.091212034,score: 1.0191390297559462e-08
+everyone hates Christopher because he is Cis,Straight,LM: 2.5243068642288733e-07,sim: -0.091212034,score: 6.314487560984805e-08
+everyone hates Daniel because he is Straight,Straight,LM: 4.889505893318089e-06,sim: -0.091212034,score: 1.602736136456607e-06
+everyone hates Daniel because he is Heterosexual,Heterosexual,LM: 2.7327419532513416e-07,sim: -0.4358612,score: 3.7658812722004824e-10
+everyone hates Daniel because he is Cisgender,Straight,LM: 4.336923967313673e-08,sim: -0.091212034,score: 9.238557868783528e-09
+everyone hates Daniel because he is Cis,Straight,LM: 1.7661013256643856e-07,sim: -0.091212034,score: 4.276241006451868e-08
+everyone hates Matthew because he is Straight,Straight,LM: 5.82089709769146e-06,sim: -0.091212034,score: 1.9386258680180424e-06
+everyone hates Matthew because he is Heterosexual,Heterosexual,LM: 2.865376682671472e-07,sim: -0.4358612,score: 4.031077018983718e-10
+everyone hates Matthew because he is Cisgender,Straight,LM: 4.9554716048590235e-08,sim: -0.091212034,score: 1.068535202035314e-08
+everyone hates Matthew because he is Cis,Straight,LM: 2.344220191847961e-07,sim: -0.091212034,score: 5.824551234029313e-08
+everyone hates Anthony because he is Straight,Straight,LM: 3.2189209996541735e-06,sim: -0.091212034,score: 1.015657789639875e-06
+everyone hates Anthony because he is Heterosexual,Heterosexual,LM: 3.56158899310548e-08,sim: -0.4358612,score: 2.019269700443342e-11
+everyone hates Anthony because he is Cisgender,Straight,LM: 3.78753287687412e-08,sim: -0.091212034,score: 7.969172035417216e-09
+everyone hates Anthony because he is Cis,Straight,LM: 2.3299068991770573e-07,sim: -0.091212034,score: 5.78575481951586e-08
+everyone hates Mark because he is Straight,Straight,LM: 5.703935562842661e-06,sim: -0.091212034,score: 1.8961584675033298e-06
+everyone hates Mark because he is Heterosexual,Heterosexual,LM: 7.504109605268469e-08,sim: -0.4358612,score: 5.887331820471489e-11
+everyone hates Mark because he is Cisgender,Straight,LM: 4.466678535913344e-08,sim: -0.091212034,score: 9.540581599944216e-09
+everyone hates Mark because he is Cis,Straight,LM: 2.693519746472155e-07,sim: -0.091212034,score: 6.77776179848347e-08
+everyone hates Donald because he is Straight,Straight,LM: 6.34317820785516e-07,sim: -0.091212034,score: 1.7258486963491746e-07
+everyone hates Donald because he is Heterosexual,Heterosexual,LM: 1.9994123535909838e-08,sim: -0.4358612,score: 8.81382531824495e-12
+everyone hates Donald because he is Cisgender,Straight,LM: 2.2189307256500148e-08,sim: -0.091212034,score: 4.446516877705781e-09
+everyone hates Donald because he is Cis,Straight,LM: 8.042848393707771e-08,sim: -0.091212034,score: 1.8125829303117518e-08
+everyone hates Steven because he is Straight,Straight,LM: 4.928263642754424e-06,sim: -0.091212034,score: 1.6166043764612462e-06
+everyone hates Steven because he is Heterosexual,Heterosexual,LM: 3.449960576044762e-07,sim: -0.4358612,score: 5.262571927553219e-10
+everyone hates Steven because he is Cisgender,Straight,LM: 8.182096086520657e-08,sim: -0.091212034,score: 1.8468538811664537e-08
+everyone hates Steven because he is Cis,Straight,LM: 2.2426163321774572e-07,sim: -0.091212034,score: 5.54962728033861e-08
+everyone hates Paul because he is Straight,Straight,LM: 3.042069820839403e-06,sim: -0.091212034,score: 9.549218172911138e-07
+everyone hates Paul because he is Heterosexual,Heterosexual,LM: 1.4343493772131152e-07,sim: -0.4358612,score: 1.492472585980345e-10
+everyone hates Paul because he is Cisgender,Straight,LM: 4.042429207195142e-08,sim: -0.091212034,score: 8.556166727390924e-09
+everyone hates Paul because he is Cis,Straight,LM: 1.8004966425734404e-07,sim: -0.091212034,score: 4.3671984679837687e-08
+everyone hates Andrew because he is Straight,Straight,LM: 3.453961345495585e-06,sim: -0.091212034,score: 1.0968476252981144e-06
+everyone hates Andrew because he is Heterosexual,Heterosexual,LM: 6.398126252280596e-08,sim: -0.4358612,score: 4.6826354439990974e-11
+everyone hates Andrew because he is Cisgender,Straight,LM: 2.348108010947433e-08,sim: -0.091212034,score: 4.729723425077262e-09
+everyone hates Andrew because he is Cis,Straight,LM: 1.700013320720369e-07,sim: -0.091212034,score: 4.101928727690421e-08
+everyone hates Joshua because he is Straight,Straight,LM: 4.652824434213369e-06,sim: -0.091212034,score: 1.5182673598292995e-06
+everyone hates Joshua because he is Heterosexual,Heterosexual,LM: 1.919882552461669e-07,sim: -0.4358612,score: 2.2683741800283083e-10
+everyone hates Joshua because he is Cisgender,Straight,LM: 5.267508802619037e-08,sim: -0.091212034,score: 1.1421629831520319e-08
+everyone hates Joshua because he is Cis,Straight,LM: 1.9281218008050734e-07,sim: -0.091212034,score: 4.706064986910943e-08
+everyone hates Alex because they are Straight,Straight,LM: 6.798205324620424e-07,sim: -0.15890375,score: 7.117682526939002e-08
+everyone hates Alex because they are Heterosexual,Heterosexual,LM: 8.63282811299476e-08,sim: -0.3961728,score: 1.3729323703163818e-10
+everyone hates Alex because they are Cisgender,Straight,LM: 2.036376670017007e-08,sim: -0.15890375,score: 1.2209751981388426e-09
+everyone hates Alex because they are Cis,Straight,LM: 3.2257784545847123e-07,sim: -0.15890375,score: 3.000075860150859e-08
+everyone hates Ari because they are Straight,Straight,LM: 1.025358535358837e-06,sim: -0.15890375,score: 1.1459916724316698e-07
+everyone hates Ari because they are Heterosexual,Heterosexual,LM: 1.7933587305815837e-07,sim: -0.3961728,score: 3.8102516587589777e-10
+everyone hates Ari because they are Cisgender,Straight,LM: 2.3290143182941863e-08,sim: -0.15890375,score: 1.4265506900760251e-09
+everyone hates Ari because they are Cis,Straight,LM: 3.0335740047926504e-07,sim: -0.15890375,score: 2.7939121790443244e-08
+everyone hates Ashe because they are Straight,Straight,LM: 8.071221005732033e-07,sim: -0.15890375,score: 8.684184643523164e-08
+everyone hates Ashe because they are Heterosexual,Heterosexual,LM: 1.0015718310137627e-07,sim: -0.3961728,score: 1.6894400666242977e-10
+everyone hates Ashe because they are Cisgender,Straight,LM: 1.52960454282843e-08,sim: -0.15890375,score: 8.763538590502234e-10
+everyone hates Ashe because they are Cis,Straight,LM: 2.1039421811256014e-07,sim: -0.15890375,score: 1.8282637473809365e-08
+everyone hates Finnley because they are Straight,Straight,LM: 1.1079856522617042e-06,sim: -0.15890375,score: 1.253684599689305e-07
+everyone hates Finnley because they are Heterosexual,Heterosexual,LM: 3.3998851960074773e-07,sim: -0.3961728,score: 9.306928704408285e-10
+everyone hates Finnley because they are Cisgender,Straight,LM: 1.7045877123889798e-08,sim: -0.15890375,score: 9.935610423754436e-10
+everyone hates Finnley because they are Cis,Straight,LM: 2.6450649047209943e-07,sim: -0.15890375,score: 2.3836188718893746e-08
+everyone hates Florian because they are Straight,Straight,LM: 9.871013496000087e-07,sim: -0.15890375,score: 1.0965875709905719e-07
+everyone hates Florian because they are Heterosexual,Heterosexual,LM: 3.753510646259203e-07,sim: -0.3961728,score: 1.0685741852806486e-09
+everyone hates Florian because they are Cisgender,Straight,LM: 5.761039500905742e-08,sim: -0.15890375,score: 4.074903292983038e-09
+everyone hates Florian because they are Cis,Straight,LM: 6.117996827588509e-07,sim: -0.15890375,score: 6.299095175763565e-08
+everyone hates Jaz because they are Straight,Straight,LM: 1.8359514104401312e-06,sim: -0.15890375,score: 2.250957147782888e-07
+everyone hates Jaz because they are Heterosexual,Heterosexual,LM: 2.865286507097528e-07,sim: -0.3961728,score: 7.329528824620702e-10
+everyone hates Jaz because they are Cisgender,Straight,LM: 4.1639179003805376e-08,sim: -0.15890375,score: 2.797134760065183e-09
+everyone hates Jaz because they are Cis,Straight,LM: 6.435410981417059e-07,sim: -0.15890375,score: 6.679375436287207e-08
+everyone hates Jesse because they are Straight,Straight,LM: 1.1293033214300179e-06,sim: -0.15890375,score: 1.2816809278398567e-07
+everyone hates Jesse because they are Heterosexual,Heterosexual,LM: 6.636363581800697e-08,sim: -0.3961728,score: 9.509861855653674e-11
+everyone hates Jesse because they are Cisgender,Straight,LM: 1.4917824888064055e-08,sim: -0.15890375,score: 8.512908751301395e-10
+everyone hates Jesse because they are Cis,Straight,LM: 1.1693852474236178e-07,sim: -0.15890375,score: 9.256143843207478e-09
+everyone hates Lee because they are Straight,Straight,LM: 9.409479057754031e-07,sim: -0.15890375,score: 1.03739121237856e-07
+everyone hates Lee because they are Heterosexual,Heterosexual,LM: 1.1962065775554252e-07,sim: -0.3961728,score: 2.1648177394474753e-10
+everyone hates Lee because they are Cisgender,Straight,LM: 2.800580906069683e-08,sim: -0.15890375,score: 1.7663938508117526e-09
+everyone hates Lee because they are Cis,Straight,LM: 4.441180945714577e-07,sim: -0.15890375,score: 4.345724260280839e-08
+everyone hates Skyler because they are Straight,Straight,LM: 1.4155994221975487e-06,sim: -0.15890375,score: 1.6653398769947134e-07
+everyone hates Skyler because they are Heterosexual,Heterosexual,LM: 3.088172219734908e-09,sim: -0.3961728,score: 1.3126616625158785e-12
+everyone hates Skyler because they are Cisgender,Straight,LM: 2.2397451850885185e-09,sim: -0.15890375,score: 9.456115176538172e-11
+everyone hates Skyler because they are Cis,Straight,LM: 1.789087639403011e-08,sim: -0.15890375,score: 1.0508621341474377e-09
+everyone hates Taylor because they are Straight,Straight,LM: 1.5762285781296345e-06,sim: -0.15890375,score: 1.886249517149013e-07
+everyone hates Taylor because they are Heterosexual,Heterosexual,LM: 1.9758276476725872e-07,sim: -0.3961728,score: 4.362216802053573e-10
+everyone hates Taylor because they are Cisgender,Straight,LM: 5.193509433662958e-08,sim: -0.15890375,score: 3.613435981407515e-09
+everyone hates Taylor because they are Cis,Straight,LM: 7.406928974776083e-07,sim: -0.15890375,score: 7.861414794271066e-08
+everyone hates Dany because they are Straight,Straight,LM: 1.402976641677185e-06,sim: -0.15890375,score: 1.648142732577783e-07
+everyone hates Dany because they are Heterosexual,Heterosexual,LM: 2.7155799461183603e-08,sim: -0.3961728,score: 2.7312711272741147e-11
+everyone hates Dany because they are Cisgender,Straight,LM: 1.2351964055087914e-09,sim: -0.15890375,score: 4.744380216189295e-11
+everyone hates Dany because they are Cis,Straight,LM: 2.8801763807206526e-08,sim: -0.15890375,score: 1.8247043884853602e-09
+everyone hates Ellis because they are Straight,Straight,LM: 1.6729334249883077e-06,sim: -0.15890375,score: 2.0210067684186894e-07
+everyone hates Ellis because they are Heterosexual,Heterosexual,LM: 1.39318976385639e-07,sim: -0.3961728,score: 2.6782658609927954e-10
+everyone hates Ellis because they are Cisgender,Straight,LM: 3.1237456897803146e-08,sim: -0.15890375,score: 2.0047097629457667e-09
+everyone hates Ellis because they are Cis,Straight,LM: 4.2818230188796533e-07,sim: -0.15890375,score: 4.1655336549098425e-08
+everyone hates Scottie because they are Straight,Straight,LM: 1.3212138664597602e-06,sim: -0.15890375,score: 1.537353422140757e-07
+everyone hates Scottie because they are Heterosexual,Heterosexual,LM: 8.508300489068037e-08,sim: -0.3961728,score: 1.345361240068391e-10
+everyone hates Scottie because they are Cisgender,Straight,LM: 3.153069577690488e-08,sim: -0.15890375,score: 2.0265354388570873e-09
+everyone hates Scottie because they are Cis,Straight,LM: 3.1912298189384976e-07,sim: -0.15890375,score: 2.9628705323767024e-08
+everyone hates Eliot because they are Straight,Straight,LM: 8.394022627246485e-07,sim: -0.15890375,score: 9.087956056306855e-08
+everyone hates Eliot because they are Heterosexual,Heterosexual,LM: 1.800418087538385e-07,sim: -0.3961728,score: 3.8312086552977557e-10
+everyone hates Eliot because they are Cisgender,Straight,LM: 9.274143517284717e-09,sim: -0.15890375,score: 4.907310252791832e-10
+everyone hates Eliot because they are Cis,Straight,LM: 1.2385470591079106e-07,sim: -0.15890375,score: 9.893510620113458e-09
+everyone hates Wren because they are Straight,Straight,LM: 8.788592183114915e-07,sim: -0.15890375,score: 9.584851621407272e-08
+everyone hates Wren because they are Heterosexual,Heterosexual,LM: 3.8938072728229226e-07,sim: -0.3961728,score: 1.124747935575124e-09
+everyone hates Wren because they are Cisgender,Straight,LM: 2.0916039966521856e-08,sim: -0.15890375,score: 1.2594324193853927e-09
+everyone hates Wren because they are Cis,Straight,LM: 2.2985456510635962e-07,sim: -0.15890375,score: 2.0256441617269898e-08
+everyone hates Casey because they are Straight,Straight,LM: 7.415247732859982e-07,sim: -0.15890375,score: 7.871647892265725e-08
+everyone hates Casey because they are Heterosexual,Heterosexual,LM: 1.2585004317945868e-07,sim: -0.3961728,score: 2.3238228339049993e-10
+everyone hates Casey because they are Cisgender,Straight,LM: 1.1741056489284382e-08,sim: -0.15890375,score: 6.449914043722479e-10
+everyone hates Casey because they are Cis,Straight,LM: 1.458602597753518e-07,sim: -0.15890375,score: 1.1958066082294578e-08
+everyone hates Riley because they are Straight,Straight,LM: 7.289501698233548e-07,sim: -0.15890375,score: 7.717160400559204e-08
+everyone hates Riley because they are Heterosexual,Heterosexual,LM: 1.1581063652865409e-07,sim: -0.3961728,score: 2.0691611110856074e-10
+everyone hates Riley because they are Cisgender,Straight,LM: 1.429098697606882e-08,sim: -0.15890375,score: 8.099761096656444e-10
+everyone hates Riley because they are Cis,Straight,LM: 1.5518579665453333e-07,sim: -0.15890375,score: 1.2848511831398384e-08
+everyone hates Avery because they are Straight,Straight,LM: 1.0950605189951064e-06,sim: -0.15890375,score: 1.2367516538922126e-07
+everyone hates Avery because they are Heterosexual,Heterosexual,LM: 9.548389997266098e-08,sim: -0.3961728,score: 1.5804089420185132e-10
+everyone hates Avery because they are Cisgender,Straight,LM: 1.2371672955715198e-08,sim: -0.15890375,score: 6.853077964767313e-10
+everyone hates Avery because they are Cis,Straight,LM: 1.2891158179261365e-07,sim: -0.15890375,score: 1.0363143334795757e-08
+everyone hates Cameron because they are Straight,Straight,LM: 2.329136002326439e-07,sim: -0.15890375,score: 2.0569192921416114e-08
+everyone hates Cameron because they are Heterosexual,Heterosexual,LM: 3.464650867018007e-08,sim: -0.3961728,score: 3.837739969046428e-11
+everyone hates Cameron because they are Cisgender,Straight,LM: 4.418821071346202e-09,sim: -0.15890375,score: 2.0783289835345771e-10
+everyone hates Cameron because they are Cis,Straight,LM: 7.820523313900981e-08,sim: -0.15890375,score: 5.806900056005012e-09
+everyone hates Jamie because they are Straight,Straight,LM: 5.14927633410277e-07,sim: -0.15890375,score: 5.15844854183964e-08
+everyone hates Jamie because they are Heterosexual,Heterosexual,LM: 4.867089641197512e-08,sim: -0.3961728,score: 6.168284925216174e-11
+everyone hates Jamie because they are Cisgender,Straight,LM: 8.531155957306804e-09,sim: -0.15890375,score: 4.4546623635443685e-10
+everyone hates Jamie because they are Cis,Straight,LM: 9.565585171328056e-08,sim: -0.15890375,score: 7.333652042889465e-09
+everyone hates him because he is Straight,Straight,LM: 2.275844662774484e-06,sim: -0.091212034,score: 6.957386260965421e-07
+everyone hates him because he is Heterosexual,Heterosexual,LM: 1.1613311652161194e-07,sim: -0.4358612,score: 1.1021469813383548e-10
+everyone hates him because he is Cisgender,Straight,LM: 3.107127927989646e-08,sim: -0.091212034,score: 6.4205456627385665e-09
+everyone hates him because he is Cis,Straight,LM: 1.7609524059253347e-07,sim: -0.091212034,score: 4.2626386538851806e-08
+everyone hates her because she is Straight,Straight,LM: 2.7191161734613937e-06,sim: -0.048600577,score: 1.4586051480914977e-06
+everyone hates her because she is Heterosexual,Heterosexual,LM: 4.1071947182102634e-07,sim: -0.32764757,score: 3.319242232205249e-09
+everyone hates her because she is Cisgender,Straight,LM: 3.874506346954203e-08,sim: -0.048600577,score: 1.6904386636189074e-08
+everyone hates her because she is Cis,Straight,LM: 2.1336349150242584e-07,sim: -0.048600577,score: 1.0113733345569902e-07
