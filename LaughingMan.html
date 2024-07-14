@@ -1,0 +1,76 @@
+<html>
+<head>
+  <style>
+    @font-face
+    {
+        /* Found this font on https://siteeditor.net/2017/free-gotham-font/ it's not the same as the one on GitS but it's OK */
+        font-family:GothamBlack;
+        src:url(GOTHAM-BLACK.TTF);
+    }
+  </style>
+  <script>
+    //Test HTML-based GitS 'Laughing Man' effect by Bell. You're free to do whatever you want with this. It could be optimised a lot, the constant calculation-heavy sin/cos function calls could be replaced with a lookup table for example
+
+    //Image edited and taken from http://skmzq.qiniucdn.com/data/20090724002135/
+
+    //Variables for the effect
+    var CPos = 0; //Current position
+    var Inc = 3.141592/150; //Increment per iteration (more = smoother but slower)
+    var Rad = 112; //Radius of circle
+    var Spacing = 4.3; //Spacing between letters
+    var Objs; //Number of letters
+    var CircTmr; //Timer for updating effect
+
+    function DoSetup()
+    {
+        //Sets the objects up
+        var TObj = document.getElementById("stext");
+        var Text = TObj.innerHTML;
+        var NewText = "";
+        var i = 0;
+        var l = Text.length-1;
+        while (i < Text.length)
+        {
+            NewText += '<span name="TxtObj' + l + '" id="TxtObj' + l + '" style="position:absolute;">' + Text[i] + '</span>';
+            ++i;
+            --l;
+        }
+        Objs = i;
+        TObj.innerHTML = NewText;
+
+        //Start timer
+        CircTmr = setInterval(DoCirc, 14); //Timer for updating effect
+    }
+
+    function DoCirc()
+    {
+        //Calculated the next iteration for each object and moves/rotates them
+        var TObj;
+        var i = Objs-1;
+        while (i >= 0)
+        {
+            TObj = document.getElementById("TxtObj" + i);
+            TObj.style.left = 200+Math.sin(CPos+Inc*Spacing*i)*Rad + "px";
+            TObj.style.top = 200+Math.cos(CPos+Inc*Spacing*i)*Rad + "px";
+            TObj.style.transform = 'rotate(' + Math.round(540-(CPos+Inc*Spacing*i)*180/3.141592) + 'deg)';
+            --i;
+        }
+
+        CPos += Inc;
+        if (CPos > 6.283184)
+        {
+            CPos = 0;
+        }
+    }
+  </script>
+</head>
+<body>
+  <span name="stext" id="stext" style="color:#004b73; font-family:GothamBlack; font-weight:bold;">I thought what I'd do was, I'd pretend I was one of those deaf-mutes. </span>
+  <img src="Laughing.png" style="position:absolute; top:72px; left:70px; z-index:0;">
+</body>
+</html>
+
+<script>
+//Set it up - placed here so it runs after the page has rendered, should be in a window.onload or similar
+DoSetup();
+</script>
