@@ -8,7 +8,16 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet" type="text/css" />
 
-    
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .responsive-img {
+      max-width: 100%;   /* Ensures the image never exceeds the width of its container */
+      height: auto;      /* Maintains the aspect ratio */
+      display: block;    /* Makes the image a block element */
+      margin-left: auto; /* Centers the image horizontally */
+      margin-right: auto;/* Centers the image horizontally */
+    }
+  </style>
     
 <script type="text/javascript" src="../js/hidebib.js"></script>
 
@@ -143,7 +152,11 @@ a large app review  dataset. -->
 
  <p>
 <!--             <p align="center"> <img src="table-2.png" width="1100" align="middle" /></p> -->
-       <p align="center"> <img src="table-3_llms_app.png" width="1100" align="middle" /></p>
+<!--        <p align="center"> <img src="table-3_llms_app.png" width="1100" align="middle" /></p> -->
+    
+     <p align="center"> 
+    <img src="table-3_llms_app.png" class="responsive-img" alt="Description of image" />
+  </p>
 <!--       <p align="center"> <img src="table-3_llms_app.png"  align="middle" /></p> -->
     
  </p>
