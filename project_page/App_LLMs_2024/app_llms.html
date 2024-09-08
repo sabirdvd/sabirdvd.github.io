@@ -120,16 +120,30 @@
         
       <p>
 
-Comparison of zero-shot, 1-shot, and 5-shot performances of LLMs for extracting app features from app reviews
+</div>
+
+    <hr>
+
+      <h2>Results</h2>
+ In zero-shot learning, GPT-4 is the top-performing model for extracting app features, surpassing rule-based approaches by
+23.6% in f1-score with the exact matching strategy. However, the fine-tuned BERT(*) model still outperforms GPT-4 by 14%
+in the f1-score. In the 5-shot scenario, both GPT-4 and Llama-2-70B show further improvements of 7% and 6% in f1-score, respectively. Our evaluation study has showcased the
+encouraging performance of LLMs in extracting fine-grained information from user feedback. This capability of LLMs
+holds promise in assisting developers with their software maintenance and evolution activities by analyzing users’ opinions.
+
+    
+<!-- Comparison of zero-shot, 1-shot, and 5-shot performances of LLMs for extracting app features from app reviews
 using exact and partial match strategies. (Second best result (in Blue) and Third best result (in yellow) ). The (*) refers to the model fine-tuned on
-a large app review  dataset.
+a large app review  dataset. -->
 
 
 <!--             <p align="center"> <img src="table-2.png" width="1100" align="middle" /></p> -->
        <p align="center"> <img src="table-3_llms_app.png" width="1100" align="middle" /></p>
 
+  <p>(Second best result (in Blue) and Third best result (in yellow)). </p>
 
 
+    <hr> 
 
       <p>
   The Figure below shows a comparison of 5-shot f1 performance of GPT-4, ChatGPT, LLama-2-70B Chat for individual app. This analysis reveals that LLM models exhibit varying performance across different applications. Specifically, LLM models
