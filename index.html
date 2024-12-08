@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Blog & Research Noteへようこそ！</title>
+
+    <style>
+        blink {
+            animation: 2s linear infinite condemned_blink_effect;
+        }
+
+        @keyframes condemned_blink_effect {
+            0% {
+                visibility: hidden;
+            }
+            10% {
+                visibility: hidden;
+            }
+            100% {
+                visibility: visible;
+            }
+        }
+
+        body {
+            padding: 25px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        a {
+            margin: 0;
+            -webkit-transition: color 1s;
+            transition: color 1s;
+            color: #43b394;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #feaa5a;
+        }
+
+        .noteBoxes {
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            width: 590px;
+        }
+
+        .type1 {
+            border-color: white;
+            background-color: rgba(250, 235, 206, 255);
+        }
+
+        /* Glitch Effect */
+        .glitch-link {
+            position: relative;
+            color: inherit; /* Maintain original text color */
+            text-decoration: none;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .glitch-link::before,
+        .glitch-link::after {
+            content: attr(data-glitch);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .glitch-link::before {
+            color: red;
+            z-index: -1;
+            transform: translate(3px, -3px);
+        }
+
+        .glitch-link::after {
+            color: blue;
+            z-index: -2;
+            transform: translate(-3px, 3px);
+        }
+
+        .glitch-link.active::before,
+        .glitch-link.active::after {
+            opacity: 1;
+            animation: glitch 0.3s steps(2, end) infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(3px, -3px);
+            }
+            50% {
+                transform: translate(-3px, 3px);
+            }
+            100% {
+                transform: translate(3px, -3px);
+            }
+        }
+    </style>
+</head>
+
+<div>
+    <!--  <button onclick="darkMode()">🌓</button>-->
+<!--     <a href="https://kodu.ut.ee/~ahmedabdulmajeed/" class="button">♟️</a>
+    <button4 style= "cursor:pointer" onclick="darkMode()">🌗<button4 class="button button5"></button> -->
+
+<!-- 	      <a href="https://kodu.ut.ee/~ahmedabdulmajeed/" class="button">♟️</a> -->
+<!-- 	  <a href="https://kodu.ut.ee/~ahmedabdulmajeed/" class="button">&#9823;</a> -->
+<!-- 	  <a href="https://kodu.ut.ee/~ahmedabdulmajeed/" style="color: #43b394">&#9823;</a> -->
+	   <a href="https://kodu.ut.ee/~ahmedabdulmajeed/" style="color:white;">&#9823;</a>
+	
+    <<button4 style= "cursor:pointer" onclick="darkMode()">🌗<button4 class="button button5"></button> -->
+
+	    
+  </div>
+  <script>
+    function darkMode() {
+      var element = document.body; 
+      element.classList.toggle("dark-mode");
+    }
+  </script>
+
+<body>
+    <!-- <div>
+        <a href="#" class="glitch-link" onclick="darkMode()" data-glitch="🌗 Toggle Dark Mode">🌗 Toggle Dark Mode</a>
+    </div> -->
+    <script>
+        function darkMode() {
+            document.body.classList.toggle("light-mode");
+        }
+    </script>
+
+<title>Welcome to my Blog & Research Noteへようこそ！</title>
+    <p><strong class="glitch-link" data-glitch="Welcome to my Blog & Research Note">Welcome to my Blog & Research Note</strong></p>
+    <a href="https://www.nytimes.com/2022/06/13/crosswords/chess/chess-algebraic-notation.html" class="glitch-link" data-glitch="Chess Notation">
+        <img src="chess.jpg" height="400" />
+    </a>
+
+    <a href="https://github.com/sabirdvd/Blog-code" class="glitch-link" data-glitch="Please refer to this GitHub for the related code of each post">
+        Please refer to this GitHub for the related code of each post
+    </a>
+
+    <p class="noteBoxes type1">
+        <q><em class="glitch-link" data-glitch="Writing is a nature's way of letting you know how sloppy your thinking is.">
+            Writing is a nature's way of letting you know how sloppy your thinking is.
+        </em></q> - Dick Guindon
+    </p>
+
+</ul>
+<p> <strong>Medium </strong>
+<ul>
+
+  
+    <ul style="list-style-type: '&#9823';">
+        <li>
+            <a href="https://medium.com/@iee_53136/an-application-for-semantic-relatedness-post-ocr-correction-1e7285a78f4f" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="An application for Semantic Relatedness: Post OCR Correction">
+               An application for Semantic Relatedness: Post OCR Correction
+            </a>
+        </li>
+        <li>
+            <a href="https://medium.com/@iee_53136/paper-summary-unimo-towards-unified-modal-understanding-and-generation-via-cross-modal-8c9e881c2012" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Paper Summary: UNIMO: Towards Unified-Modal Understanding and Generation via Cross-Modal Contrastive Learning">
+               Paper Summary: UNIMO: Towards Unified-Modal Understanding and Generation via Cross-Modal Contrastive Learning
+            </a>
+        </li>
+        <!-- 
+        <li>
+            <a href="https://medium.com/@iee_53136/word-to-sentence-visual-semantic-similarity-for-caption-generation-lesson-learned-312a96c33525" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Word to Sentence Visual Semantic Similarity for Caption Generation: Lesson learned">
+               Word to Sentence Visual Semantic Similarity for Caption Generation: Lesson learned
+            </a>
+        </li>
+        -->
+
+    
+        <li>
+            <a href="https://medium.com/@iee_53136/paper-summary-blip-bootstrapping-language-image-pre-training-for-unified-vision-language-c1df6f6c9166" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Paper Summary: BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation">
+               Paper Summary: BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation
+            </a>
+        </li>
+        <!-- 
+        <li>
+            <a href="https://medium.com/@iee_53136/80f4c1030380" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Review: Deep Learning for Sentence Semantic Similarity">
+               Review: Deep Learning for Sentence Semantic Similarity
+            </a>
+        </li>
+        -->
+        <li>
+            <a href="https://medium.com/@iee_53136/icrl2022-interesting-papers-3eec101777de" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="ICRL2022 - Interesting Papers">
+               ICRL2022 - Interesting Papers
+            </a>
+        </li>
+    </ul>
+    
+      
+</ul>
+<p> <strong>Blog</strong>
+<ul>
+
+    <ul style="list-style-type: '&#9823';">
+        <li>
+            <a href="https://sabirdvd.github.io/blog/2022-6-ACL2022/ACL2022.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="ACL 2022 Interesting Papers & Workshop">
+               ACL 2022 Interesting Papers & Workshop
+            </a>
+        </li>
+        <li>
+            <a href="https://sabirdvd.github.io/blog/2022-7-NAACL2022/NAACL2022.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="NAACL 2022 Interesting Papers & Workshop (25 July 2022)">
+               NAACL 2022 Interesting Papers & Workshop (25 July 2022)
+            </a>
+        </li>
+        <li>
+            <a href="https://sabirdvd.github.io/blog/2022-8-DALLE-2/DALLE-2.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="DALL·E 2 - Overview and Applications (28 August 2022)">
+               DALL·E 2 - Overview and Applications (28 August 2022)
+            </a>
+        </li>
+        <li>
+            <a href="https://sabirdvd.github.io/blog/2022-12-ChatGPT/ChatGPT_2022.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Review: ChatGPT: Optimizing Language Models for Dialogue (31 Dec 2022)">
+               Review: ChatGPT: Optimizing Language Models for Dialogue (31 Dec 2022)
+            </a>
+        </li>
+        <li>
+            <a href="https://sabirdvd.github.io/blog/2022-12-ArabTop/ArabTop_2022.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Review: Topic Modeling for Arabic Language — Part I (26 March 2023)">
+               Review: Topic Modeling for Arabic Language — Part I (26 March 2023)
+            </a>
+        </li>
+        <li>
+            <a href="https://ahmed.jp/blog/2022-4-negtive-result/negative_result.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Paper: Word to Sentence Visual Semantic Similarity for Caption Generation: Lesson learned (8 Jul 2023)">
+               Paper: Word to Sentence Visual Semantic Similarity for Caption Generation: Lesson learned (8 Jul 2023)
+            </a>
+        </li>
+    </ul>
+    
+
+</ul>
+<p> <strong>ブログ</strong>
+<ul>
+    
+  
+    <ul style="list-style-type: '&#9823';">
+        <li>
+            <a href="https://sabirdvd.github.io/blog/pose-estimation-2013-4/pose-estimation.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Kinectを用いた手旗信号の認識手法に関する研究">
+               Kinectを用いた手旗信号の認識手法に関する研究
+            </a>
+        </li>
+        <li>
+            <a href="http://blog.cs.kanagawa-it.ac.jp/2012/03/blog-post_18.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="留学生も頑張っています">
+               留学生も頑張っています
+            </a>
+        </li>
+        <li>
+            <a href="http://blog.cs.kanagawa-it.ac.jp/2012/04/blog-post_07.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="学会発表をしてきました！！">
+               学会発表をしてきました！！
+            </a>
+        </li>
+    </ul>
+
+</ul>
+<p> <strong>Useful Links</strong>
+<ul>
+    <ul style="list-style-type: '&#9823';">
+        <li>
+            <a href="https://aideadlin.es/calendar/?sub=NLP" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="ML Conference Deadline">
+               ML Conference Deadline
+            </a>
+        </li>
+        <li>
+            <a href="https://aideadlin.es/?sub=NLP" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="ML Conference Deadline カウントダウン">
+               ML Conference Deadline カウントダウン
+            </a>
+        </li>
+        <li>
+            <a href="https://huggingface.co/papers" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="🤗AK-Huggingface Daily Papers">
+               🤗AK-Huggingface Daily Papers
+            </a>
+        </li>
+        <li>
+            <a href="https://nn.labml.ai/ja/" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="📟 Paper Implementations">
+               📟 Paper Implementations
+            </a>
+        </li>
+        <li>
+            <a href="http://www.cs.ox.ac.uk/people/michael.wooldridge/conferences.html" 
+               style="color: #43b394" 
+               class="glitch-link" 
+               data-glitch="Conference List">
+               Conference List
+            </a>
+        </li>
+    </ul>
+    
+    <p>
+        <img style="max-width: 20px; height: auto;" src="application_application_firefox_browser_mozzila_970.ico"/> 
+        PC/Ipad Brave Firefox is recommended for a better experience
+    </p>
+    
+    <p>
+        <br>
+        <a href="https://kodu.ut.ee/~ahmedabdulmajeed/" style="color: #43b394" class="glitch-link" data-glitch="Ahmed Sabir">
+            Ahmed Sabir
+        </a>
+        <br>
+        <a href="https://ut.ee/en/curriculum/computer-science" style="color: #43b394" class="glitch-link" data-glitch="Computer Science Department">
+            Computer Science Department
+        </a>
+    </p>
+    
+
+
+
+
+
+
+
+
+<!-- 
+
+        
+       <li><a href= https://ahmed-sabir.medium.com/similarity-to-probability-part-i-visual-word-embedding-for-ocr-post-correction-ae1686bb079d style="color: #43b394"> Similarity to Probability — Part I: Visual Word Embedding for OCR Post Correction (3-Nov 2022)  <img src="new.gif" \=""> </a> 
+       <!-- <li><a href= > Similarity to Probability — Part II: Visual Sentence Embedding for Image Captioning (26-Nov 2022) <img src="" \=""> </a> -->
+       <!-- <li><a href= > Short Review: LoRA: Low-Rank Adaptation of LLMs (??-Aug 2023) <img src="" \=""> </a> -->
+
+
+
+    <script>
+        // Apply glitch effect dynamically to elements with the "glitch-link" class
+        document.querySelectorAll('.glitch-link').forEach(element => {
+            // Automatically set the `data-glitch` attribute to the element's content
+            if (!element.hasAttribute('data-glitch')) {
+                element.setAttribute('data-glitch', element.textContent.trim());
+            }
+
+            // Add glitch effect activation on click
+            element.addEventListener('click', (event) => {
+                element.classList.add('active');
+                setTimeout(() => {
+                    element.classList.remove('active');
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
