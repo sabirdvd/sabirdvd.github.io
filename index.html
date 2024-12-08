@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my Blog & Research Noteへようこそ！</title>
-
- <link href="https://fonts.googleapis.com/css2?family=Departure+Mono&display=swap" rel="stylesheet">
+<!-- 
+ <link href="https://fonts.googleapis.com/css2?family=Departure+Mono&display=swap" rel="stylesheet"> -->
 
     <style>
-        /* Apply Departure Mono font */
+         @font-face {
+            font-family: 'Departure Mono';
+            src: url('font/DepartureMono-Regular.woff2') format('woff2'),
+                 url('front/DepartureMono-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
             font-family: 'Departure Mono', monospace;
             padding: 25px;
