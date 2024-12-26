@@ -13,6 +13,15 @@
             font-style: normal;
         }
 
+	    @font-face {
+    font-family: 'PixelMplus10';
+    src: url('fonts/PixelMplus10-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+	    
         body {
             font-family: 'Departure Mono', monospace;
             padding: 25px;
@@ -20,6 +29,10 @@
             color: white;
             font-size: 20px;
         }
+
+	    :lang(ja) {
+    font-family: 'PixelMplus10', monospace; /* Font for Japanese text */
+	    }
 
         a {
             margin: 0;
