@@ -491,9 +491,31 @@
 </p>
 
         
-        
+        <script>
+        document.querySelectorAll('.glitch-link').forEach(link => {
+            const originalText = link.textContent;
+            const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    <script>
+            // Glitch effect on page load
+            let interval;
+            let counter = 0;
+
+            interval = setInterval(() => {
+                let randomText = '';
+                for (let i = 0; i < originalText.length; i++) {
+                    randomText += characters[Math.floor(Math.random() * characters.length)];
+                }
+                link.textContent = randomText;
+                counter++;
+                if (counter > 10) { // 1 second (10 iterations at 100ms each)
+                    clearInterval(interval);
+                    link.textContent = originalText;
+                }
+            }, 100); // 100ms interval
+        });
+    </script>
+
+<!--     <script>
         document.querySelectorAll('.glitch-link').forEach(link => {
             const originalText = link.textContent;
             const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -525,6 +547,6 @@
                 }, 300); // Reset glitch effect after 300ms
             });
         });
-    </script>
+    </script> -->
 </body>
 </html>
