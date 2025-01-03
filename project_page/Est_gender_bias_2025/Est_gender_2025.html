@@ -141,7 +141,7 @@
       
 <div class="container">
     <h2 style="text-align: center;">Abstract</h2>
-    <div style="text-align: left; background-color: #f5f3f3; padding: 10px; border-radius: 5px;" class="containersmall">
+    <div style="text-align: left; background-color: #fdfafa; padding: 10px; border-radius: 5px;" class="containersmall">
         <p align="justify"> This paper examines gender bias in Estonian, a grammatically 
                 genderless Finno-Ugric language, which doesn't have gendered noun system nor 
                 any gendered pronouns, but expresses gender through vocabulary. 
@@ -173,15 +173,17 @@
     
             <h2 style="text-align: center;">Statistical Evaluation </h2>
 
-      <p>
-    The result shows that the female compound words ending with <i>Tädi</i> in occupational titles primarily marked professions related to 
-    customer service (44% from all occupational titles), healthcare (13%), 
-    and social work (11%), while <i>onu</i> in occupational titles predominantly 
-    represented law enforcement (20%), followed by healthcare (12%) and customer service (7%). 
-    Thus, women are more often associated with occupations related to children, teaching, and (elder)
-     care, while men are often found in the role of guards and police officers.
-     </p>
-
+    <div style="text-align: left; background-color: #fdfafa; padding: 10px; border-radius: 5px;" class="containersmall">
+        <p>
+            The result shows that the female compound words ending with <i>Tädi</i> in occupational titles primarily marked professions related to 
+            customer service (44% from all occupational titles), healthcare (13%), 
+            and social work (11%), while <i>onu</i> in occupational titles predominantly 
+            represented law enforcement (20%), followed by healthcare (12%) and customer service (7%). 
+            Thus, women are more often associated with occupations related to children, teaching, and (elder)
+            care, while men are often found in the role of guards and police officers.
+        </p>
+    </div>
+<br>
 <!-- <br><br> -->
      <p align="center"> <img src=" table-1.png" width="800" align="middle" /></p>
 
@@ -195,26 +197,31 @@
           
     <h2 style="text-align: center;">LLMs Evaluation </h2>
 
-    Inspired by the human-written CrowS-Pairs dataset (Nangia et al., 2020), which  uses sentence pairs to highlight stereotypes across
-    social categories, we manually created sentence pairs using the same Estonian National Corpus.  The analysis of LLMs revealed that these models
-propagate occupational biases related to the compound words <i>tädi</i> and <i>onu</i>. Specifically, the fine-tuned Estonian LLAMMAS model reflects biases from Estonian labor force statistics more accurately
-than the similar-sized LLAMA-3-8B and the larger LLAMA-3-70B models. This indicates that the process of fine-tuning has amplified the inherent biases within the model. 
- </p>
+    <div style="text-align: left; background-color: #fdfafa; padding: 10px; border-radius: 5px;" class="containersmall">
+        <p>
+            Inspired by the human-written CrowS-Pairs dataset (Nangia et al., 2020), which uses sentence pairs to highlight stereotypes across
+            social categories, we manually created sentence pairs using the same Estonian National Corpus. The analysis of LLMs revealed that these models
+            propagate occupational biases related to the compound words <i>tädi</i> and <i>onu</i>. Specifically, the fine-tuned Estonian LLAMMAS model reflects biases from Estonian labor force statistics more accurately
+            than the similar-sized LLAMA-3-8B and the larger LLAMA-3-70B models. This indicates that the process of fine-tuning has amplified the inherent biases within the model.
+        </p>
+    </div>
 
 
      <p align="center"> 
     <img src="result.png" class="responsive-img" width="350" alt="Description of image" />
   </p>
 
-  <p> (below) Examples of occupational title bias via fine-tuned Estonian LLAMA (LLAMMAS) and off-the-
-    shelf LLAMA-3-70B models. (Top) example demonstrates a model measuring gender bias that associates
-    cleaning tasks with women. (Bottom) example with control [aunt/uncle] occupational title, the fine-tuned
-    model (LLAMMAS) aligns with our best model, GPT-4-Turbo, but incorrectly reflects Estonian labor
-    force statistics.</p>
+<div style="text-align: left; background-color: #fdfafa; padding: 10px; border-radius: 5px;" class="containersmall">
+    <p> (below) Examples of occupational title bias via fine-tuned Estonian LLAMA (LLAMMAS) and off-the-
+        shelf LLAMA-3-70B models. (Top) example demonstrates a model measuring gender bias that associates
+        cleaning tasks with women. (Bottom) example with control [aunt/uncle] occupational title, the fine-tuned
+        model (LLAMMAS) aligns with our best model, GPT-4-Turbo, but incorrectly reflects Estonian labor
+        force statistics.</p>
+</div>
 
-
-  <p align="center"> 
+<p align="center"> 
     <img src="Example.png" class="responsive-img" width="800" alt="Description of image" />
+</p>
   </p>
 
 
