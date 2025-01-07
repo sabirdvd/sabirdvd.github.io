@@ -156,7 +156,7 @@
          <h2 style="text-align: center;">Abstract</h2>
 
 
-  
+
   
   
 
@@ -201,7 +201,7 @@
         <p>
             Inspired by the human-written CrowS-Pairs dataset (Nangia et al., 2020), which uses sentence pairs to highlight stereotypes across
             social categories, we manually created sentence pairs using the same Estonian National Corpus. The analysis of LLMs revealed that these models
-            propagate occupational biases related to the compound words <i>tädi</i> and <i>onu</i>. Specifically, the fine-tuned Estonian LLAMMAS model reflects biases from Estonian labor force statistics more accurately
+            propagate occupational biases related to the compound words <i>tädi</i> and <i>onu</i>. Specifically, the fine-tuned Estonian LLAMA-2-7B (LLAMMAS) model reflects biases from Estonian labor force statistics more accurately
             than the similar-sized LLAMA-3-8B and the larger LLAMA-3-70B models. This indicates that the process of fine-tuning has amplified the inherent biases within the model.
         </p>
     </div>
@@ -212,20 +212,16 @@
   </p>
 
 <div style="text-align: left; background-color: #fdfafa; padding: 10px; border-radius: 5px;" class="containersmall">
-    <p> (below) Examples of occupational title bias via fine-tuned Estonian LLAMA (LLAMMAS) and off-the-
-        shelf LLAMA-3-70B models. (Top) example demonstrates a model measuring gender bias that associates
-        cleaning tasks with women. (Bottom) example with control [aunt/uncle] occupational title, the fine-tuned
-        model (LLAMMAS) aligns with our best model, GPT-4-Turbo, but incorrectly reflects Estonian labor
-        force statistics.</p>
+    <p>   Examples of occupational title bias using the fine-tuned Estonian LLAMA (LLAMMAS) and
+the off-the-shelf LLAMA-3-70B models. (Top) The example demonstrates how the models measure
+gender bias, associating bakery tasks with women. (Bottom) in the example with the cleaning [aunt/uncle]
+occupational title, the standard LLAMA-70B incorrectly reflects the female-biased occupation </p>
 </div>
 
 <p align="center"> 
     <img src="Example.png" class="responsive-img" width="800" alt="Description of image" />
 </p>
   </p>
-
-
-
 
   
     </table> 
@@ -234,7 +230,14 @@
 
 </table> 
 </div>
+    
+<h3 style="text-align: center;">Acknowledgment</h3>
 
+    <div style="text-align: left; background-color: #fdfafa; padding: 10px; border-radius: 5px;" class="containersmall">
+        <p> This work has received funding from the EU H2020 program under the SoBigData++ project (grant agreement No. 871042), 
+            by the CHIST-ERA grant No. CHIST-ERA-19-XAI-010, (ETAg grant No.SLTAT21096), and partially funded by HAMISON project.
+        </p>
+    </div>
 </table> 
 </div>
 
