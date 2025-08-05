@@ -39,16 +39,10 @@
             margin: 10px 0;
             width: 600px;
         }
-        @media screen and (max-width: 480px){
-            #wrap {
-                max-width: auto;
-            }
-        }
         .type1 { border-color: #E76F51; background-color: rgba(231, 111, 81, 0.1); }
         .type2 { border-color: #2A9D8F; background-color: rgba(42, 157, 143, 0.1); }
         .type3 { border-color: #0096C7; background-color: rgba(0, 150, 199, 0.1); }
         .type4 { border-color: #00B353; background-color: rgba(0, 179, 83, 0.1); }
-        .picture { width: 15px; padding-right: 10px; }
     </style>
 </head>
 
@@ -57,45 +51,50 @@
 <h2><p align="center">Review: Large Language Models Are Biased Because They Are Large Language Models</p></h2>
 <dt-byline></dt-byline>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>MathJax example</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-</head>
-
 <body>
-<p>In this post, I review Philip Resnik’s thought-provoking paper, <em>Large Language Models Are Biased Because They Are Large Language Models</em> </strong> <dt-cite key="resnik2024bias"></dt-cite>. The work challenges a common assumption in AI ethics: that harmful bias in language models is an accidental flaw that can be patched away.</p>
+<p>In this review, I summarise Philip Resnik’s 2024 position paper, <em>Large Language Models Are Biased Because They Are Large Language Models</em> <dt-cite key="resnik2024bias"></dt-cite>. The work takes a conceptual rather than purely empirical approach, arguing that bias in large language models (LLMs) is <strong>structural</strong> rather than incidental.</p>
 
-<p>&clubs; <strong>Main Idea</strong></p>
+<!-- INTRODUCTION -->
+<h3>1. Introduction</h3>
 <p>
-Resnik’s central claim is that bias in LLMs is not incidental — it is inherent to the very way these systems are built.  
-Because LLMs are trained on massive datasets that reflect the social, cultural, and historical biases of human language, those biases become <em>structurally embedded</em> in the models.  
-As such, even after extensive fine-tuning and filtering, bias will inevitably resurface in different forms.
+Resnik challenges the prevailing assumption that harmful bias in LLMs is a correctable defect.  
+Instead, he argues that such bias is a natural consequence of the probabilistic, data-driven approach used to train these models.  
+Given that training data reflects human society—with all its historical, cultural, and political biases—these biases inevitably become embedded in the model itself.
 </p>
 
-<p>&clubs; <strong>Key Arguments</strong></p>
+<!-- KEY ARGUMENTS -->
+<h3>2. Key Arguments</h3>
 <ul>
-    <li><strong>Bias is a structural property</strong>: It emerges naturally from probabilistic modeling of human language.</li>
-    <li><strong>Mitigation techniques are limited</strong>: Post-processing, fine-tuning, or curated data may reduce surface-level bias but cannot remove it entirely.</li>
-    <li><strong>Foundational change is needed</strong>: Addressing bias requires rethinking the architecture and training paradigm of LLMs, not just applying incremental fixes.</li>
+    <li><strong>Bias is Structural</strong> — It arises from the statistical modeling of human language patterns, not from accidental “bugs.”</li>
+    <li><strong>Mitigation Has Limits</strong> — Filtering, fine-tuning, and curated datasets can only address surface-level manifestations of bias.</li>
+    <li><strong>Rethinking Model Design</strong> — Effective solutions may require fundamentally different architectures, training paradigms, or reasoning frameworks.</li>
 </ul>
 
-<p>&clubs; <strong>Metaphor: The Scorpion and the Frog</strong></p>
+<!-- METAPHOR -->
+<h3>3. The Scorpion and the Frog</h3>
 <p>
-Resnik uses the famous fable to illustrate his point:  
-A scorpion convinces a frog to carry it across a river, promising not to sting. Halfway across, it stings anyway. When the frog asks why, the scorpion replies, “Because it’s in my nature.”  
-Likewise, current LLMs will continue to produce biased outputs because it is in their <em>nature</em> as language models trained on human data.
+To illustrate his thesis, Resnik invokes the fable of the scorpion and the frog.  
+Even after promising not to sting the frog, the scorpion does so mid-river, explaining: “It’s in my nature.”  
+Likewise, LLMs will continue to exhibit bias, because it is intrinsic to their statistical design.
 </p>
 
-<p>&clubs; <strong>Why It Matters</strong></p>
+<!-- IMPLICATIONS -->
+<h3>4. Implications</h3>
 <p>
-If bias is built into the structure of current LLMs, then deploying them in sensitive domains — hiring, healthcare, education, law — risks automating and amplifying societal inequalities.  
-This recognition should push the research community to explore fundamentally new AI design approaches, including hybrid systems that combine statistical learning with explicit reasoning and explainability.
+If bias is structural, deploying LLMs in high-stakes areas such as hiring, law, healthcare, or education risks scaling up societal inequities.  
+Resnik’s work suggests that addressing bias may require building models that go beyond mere statistical correlation—potentially incorporating explicit reasoning, interpretability, and cultural awareness from the ground up.
 </p>
+
+<!-- KEY TAKEAWAYS BOX -->
+<div class="noteBoxes type1">
+    <strong>Key Takeaways</strong>
+    <ul>
+        <li>Bias in LLMs is not a removable defect—it is inherent to the architecture and training paradigm.</li>
+        <li>Existing bias mitigation techniques offer limited, surface-level solutions.</li>
+        <li>Fundamental rethinking of AI design is required to achieve true fairness.</li>
+        <li>The “scorpion and frog” metaphor captures the inevitability of bias in current LLMs.</li>
+    </ul>
+</div>
 
 <hr>
 
