@@ -15,35 +15,37 @@
 </script>
 
 <script type="text/javascript">
-    function zoom() {
-        document.body.style.zoom = "100%" 
-    }
+  function zoom(){ document.body.style.zoom = "100%"; }
 </script>
 
 <body onload="zoom()">
 
 <style>
-    .blue-color { color: blue; }
-    .green-color { color: green; }
-    .teal-color { color: teal; }
-    .yellow-color { color: yellow; }
-    .red-color { color: red; }
+  .blue-color { color: blue; }
+  .green-color { color: green; }
+  .teal-color { color: teal; }
+  .yellow-color { color: yellow; }
+  .red-color { color: red; }
 </style>
 
 <head>
-    <style>
-        .noteBoxes {
-            border: 1px solid;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0;
-            width: 600px;
-        }
-        .type1 { border-color: #E76F51; background-color: rgba(231, 111, 81, 0.1); }
-        .type2 { border-color: #2A9D8F; background-color: rgba(42, 157, 143, 0.1); }
-        .type3 { border-color: #0096C7; background-color: rgba(0, 150, 199, 0.1); }
-        .type4 { border-color: #00B353; background-color: rgba(0, 179, 83, 0.1); }
-    </style>
+  <style>
+    .noteBoxes {
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+      width: 600px;
+    }
+    @media screen and (max-width: 480px){
+      #wrap { max-width: auto; }
+    }
+    .type1 { border-color: #E76F51; background-color: rgba(231,111,81,0.1); }
+    .type2 { border-color: #2A9D8F; background-color: rgba(42,157,143,0.1); }
+    .type3 { border-color: #0096C7; background-color: rgba(0,150,199,0.1); }
+    .type4 { border-color: #00B353; background-color: rgba(0,179,83,0.1); }
+    .small { font-size: 0.95em; }
+  </style>
 </head>
 
 <dt-article class="centered">
@@ -51,49 +53,137 @@
 <h2><p align="center">Review: Large Language Models Are Biased Because They Are Large Language Models</p></h2>
 <dt-byline></dt-byline>
 
-<body>
-<p>In this review, I summarise Philip Resnik’s 2024 position paper, <em>Large Language Models Are Biased Because They Are Large Language Models</em> <dt-cite key="resnik2024bias"></dt-cite>. The work takes a conceptual rather than purely empirical approach, arguing that bias in large language models (LLMs) is <strong>structural</strong> rather than incidental.</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax support</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
 
-<!-- INTRODUCTION -->
-<h3>1. Introduction</h3>
+<body>
+
 <p>
-Resnik challenges the prevailing assumption that harmful bias in LLMs is a correctable defect.  
-Instead, he argues that such bias is a natural consequence of the probabilistic, data-driven approach used to train these models.  
-Given that training data reflects human society—with all its historical, cultural, and political biases—these biases inevitably become embedded in the model itself.
+This review summarises Philip Resnik’s position paper, <em>Large Language Models Are Biased Because They Are Large Language Models</em> <dt-cite key="resnik2024bias"></dt-cite>. The claim is stark: <strong>harmful bias is not a glitch to be patched but a structural consequence of how LLMs are formulated and trained</strong>.
 </p>
 
-<!-- KEY ARGUMENTS -->
-<h3>2. Key Arguments</h3>
-<ul>
-    <li><strong>Bias is Structural</strong> — It arises from the statistical modeling of human language patterns, not from accidental “bugs.”</li>
-    <li><strong>Mitigation Has Limits</strong> — Filtering, fine-tuning, and curated datasets can only address surface-level manifestations of bias.</li>
-    <li><strong>Rethinking Model Design</strong> — Effective solutions may require fundamentally different architectures, training paradigms, or reasoning frameworks.</li>
+<div class="noteBoxes type1">
+  <strong>Key Takeaways (TL;DR)</strong>
+  <ul>
+    <li>LLMs optimise next-token prediction on human text; they therefore learn society’s regularities <em>including</em> its biases.</li>
+    <li>Bias persists under post-hoc filters and fine-tuning because the underlying distribution the model represents is biased.</li>
+    <li>Common fixes move the problem around (distribution shift / Goodharting) rather than remove it.</li>
+    <li>Real progress likely requires rethinking objectives and architectures beyond “pure language modeling”.</li>
+  </ul>
+</div>
+
+<h3>1) Formalising the argument</h3>
+
+<p class="small">
+A language model with parameters \( \theta \) minimises cross-entropy with respect to a text distribution \( \mathcal{D} \):
+</p>
+
+<p class="small">
+\[
+\theta^\star \;=\; \arg\max_{\theta}\; \mathbb{E}_{x \sim \mathcal{D}} \big[ \log p_{\theta}(x) \big]
+\;=\; \arg\min_{\theta}\; \mathrm{KL}\!\left(\mathcal{D} \,\|\, p_{\theta}\right).
+\]
+</p>
+
+<p class="small">
+Let \(A\) be a sensitive attribute (e.g., gender), \(Y\) a linguistic decision/event (e.g., an occupation completion). If \(\mathcal{D}\) encodes an association \( \mathcal{D}(Y \,|\, A=a_1) \neq \mathcal{D}(Y \,|\, A=a_2)\), then a successful model will mirror it:
+\[
+p_{\theta^\star}(Y \,|\, A=a) \approx \mathcal{D}(Y \,|\, A=a).
+\]
+Bias is therefore <em>inherited</em>:
+\[
+\Delta \;=\; \mathbb{E}_{\mathcal{D}}\big[f(Y)\,|\,A=a_1\big] - \mathbb{E}_{\mathcal{D}}\big[f(Y)\,|\,A=a_2\big]
+\;\Rightarrow\;
+\Delta_{\text{model}} \approx \Delta_{\mathcal{D}}.
+\]
+</p>
+
+<div class="noteBoxes type3">
+  <strong>Interpretation</strong>
+  <p class="small">
+  The core objective aligns the model to the training distribution. If that distribution encodes harmful social regularities, alignment reproduces them. This is <em>structural</em>, not an implementation bug.
+  </p>
+</div>
+
+<h3>2) A concrete toy example</h3>
+
+<p class="small">
+Consider prompts of the form: “The <em>profession</em> of <em>NAME</em> is &lowast;&lowast;&lowast;.” Let \(Y\) be the next token and \(A \in \{\text{female},\text{male}\}\) inferred from NAME.
+</p>
+
+<p class="small">
+Suppose in \( \mathcal{D} \) we have stereotyped associations:
+\[
+\mathcal{D}(Y=\texttt{nurse}\,|\,A=\text{female}) = 0.20,\quad
+\mathcal{D}(Y=\texttt{nurse}\,|\,A=\text{male}) = 0.05.
+\]
+Maximising likelihood drives \(p_{\theta}\) toward those conditional probabilities. Even after adding a generic “avoid stereotypes” penalty, the model may simply <em>redistribute</em> mass to near-synonyms (e.g., <em>assistant</em>) or defer with safe-sounding but unequal completions, preserving a group gap:
+\[
+\Delta_{\text{nurse}} \;=\; p_{\theta}(Y=\texttt{nurse}\,|\,\text{female}) - p_{\theta}(Y=\texttt{nurse}\,|\,\text{male}) \;>\; 0.
+\]
+</p>
+
+<div class="noteBoxes type2">
+  <strong>Worked example (qualitative)</strong>
+  <ul class="small">
+    <li><em>Before mitigation</em>: model mirrors corpus stats (higher <code>nurse</code> for female names).</li>
+    <li><em>After keyword filter</em>: model avoids “nurse” but increases “assistant/caregiver”; the group difference persists under a new label.</li>
+    <li>Surface bias ↓, structural association ↔ (unchanged).</li>
+  </ul>
+</div>
+
+<h3>3) Why common mitigations struggle</h3>
+
+<p class="small">
+A popular approach (RLHF or similar preference optimisation) adds a reward model \(r_{\phi}\) and a KL constraint to a reference model \(p_{\theta_0}\):
+\[
+\max_{\theta}\; \mathbb{E}_{x \sim \mathcal{D}} \mathbb{E}_{y \sim p_{\theta}(\cdot|x)}\!\big[\, r_{\phi}(x,y) \,\big]
+\;-\; \beta\, \mathrm{KL}\!\left( p_{\theta}(\cdot|x) \,\|\, p_{\theta_0}(\cdot|x) \right).
+\]
+This reshapes <em>outputs</em> that humans rate as acceptable, but the underlying representation still reflects \(\mathcal{D}\). As \(\beta\) increases, safety grows but utility and faithfulness may drop; as \(\beta\) decreases, alignment to biased \(\mathcal{D}\) reasserts itself.
+</p>
+
+<p class="small">
+Post-hoc filters formalise to a projection \( \Pi \) on an allowed set \( \mathcal{S} \): \( \tilde{p}_{\theta} \propto \Pi \big(p_{\theta}\big)\). This can induce <em>distributional shift</em> and Goodhart effects (optimising the proxy “passes the filter” rather than the true goal “is unbiased”), often displacing rather than removing bias.
+</p>
+
+<div class="noteBoxes type3">
+  <strong>Take-home math</strong>
+  <ul class="small">
+    <li>\(\min_{\theta} \mathrm{KL}(\mathcal{D}\,\|\,p_{\theta})\) <em>preserves</em> biased conditionals \( \mathcal{D}(Y|A) \).</li>
+    <li>Preference/RLHF terms constrain style, not the learned base distribution.</li>
+    <li>Filtering = projection; projections can hide bias without changing latent associations.</li>
+  </ul>
+</div>
+
+<h3>4) Normative vs. descriptive generalisation</h3>
+
+<p class="small">
+LLMs excel at <em>descriptive</em> generalisation (what people <em>say</em>), not at deciding which generalisations are <em>normatively</em> acceptable. Without explicit normative structure, models cannot reliably distinguish “statistical regularity” from “stereotype that should be resisted.”
+</p>
+
+<h3>5) Implications and directions</h3>
+
+<ul class="small">
+  <li><strong>Risk at scale</strong>: deploying purely descriptive models in hiring/health/education scales historical inequities.</li>
+  <li><strong>Objective-level change</strong>: incorporate constraints or auxiliary objectives that encode normative requirements beyond next-token likelihood.</li>
+  <li><strong>Hybrid systems</strong>: combine LM components with causal/logic layers that can <em>justify</em> and <em>audit</em> decisions.</li>
+  <li><strong>Measurement</strong>: evaluate at the level of conditional behaviour \(p(Y|A,X)\), not only forbidden-word rates.</li>
 </ul>
 
-<!-- METAPHOR -->
-<h3>3. The Scorpion and the Frog</h3>
-<p>
-To illustrate his thesis, Resnik invokes the fable of the scorpion and the frog.  
-Even after promising not to sting the frog, the scorpion does so mid-river, explaining: “It’s in my nature.”  
-Likewise, LLMs will continue to exhibit bias, because it is intrinsic to their statistical design.
-</p>
-
-<!-- IMPLICATIONS -->
-<h3>4. Implications</h3>
-<p>
-If bias is structural, deploying LLMs in high-stakes areas such as hiring, law, healthcare, or education risks scaling up societal inequities.  
-Resnik’s work suggests that addressing bias may require building models that go beyond mere statistical correlation—potentially incorporating explicit reasoning, interpretability, and cultural awareness from the ground up.
-</p>
-
-<!-- KEY TAKEAWAYS BOX -->
 <div class="noteBoxes type1">
-    <strong>Key Takeaways</strong>
-    <ul>
-        <li>Bias in LLMs is not a removable defect—it is inherent to the architecture and training paradigm.</li>
-        <li>Existing bias mitigation techniques offer limited, surface-level solutions.</li>
-        <li>Fundamental rethinking of AI design is required to achieve true fairness.</li>
-        <li>The “scorpion and frog” metaphor captures the inevitability of bias in current LLMs.</li>
-    </ul>
+  <strong>Main Takeaways (boxed)</strong>
+  <ul>
+    <li>Bias emerges from the core modelling objective and the data distribution; it is therefore structural.</li>
+    <li>Mitigations that do not alter the underlying objective/distribution mostly relocate bias.</li>
+    <li>Progress likely requires rethinking architectures, training signals, and the role of explicit normative constraints.</li>
+  </ul>
 </div>
 
 <hr>
@@ -105,8 +195,9 @@ Resnik’s work suggests that addressing bias may require building models that g
 @article{resnik2024bias,
   title={Large Language Models Are Biased Because They Are Large Language Models},
   author={Philip Resnik},
-  journal={arXiv preprint arXiv:2406.13138},
-  year={2024}
+  journal={Computational Linguistics (accepted); arXiv:2406.13138},
+  year={2024},
+  note = {Position paper arguing bias is structurally inherent to LLMs as currently formulated.}
 }
 </script>
 
