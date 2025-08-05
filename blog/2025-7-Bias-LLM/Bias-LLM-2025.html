@@ -787,7 +787,7 @@ Preference optimisation augments the objective with a reward model \(r_\phi(x,y)
 This reshapes outputs toward what annotators deem acceptable, but it does not rewrite the underlying conditional structure that the base model learned from \(\mathcal{D}\). Large \(\beta\) keeps the policy close to the base (and its biases); small \(\beta\) departs more but risks utility and factuality trade-offs, while latent dependencies can survive through indirection.
 </p>
 
-<h2>4. Normative vs. descriptive generalisation</h2>
+<h2> Normative vs. descriptive generalization</h2>
 
 <p class="small">
 The language modelling loss rewards descriptive fidelity to human usage and does not distinguish correlations that are evidentially relevant from those that are socially impermissible. Without explicit normative structure, models cannot reliably separate statistical regularities from stereotypes that should be resisted.
