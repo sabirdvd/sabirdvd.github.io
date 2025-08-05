@@ -6,15 +6,22 @@
   <title>Welcome to my Blog & Research Noteへようこそ！</title>
   <style>
 
-
- .blinking {
+.glitch {
   display: inline-block;
-  animation: blink 3s infinite; /* Slow blink every 3 seconds */
+  animation: glitch 1s infinite;
 }
 
-@keyframes blink {
-  0%, 80%, 100% { opacity: 1; } /* Mostly visible */
-  40%, 60% { opacity: 0; }     /* Short fade-out */
+@keyframes glitch {
+  0%, 100% { opacity: 1; transform: translate(0, 0); }
+  10% { opacity: 0.8; transform: translate(-1px, 1px); }
+  20% { opacity: 0.6; transform: translate(1px, -1px); }
+  30% { opacity: 0.9; transform: translate(-1px, -2px); }
+  40% { opacity: 0.7; transform: translate(2px, 1px); }
+  50% { opacity: 0.5; transform: translate(-1px, 1px); }
+  60% { opacity: 0.9; transform: translate(1px, -1px); }
+  70% { opacity: 0.8; transform: translate(-2px, 2px); }
+  80% { opacity: 0.6; transform: translate(1px, -1px); }
+  90% { opacity: 0.9; transform: translate(0, 0); }
 }
     /* Fonts */
     @font-face {
@@ -100,7 +107,9 @@
 
   <p><strong>Blog</strong></p>
   <ul style="list-style-type: '&#9823'; margin: 0; padding: 0;"> 
-    <li><a href="https://ahmed.jp/blog/2025-7-Bias-LLM/Bias-LLM-2025.html" target="_blank" class="blinking"> Review: Large Language Models Are Biased Because They Are LLMs</a></li>
+   <li>
+  <a href="https://ahmed.jp/blog/2025-7-Bias-LLM/Bias-LLM-2025.html" target="_blank" class="glitch"> Review: Large Language Models Are Biased Because They Are LLMs </a></li>
+    
 <!--     <li><a href="https://sabirdvd.github.io/blog/2025-7-ACL2025/ACL2025.html" target="_blank">ACL 2025 Interesting Papers & Workshop</a></li>
     <li><a href="#">EMNLP 2024 Interesting Papers & Workshop</a></li> -->
     <li><a href="https://sabirdvd.github.io/blog/2022-7-NAACL2022/NAACL2022.html" target="_blank">NAACL 2022 Interesting Papers & Workshop</a></li>
