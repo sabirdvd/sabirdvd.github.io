@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to my Blog & Research Noteへようこそ！</title>
   <style>
-     .blinking {
-    animation: blink 1s infinite;
-  }
 
-  @keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
-  }
+    .blinking {
+  display: inline-block; /* allows opacity animation on <a> */
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+    
     /* Fonts */
     @font-face {
       font-family: 'Departure Mono';
