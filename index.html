@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to my Blog & Research Noteへようこそ！</title>
   <style>
+     .blinking {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
     /* Fonts */
     @font-face {
       font-family: 'Departure Mono';
@@ -89,7 +97,7 @@
 
   <p><strong>Blog</strong></p>
   <ul style="list-style-type: '&#9823'; margin: 0; padding: 0;"> 
-    <li><a href="https://ahmed.jp/blog/2025-7-Bias-LLM/Bias-LLM-2025.html" target="_blank">Review: Large Language Models Are Biased Because They Are Large Language Models</a></li>
+    <li><a href="https://ahmed.jp/blog/2025-7-Bias-LLM/Bias-LLM-2025.html" target="_blank" class="blinking"> Review: Large Language Models Are Biased Because They Are LLMs</a></li>
 <!--     <li><a href="https://sabirdvd.github.io/blog/2025-7-ACL2025/ACL2025.html" target="_blank">ACL 2025 Interesting Papers & Workshop</a></li>
     <li><a href="#">EMNLP 2024 Interesting Papers & Workshop</a></li> -->
     <li><a href="https://sabirdvd.github.io/blog/2022-7-NAACL2022/NAACL2022.html" target="_blank">NAACL 2022 Interesting Papers & Workshop</a></li>
