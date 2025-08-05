@@ -1,32 +1,92 @@
-<dt-article class="centered">
+<!doctype html>
 
-  <h2><p align="center"> ACL \(2025\) Interesting Papers & Workshop<p></h2>
+
+<a href="https://sabirdvd.github.io" class="button"> <small>↩ </small></a>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+<meta charset="utf-8">
+<script src="template.v1.js"></script>
+<script type="text/front-matter">
+  title: "ACL 2025 - Interesting Papers"
+  authors:
+  - Ahmed Sabir: https://www.cs.upc.edu/~asabir/
+  - PUBLISHED Date
+  affiliations:
+  - Universitat Politècnica de Catalunya: https://www.upc.edu
+  -  5 August 2025
+</script>
+
+<script type="text/javascript">
+    function zoom() {
+        document.body.style.zoom = "80%" 
+    }
+</script>
+
+<body onload="zoom()">
+
+<style>
+    .blue-color { color: blue; }
+    .green-color { color: green; }
+    .teal-color { color: teal; }
+    .yellow-color { color: yellow; }
+    .red-color { color: red; }
+</style>
+
+<head>
+    <style>
+        .noteBoxes {
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            width: 600px;
+        }
+        @media screen and (max-width: 480px){
+            #wrap { max-width: auto; }
+        }
+        .type1 { border-color: #E76F51; background-color: rgba(231, 111, 81, 0.1); }
+        .type2 { border-color: #2A9D8F; background-color: rgba(42, 157, 143, 0.1); }
+        .type3 { border-color: #0096C7; background-color: rgba(0, 150, 199, 0.1); }
+        .type4 { border-color: #00B353; background-color: rgba(0, 179, 83, 0.1); }
+        .picture { width: 15px; padding-right: 10px; }
+    </style>
+</head>
+
+<dt-article class="centered">
+  <h2><p align="center">ACL \(2025\) Interesting Papers & Workshop</p></h2>
   <dt-byline></dt-byline>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
 
 <p>In this short blog post, I will highlight a couple of interesting ideas presented in ACL \(2025\).</p>
 
-<p>&clubs;<strong> Cultural Bias Matters: A Cross-Cultural Benchmark Dataset and Sentiment-Enriched Model for Understanding Multimodal Metaphors </strong></p>
+
+
+<p>&clubs;<strong> Cultural Bias Matters: A Cross-Cultural Benchmark Dataset and Sentiment-Enriched Model for Understanding Multimodal Metaphors </strong> <dt-cite key="author2025culturalbias"></dt-cite></p>
 
 <p>
-This paper addresses the underexplored issue of <strong>cultural bias</strong> in multimodal metaphor understanding. The authors introduce a new cross-cultural benchmark dataset containing metaphorical expressions paired with both textual and visual contexts, annotated for sentiment and cultural origin. This resource spans multiple languages and cultural groups, allowing for systematic evaluation of models’ cultural adaptability.
+This paper addresses the challenge of understanding multimodal metaphors across different cultures. It introduces a new benchmark dataset that captures metaphorical expressions in both text and images, annotated for cultural context and sentiment polarity. The authors argue that cultural bias plays a significant role in how metaphors are interpreted and propose a sentiment-enriched model that leverages both visual and textual modalities.
 </p>
 
 <p>
-They propose a <strong>Sentiment-Enriched Multimodal Metaphor Model (SE-M3)</strong> that integrates sentiment-aware features into a multimodal transformer framework. By jointly modeling metaphor semantics, cultural cues, and emotional tone, SE-M3 demonstrates substantial improvements over baseline models in metaphor classification, sentiment prediction, and cross-cultural generalization tasks.
-</p>
-
-<p>
-Key findings include:
+Key contributions:
 <ul>
-<li>Multimodal metaphors often carry culturally dependent sentiment nuances that monolingual models fail to capture.</li>
-<li>Adding sentiment-aware features improves metaphor interpretation accuracy by over <strong>10%</strong> in low-resource cultural contexts.</li>
-<li>Cross-cultural training enables better transfer to unseen cultural domains compared to standard multimodal models.</li>
+<li>A large-scale cross-cultural multimodal metaphor dataset with sentiment annotations.</li>
+<li>Analysis showing how metaphor interpretation varies significantly across cultures.</li>
+<li>A multimodal transformer-based architecture enriched with sentiment features for improved metaphor understanding.</li>
 </ul>
 </p>
 
 <p>
-This work highlights the importance of culturally sensitive NLP, showing that integrating cultural and sentiment signals is crucial for robust metaphor understanding across diverse communities.
+Experiments demonstrate that incorporating sentiment and cultural context improves metaphor detection and interpretation accuracy, especially for non-Western datasets. This research paves the way for culturally-aware multimodal NLP systems.
 </p>
 
 <hr>
-
