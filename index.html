@@ -6,16 +6,16 @@
   <title>Welcome to my Blog & Research Noteへようこそ！</title>
   <style>
 
-    .blinking {
-  display: inline-block; /* allows opacity animation on <a> */
-  animation: blink 1s infinite;
+
+ .blinking {
+  display: inline-block;
+  animation: blink 3s infinite; /* Slow blink every 3 seconds */
 }
 
 @keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+  0%, 80%, 100% { opacity: 1; } /* Mostly visible */
+  40%, 60% { opacity: 0; }     /* Short fade-out */
 }
-    
     /* Fonts */
     @font-face {
       font-family: 'Departure Mono';
