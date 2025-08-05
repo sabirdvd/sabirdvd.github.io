@@ -22,89 +22,50 @@
 
 <body onload="zoom()">
 
+<!-- Dark overlay to cover white background from template.v1.js -->
 <style>
-    /* Dark mode default */
-    body {
-        background-color: #121212;
-        color: #e0e0e0;
-        font-family: Arial, sans-serif;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    a {
-        color: #90caf9;
-    }
-
-    /* Light mode override */
-    body.light-mode {
-        background-color: #ffffff;
-        color: #000000;
-    }
-    body.light-mode a {
-        color: blue;
-    }
-
-    /* Dark mode / light mode toggle button */
-    #modeToggle {
+    #darkOverlay {
         position: fixed;
-        top: 10px;
-        right: 10px;
-        background: #333;
-        color: white;
-        border: none;
-        padding: 8px 12px;
-        cursor: pointer;
-        border-radius: 5px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #121212;
+        pointer-events: none; /* allows clicks through overlay */
+        z-index: 9999; /* stays on top */
     }
-    body.light-mode #modeToggle {
-        background: #ddd;
-        color: black;
-    }
+</style>
+<div id="darkOverlay"></div>
 
+<style>
     .blue-color { color: blue; }
     .green-color { color: green; }
     .teal-color { color: teal; }
     .yellow-color { color: yellow; }
     .red-color { color: red; }
-
-    .noteBoxes {
-        border: 1px solid;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 10px 0;
-        width: 600px;
-    }
-    @media screen and (max-width: 480px){
-        #wrap {
-            max-width: auto;
-        }
-    }
-    .type1 { border-color: #E76F51; background-color: rgba(231, 111, 81, 0.1); }
-    .type2 { border-color: #2A9D8F; background-color: rgba(42, 157, 143, 0.1); }
-    .type3 { border-color: #0096C7; background-color: rgba(0, 150, 199, 0.1); }
-    .type4 { border-color: #00B353; background-color: rgba(0, 179, 83, 0.1); }
-    .picture { width: 15px; padding-right: 10px; }
 </style>
 
-<!-- Dark mode toggle button -->
-<button id="modeToggle">☀ Light Mode</button>
-
-<script>
-    const body = document.body;
-    const toggleBtn = document.getElementById("modeToggle");
-
-    // Default to dark mode
-    body.classList.remove("light-mode");
-    toggleBtn.textContent = "☀ Light Mode";
-
-    toggleBtn.addEventListener("click", () => {
-        body.classList.toggle("light-mode");
-        if (body.classList.contains("light-mode")) {
-            toggleBtn.textContent = "🌙 Dark Mode";
-        } else {
-            toggleBtn.textContent = "☀ Light Mode";
+<head>
+    <style>
+        .noteBoxes {
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            width: 600px;
         }
-    });
-</script>
+        @media screen and (max-width: 480px){
+            #wrap {
+                max-width: auto;
+            }
+        }
+        .type1 { border-color: #E76F51; background-color: rgba(231, 111, 81, 0.1); }
+        .type2 { border-color: #2A9D8F; background-color: rgba(42, 157, 143, 0.1); }
+        .type3 { border-color: #0096C7; background-color: rgba(0, 150, 199, 0.1); }
+        .type4 { border-color: #00B353; background-color: rgba(0, 179, 83, 0.1); }
+        .picture { width: 15px; padding-right: 10px; }
+    </style>
+</head>
 
 <dt-article class="centered">
 
