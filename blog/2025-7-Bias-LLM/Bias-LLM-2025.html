@@ -839,11 +839,30 @@ The fable is a metaphor for optimizing under a fixed nature. The nature of an LL
 If the objective is to be an accurate model of human language, then structural artifacts of human language will be structural artifacts of the model. When those artifacts are harmful, it is wishful to expect that better mirrors will be less reflective. What is required is a concurrent theory of learning that prioritizes the reasons for predictions and not merely their frequencies, backed by measurements that interrogate conditional behavior rather than surface forms.
 </p>
 
-<h2>Open research questions</h2>
+<!-- <h2>Open research questions</h2>
 
 <p class="small">
 Objective design asks for tractable surrogates that enforce constraints on \(p_\theta(Y\mid A,X)\) so models are right for the right reasons without large utility loss. Representation control asks whether we can provably suppress linear and non-linear recoverability of protected attributes in intermediate states while preserving task competence. Hybrid architectures ask which causal or logic overlays most effectively gate LM proposals to enforce invariances and how to compose them without brittleness. Evaluation at scale asks how to estimate group-conditional behavior, including counterfactual flips of \(A\), across diverse tasks without prompt leakage or Simpson’s paradox. Data governance asks what re-weighting, counterfactual augmentation, or attribution strategies measurably reduce unwanted dependencies beyond keyword sanitization. Limits of preference learning ask when and why RLHF or direct preference optimization fails to alter structural dependencies and what additional signals are necessary. A theory of trade-offs asks for Pareto frontiers among fidelity, fairness constraints on \(p(Y\mid A,X)\), and robustness, analogous to impossibility results for classifiers.
+</p> -->
+
+  <h2>Open Research Questions</h2>
+
+<p class="small">
+<strong>Objective design:</strong> How can we create practical surrogate objectives that place constraints on \(p_\theta(Y \mid A, X)\)? The goal is to ensure models make decisions for the right reasons, while keeping performance loss minimal.  
+<br><br>
+<strong>Representation control:</strong> Can we reliably suppress both linear and non-linear recoverability of protected attributes in intermediate model states, while still maintaining strong task performance?  
+<br><br>
+<strong>Hybrid architectures:</strong> Which causal or logical overlays work best for gating language model outputs to enforce invariances? How can these overlays be composed without becoming brittle?  
+<br><br>
+<strong>Evaluation at scale:</strong> How can we measure group-conditional behavior — including counterfactual flips of \(A\) — across diverse tasks without causing prompt leakage or falling into Simpson’s paradox?  
+<br><br>
+<strong>Data governance:</strong> Which techniques, such as re-weighting, counterfactual augmentation, or attribution, most effectively reduce unwanted dependencies — going beyond simple keyword sanitization?  
+<br><br>
+<strong>Limits of preference learning:</strong> When and why do methods like RLHF or direct preference optimization fail to change structural dependencies? What additional signals are needed for success?  
+<br><br>
+<strong>Theory of trade-offs:</strong> Can we map Pareto frontiers between model fidelity, fairness constraints on \(p(Y \mid A, X)\), and robustness — similar to impossibility results in classification theory?
 </p>
+
 
 <div class="d-appendix"></div>
 <dt-appendix></dt-appendix>
