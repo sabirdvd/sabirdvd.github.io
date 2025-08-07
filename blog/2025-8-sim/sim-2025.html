@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <a href="https://sabirdvd.github.io" class="button"><small>↩</small></a>
 <meta charset="utf-8">
@@ -37,8 +36,7 @@
   <p class="small">
     This article reviews philosopher Nick Bostrom’s influential 2003 paper,
     <em>“Are You Living in a Computer Simulation?”</em>
-    <dt-cite key="bostrom2003simulation"></dt-cite>, published in <em>Philosophical Quarterly</em>. Bostrom argues that we might be living in a computer simulation created by an advanced civilization.
-    The paper uses probabilistic reasoning and assumptions about future technology to propose that our reality could be a highly sophisticated virtual world, similar to a video game but with conscious beings.
+    <dt-cite key="bostrom2003simulation"></dt-cite>, published in <em>Philosophical Quarterly</em>. Bostrom argues that we might be living in a computer simulation created by an advanced civilization. The paper uses probabilistic reasoning and assumptions about future technology to propose that our reality could be a highly sophisticated virtual world, similar to a video game but with conscious beings.
   </p>
   <div class="noteBoxes type1">
     <strong>Key Takeaways</strong>
@@ -90,8 +88,11 @@
     \]
     Even with fewer simulations, the odds remain overwhelmingly in favor of being simulated.
   </p>
-  <div class="noteBoxes type2">
-    <strong>Toy box Example</strong>
+  
+  
+ <!--
+  <div class="noteBoxes small">
+    <strong>Example</strong>
     <p class="small">
       Imagine a toy box with one “real” person, like you, and lots of “pretend” people who live in computer games, like characters in a video game. A super-smart toymaker makes 10 games, and each game has 10 pretend people who think they’re real. So:
       \[
@@ -104,6 +105,40 @@
       Bostrom says if future people make lots of games with pretend people, we’re probably one of those pretend people in a game!
     </p>
   </div>
+  -->
+    <!-- BEGIN INSERTED NOTE -->
+  <div class="noteBoxes type1">
+    <strong>Note on Mathematical Interpretation</strong>
+    <p class="small">
+      In the main paper, Bostrom does not define variables like \( N_{\text{base}} \) or \( N_{\text{sim}} \). 
+      Instead, he frames the probability that we are in a simulation using the formula:
+    </p>
+    <p class="small" style="text-align: center;">
+      \[
+      f_{\text{sim}} = \frac{f_p f_1 N_1}{f_p f_1 N_1 + 1}
+      \]
+    </p>
+    <p class="small">
+      where:
+      <ul>
+        <li><strong>\( f_p \)</strong> is the fraction of civilizations that reach a posthuman (technologically advanced) stage,</li>
+        <li><strong>\( f_1 \)</strong> is the fraction of posthuman civilizations that are interested in running simulations of their ancestors,</li>
+        <li><strong>\( N_1 \)</strong> is the average number of ancestor simulations each such civilization runs.</li>
+      </ul>
+    </p>
+    <p class="small">
+      This formula gives the estimated fraction of all observers with human-like experiences who are actually simulated. 
+      If the numerator is very large (i.e., many simulations), then \( f_{\text{sim}} \) approaches 1—meaning most such observers are in simulations.
+    </p>
+    <p class="small">
+       We reframe this idea using an alternative but mathematically consistent model:
+      by comparing the number of simulated observers to those in base reality using variables like \( N_{\text{sim}} \), \( N_{\text{base}} \), and \( P(\text{simulation}) \). 
+      This approach makes the argument more accessible through concrete numerical examples, but the philosophical conclusion remains the same.
+    </p>
+  </div>
+  
+
+
   <h2>1. Civilizational Extinction</h2>
   <p class="small">
     Many civilizations may collapse before reaching a “posthuman” stage where they can simulate conscious minds. Think of historical empires that fell due to war or famine—modern risks like nuclear conflict, climate change, pandemics, or rogue AI could similarly wipe us out before we develop simulation technology.
