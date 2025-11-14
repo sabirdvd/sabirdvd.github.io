@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Data Analytics 2025/26 Fall</title>
+
+  <!-- Keep page hidden until geolocation check completes -->
+  <style>
+    html{visibility:hidden}
+    :root{color-scheme:dark}
+  </style>
+
+  <script>
+  (function () {
+    // ---------- Config ----------
+    const BLOCK_CC = "EE";                 // Estonia
+    const TIMEOUT_MS = 3500;               // per-request timeout
+    const TOTAL_FAILOPEN_MS = 5000;        // show page if everything stalls
+    const CACHE_TTL_MS = 15 * 60 * 1000;   // cache result 15 minutes
+
+    // ---------- Helpers ----------
+    const visOn = () => document.documentElement.style.visibility = "visible";
+
+    const withTimeout = (p, ms) =>
+      Promise.race([
+        p,
+        new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), ms))
+      ]);
+
+    const cacheKey = "geo_cc_cache_v1";
+    const now = () => Date.now();
+
+    function getCachedCC() {
+      try {
+        const raw = localStorage.getItem(cacheKey);
+        if (!raw) return null;
+        const obj = JSON.parse(raw);
+        if (!obj || !obj.cc || !obj.t) return null;
+        if (now() - obj.t > CACHE_TTL_MS) return null;
+        return (obj.cc || "").toUpperCase();
+      } catch { return null; }
+    }
+
+    function setCachedCC(cc) {
+      try {
+        localStorage.setItem(cacheKey, JSON.stringify({ cc: (cc || "").toUpperCase(), t: now() }));
+      } catch {}
+    }
+
+    // Quick manual override for testing: ?cc=EE or ?cc=US
+    const urlCC = new URLSearchParams(location.search).get("cc");
+    if (urlCC) setCachedCC(urlCC.toUpperCase());
+
+    // ---------- APIs (no key required) ----------
+    async function fetchCC_ipapi() {
+      const r = await fetch("https://ipapi.co/json/", { cache: "no-store" });
+      const j = await r.json();
+      return (j.country_code || "").toUpperCase();
+    }
+
+    async function fetchCC_ipwhois() {
+      const r = await fetch("https://ipwho.is/?output=json", { cache: "no-store" });
+      const j = await r.json();
+      return (j.country_code || "").toUpperCase();
+    }
+
+    async function getCountryCode() {
+      // 1) try cache
+      const cached = getCachedCC();
+      if (cached) return cached;
+
+      // 2) race two providers (best-effort)
+      try {
+        const cc = await withTimeout(
+          Promise.any([
+            withTimeout(fetchCC_ipapi(), TIMEOUT_MS),
+            withTimeout(fetchCC_ipwhois(), TIMEOUT_MS),
+          ]),
+          TIMEOUT_MS + 500
+        );
+        if (cc) setCachedCC(cc);
+        return cc;
+      } catch {
+        // 3) final attempt (sequential, less strict)
+        try {
+          const cc1 = await withTimeout(fetchCC_ipapi(), TIMEOUT_MS);
+          if (cc1) { setCachedCC(cc1); return cc1; }
+        } catch {}
+        try {
+          const cc2 = await withTimeout(fetchCC_ipwhois(), TIMEOUT_MS);
+          if (cc2) { setCachedCC(cc2); return cc2; }
+        } catch {}
+        return ""; // fail open
+      }
+    }
+
+    // ---------- Block Page ----------
+    function renderBlock() {
+      document.documentElement.innerHTML = `
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>403 Forbidden</title>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b1a2b;color:#fff;
+       font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif}
+  .card{max-width:720px;padding:28px;border:1px solid #1f3550;border-radius:14px;background:#0f2440;
+        box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  h1{margin:0 0 10px;font-size:22px}
+  p{margin:0 0 8px;color:#cfe1ff}
+</style>
+</head><body>
+  <div class="card">
+    <h1>404 — Page Not Found</h1>
+    
+  </div>
+</body></html>`;
+    }
+
+    // ---------- Main ----------
+    const globalFailOpen = setTimeout(visOn, TOTAL_FAILOPEN_MS);
+
+    (async () => {
+      try {
+        const cc = (await getCountryCode()) || "";
+        if (cc.toUpperCase() === BLOCK_CC) {
+          renderBlock();
+          return;
+        }
+      } catch {
+        // fail open
+      } finally {
+        clearTimeout(globalFailOpen);
+        visOn();
+      }
+    })();
+  })();
+  </script>
+
+  <!-- Your page styles below -->
+  <style>
+    @font-face {
+      font-family: 'Departure Mono';
+      src: url('font/DepartureMono-Regular.woff2') format('woff2'),
+           url('font/DepartureMono-Regular.woff') format('woff');
+    }
+    body {
+      font-family: 'Departure Mono', monospace;
+      padding: 25px;
+      background-color: #001f3f;
+      color: white;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    a { color: #1772d0; text-decoration: none; }
+    a:hover, a:focus { color: #f09228; }
+    h1, h2 { font-family: 'Departure Mono', monospace; }
+    #title { font-size: 32px; }
+    h2 { font-size: 22px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Business Data Analytics <small>2025/26 Fall</small></h1>
+  </header>
+  <script src="glitch_H2.js" defer></script>
+
+  <main>
+    <section>
+      <h2>Lectures</h2>
+      <p>All the material will be provided through Moodle. If you are a registered student, you should have Moodle access. Please contact me if you do not get access.</p>
+      <ul>
+        <li>11.09 - Introduction</li>
+        <li>25.09 - Descriptive analysis and visualization</li>
+        <li>09.10 - Customer segmentation</li>
+        <li>23.10 - Customer Lifecycle Management - Regression Problems</li>
+        <li>06.11 - Customer Lifecycle Management - Classification Problems</li>
+        <li>20.11 - Cross-sell/Up-sell Recommendations: Collaborative Filtering</li>
+        <li>04.12 - A/B Testing </li>
+        <li>18.12 - Summary and Exam Preparation + Guest Lecture</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://courses.cs.ut.ee/2025/BDA/fall" target="_blank">HomePage</a></li>
+      <li><a href="http://cs.ut.ee/" target="_blank">Institute of Computer Science</a></li>
+      <li><a href="http://reaalteadused.ut.ee/" target="_blank">Faculty of Science and Technology</a></li>
+    </ul>
+  </footer>
+
+  <noscript>
+    <!-- If JS is disabled, the page will be visible (client-side blocks need JS) -->
+    <style>html{visibility:visible}</style>
+  </noscript>
+</body>
+</html>

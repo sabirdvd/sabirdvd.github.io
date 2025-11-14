@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching</title>
+
+    <!-- Fonts -->
+    <style>
+        @font-face {
+            font-family: 'Departure Mono';
+            src: url('font/DepartureMono-Regular.woff2') format('woff2'),
+                 url('font/DepartureMono-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Departure Mono', monospace;
+            padding: 25px;
+            background-color: #001f3f; /* Dark blue BIOS-like background */
+            color: white; /* White text for contrast */
+            font-size: 14px; /* Adjusted font size */
+            line-height: 1.8; /* Improved readability */
+        }
+
+        a {
+            color: #1772d0;
+            text-decoration: none;
+        }
+
+        a:hover, a:focus {
+            color: #f09228; /* Hover effect color */
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            font-size: 18px;
+            color: #00aaff;
+        }
+
+        a:hover {
+            color: #ffaa00;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="glitch-title">Thesis Topics Fall 25/26</h2>
+    <ul>
+        <li>
+            Please have a look at the <a href="https://topics.cs.ut.ee/?language=en" target="_blank">topics page</a> for more information. Here are <br> some examples of topics
+             that our group interested in supervising.
+        </li>
+            <a href="">AI Ethics: Understanding Stereotypes in LLMs</a>
+            <p style="text-align: left; max-width: 800px;">Pretrained language models, particularly large language models (LLMs) like ChatGPT, 
+                have achieved significant success across various NLP tasks. However, there is considerable 
+                evidence that these models tend to adopt the cultural biases inherent in the datasets used for 
+                training, thereby unintentionally reinforcing biased patterns and potentially causing harm. 
+                This project aims to investigate these biases across different categories, such as racial 
+                and gender biases, in both Estonian and English language models. <br> <br> 
+                <span style="font-size: 5px;"></span>
+                <a href="https://aclanthology.org/2025.nodalida-1.31.pdf" target="_blank">
+                    <small>[1]</small>
+                </a> E. Kaukonen, A. Sabir, R. Sharma, How Aunt-Like Are You? Exploring Gender Bias in the Genderless Estonian Language: A Case Study, (2025 Nodalida)                   
+                </span>
+            </p>
+        </li>
+            <li>
+    <a href="">Human Values in Online Communities: Mining Reddit with LLMs</a>
+    <p style="text-align: left; max-width: 800px;">
+        Human values, as described in Schwartz’s theory, strongly shape how people interact with digital technologies. 
+        For example, concerns about privacy influence how users manage their online data, the desire for freedom shapes 
+        their engagement with open platforms, and the need for accessibility determines whether technologies can be used 
+        by people with diverse abilities. These values are often reflected in online discussions, with platforms such as 
+        Reddit providing a rich source of conversations where they are openly articulated. Prior research has shown that 
+        mining Reddit can yield valuable insights for software requirements, demonstrating its potential as a source of 
+        user feedback. Yet, despite their importance for attracting and retaining users, such values remain underrepresented 
+        in software artefacts. <br><br>
+        <a href="https://doi.org/10.9707/2307-0919.1116" target="_blank">
+            <small>[1]</small>
+        </a> S. H. Schwartz, An Overview of the Schwartz Theory of Basic Values. Online Readings in Psychology and Culture (2012) <br>
+        <a href="https://ieeexplore.ieee.org/document/9510760" target="_blank">
+            <small>[2]</small>
+        </a> T. Iqbal et al., Mining Reddit as a New Source for Software Requirements. IEEE International Requirements Engineering Conference (2021) <br>
+        <a href="https://doi.org/10.1016/j.infsof.2021.106731" target="_blank">
+            <small>[3]</small>
+        </a> A. Nurwidyantoro et al., Human values in software development artefacts: A case study on issue discussions in three Android applications. Information and Software Technology (2021)
+    </p>
+</li>
+
+
+        
+
+ <li>
+            <a href="">Evaluating LLMs on App Feature Extraction with Similarity Metrics</a>
+            <p style="text-align: left; max-width: 800px;">Evaluating LLMs for App Feature Extraction in App Reviews Using Semantic Similarity Metrics
+Description Users frequently submit feedback through reviews on app marketplaces, discussing new features or expressing opinions about existing ones. Automatically extracting app features from these reviews is essential for conducting feature-level sentiment analysis—also known as “aspect-based sentiment analysis”—which helps developers improve their apps based on user feedback.
+
+Recently, large language models (LLMs) have been applied to extract app features from user reviews with zero-shot and few-shot performance [1]. Traditional evaluation metrics rely on exact or partial matches, but these can be overly rigid. Semantic similarity-based evaluation provides a more flexible and meaningful approach, as LLMs can correct typos in user reviews and generate feature words that are semantically related to the true features (e.g., “picture” instead of “photo”).
+
+This project explores the use of semantic similarity-based metrics to evaluate the accuracy of LLMs in extracting app features, offering a more nuanced assessment than traditional exact or partial match criteria.
+                <br> <br>
+                <span style="font-size: 5px;"></span>
+                 <span style="font-size: 5px;"></span>
+                <a href="https://arxiv.org/pdf/2203.03911" target="_blank">
+                    <small>[1]</small>
+                </a> Shah, F.A., Sabir, A., Sharma, R., Pfahl, D. (2025). How Effectively Do LLMs Extract Feature-Sentiment Pairs from App Reviews?. REFSQ 2025. Lecture Notes in Computer Science, vol 15588. Springer, Cham.
+
+                   
+                </span> 
+            </p>
+        </li> 
+
+    </ul>
+
+
+
+    <a href="">Context Sensitivity and Cultural Bias in Vision-Language Models</a>
+    <p style="text-align: left; max-width: 800px;">Cross-cultural research in perception and cognition has demonstrated that individuals 
+        from different backgrounds process information in distinct ways, with East Asians tending toward holistic perspectives and Westerners 
+        favoring more analytical approaches. These cultural patterns raise important questions for computational models that are trained primarily 
+        on linguistic data. Vision-Language Models (VLMs), in particular, learn to connect textual and visual information, and their outputs may 
+        reflect not only structural properties of language but also culturally embedded modes of reasoning. When restricted to English, however, 
+        such models are trained within a predominantly Western linguistic and cultural context, which may influence their attentional patterns and 
+        descriptive tendencies.
+        This project aims to examine whether VLMs trained predominantly on English text exhibit cultural biases consistent with analytic perceptual styles, and how these biases manifest in image description tasks. The goal is to systematically analyze the presence of culturally grounded attentional patterns in the dominant English language in each model, evaluate their implications for fairness and inclusivity, and establish a foundation for understanding how cultural cognition is implicitly reproduced in large-scale multimodal training. <br><br>
+        <a href="https://psycnet.apa.org/record/2001-17515-002" target="_blank">
+            <small>[1]</small>
+        </a> Masuda, T. (2001). Attending holistically versus analytically: Comparing the context sensitivity of Japanese and Americans. Journal of Personality and Social Psychology.
+    </p>
+</li>
+
+
+<!--     
+            <a href="">Language Grounding: Understanding VLM Behavior</a>
+            <p style="text-align: left; max-width: 800px;">Pretrained vision-language models (VLMs) like CLIP exhibit impressive performance in aligning images with language. 
+                However, their behavior often reflects biases present in training data, affecting how they ground language in 
+                visual inputs. This project examines how VLMs interpret objects and images through textual prompts, focusing 
+                on the dynamics of language grounding and the emergence of bias in multimodal predictions. <br> <br>
+                <span style="font-size: 5px;"></span>
+                <a href="https://proceedings.mlr.press/v202/koh23a/koh23a.pdf" target="_blank">
+                    <small>[1]</small>
+                </a> Jing Yu Koh, Ruslan Salakhutdinov, Daniel Fried, Grounding Language Models to Images for Multimodal Inputs and Outputs (2023 ICML)
+
+                   
+                </span>
+            </p>
+        </li>
+ -->
+
+
+    <script src="glitch_H1.js" defer></script>
+
+    </script> 
+</body>
+</html>
