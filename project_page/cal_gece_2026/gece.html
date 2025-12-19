@@ -1,287 +1,626 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>The Confidence Trap: Gender Bias and Predictive Certainty in LLMs</title>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <title>The Confidence Trap: Gender Bias and Predictive Certainty in LLMs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/hidebib.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
-    .responsive-img {
-      max-width: 90%;   /* Ensures the image never exceeds the width of its container */
-      height: auto;      /* Maintains the aspect ratio */
-      display: block;    /* Makes the image a block element */
-      margin-left: auto; /* Centers the image horizontally */
-      margin-right: auto;/* Centers the image horizontally */
+    body {
+      font-size: 19px;
+      font-family: 'Lato', sans-serif;
     }
+
+    .responsive-img {
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .link-grid {
+      max-width: 520px;
+      margin: 10px auto 15px;
+    }
+
+    .link-grid .link-item {
+      margin-bottom: 12px;
+    }
+
+    .link-grid a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .link-grid svg {
+      width: 40px;
+      height: 40px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    .table-latex {
+      width: 854px;
+      max-width: 100%;
+      border-collapse: collapse;
+      margin: 15px auto;
+      font-size: 16px;
+    }
+
+    .table-latex.table-wide {
+      width: 1151px;
+    }
+
+    .table-latex th,
+    .table-latex td {
+      border: none;
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .table-latex th:first-child,
+    .table-latex td:first-child {
+      text-align: left;
+    }
+
+    .table-latex thead tr:first-child th {
+      border-bottom: 2px solid #000;
+    }
+
+    .table-latex thead tr:nth-child(2) th {
+      border-bottom: 1px solid #000;
+    }
+
+    .table-latex tbody tr {
+      border-bottom: 1px solid #bbb;
+    }
+
+    .table-latex tbody tr:last-child {
+      border-bottom: 2px solid #000;
+    }
+
+    .table-latex td strong {
+      font-weight: 700;
+    }
+
   </style>
+</head>
 
-    <style>
+<body>
+  <div class="container text-center">
+    <h1>The Confidence Trap: Gender Bias and Predictive Certainty in LLMs</h1>
+    <p style="font-size: 20px;">
+      <a href="https://ahmed.jp/">Ahmed Sabir<sup>1</sup></a>,
+      <a href="">Markus Kängsepp<sup>1</sup></a>,
+      <a href="https://rajeshsharmacss.github.io/">Rajesh Sharma<sup>1,2</sup></a>
+    </p>
+    <p style="font-size: 18px;">
+      <sup>1</sup> Institute of Computer Science, University of Tartu, Estonia<br />
+      <sup>2</sup> School of AI and CS, Plaksha University, India
+    </p>
+  </div>
 
-  body {
-    font-size: 19px; 
-  }
-</style>
+  <div class="container link-grid text-center">
+    <div class="row">
+      <div class="col-sm-4 col-xs-12 link-item">
+        <a href="" title="Paper">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z" />
+          </svg>
+          Paper
+        </a>
+      </div>
+      <div class="col-sm-4 col-xs-12 link-item">
+        <a href="https://github.com/ahmedssabir/GECE" title="Code">
+          <svg viewBox="0 0 65 65">
+            <path fill="currentColor"
+              d="M32 0a32.021 32.021 0 0 0-10.1 62.4c1.6.3 2.2-.7 2.2-1.5v-6c-8.9 1.9-10.8-3.8-10.8-3.8-1.5-3.7-3.6-4.7-3.6-4.7-2.9-2 .2-1.9.2-1.9 3.2.2 4.9 3.3 4.9 3.3 2.9 4.9 7.5 3.5 9.3 2.7a6.93 6.93 0 0 1 2-4.3c-7.1-.8-14.6-3.6-14.6-15.8a12.27 12.27 0 0 1 3.3-8.6 11.965 11.965 0 0 1 .3-8.5s2.7-.9 8.8 3.3a30.873 30.873 0 0 1 8-1.1 30.292 30.292 0 0 1 8 1.1c6.1-4.1 8.8-3.3 8.8-3.3a11.965 11.965 0 0 1 .3 8.5 12.1 12.1 0 0 1 3.3 8.6c0 12.3-7.5 15-14.6 15.8a7.746 7.746 0 0 1 2.2 5.9v8.8c0 .9.6 1.8 2.2 1.5A32.021 32.021 0 0 0 32 0z" />
+          </svg>
+          Code
+        </a>
+      </div>
+      <div class="col-sm-4 col-xs-12 link-item">
+        <a href="" title="Data">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z" />
+          </svg>
+          Data
+        </a>
+      </div>
+    </div>
+  </div>
 
-    
-    
-<script type="text/javascript" src="../js/hidebib.js"></script>
-
-
-   
-
-</head> 
-
-<body> 
-
-    
-
-        
-<div class="container">
-    <table border="0" align="center">
-        <tr><td width="623" align="center" valign="middle"><h2>The Confidence Trap: Gender Bias and Predictive Certainty in LLMs</h2></td></tr>
-
-
-        
-<!-- <tr><td width="300" align="center" valign="middle">   <a href="">Anonymous<sup></sup></a></tr> -->
-
- 
-    <tr>
-        <td width="300" align="center" valign="middle" style="font-size: 20px;">
-          <a href="https://ahmed.jp/">Ahmed Sabir<sup>1</sup></a>, 
-          <a href="">Markus Kängsepp<sup>1</sup></a>, 
-          <a href="https://rajeshsharmacss.github.io/">Rajesh Sharma<sup>1,2</sup></a>
-        </td>
-      </tr>
-      <tr>
-        <td align="center" valign="middle" style="font-size: 18px;">
-          <sup>1</sup> Institute of Computer Science, University of Tartu, Estonia <br>
-          <sup>2</sup> School of AI and CS, Plaksha University, India
-        </td>
-      </tr>
-      <tr>
-      
-      
-
-
-<!-- 
-
-
-
-
-            <tr><td width="300" align="center" valign="middle" style="font-size: 18px;">   <a href="https://www.linkedin.com/in/faiz-ali-shah-018547a/">Faiz Ali Shah<sup>*</sup></a>, <a href="https://kodu.ut.ee/~ahmedabdulmajeed/">Ahmed Sabir<sup>*</sup></a>, 
-        <a href="https://rajeshsharma.cs.ut.ee">Rajesh Sharma <sup></sup></a></td></tr>
---->
-       
-    
-<!-- 
-     <p align="center"> 
-    <img src="LLM-app.png" class="responsive-img" alt="Description of image" />
-  </p> -->
-    
-<!--   <p>
-  <p align="center"> <img src="LLM-app.png" width="900" align="middle" /></p>
-
-</p>
-
-
- -->
-
-</table>
-<table width="400px" align="center">
-  <tr>
-    <td align=center width=100px>
-      <center>
-        <ul class="nav">
-          <li class="nav-item text-center">
-              <a href="" class="nav-link" title="Temp link">
-                  <svg style="width:40px;height:40px" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z" />
-                  </svg><br>
-                  Paper
-              </a>
-      </center>
-    </td>
-    <td align=center width=200px>
-      <center>
-        
-        <ul class="nav">
-        <li class="nav-item text-center">
-          <a href="https://github.com/ahmedssabir/GECE" class="nav-link">
-              <svg style="width:40px;height:40px" viewBox="0 0 65 65">
-                  <path fill="currentColor" d="M32 0a32.021 32.021 0 0 0-10.1 62.4c1.6.3 2.2-.7 2.2-1.5v-6c-8.9 1.9-10.8-3.8-10.8-3.8-1.5-3.7-3.6-4.7-3.6-4.7-2.9-2 .2-1.9.2-1.9 3.2.2 4.9 3.3 4.9 3.3 2.9 4.9 7.5 3.5 9.3 2.7a6.93 6.93 0 0 1 2-4.3c-7.1-.8-14.6-3.6-14.6-15.8a12.27 12.27 0 0 1 3.3-8.6 11.965 11.965 0 0 1 .3-8.5s2.7-.9 8.8 3.3a30.873 30.873 0 0 1 8-1.1 30.292 30.292 0 0 1 8 1.1c6.1-4.1 8.8-3.3 8.8-3.3a11.965 11.965 0 0 1 .3 8.5 12.1 12.1 0 0 1 3.3 8.6c0 12.3-7.5 15-14.6 15.8a7.746 7.746 0 0 1 2.2 5.9v8.8c0 .9.6 1.8 2.2 1.5A32.021 32.021 0 0 0 32 0z" />
-              </svg> <br>
-             
-              Code
-          </a>
-      </center>
-      <td align=center width=100px>
-        <center>
-          <ul class="nav">
-          <li class="nav-item text-center">
-            <a href="" class="nav-link">
-              <svg style="width:40px;height:40px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z" />
-              </svg><br>
-              Data
-            </a>
-                  </ul>
-        </center>
-    </td>
-</table>
-
-  
-</div>
-
-</br>
-
-      
-<div class="container">
+  <div class="container">
     <h2 style="text-align: center;">Abstract</h2>
     <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
-        <p align="justify"> The increased use of Large Language Models (LLMs) in 
-          sensitive domains leads to growing interest in how their confidence scores 
-          correspond to fairness and bias. This study examines the alignment between 
-          LLM-predicted confidence and human-annotated bias judgments. Focusing on 
-          gender bias, the research investigates probability confidence calibration 
-          in contexts involving gendered pronoun resolution. The goal is to evaluate 
-          if calibration metrics based on predicted confidence scores effectively
-           capture fairness-related disparities in LLMs. The results show that, 
-           among the six stateof-the-art models, Gemma-2 demonstrates the worst 
-           calibration according to the gender bias benchmark. The primary contribution 
-           of this work is a fairness-aware evaluation of LLMs’ confidence calibration, 
-           offering guidance for ethical deployment. In addition, we introduce a 
-           new calibration metric, Gender-ECE, designed to measure gender disparities 
-           in resolution tasks.
-        </p>
+      <p align="justify">
+        The increased use of Large Language Models (LLMs) in sensitive domains leads to growing interest in how their confidence
+        scores correspond to fairness and bias. This study examines the alignment between LLM-predicted confidence and
+        human-annotated bias judgments. Focusing on gender bias, the research investigates probability confidence calibration in
+        contexts involving gendered pronoun resolution. The goal is to evaluate if calibration metrics based on predicted
+        confidence scores effectively capture fairness-related disparities in LLMs. The results show that, among the six
+        state-of-the-art models, Gemma-2 demonstrates the worst calibration according to the gender bias benchmark. The primary
+        contribution of this work is a fairness-aware evaluation of LLMs’ confidence calibration, offering guidance for ethical
+        deployment. In addition, we introduce a new calibration metric, Gender-ECE, designed to measure gender disparities in
+        resolution tasks.
+      </p>
     </div>
-</div>
-<!--
-<div class="container">
-         <h2 style="text-align: center;">Abstract</h2>
+  </div>
 
-
-
-  
-  
-
-    <p align="justify"> This paper examines gender bias in Estonian, a grammatically 
-        genderless Finno-Ugric language, which doesn't have gendered noun system nor 
-        any gendered pronouns, but expresses gender through vocabulary. 
-        In this work, we focus on the male-female compound words ending with <i>-tädi</i> ‘aunt’ and <i>-onu</i> ‘uncle’, 
-        aiming to pinpoint the occupations these words signify for women and men, and to examine whether they reveal occupational 
-        differentiation and gender stereotypes.  The findings indicate that these compounds go beyond occupational titles and highlight prevalent gender bias.
-    </p>
-
-
-<div class="container">
-    
-            <h2 style="text-align: center;">Statistical Evaluation </h2>
-
+  <div class="container">
+    <h2 style="text-align: center;">Gender-ECE</h2>
     <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
-        <p>
-            The result shows that the female compound words ending with <i>Tädi</i> in occupational titles primarily marked professions related to 
-            customer service (44% from all occupational titles), healthcare (13%), 
-            and social work (11%), while <i>onu</i> in occupational titles predominantly 
-            represented law enforcement (20%), followed by healthcare (12%) and customer service (7%). 
-            Thus, women are more often associated with occupations related to children, teaching, and (elder)
-            care, while men are often found in the role of guards and police officers.
-        </p>
-    </div>
-<br>
-<br><br> -->
-     <!-- <p align="center"> <img src=" table-1.png" width="900" align="middle" /></p>
-
-
-
-
-    
       <p>
-
-    <hr>
-          
-    <h2 style="text-align: center;">LLMs Evaluation </h2>
-
-    <div style="text-align: left; background-color: #ffffff padding: 10px; border-radius: 5px;" class="containersmall">
-        <p>
-            Inspired by the human-written CrowS-Pairs dataset (Nangia et al., 2020), which uses sentence pairs to highlight stereotypes across
-            social categories, we manually created sentence pairs using the same Estonian National Corpus. The analysis of LLMs revealed that these models
-            propagate occupational biases related to the compound words <i>tädi</i> and <i>onu</i>. Specifically, the fine-tuned Estonian LLAMA-2-7B (LLAMMAS) model reflects biases from Estonian labor force statistics more accurately
-            than the similar-sized LLAMA-3-8B and the larger LLAMA-3-70B models. This indicates that the process of fine-tuning has amplified the inherent biases within the model.
-        </p>
+    
+Calibration metrics include ECE, MacroCE, ICE, and Brier score, 
+which are commonly used to evaluate calibration in LLMs. These metrics typically compare 
+two gendered sentence completions, one with a male pronoun and one with a female pronoun. 
+However, overall calibration measures such as ECE do not provide information about 
+how the model behaves differently with respect to male versus female pronouns. 
+To address this limitation, 
+we propose Gender-Aware Group ECE, a metric that provides explicit information about calibration disparities across gendered pronouns.
+      </p>
     </div>
+    <div style="text-align: center; margin-bottom: 10px;">
+      <p>
+        $$ \text{Gender-ECE} = \frac{1}{2} (\text{ECE}_{\text{male}} + \text{ECE}_{\text{female}}) $$
+      </p>
+      <p>
+        $$ \text{ECE}_{\text{male/female}} = \sum_{m=1}^{M} \frac{|B_m|}{n} \left| \text{acc}(B_m) - \text{conf}(B_m) \right|, \quad \forall \hat{y}_i \in \{1,0\} $$
+      </p>
+    </div>
+  </div>
 
-
-     <p align="center"> 
-    <img src="result.png" class="responsive-img" width="400" alt="Description of image" />
-  </p>
-
-<div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
-    <p>   Examples of occupational title bias using the fine-tuned Estonian LLAMA (LLAMMAS) and
-the off-the-shelf LLAMA-3-70B models. (Top) The example demonstrates how the models measure
-gender bias, associating bakery tasks with women. (Bottom) in the example with the cleaning [aunt/uncle]
-occupational title, the standard LLAMA-70B incorrectly reflects the female-biased occupation. </p>
-</div>
-
-<p align="center"> 
-    <img src="Example.png" class="responsive-img" width="850" alt="Description of image" />
-</p>
-  </p> -->
-
-
-
-   <h3 style="text-align: center;">Acknowledgment</h3>
-
+  <div class="container">
+    <h2 style="text-align: center;">Evaluation: Last Cloze Task</h2>
     <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
-        <p> This work was supported by the Estonian 
-          Research Council grant “Developing human-centric 
-          digital solutions” (TEM TA120) and by the Estonian 
-          Centre of Excellence in Artificial Intelligence (EXAI), 
-          funded by the Estonian Ministry of Education and Research 
-          and co-funded by the European Union and the Estonian Research 
-          Council via project TEM TA119. It was funded by the EU H2020 
-          program under the SoBigData++ project (grant agreement No. 871042) and partially funded by the HAMISON project.
-        </p>
+      <p>
+        The primary focus of the analysis is to assess the models’ bias and confidence in predicting pronouns at the end of sentences,
+        GenderLex dataset (last cloze), meaning that the model has access to the full context of the sentence before scoring a biased
+        pronoun.
+      </p>
     </div>
-</table> 
-</div>
+
+ <div class="table-responsive">
+      <table class="table-latex">
+        <thead>
+          <tr>
+            <th rowspan="2">Model</th>
+            <th colspan="4">Standard Calibration Metrics</th>
+            <th colspan="3">Gender-ECE</th>
+            <th rowspan="2">Human</th>
+          </tr>
+          <tr>
+            <th>ECE</th>
+            <th>MacroCE</th>
+            <th>ICE</th>
+            <th>Brier Score</th>
+            <th>Group</th>
+            <th>M</th>
+            <th>F</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GPT-J-6B</td>
+            <td>0.076</td>
+            <td>0.453</td>
+            <td>0.374</td>
+            <td>0.432</td>
+            <td>0.076</td>
+            <td>0.085</td>
+            <td>0.066</td>
+            <td>0.715</td>
+          </tr>
+          <tr>
+            <td>LLAMA-3.1-8B</td>
+            <td>0.111</td>
+            <td>0.466</td>
+            <td>0.371</td>
+            <td>0.446</td>
+            <td>0.111</td>
+            <td>0.112</td>
+            <td>0.109</td>
+            <td><strong>0.727</strong></td>
+          </tr>
+          <tr>
+            <td>Gemma-2-9B</td>
+            <td><strong>0.327</strong></td>
+            <td><strong>0.493</strong></td>
+            <td>0.390</td>
+            <td><strong>0.559</strong></td>
+            <td><strong>0.267</strong></td>
+            <td><strong>0.330</strong></td>
+            <td>0.204</td>
+            <td>0.617</td>
+          </tr>
+          <tr>
+            <td>Qwen2.5-7B</td>
+            <td>0.106</td>
+            <td>0.476</td>
+            <td>0.422</td>
+            <td>0.385</td>
+            <td>0.107</td>
+            <td>0.052</td>
+            <td>0.162</td>
+            <td>0.637</td>
+          </tr>
+          <tr>
+            <td>Falcon-3-7B</td>
+            <td>0.161</td>
+            <td>0.491</td>
+            <td><strong>0.449</strong></td>
+            <td>0.356</td>
+            <td>0.149</td>
+            <td>0.081</td>
+            <td><strong>0.217</strong></td>
+            <td>0.605</td>
+          </tr>
+          <tr>
+            <td>DeepSeek-8B</td>
+            <td>0.085</td>
+            <td>0.461</td>
+            <td>0.369</td>
+            <td>0.470</td>
+            <td>0.090</td>
+            <td>0.074</td>
+            <td>0.106</td>
+            <td>0.686</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    <p align="center">
+      <img src="evaluation_last_cloze_task.png" class="responsive-img" width="1151" alt="Calibration histograms for different models" />
+    </p>
+    <div class="containersmall" style="text-align: left; background-color: #feecec; border-left: 5px solid #d9534f; padding: 12px 16px; border-radius: 6px; margin: 10px auto; max-width: 900px;">
+      <p style="margin: 0;">
+        <strong>Finding:</strong> GPT-J-6B exhibits the best calibration (lowest ECE), while Gemma-2-9B performs the worst overall, consistently producing
+        incorrect outcomes with a high disparity toward the female group.
+      </p>
+    </div>
+    <!-- <p align="center">
+      <img src="Example.png" class="responsive-img" width="850" alt="Examples of gender bias predictions" />
+    </p> -->
+  </div>
+
+  <div class="container">
+    <h2 style="text-align: center;">Evaluation: conference resolution</h2>
+    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+      <p>
+        The main objective is to evaluate the model’s confidence in coreference re-
+solution by measuring the model’s preferences when resolving pronouns in
+syntactically and semantically controlled sentence pairs.
+      </p>
+    </div>
+    <!-- Full WinoBias/WinoGender table kept for future reference
+    <div class="table-wrapper">
+      <table class="table-latex table-wide">
+        ...
+      </table>
+    </div>
+    -->
+    <div class="table-wrapper">
+      <table class="table-latex">
+        <thead>
+          <tr>
+            <th rowspan="2">Model</th>
+            <th colspan="4">Standard Metrics</th>
+            <th colspan="3">Gender-ECE</th>
+            <th rowspan="2">Human</th>
+          </tr>
+          <tr>
+            <th>ECE</th>
+            <th>MacroCE</th>
+            <th>ICE</th>
+            <th>Brier</th>
+            <th>Group</th>
+            <th>M</th>
+            <th>F</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GPT-J-6B</td>
+            <td>0.157</td>
+            <td>0.444</td>
+            <td>0.356</td>
+            <td>0.481</td>
+            <td>0.164</td>
+            <td>0.150</td>
+            <td>0.179</td>
+            <td>0.686</td>
+          </tr>
+          <tr>
+            <td>LLAMA-3.1-8B</td>
+            <td>0.193</td>
+            <td>0.460</td>
+            <td>0.377</td>
+            <td>0.460</td>
+            <td>0.214</td>
+            <td>0.179</td>
+              <td><strong>0.249</strong></td>
+              <td>0.662</td>
+            </tr>
+            <tr>
+              <td>Gemma-2-9B</td>
+            <td><strong>0.429</strong></td>
+            <td><strong>0.490</strong></td>
+            <td><strong>0.482</strong></td>
+            <td>0.467</td>
+            <td><strong>0.297</strong></td>
+            <td><strong>0.438</strong></td>
+            <td>0.156</td>
+            <td>0.509</td>
+          </tr>
+          <tr>
+            <td>Qwen2.5-7B</td>
+            <td>0.234</td>
+            <td>0.442</td>
+            <td>0.362</td>
+            <td><strong>0.510</strong></td>
+            <td>0.190</td>
+            <td>0.259</td>
+            <td>0.121</td>
+            <td>0.630</td>
+          </tr>
+          <tr>
+            <td>Falcon-3-7B</td>
+            <td>0.154</td>
+            <td>0.452</td>
+            <td>0.357</td>
+            <td>0.487</td>
+            <td>0.149</td>
+            <td>0.160</td>
+            <td>0.138</td>
+            <td>0.684</td>
+          </tr>
+          <tr>
+            <td>DeepSeek-8B</td>
+            <td>0.240</td>
+            <td>0.478</td>
+            <td>0.382</td>
+            <td>0.496</td>
+            <td>0.218</td>
+            <td>0.255</td>
+              <td>0.182</td>
+              <td>0.648</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+    <p align="center">
+      <img src="evaluation_conference_resolution.png" class="responsive-img" width="1151" alt="Calibration histograms for the conference resolution task" />
+    </p>
+    <div style="text-align: left; background-color: #ffe5e5; border-left: 5px solid #d9534f; padding: 10px; border-radius: 5px;" class="containersmall">
+      <p>
+        Finding: Gemma-2-9B exhibits the worst calibration overall and a preference for male pronouns. GPT-J-6B and Falcon3-7B are the
+        fairest models, with the lowest Gender-ECE and minimal differences between genders.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 style="text-align: center;">Evaluation: Gender-Neutral</h2>
+    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+      <p>
+        To study gender-neutral contexts, we analyze the “someone/person/occupation” prompts. Calibration scores reveal how models adjust
+        when explicit gender cues are removed.
+      </p>
+    </div>
+    <div class="table-wrapper">
+      <table class="table-latex table-wide">
+        <thead>
+          <tr>
+            <th rowspan="2">Metric</th>
+            <th colspan="3">GPT-J-6B</th>
+            <th colspan="3">LLAMA-3.1-8B</th>
+            <th colspan="3">DeepSeek-R1-8B</th>
+            <th colspan="3">Gemma-2-9B</th>
+          </tr>
+          <tr>
+            <th>Someone</th>
+            <th>Person</th>
+            <th>Occ</th>
+            <th>Someone</th>
+            <th>Person</th>
+            <th>Occ</th>
+            <th>Someone</th>
+            <th>Person</th>
+            <th>Occ</th>
+            <th>Someone</th>
+            <th>Person</th>
+            <th>Occ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ECE</td>
+            <td><strong>0.144</strong></td>
+            <td>0.063</td>
+            <td>0.076</td>
+            <td>0.134</td>
+            <td><strong>0.138</strong></td>
+            <td>0.111</td>
+            <td><strong>0.139</strong></td>
+            <td>0.130</td>
+            <td>0.085</td>
+            <td>0.364</td>
+            <td><strong>0.367</strong></td>
+            <td>0.327</td>
+          </tr>
+          <tr>
+            <td>MacroCE</td>
+            <td><strong>0.484</strong></td>
+            <td>0.476</td>
+            <td>0.453</td>
+            <td><strong>0.483</strong></td>
+            <td>0.478</td>
+            <td>0.466</td>
+            <td><strong>0.482</strong></td>
+            <td>0.481</td>
+            <td>0.461</td>
+            <td>0.493</td>
+            <td>0.493</td>
+            <td><strong>0.494</strong></td>
+          </tr>
+          <tr>
+            <td>ICE</td>
+            <td><strong>0.454</strong></td>
+            <td>0.442</td>
+            <td>0.374</td>
+            <td>0.436</td>
+            <td><strong>0.445</strong></td>
+            <td>0.371</td>
+            <td><strong>0.452</strong></td>
+            <td>0.443</td>
+            <td>0.369</td>
+            <td><strong>0.397</strong></td>
+            <td>0.393</td>
+            <td>0.390</td>
+          </tr>
+          <tr>
+            <td>Brier Score</td>
+            <td>0.331</td>
+            <td>0.341</td>
+            <td><strong>0.432</strong></td>
+            <td>0.358</td>
+            <td>0.348</td>
+            <td><strong>0.446</strong></td>
+            <td>0.352</td>
+            <td>0.361</td>
+            <td><strong>0.470</strong></td>
+            <td>0.560</td>
+            <td><strong>0.581</strong></td>
+            <td>0.574</td>
+          </tr>
+          <tr>
+            <td>Group-ECE</td>
+            <td><strong>0.138</strong></td>
+            <td>0.077</td>
+            <td>0.076</td>
+            <td>0.132</td>
+            <td>0.111</td>
+            <td><strong>0.138</strong></td>
+            <td><strong>0.138</strong></td>
+            <td>0.137</td>
+            <td>0.097</td>
+            <td><strong>0.450</strong></td>
+            <td>0.351</td>
+            <td>0.267</td>
+          </tr>
+          <tr>
+            <td>+ Male</td>
+            <td><strong>0.106</strong></td>
+            <td>0.031</td>
+            <td>0.085</td>
+            <td><strong>0.115</strong></td>
+            <td>0.071</td>
+            <td>0.112</td>
+            <td>0.048</td>
+            <td>0.065</td>
+            <td><strong>0.074</strong></td>
+            <td>0.363</td>
+            <td><strong>0.367</strong></td>
+            <td>0.330</td>
+          </tr>
+          <tr>
+            <td>+ Female</td>
+            <td><strong>0.170</strong></td>
+            <td>0.122</td>
+            <td>0.066</td>
+            <td><strong>0.148</strong></td>
+            <td>0.109</td>
+            <td>0.109</td>
+            <td><strong>0.228</strong></td>
+            <td>0.210</td>
+            <td>0.216</td>
+            <td><strong>0.536</strong></td>
+            <td>0.335</td>
+            <td>0.204</td>
+          </tr>
+          <tr>
+            <td>Human alignment</td>
+            <td>0.598</td>
+            <td>0.616</td>
+            <td><strong>0.715</strong></td>
+            <td>0.638</td>
+            <td>0.598</td>
+            <td><strong>0.727</strong></td>
+            <td>0.578</td>
+            <td>0.596</td>
+            <td><strong>0.687</strong></td>
+            <td>0.603</td>
+            <td>0.606</td>
+            <td><strong>0.618</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <p align="center">
+      <img src="gender_neutral_pronouns.png" class="responsive-img" width="667" alt="Calibration histograms for gender-neutral prompts" />
+    </p> -->
+    <div style="text-align: left; background-color: #ffe5e5; border-left: 5px solid #d9534f; padding: 10px; border-radius: 5px;" class="containersmall">
+      <p>
+        Gender-neutral finding: Gemma-2-9B remains poorly calibrated across "someone/person/occupation" prompts, while GPT-J-6B delivers the
+        lowest Gender-ECE, indicating the most balanced neutral predictions.
+      </p>
+    </div>
+  </div>
+
   
-    </table> 
-</div>
 
+  <div class="container">
+    <h2 style="text-align: center;">Calibration</h2>
+    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+      <p>
+        Our findings show that most models are poorly calibrated, remaining over-confident despite frequent prediction errors. We therefore
+        apply Beta calibration (Kull, 2017) using a balanced calibration set (50:50), which reduces ECE and better aligns predicted confidences
+        with empirical accuracy.
+      </p>
+    </div>
+    <p align="center">
+      <img src="calibration_diagnostics.png" class="responsive-img" width="945" alt="Calibration comparison histograms" />
+    </p>
+  </div>
 
- 
+  <div class="container">
+    <h3 style="text-align: center;">Acknowledgment</h3>
+    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+      <p>
+        This work was supported by the Estonian Research Council grant “Developing human-centric digital solutions” (TEM TA120) and by the
+        Estonian Centre of Excellence in Artificial Intelligence (EXAI), funded by the Estonian Ministry of Education and Research and
+        co-funded by the European Union and the Estonian Research Council via project TEM TA119. It was funded by the EU H2020 program under
+        the SoBigData++ project (grant agreement No. 871042) and partially funded by the HAMISON project.
+      </p>
+    </div>
+  </div>
 
-</table> 
-</div>
-    
-
-    
-</div>
-
-<div class="container">
-  <br>
-  <div class="box" style="text-align: left;">
-    <div class="containersmall">
-      <h3>Citation</h3>
-      <pre class="citation" style="white-space: pre-wrap; overflow-wrap: break-word; text-align: left; direction: ltr; margin: 0;">
+  <div class="container">
+    <div class="box" style="text-align: left;">
+      <div class="containersmall">
+        <h3>Citation</h3>
+        <pre class="citation" style="white-space: pre-wrap; overflow-wrap: break-word; text-align: left; direction: ltr; margin: 0;">
 @misc{sabir2025confidence,
   title = {The Confidence Trap: Gender Bias and Predictive Certainty in LLMs},
   author = {Sabir, Ahmed and Kängsepp, Markus and Sharma, Rajesh},
   note = {citation for the paper},
   year = {2025}
 }
-</pre>
+        </pre>
+      </div>
+    </div>
+    <div class="containersmall" style="text-align: left;">
+      <p>Contact: <a href="mailto:blank@ut.ee">Ahmed Sabir</a></p>
     </div>
   </div>
-  <div class="containersmall" style="text-align: left;">
-    <p>Contact: <a href="mailto:blank@ut.ee">Ahmed Sabir</a></p>
-  </div>
-</div>
-
-
-
+</body>
 </html>
