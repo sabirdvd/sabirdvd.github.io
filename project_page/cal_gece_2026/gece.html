@@ -13,19 +13,46 @@
     body {
       font-size: 19px;
       font-family: 'Lato', sans-serif;
+      background: #f8fafc;
+      color: #1f2a37;
+      line-height: 1.65;
     }
 
+    .container {
+      margin-bottom: 35px;
+    }
+
+    .hero {
+      margin-top: 30px;
+      padding: 45px 30px;
+      border-radius: 16px;
+      background: linear-gradient(120deg, #0f4c81, #2575c4);
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(15, 76, 129, 0.25);
+    }
+
+    .hero a { color: #fff; text-decoration: underline; }
+
     .responsive-img {
-      max-width: 90%;
+      max-width: 92%;
       height: auto;
       display: block;
       margin-left: auto;
       margin-right: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      background: #fff;
+      padding: 6px;
     }
 
     .link-grid {
-      max-width: 520px;
-      margin: 10px auto 15px;
+      max-width: 680px;
+      margin: 18px auto 35px;
+      padding: 15px;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 8px 18px rgba(31, 42, 55, 0.08);
     }
 
     .link-grid .link-item {
@@ -33,15 +60,44 @@
     }
 
     .link-grid a {
-      display: inline-block;
+      display: block;
       text-decoration: none;
+      padding: 12px 6px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #0f4c81;
+      border: 1px solid rgba(37, 117, 196, 0.25);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .link-grid a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 18px rgba(15, 76, 129, 0.15);
     }
 
     .link-grid svg {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       display: block;
       margin: 0 auto 5px;
+    }
+
+    .section-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 30px rgba(31, 42, 55, 0.08);
+    }
+
+    .note-box {
+      border-left: 5px solid #2575c4;
+      background: #edf4ff;
+    }
+
+    .note-danger {
+      border-left: 5px solid #d9534f;
+      background: #ffeceb;
     }
 
     .table-latex {
@@ -92,7 +148,7 @@
 </head>
 
 <body>
-  <div class="container text-center">
+  <div class="container hero">
     <h1>The Confidence Trap: Gender Bias and Predictive Certainty in LLMs</h1>
     <p style="font-size: 20px;">
       <a href="https://ahmed.jp/">Ahmed Sabir<sup>1</sup></a>,
@@ -139,7 +195,7 @@
 
   <div class="container">
     <h2 style="text-align: center;">Abstract</h2>
-    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+    <div class="section-card">
       <p align="justify">
         The increased use of Large Language Models (LLMs) in sensitive domains leads to growing interest in how their confidence
         scores correspond to fairness and bias. This study examines the alignment between LLM-predicted confidence and
@@ -156,7 +212,7 @@
 
   <div class="container">
     <h2 style="text-align: center;">Gender-ECE</h2>
-    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+    <div class="section-card">
       <p>
     
 Calibration metrics include ECE, MacroCE, ICE, and Brier score, 
@@ -179,8 +235,8 @@ we propose Gender-Aware Group ECE, a metric that provides explicit information a
   </div>
 
   <div class="container">
-    <h2 style="text-align: center;">Evaluation: Last Cloze Task</h2>
-    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+    <h2 style="text-align: center;">Experiment: Last Cloze Task</h2>
+    <div class="section-card">
       <p>
         The primary focus of the analysis is to assess the models’ bias and confidence in predicting pronouns at the end of sentences,
         GenderLex dataset (last cloze), meaning that the model has access to the full context of the sentence before scoring a biased
@@ -281,7 +337,7 @@ we propose Gender-Aware Group ECE, a metric that provides explicit information a
     <p align="center">
       <img src="evaluation_last_cloze_task.png" class="responsive-img" width="1151" alt="Calibration histograms for different models" />
     </p>
-    <div class="containersmall" style="text-align: left; background-color: #feecec; border-left: 5px solid #d9534f; padding: 12px 16px; border-radius: 6px; margin: 10px auto; max-width: 900px;">
+    <div class="section-card note-danger" style="margin: 10px auto; max-width: 900px;">
       <p style="margin: 0;">
         <strong>Finding:</strong> GPT-J-6B exhibits the best calibration (lowest ECE), while Gemma-2-9B performs the worst overall, consistently producing
         incorrect outcomes with a high disparity toward the female group.
@@ -293,8 +349,8 @@ we propose Gender-Aware Group ECE, a metric that provides explicit information a
   </div>
 
   <div class="container">
-    <h2 style="text-align: center;">Evaluation: conference resolution</h2>
-    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+    <h2 style="text-align: center;">Experiment: conference resolution</h2>
+    <div class="section-card">
       <p>
         The main objective is to evaluate the model’s confidence in coreference re-
 solution by measuring the model’s preferences when resolving pronouns in
@@ -400,17 +456,17 @@ syntactically and semantically controlled sentence pairs.
     <p align="center">
       <img src="evaluation_conference_resolution.png" class="responsive-img" width="1151" alt="Calibration histograms for the conference resolution task" />
     </p>
-    <div style="text-align: left; background-color: #ffe5e5; border-left: 5px solid #d9534f; padding: 10px; border-radius: 5px;" class="containersmall">
+    <div class="section-card note-danger" style="margin: 10px auto; max-width: 900px;">
       <p>
-        Finding: Gemma-2-9B exhibits the worst calibration overall and a preference for male pronouns. GPT-J-6B and Falcon3-7B are the
+        <strong>Finding:</strong> Gemma-2-9B exhibits the worst calibration overall and a preference for male pronouns. GPT-J-6B and Falcon3-7B are the
         fairest models, with the lowest Gender-ECE and minimal differences between genders.
       </p>
     </div>
   </div>
 
   <div class="container">
-    <h2 style="text-align: center;">Evaluation: Gender-Neutral</h2>
-    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+    <h2 style="text-align: center;">Experiment: Gender-Neutral</h2>
+    <div class="section-card">
       <p>
         To study gender-neutral contexts, we analyze the “someone/person/occupation” prompts. Calibration scores reveal how models adjust
         when explicit gender cues are removed.
@@ -568,9 +624,9 @@ syntactically and semantically controlled sentence pairs.
     <!-- <p align="center">
       <img src="gender_neutral_pronouns.png" class="responsive-img" width="667" alt="Calibration histograms for gender-neutral prompts" />
     </p> -->
-    <div style="text-align: left; background-color: #ffe5e5; border-left: 5px solid #d9534f; padding: 10px; border-radius: 5px;" class="containersmall">
+    <div class="section-card note-danger" style="margin: 10px auto; max-width: 900px;">
       <p>
-        Gender-neutral finding: Gemma-2-9B remains poorly calibrated across "someone/person/occupation" prompts, while GPT-J-6B delivers the
+        <strong>Gender-neutral Finding:</strong> Gemma-2-9B remains poorly calibrated across "someone/person/occupation" prompts, while GPT-J-6B delivers the
         lowest Gender-ECE, indicating the most balanced neutral predictions.
       </p>
     </div>
@@ -580,7 +636,7 @@ syntactically and semantically controlled sentence pairs.
 
   <div class="container">
     <h2 style="text-align: center;">Calibration</h2>
-    <div style="text-align: left; background-color: #ffffff; padding: 10px; border-radius: 5px;" class="containersmall">
+    <div class="section-card">
       <p>
         Our findings show that most models are poorly calibrated, remaining over-confident despite frequent prediction errors. We therefore
         apply Beta calibration (Kull, 2017) using a balanced calibration set (50:50), which reduces ECE and better aligns predicted confidences
@@ -606,7 +662,7 @@ syntactically and semantically controlled sentence pairs.
 
   <div class="container">
     <div class="box" style="text-align: left;">
-      <div class="containersmall">
+      <div class="section-card">
         <h3>Citation</h3>
         <pre class="citation" style="white-space: pre-wrap; overflow-wrap: break-word; text-align: left; direction: ltr; margin: 0;">
 @misc{sabir2025confidence,
@@ -618,7 +674,7 @@ syntactically and semantically controlled sentence pairs.
         </pre>
       </div>
     </div>
-    <div class="containersmall" style="text-align: left;">
+    <div class="section-card">
       <p>Contact: <a href="mailto:blank@ut.ee">Ahmed Sabir</a></p>
     </div>
   </div>
