@@ -468,8 +468,8 @@ syntactically and semantically controlled sentence pairs.
     <h2 style="text-align: center;">Experiment: Gender-Neutral</h2>
     <div class="section-card">
       <p>
-        To study gender-neutral contexts, we analyze the “someone/person/occupation” prompts. Calibration scores reveal how models adjust
-        when explicit gender cues are removed.
+        We investigate model behavior under gender-neutral conditions by replacing occupation terms in the GenderLex dataset with gender-neutral expressions
+such as <em>person</em>and <em>someone</em>.
       </p>
     </div>
     <div class="table-wrapper">
@@ -626,8 +626,8 @@ syntactically and semantically controlled sentence pairs.
     </p> -->
     <div class="section-card note-danger" style="margin: 10px auto; max-width: 900px;">
       <p>
-        <strong>Gender-neutral Finding:</strong> Gemma-2-9B remains poorly calibrated across "someone/person/occupation" prompts, while GPT-J-6B delivers the
-        lowest Gender-ECE, indicating the most balanced neutral predictions.
+        <strong>Gender-neutral Finding:</strong> Explicit role titles improve model calibration, whereas gender-neutral
+terms increase calibration error due to ambiguity.
       </p>
     </div>
   </div>
