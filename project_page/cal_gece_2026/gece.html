@@ -30,6 +30,7 @@
       color: #fff;
       text-align: center;
       box-shadow: 0 12px 30px rgba(15, 76, 129, 0.25);
+      position: relative;
     }
 
     .hero a { color: #fff; text-decoration: underline; }
@@ -155,10 +156,10 @@
     }
 
     .theme-toggle {
-      position: fixed;
+      position: absolute;
       top: 16px;
       right: 16px;
-      z-index: 1000;
+      z-index: 2;
       padding: 6px 14px;
       border-radius: 999px;
       border: 1px solid rgba(15, 76, 129, 0.35);
@@ -252,7 +253,7 @@
 
 <body>
   <div class="container hero">
-    <button class="theme-toggle" type="button" id="themeToggle">
+    <button class="theme-toggle" type="button" id="themeToggle" aria-label="Switch to dark mode">
       <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
       </svg>
@@ -267,7 +268,6 @@
         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
       </svg>
-      <span>Dark mode</span>
     </button>
     <h1>The Confidence Trap: Gender Bias and Predictive Certainty in LLMs</h1>
     <p style="font-size: 20px;">
@@ -802,13 +802,7 @@ terms increase calibration error due to ambiguity.
       if (!button) return;
       button.addEventListener('click', function () {
         var isDark = document.body.classList.toggle('theme-dark');
-        var label = isDark ? 'Light mode' : 'Dark mode';
-        var labelNode = button.querySelector('span');
-        if (labelNode) {
-          labelNode.textContent = label;
-        } else {
-          button.textContent = label;
-        }
+        button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
       });
     })();
   </script>
