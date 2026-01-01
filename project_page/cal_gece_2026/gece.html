@@ -154,11 +154,121 @@
       font-weight: 700;
     }
 
+    .theme-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 76, 129, 0.35);
+      background: rgba(255, 255, 255, 0.9);
+      color: #0f4c81;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .theme-icon {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon-sun { display: none; }
+    .icon-moon { display: inline-block; }
+
+    body.theme-dark {
+      background: #0f141b;
+      color: #e6edf5;
+    }
+
+    body.theme-dark .theme-toggle {
+      background: rgba(20, 27, 36, 0.9);
+      color: #e6edf5;
+      border-color: rgba(230, 237, 245, 0.3);
+    }
+
+    body.theme-dark .icon-sun { display: inline-block; }
+    body.theme-dark .icon-moon { display: none; }
+
+    body.theme-dark .hero {
+      background: linear-gradient(120deg, #0b2336, #123b5c);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    body.theme-dark .hero a { color: #e6edf5; }
+
+    body.theme-dark .link-grid,
+    body.theme-dark .section-card,
+    body.theme-dark .figure-card {
+      background: #141b24;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    body.theme-dark .link-grid a {
+      color: #cfe3f7;
+      border-color: rgba(207, 227, 247, 0.25);
+    }
+
+    body.theme-dark .note-box {
+      border-left-color: #5aa1dd;
+      background: #1b2a36;
+    }
+
+    body.theme-dark .note-danger {
+      border-left-color: #e07a73;
+      background: #2a1b1c;
+    }
+
+    body.theme-dark .responsive-img {
+      background: #10161e;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    body.theme-dark .table-latex thead tr:first-child th,
+    body.theme-dark .table-latex thead tr:nth-child(2) th {
+      border-bottom-color: #cbd5e1;
+    }
+
+    body.theme-dark .table-latex tbody tr {
+      border-bottom-color: rgba(203, 213, 225, 0.4);
+    }
+
+    body.theme-dark .containersmall {
+      background-color: #141b24 !important;
+      color: #e6edf5;
+    }
+
   </style>
 </head>
 
 <body>
   <div class="container hero">
+    <button class="theme-toggle" type="button" id="themeToggle">
+      <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+      </svg>
+      <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <span>Dark mode</span>
+    </button>
     <h1>The Confidence Trap: Gender Bias and Predictive Certainty in LLMs</h1>
     <p style="font-size: 20px;">
       <a href="https://ahmed.jp/">Ahmed Sabir<sup>1</sup></a>,
@@ -686,5 +796,21 @@ terms increase calibration error due to ambiguity.
       <p>Contact: <a href="mailto:blank@ut.ee">Ahmed Sabir</a></p>
     </div>
   </div>
+  <script>
+    (function () {
+      var button = document.getElementById('themeToggle');
+      if (!button) return;
+      button.addEventListener('click', function () {
+        var isDark = document.body.classList.toggle('theme-dark');
+        var label = isDark ? 'Light mode' : 'Dark mode';
+        var labelNode = button.querySelector('span');
+        if (labelNode) {
+          labelNode.textContent = label;
+        } else {
+          button.textContent = label;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
