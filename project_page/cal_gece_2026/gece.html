@@ -34,12 +34,15 @@
 
     .hero a { color: #fff; text-decoration: underline; }
 
+    .figure-wrap {
+      width: 100%;
+      margin: 18px auto;
+    }
+
     .responsive-img {
-      max-width: 92%;
+      width: 100%;
       height: auto;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
       border-radius: 10px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       background: #fff;
@@ -87,6 +90,13 @@
       border-radius: 14px;
       padding: 16px 22px;
       margin-bottom: 18px;
+      box-shadow: 0 10px 30px rgba(31, 42, 55, 0.08);
+    }
+
+    .figure-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px 22px;
       box-shadow: 0 10px 30px rgba(31, 42, 55, 0.08);
     }
 
@@ -334,10 +344,9 @@ calibration disparities across gendered pronouns.
         </tbody>
       </table>
     </div>
-  </div>
-    <p align="center">
-      <img src="evaluation_last_cloze_task.png" class="responsive-img" width="1151" alt="Calibration histograms for different models" />
-    </p>
+    <div class="figure-wrap figure-card">
+      <img src="evaluation_last_cloze_task.png" class="responsive-img" alt="Calibration histograms for different models" />
+    </div>
     <div class="section-card note-danger" style="margin: 10px auto; max-width: 900px;">
       <p style="margin: 0;">
         <strong>Finding:</strong> GPT-J-6B exhibits the best calibration (lowest ECE), while Gemma-2-9B performs the worst overall, consistently producing
@@ -452,9 +461,9 @@ calibration disparities across gendered pronouns.
           </tbody>
       </table>
     </div>
-    <p align="center">
-      <img src="evaluation_conference_resolution.png" class="responsive-img" width="1151" alt="Calibration histograms for the conference resolution task" />
-    </p>
+    <div class="figure-wrap figure-card">
+      <img src="evaluation_conference_resolution.png" class="responsive-img" alt="Calibration histograms for the conference resolution task" />
+    </div>
     <div class="section-card note-danger" style="margin: 10px auto; max-width: 900px;">
       <p>
         <strong>Finding:</strong> Gemma-2-9B exhibits the worst calibration overall and a preference for male pronouns. GPT-J-6B and Falcon3-7B are the
@@ -620,9 +629,9 @@ such as <em>person</em>and <em>someone</em>.
         </tbody>
       </table>
     </div>
-    <!-- <p align="center">
-      <img src="gender_neutral_pronouns.png" class="responsive-img" width="667" alt="Calibration histograms for gender-neutral prompts" />
-    </p> -->
+    <div class="figure-wrap figure-card">
+      <img src="evaluation_GN_someone.png" class="responsive-img" alt="Calibration histograms for gender-neutral prompts (someone/person/occupation)" />
+    </div>
     <div class="section-card note-danger" style="margin: 10px auto; max-width: 900px;">
       <p>
         <strong>Gender-neutral Finding:</strong> Explicit role titles improve model calibration, whereas gender-neutral
@@ -642,9 +651,9 @@ terms increase calibration error due to ambiguity.
         with empirical accuracy.
       </p>
     </div>
-    <p align="center">
-      <img src="calibration_diagnostics.png" class="responsive-img" width="945" alt="Calibration comparison histograms" />
-    </p>
+    <div class="figure-wrap figure-card">
+      <img src="calibration_diagnostics.png" class="responsive-img" alt="Calibration comparison histograms" />
+    </div>
   </div>
 
   <div class="container">
