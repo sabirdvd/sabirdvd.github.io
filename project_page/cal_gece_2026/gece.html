@@ -335,14 +335,15 @@
     <div class="section-card">
       <p>
     
-Calibration metrics include ECE, MacroCE, ICE, and the Brier score, 
-which are commonly used to evaluate calibration in LLMs. These metrics 
-typically compare two binary labels &mdash;in our case, two sentence completions: 
-one with a male pronoun and one with a female pronoun.  However, overall calibration
-measures such as ECE do not provide information about how the model behaves 
-differently with respect to male versus female pronouns. To address this limitation, 
-we propose Gender-Aware Group ECE, a metric that provides explicit information about 
-calibration disparities across gendered pronouns.
+Calibration metrics include ECE, MacroCE, ICE, and the Brier score,
+which are commonly used to evaluate calibration in LLMs. These metrics
+typically evaluate binary prediction outcomes &mdash; in our case, two sentence
+completions: one with a male pronoun and one with a female pronoun. However,
+aggregate calibration measures such as ECE do not provide information about how
+the model behaves differently with respect to these two outcomes, i.e., male
+versus female pronouns. To address this limitation, we propose
+<strong>Gender-Aware Group ECE</strong>, a metric that provides explicit information
+about calibration disparities across gendered pronouns.
       </p>
     </div>
     <div style="text-align: center; margin-bottom: 10px;">
