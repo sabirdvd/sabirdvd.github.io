@@ -316,7 +316,50 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
           </p>
         </td>
       </tr>
+		  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tr onmouseout="portrait_stop_confidence()" onmouseover="portrait_start_confidence()">
+          <td width="25%">
+            <div class="one">
+              <div class="two" id="portrait_image_confidence">
+                <img src="public_html/gece/cal-1.jpg">
+              </div>    
+              <img src="public_html/gece/cal-2.png">
+              <script type="text/javascript">
+                function portrait_start_confidence() {
+                  document.getElementById('portrait_image_confidence').style.opacity = "1";
+                }
+                function portrait_stop_confidence() {
+                  document.getElementById('portrait_image_confidence').style.opacity = "0";
+                }
+                portrait_stop_confidence();
+              </script>
+            </div>
+          </td>
+          <td valign="top" width="75%">
+            <a href="">
+              <papertitle> The Confidence Trap: Gender Bias and Predictive <br> Certainty in LLMs
+              </papertitle>
+            </a>
+            <br>
+            <strong>Ahmed Sabir</strong>,<a href=""> Markus Kängsepp</a>, <a href="https://rajeshsharma.cs.ut.ee/index.php/Main/HomePage">Rajesh Sharma</a>
+            <br>
+            <em>AAAI 2026 (AISI track) <span class="red-tag">(Oral Presentation)</span></em> <br>
+            <a href="https://arxiv.org/pdf/2601.07806">paper</a> /
+            <a href="https://ahmed.jp/project_page/cal_gece_2026/gece.html"> project page</a> /
+            <a href="https://github.com/ahmedssabir/GECE">code</a> /
+            <a href="">slides</a> /
+            <a href="">poster</a>
+            <style>
+              emw { color: pink; }
+            </style>
+            <p></p>
+            <p>Investigating the relation between gender bias and model confidence in LLMs.<br>
+            </p>
+          </td>
+        </tr>
+      </table>
 
+		  
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr onmouseout="portrait_stop()" onmouseover="portrait_start()" >
             <td width="25%">
