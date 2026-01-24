@@ -112,15 +112,77 @@
     }
 
     .table-latex {
-      width: 854px;
-      max-width: 100%;
+      width: 100%;
+      max-width: 854px;
       border-collapse: collapse;
       margin: 15px auto;
       font-size: 16px;
     }
 
     .table-latex.table-wide {
-      width: 1151px;
+      max-width: 1151px;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Mobile responsive styles */
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 25px 15px;
+        margin-top: 15px;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 14px !important;
+      }
+
+      .section-card,
+      .figure-card {
+        padding: 12px 14px;
+      }
+
+      .link-grid {
+        padding: 10px;
+      }
+
+      .link-grid a {
+        padding: 10px 4px;
+        font-size: 14px;
+      }
+
+      .link-grid svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .table-latex {
+        font-size: 12px;
+      }
+
+      .table-latex th,
+      .table-latex td {
+        padding: 4px 5px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
     }
 
     .table-latex th,
@@ -366,7 +428,7 @@ about calibration disparities across gendered pronouns.
       </p>
     </div>
 
- <div class="table-responsive">
+    <div class="table-wrapper">
       <table class="table-latex">
         <thead>
           <tr>
