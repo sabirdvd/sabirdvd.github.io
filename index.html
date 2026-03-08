@@ -1162,5 +1162,100 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
     </tr>
   </table>
 
+<style>
+  .crt-image,
+  .crt-image-shell {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: #000;
+    isolation: isolate;
+  }
+
+  .crt-image img,
+  .crt-image-shell img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    filter: contrast(1.08) saturate(0.95);
+  }
+
+  .crt-image > img,
+  .crt-image-shell > img {
+    position: relative;
+    z-index: 1;
+  }
+
+  .crt-image .two {
+    z-index: 2;
+  }
+
+  .crt-image .two img {
+    position: relative;
+    z-index: 2;
+  }
+
+  .crt-image.poster-fix {
+    background: transparent;
+  }
+
+  .crt-image.poster-fix > img,
+  .crt-image.poster-fix .two img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .crt-image::before,
+  .crt-image-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0 2px,
+      rgba(0, 0, 0, 0.18) 2px 4px
+    );
+    mix-blend-mode: multiply;
+    z-index: 10;
+  }
+
+  .crt-image::after,
+  .crt-image-shell::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at center, transparent 58%, rgba(0, 0, 0, 0.42) 100%),
+      linear-gradient(90deg, rgba(32, 240, 255, 0.05), rgba(255, 72, 64, 0.03));
+    z-index: 11;
+  }
+</style>
+<script>
+  function applyCrtToImages() {
+    document.querySelectorAll(".one").forEach(function (el) {
+      el.classList.add("crt-image");
+      if (el.querySelector("img[src*='poster-1.jpg']")) {
+        el.classList.add("poster-fix");
+      }
+    });
+
+    document.querySelectorAll("td[width='25%'] > img, td[width='33%'] > img").forEach(function (img) {
+      if (img.closest(".one") || img.parentElement.classList.contains("crt-image-shell")) return;
+      var shell = document.createElement("span");
+      shell.className = "crt-image-shell";
+      img.parentNode.insertBefore(shell, img);
+      shell.appendChild(img);
+    });
+  }
+
+  applyCrtToImages();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyCrtToImages);
+  }
+</script>
 </html>
  
