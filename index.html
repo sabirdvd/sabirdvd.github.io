@@ -1,16 +1,12 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>>404: Ahmed Sabir</title>
-	<link rel="canonical" href="https://cs.ut.ee/et" />
-
-  
+    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org" />
+    <title>Ahmed Sabir</title>
+    <link rel="canonical" href="https://cs.ut.ee/et" />
     <style>
       a {
   color: #1772d0;
@@ -33,22 +29,7 @@ a:focus, a:hover {
         color: white;
       }
     </style>
-  </head> 
-    <div>
-      <!--  <button onclick="darkMode()">🌓</button>-->
-      <!-- <button4 style= "cursor:pointer" onclick="darkMode()">🌗<button4 class="button button5"></button> -->
-    </div>
-    <script>
-      function darkMode() {
-        var element = document.body; 
-        element.classList.toggle("dark-mode");
-      }
-    </script>
-  <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name=viewport content=“width=800”>
-  <meta charset="utf-8" />
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style>
   <style type="text/css">
     /* Color scheme stolen from Sergey Karayev */
     a {
@@ -104,8 +85,7 @@ a:focus, a:hover {
         background-color: #ffffd0;
     }
   </style>
-  <link rel="icon" type="image/png" href="public_html/-asabir/images/Logo_UPC.svg.png">
-  <title>Ahmed Sabir</title>
+  <link rel="icon" type="image/png" href="sakura.png">
   <style>
     @font-face {
       font-family: 'Departure Mono';
@@ -257,9 +237,21 @@ heading {
 
 
   
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   </head>
   <body>
+  <div>
+    <!--  <button onclick="darkMode()">🌓</button>-->
+    <!-- <button4 style= "cursor:pointer" onclick="darkMode()">🌗<button4 class="button button5"></button> -->
+  </div>
+  <script>
+    function darkMode() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
+  <div class="sakura-layer" id="sakura-layer" aria-hidden="true"></div>
+  <div class="pixel-cursor pixel-cursor-sakura" id="pixel-cursor-sakura" aria-hidden="true"></div>
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
     <td>
@@ -550,7 +542,7 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
         function portrait_stop_w1() {
         document.getElementById('portrait_image_w1').style.opacity = "0";
         }
-        portrait_sto_w1()
+        portrait_stop_w1()
         </script>
       </td>
       <td valign="top" width="75%">
@@ -1257,5 +1249,170 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
     document.addEventListener("DOMContentLoaded", applyCrtToImages);
   }
 </script>
+<style>
+  @media (pointer: fine) {
+    body,
+    body a,
+    body button,
+    body input,
+    body textarea,
+    body select,
+    body [role="button"] {
+      cursor: url("sakura-cursor.png") 12 12, auto !important;
+    }
+  }
+
+  .sakura-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+  }
+
+  .pixel-cursor {
+    display: none !important;
+  }
+
+  .pixel-cursor.is-visible {
+    opacity: 1;
+  }
+
+  .pixel-cursor-sakura {
+    width: 110px;
+    height: 110px;
+    opacity: 1;
+  }
+
+  .pixel-petal {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 84px;
+    height: 84px;
+    opacity: 0.8;
+    background-image: url("sakura.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: pixel-sakura-fall linear infinite;
+    animation-duration: var(--fall-duration, 16s);
+    animation-delay: var(--fall-delay, 0s);
+    transition: opacity 140ms ease;
+  }
+
+  .click-sakura {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    pointer-events: none;
+    z-index: 1002;
+    background-image: url("sakura.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.95;
+    animation: click-sakura-pop 420ms ease-out forwards;
+  }
+
+  body.sakura-paused .pixel-petal {
+    animation-play-state: paused;
+    opacity: 0.14;
+  }
+
+  @keyframes pixel-sakura-fall {
+    0% {
+      transform: translate3d(var(--x-shift, 0px), -10vh, 0) rotate(0deg) scale(var(--scale, 1));
+    }
+    50% {
+      transform: translate3d(calc(var(--x-shift, 0px) + 24px), 52vh, 0) rotate(90deg) scale(var(--scale, 1));
+    }
+    100% {
+      transform: translate3d(calc(var(--x-shift, 0px) - 36px), 110vh, 0) rotate(180deg) scale(var(--scale, 1));
+    }
+  }
+
+  @keyframes click-sakura-pop {
+    0% {
+      transform: translate(-50%, -50%) scale(0.7) rotate(0deg);
+      opacity: 0.95;
+    }
+    100% {
+      transform: translate(-50%, -85%) scale(1.05) rotate(14deg);
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .pixel-petal {
+      opacity: 0.55;
+    }
+  }
+</style>
+<script>
+  function addPixelSakura() {
+    var layer = document.getElementById("sakura-layer");
+    if (!layer || layer.childElementCount) return;
+
+    for (var i = 0; i < 12; i++) {
+      var petal = document.createElement("span");
+      petal.className = "pixel-petal";
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.setProperty("--fall-duration", 15 + Math.random() * 12 + "s");
+      petal.style.setProperty("--fall-delay", (-1 * Math.random() * 20) + "s");
+      petal.style.setProperty("--x-shift", (Math.random() * 90 - 45) + "px");
+      petal.style.setProperty("--scale", (0.7 + Math.random() * 0.55).toFixed(2));
+      layer.appendChild(petal);
+    }
+  }
+
+  var sakuraPauseTimer;
+  function resetSakuraIdleTimer() {
+    document.body.classList.add("sakura-paused");
+    window.clearTimeout(sakuraPauseTimer);
+    sakuraPauseTimer = window.setTimeout(function () {
+      document.body.classList.remove("sakura-paused");
+    }, 60000);
+  }
+
+  function spawnClickSakura(x, y) {
+    var petal = document.createElement("span");
+    petal.className = "click-sakura";
+    petal.style.left = x + "px";
+    petal.style.top = y + "px";
+    document.body.appendChild(petal);
+    window.setTimeout(function () {
+      petal.remove();
+    }, 450);
+  }
+
+  function initPixelCursor() {
+    document.querySelectorAll("a, button, input, textarea, select, [role='button']").forEach(function (el) {
+      el.addEventListener("mousedown", function (event) {
+        spawnClickSakura(event.clientX, event.clientY);
+      });
+    });
+  }
+
+  addPixelSakura();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", addPixelSakura);
+  }
+  resetSakuraIdleTimer();
+  window.addEventListener("mousemove", resetSakuraIdleTimer, { passive: true });
+  initPixelCursor();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPixelCursor);
+  }
+</script>
+<script>
+  document.querySelectorAll("img").forEach(function (img) {
+    img.addEventListener("error", function () {
+      img.style.display = "none";
+    }, { once: true });
+  });
+</script>
+  </body>
 </html>
  
