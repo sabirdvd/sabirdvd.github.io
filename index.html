@@ -250,6 +250,7 @@ heading {
       element.classList.toggle("dark-mode");
     }
   </script>
+  <div class="sakura-layer" id="sakura-layer" aria-hidden="true"></div>
   <div class="pixel-cursor pixel-cursor-sakura" id="pixel-cursor-sakura" aria-hidden="true"></div>
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
@@ -1280,13 +1281,45 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
     opacity: 1;
   }
 
+  .sakura-layer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 240ms ease;
+  }
+
+  body.sakura-screensaver-on .sakura-layer {
+    opacity: 1;
+  }
+
+  .screensaver-sakura {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 96px;
+    height: 96px;
+    background-image: url("sakura_.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    animation: screensaver-sakura-fall linear infinite;
+    animation-duration: var(--fall-duration, 18s);
+    animation-delay: var(--fall-delay, 0s);
+    transform: translate3d(0, -12vh, 0) rotate(0deg) scale(var(--fall-scale, 1));
+    will-change: transform, opacity;
+  }
+
   .click-sakura {
     position: fixed;
-    width: 64px;
-    height: 64px;
+    width: 96px;
+    height: 96px;
     pointer-events: none;
     z-index: 1002;
-    background-image: url("sakura.png");
+    background-image: url("sakura_1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1297,16 +1330,61 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
 
   @keyframes click-sakura-pop {
     0% {
-      transform: translate(-50%, -50%) scale(0.7) rotate(0deg);
+      transform: translate(-50%, -50%) scale(0.82) rotate(0deg);
       opacity: 0.95;
     }
     100% {
-      transform: translate(-50%, -85%) scale(1.05) rotate(14deg);
+      transform: translate(-50%, -85%) scale(1.14) rotate(14deg);
       opacity: 0;
+    }
+  }
+
+  @keyframes screensaver-sakura-fall {
+    0% {
+      transform: translate3d(var(--x-shift, 0px), -12vh, 0) rotate(0deg) scale(var(--fall-scale, 1));
+      opacity: 0;
+    }
+    8% {
+      opacity: 0.85;
+    }
+    100% {
+      transform: translate3d(calc(var(--x-shift, 0px) + var(--drift, 40px)), 112vh, 0) rotate(220deg) scale(var(--fall-scale, 1));
+      opacity: 0.15;
     }
   }
 </style>
 <script>
+  function ensureSakuraScreensaver() {
+    var layer = document.getElementById("sakura-layer");
+    if (!layer || layer.childElementCount) return;
+
+    for (var i = 0; i < 14; i++) {
+      var bloom = document.createElement("span");
+      bloom.className = "screensaver-sakura";
+      bloom.style.left = Math.random() * 100 + "vw";
+      bloom.style.setProperty("--fall-duration", 14 + Math.random() * 10 + "s");
+      bloom.style.setProperty("--fall-delay", (-1 * Math.random() * 18) + "s");
+      bloom.style.setProperty("--fall-scale", (0.75 + Math.random() * 0.55).toFixed(2));
+      bloom.style.setProperty("--x-shift", (Math.random() * 80 - 40) + "px");
+      bloom.style.setProperty("--drift", (Math.random() * 140 - 70) + "px");
+      layer.appendChild(bloom);
+    }
+  }
+
+  var sakuraScreensaverTimer;
+  function disableSakuraScreensaver() {
+    document.body.classList.remove("sakura-screensaver-on");
+  }
+
+  function scheduleSakuraScreensaver() {
+    disableSakuraScreensaver();
+    window.clearTimeout(sakuraScreensaverTimer);
+    sakuraScreensaverTimer = window.setTimeout(function () {
+      ensureSakuraScreensaver();
+      document.body.classList.add("sakura-screensaver-on");
+    }, 60000);
+  }
+
   function spawnClickSakura(x, y) {
     var petal = document.createElement("span");
     petal.className = "click-sakura";
@@ -1324,6 +1402,13 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
         spawnClickSakura(event.clientX, event.clientY);
       });
     });
+
+    window.addEventListener("mousemove", scheduleSakuraScreensaver, { passive: true });
+    window.addEventListener("mousedown", scheduleSakuraScreensaver, { passive: true });
+    window.addEventListener("keydown", scheduleSakuraScreensaver);
+    window.addEventListener("scroll", scheduleSakuraScreensaver, { passive: true });
+    window.addEventListener("focus", scheduleSakuraScreensaver);
+    scheduleSakuraScreensaver();
   }
 
   initPixelCursor();
