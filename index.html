@@ -250,7 +250,6 @@ heading {
       element.classList.toggle("dark-mode");
     }
   </script>
-  <div class="sakura-layer" id="sakura-layer" aria-hidden="true"></div>
   <div class="pixel-cursor pixel-cursor-sakura" id="pixel-cursor-sakura" aria-hidden="true"></div>
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
@@ -1251,23 +1250,20 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
 </script>
 <style>
   @media (pointer: fine) {
-    body,
+    body {
+      cursor: url("sakura-cursor.png") 20 20, auto !important;
+    }
+
     body a,
     body button,
-    body input,
-    body textarea,
+    body input[type="button"],
+    body input[type="submit"],
+    body input[type="reset"],
     body select,
+    body summary,
     body [role="button"] {
-      cursor: url("sakura-cursor.png") 12 12, auto !important;
+      cursor: url("sakura-cursor-2.png") 20 20, pointer !important;
     }
-  }
-
-  .sakura-layer {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 999;
   }
 
   .pixel-cursor {
@@ -1282,23 +1278,6 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
     width: 110px;
     height: 110px;
     opacity: 1;
-  }
-
-  .pixel-petal {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    width: 84px;
-    height: 84px;
-    opacity: 0.8;
-    background-image: url("sakura.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    animation: pixel-sakura-fall linear infinite;
-    animation-duration: var(--fall-duration, 16s);
-    animation-delay: var(--fall-delay, 0s);
-    transition: opacity 140ms ease;
   }
 
   .click-sakura {
@@ -1316,23 +1295,6 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
     animation: click-sakura-pop 420ms ease-out forwards;
   }
 
-  body.sakura-paused .pixel-petal {
-    animation-play-state: paused;
-    opacity: 0.14;
-  }
-
-  @keyframes pixel-sakura-fall {
-    0% {
-      transform: translate3d(var(--x-shift, 0px), -10vh, 0) rotate(0deg) scale(var(--scale, 1));
-    }
-    50% {
-      transform: translate3d(calc(var(--x-shift, 0px) + 24px), 52vh, 0) rotate(90deg) scale(var(--scale, 1));
-    }
-    100% {
-      transform: translate3d(calc(var(--x-shift, 0px) - 36px), 110vh, 0) rotate(180deg) scale(var(--scale, 1));
-    }
-  }
-
   @keyframes click-sakura-pop {
     0% {
       transform: translate(-50%, -50%) scale(0.7) rotate(0deg);
@@ -1343,39 +1305,8 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
       opacity: 0;
     }
   }
-
-  @media (max-width: 700px) {
-    .pixel-petal {
-      opacity: 0.55;
-    }
-  }
 </style>
 <script>
-  function addPixelSakura() {
-    var layer = document.getElementById("sakura-layer");
-    if (!layer || layer.childElementCount) return;
-
-    for (var i = 0; i < 12; i++) {
-      var petal = document.createElement("span");
-      petal.className = "pixel-petal";
-      petal.style.left = Math.random() * 100 + "vw";
-      petal.style.setProperty("--fall-duration", 15 + Math.random() * 12 + "s");
-      petal.style.setProperty("--fall-delay", (-1 * Math.random() * 20) + "s");
-      petal.style.setProperty("--x-shift", (Math.random() * 90 - 45) + "px");
-      petal.style.setProperty("--scale", (0.7 + Math.random() * 0.55).toFixed(2));
-      layer.appendChild(petal);
-    }
-  }
-
-  var sakuraPauseTimer;
-  function resetSakuraIdleTimer() {
-    document.body.classList.add("sakura-paused");
-    window.clearTimeout(sakuraPauseTimer);
-    sakuraPauseTimer = window.setTimeout(function () {
-      document.body.classList.remove("sakura-paused");
-    }, 60000);
-  }
-
   function spawnClickSakura(x, y) {
     var petal = document.createElement("span");
     petal.className = "click-sakura";
@@ -1395,12 +1326,6 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
     });
   }
 
-  addPixelSakura();
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", addPixelSakura);
-  }
-  resetSakuraIdleTimer();
-  window.addEventListener("mousemove", resetSakuraIdleTimer, { passive: true });
   initPixelCursor();
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initPixelCursor);
