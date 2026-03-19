@@ -3,36 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ML & NLP Conferences 2025/26</title>
-
+<title>ML &amp; NLP Conferences 2026</title>
 
 <style>
   @font-face{
     font-family:"Departure Mono";
     src:url("font/DepartureMono-Regular.woff2") format("woff2"),
-        url("font/DepartureMono-Regular.woff")  format("woff");
+        url("font/DepartureMono-Regular.woff") format("woff");
   }
   body{
     font-family:"Departure Mono",monospace;
-    padding:25px;margin:0;background:#001f3f;color:#fff;
-    font-size:14px;line-height:1.8;
+    padding:25px;
+    margin:0;
+    background:#001f3f;
+    color:#fff;
+    font-size:14px;
+    line-height:1.8;
   }
-  a{color:#1772d0;text-decoration:none}
-  a:hover{color:#f09228}
-
-  h1{font-size:32px;margin:0 0 4px}
-  #tz-badge{font-size:12px;opacity:.75;margin-bottom:14px}
-  h2{font-size:22px;margin:25px 0 12px}
-
-  table{width:100%;border-collapse:collapse;margin-top:10px}
-  th,td{border:1px solid rgba(255,255,255,.35);padding:8px;text-align:left}
-  th{background:#002a5f}
-  tbody tr:nth-child(even){background:rgba(255,255,255,.05)}
-  .center{width:40px;text-align:center}
-
-  .flag{width:20px;height:15px;margin-left:6px;vertical-align:middle;border-radius:2px}
-
-
+  a{
+    color:#1772d0;
+    text-decoration:none;
+  }
+  a:hover,
+  a:focus{
+    color:#f09228;
+    text-decoration:none;
+  }
+  h1{
+    font-size:32px;
+    margin:0 0 4px;
+  }
+  #tz-badge{
+    font-size:12px;
+    opacity:.75;
+    margin-bottom:14px;
+  }
+  h2{
+    font-size:22px;
+    margin:25px 0 12px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+  }
+  th,td{
+    border:1px solid rgba(255,255,255,.35);
+    padding:8px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{
+    background:#002a5f;
+  }
+  tbody tr:nth-child(even){
+    background:rgba(255,255,255,.05);
+  }
+  .center{
+    width:40px;
+    text-align:center;
+  }
+  .flag{
+    width:20px;
+    height:15px;
+    margin-left:6px;
+    vertical-align:middle;
+    border-radius:2px;
+  }
   .hidden-text{
     color:transparent;
     background-image:linear-gradient(90deg,#fff 50%,transparent 50%);
@@ -40,205 +77,311 @@
     cursor:pointer;
     transition:background-size .5s,color .5s;
   }
-  .hidden-text:hover{color:#fff;background-size:0 100%}
-
-  /* urgency colour bar (8-px stripe at left) */
-  .urg-green  td:first-child{border-left:8px solid #2ecc71}
+  .hidden-text:hover{
+    color:#fff;
+    background-size:0 100%;
+  }
+  .urg-green td:first-child{border-left:8px solid #2ecc71}
   .urg-yellow td:first-child{border-left:8px solid #f1c40f}
   .urg-orange td:first-child{border-left:8px solid #e67e22}
-  .urg-red    td:first-child{border-left:8px solid #e74c3c}
+  .urg-red td:first-child{border-left:8px solid #e74c3c}
+  .cal-link{
+    display:inline-block;
+    margin:2px 6px 2px 0;
+    padding:2px 6px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:3px;
+    white-space:nowrap;
+  }
+  .meta-inline{
+    opacity:.75;
+    font-size:12px;
+  }
+  footer{
+    margin-top:40px;
+    font-size:13px;
+    opacity:.6;
+    text-align:center;
+  }
+  @media (pointer: fine) {
+    body {
+      cursor: url("sakura-cursor.png") 0 0, auto !important;
+    }
+    body a,
+    body button,
+    body [role="button"] {
+      cursor: pointer !important;
+    }
+  }
 </style>
 </head>
 <body>
 
-  
 <header>
-  <h1 id="title">ML &amp; NLP Conferences 2025/26</h1>
+  <h1 id="title">ML &amp; NLP Conferences 2026</h1>
   <div id="tz-badge"></div>
 </header>
-<script src="glitch_H2.js" defer></script>
-
 
 <h2>Upcoming Conference Deadlines</h2>
 <table id="conf-table">
   <thead>
-    <tr><th class="center">#</th><th>Conference</th><th>Abstract</th><th>Submission</th><th>Countdown</th></tr>
+    <tr>
+      <th class="center">#</th>
+      <th>Conference</th>
+      <th>Abstract</th>
+      <th>Submission</th>
+      <th>Countdown</th>
+      <th>Google Cal</th>
+    </tr>
   </thead>
-  <tbody>
-    <tr data-abs="2025-02-15" data-sub="2025-02-15" data-cc="AT">
-      <td class="center idx"></td>
-      <td class="conf"><a href="https://2025.aclweb.org" target="_blank">ACL 2025</a></td>
-      <td class="abs date">2025-02-15</td><td class="sub date">2025-02-15</td><td class="clock"></td>
-    </tr>
-    <tr data-abs="2025-04-29" data-sub="2025-05-06" data-cc="IT">
-      <td class="center idx"></td>
-      <td class="conf"><a href="https://ecai2025.org" target="_blank">ECAI 2025</a></td>
-      <td class="abs date">2025-04-29</td><td class="sub date">2025-05-06</td><td class="clock"></td>
-    </tr>
-    <tr data-abs="2025-05-19" data-sub="2025-06-18" data-cc="CN">
-      <td class="center idx"></td>
-      <td class="conf"><a href="https://2025.emnlp.org" target="_blank">EMNLP 2025</a></td>
-      <td class="abs date">2025-05-19</td><td class="sub date">2025-06-18</td><td class="clock"></td>
-    </tr>
-    <tr data-abs="2025-07-25" data-sub="2025-08-01" data-cc="SG">
-      <td class="center idx"></td>
-      <td class="conf"><a href="https://aaai.org/conference/aaai/aaai-26/" target="_blank">AAAI 2026</a></td>
-      <td class="abs date">2025-07-25</td><td class="sub date">2025-08-01</td><td class="clock"></td>
-    </tr>
-    <tr data-abs="2025-10-17" data-sub="2025-10-17" data-cc="ES">
-      <td class="center idx"></td>
-      <td class="conf">LREC 2026</td>
-      <td class="abs date">2025-10-17</td><td class="sub date">2025-10-17</td><td class="clock"></td>
-    </tr>
-    <tr data-abs="TBD" data-sub="2026-03-06" data-cc="SE">
-      <td class="center idx"></td>
-      <td class="conf"><a href="https://eccv2026.org" target="_blank">ECCV 2026</a></td>
-      <td class="abs">TBD</td><td class="sub date">2026-03-06</td><td class="clock"></td>
-    </tr>
-    <tr data-abs="TBD" data-sub="2025-10-06" data-cc="MA">
-      <td class="center idx"></td>
-      <td class="conf"><a href="https://2026.eacl.org" target="_blank">EACL 2026</a></td>
-      <td class="abs">TBD</td><td class="sub date">2025-10-06</td><td class="clock"></td>
-    </tr>
-    <tr data-abs="TBD" data-sub="2026-01-05" data-cc="US">
-  <td class="center idx"></td>
-  <td class="conf">
-    <a href="https://2026.acl.org" target="_blank">ACL 2026</a>
-  </td>
-  <td class="abs">TBD</td>
-  <td class="sub date">2026-01-05</td>
-  <td class="clock"></td>
-    <!-- New: IJCAI-ECAI 2026 -->
-    <tr data-abs="2026-01-12" data-sub="2026-01-19" data-cc="DE">
-      <td class="center idx"></td>
-      <td class="conf">
-        <a href="https://2026.ijcai.org" target="_blank">IJCAI-ECAI 2026</a>
-      </td>
-      <td class="abs date">2026-01-12</td>
-      <td class="sub date">2026-01-19</td>
-      <td class="clock"></td>
-    </tr>
-      
-</tr>
-      <!-- ICML 2026 -->
-    <tr data-abs="2026-01-23" data-sub="2026-01-28" data-cc="KR">
-      <td class="center idx"></td>
-      <td class="conf">
-        <a href="http://aideadlines.org/conference/?id=icml26" target="_blank">ICML 2026</a>
-      </td>
-      <td class="abs date">2026-01-23</td>
-      <td class="sub date">2026-01-28</td>
-      <td class="clock"></td>
-    </tr>
-
-    <!-- ACCV 2026 -->
-    <tr data-abs="2026-07-05" data-sub="2026-07-05" data-cc="JP">
-      <td class="center idx"></td>
-      <td class="conf">
-        <a href="https://accv2026.org" target="_blank">ACCV 2026</a>
-      </td>
-      <td class="abs date">2026-07-05</td>
-      <td class="sub date">2026-07-05</td>
-      <td class="clock"></td>
-    </tr>
-    
-  </tbody>
+  <tbody></tbody>
 </table>
-
 
 <h2>ACL Rolling Review — Monthly Cycles</h2>
 <table id="arr-table">
   <thead>
-    <tr><th class="center">#</th><th>Cycle</th><th>Submission</th><th>Reviewer Reg.</th>
-        <th>Reviews Due</th><th>Author Resp.</th><th>Meta-reviews</th><th>Cycle End</th><th>Countdown</th></tr>
+    <tr>
+      <th class="center">#</th>
+      <th>Cycle</th>
+      <th>Submission</th>
+      <th>Reviewer Reg.</th>
+      <th>Reviews Due</th>
+      <th>Author Resp.</th>
+      <th>Meta-reviews</th>
+      <th>Cycle End</th>
+      <th>Countdown</th>
+      <th>Google Cal</th>
+    </tr>
   </thead>
-  <tbody>
-    <tr data-sub="2025-05-19"><td class="center idx"></td><td class="conf"><a href="https://aclrollingreview.org">May 2025</a></td>
-      <td class="date sub">2025-05-19</td><td class="date">2025-05-21</td><td class="date">2025-06-18</td><td class="date">2025-06-26–07-02</td>
-      <td class="date">2025-07-15</td><td class="date">2025-07-27</td><td class="clock"></td></tr>
-    <tr data-sub="2025-07-28"><td class="center idx"></td><td class="conf"><a href="https://aclrollingreview.org">Jul 2025</a></td>
-      <td class="date sub">2025-07-28</td><td class="date">2025-07-30</td><td class="date">2025-08-27</td><td class="date">2025-09-04–09-10</td>
-      <td class="date">2025-09-23</td><td class="date">2025-10-05</td><td class="clock"></td></tr>
-    <tr data-sub="2025-10-06"><td class="center idx"></td><td class="conf"><a href="https://aclrollingreview.org">Oct 2025</a></td>
-      <td class="date sub">2025-10-06</td><td class="date">2025-10-08</td><td class="date">TBA</td><td class="date">TBA</td>
-      <td class="date">TBA</td><td class="date">2025-12-14</td><td class="clock"></td></tr>
-    <tr data-sub="2026-01-05"><td class="center idx"></td><td class="conf"><a href="https://aclrollingreview.org">Jan 2026</a></td>
-      <td class="date sub">2026-01-05</td><td class="date">2026-01-07</td><td class="date">TBA</td><td class="date">TBA</td>
-      <td class="date">TBA</td><td class="date">2026-03-15</td><td class="clock"></td></tr>
-  </tbody>
+  <tbody></tbody>
 </table>
 
-<!-- 💡 Add this just before </body> -->
-<footer style="margin-top:40px; font-size:13px; opacity:0.6; text-align:center">
+<footer>
   <p>
-    Feel free to steal this code — 
-    <a href="https://github.com/sabirdvd/Conferences_deadline/tree/main" target="_blank">
+    Feel free to steal this code —
+    <a href="https://github.com/sabirdvd/Conferences_deadline/tree/main" target="_blank" rel="noopener noreferrer">
       github.com/sabirdvd
     </a>
   </p>
 </footer>
 
 <script>
-
-
 (function(){
-  const zone='Europe/Tallinn';
-  const off=Intl.DateTimeFormat(undefined,{timeZoneName:'short'}).formatToParts(new Date())
-              .find(p=>p.type==='timeZoneName').value;   // e.g. GMT+3
-  document.getElementById('tz-badge').textContent=`Times shown in Estonian time (${zone}, ${off})`;
+  const zone = "Europe/Tallinn";
+  const off = Intl.DateTimeFormat(undefined,{timeZoneName:"short"}).formatToParts(new Date())
+    .find(function(p){ return p.type === "timeZoneName"; }).value;
+  document.getElementById("tz-badge").textContent =
+    "Times shown in Estonian time (" + zone + ", " + off + ")";
 })();
 
-/* ─── 2 • helpers ─── */
-const DAY=86_400_000;
-const pad=n=>n.toString().padStart(2,'0');
-const dhms=ms=>{
-  if(ms<=0)return'00 d 00h 00m 00s';
-  let s=Math.floor(ms/1000);
-  const d=Math.floor(s/86400);s%=86400;
-  const h=Math.floor(s/3600); s%=3600;
-  const m=Math.floor(s/60);   s%=60;
-  return`${pad(d)} d ${pad(h)}h ${pad(m)}m ${pad(s)}s`;
-};
-function hidePast(td){
-  const txt=td.textContent.trim();
-  if(!/^\d{4}-\d{2}-\d{2}$/.test(txt))return;
-  const past=Date.now()>new Date(txt).getTime();
-  if(past&&!td.dataset.h){td.innerHTML=`<span class="hidden-text">${txt}</span>`;td.dataset.h=1;}
-  if(!past&&td.dataset.h){td.textContent=txt;delete td.dataset.h;}
+const conferences = [
+  {
+    name: "ACL 2026",
+    url: "https://2026.acl.org/",
+    cc: "us",
+    meta: "NLP / official",
+    abstract: "TBD",
+    submission: "2026-01-05"
+  },
+  {
+    name: "NeurIPS 2026",
+    url: "https://neurips.cc/Conferences/2026",
+    cc: "au",
+    meta: "ML / official",
+    abstract: "2026-05-04",
+    submission: "2026-05-06"
+  },
+  {
+    name: "CoNLL 2026",
+    url: "https://conll.org/",
+    cc: "",
+    meta: "NLP / official",
+    abstract: "2026-03-20",
+    submission: "2026-03-27"
+  },
+  {
+    name: "COLM 2026",
+    url: "https://colmweb.org/cfp.html",
+    cc: "us",
+    meta: "LM / official",
+    abstract: "2026-03-26",
+    submission: "2026-03-31"
+  },
+  {
+    name: "EMNLP 2026",
+    url: "https://2026.emnlp.org/",
+    cc: "",
+    meta: "NLP / official",
+    abstract: "2026-05-19",
+    submission: "2026-05-26"
+  },
+  {
+    name: "AAAI-27",
+    url: "https://aaai.org/conference/aaai/",
+    cc: "",
+    meta: "AI / official / TBD",
+    abstract: "TBD",
+    submission: "TBD"
+  }
+];
+
+const arrCycles = [
+  {
+    cycle: "Jan 2026",
+    url: "https://aclrollingreview.org/",
+    submission: "2026-01-05",
+    reviewer: "2026-01-07",
+    reviews: "TBA",
+    response: "TBA",
+    meta: "TBA",
+    end: "2026-03-15"
+  },
+  {
+    cycle: "Mar 2026",
+    url: "https://aclrollingreview.org/",
+    submission: "2026-03-23",
+    reviewer: "2026-03-25",
+    reviews: "2026-04-22",
+    response: "2026-04-30 to 2026-05-06",
+    meta: "2026-05-19",
+    end: "2026-05-31"
+  },
+  {
+    cycle: "May 2026",
+    url: "https://aclrollingreview.org/",
+    submission: "2026-05-18",
+    reviewer: "2026-05-20",
+    reviews: "2026-06-17",
+    response: "2026-06-25 to 2026-07-01",
+    meta: "2026-07-14",
+    end: "2026-07-26"
+  }
+];
+
+const DAY = 86400000;
+const pad = function(n){ return n.toString().padStart(2,"0"); };
+
+function dhms(ms){
+  if(ms <= 0) return "passed";
+  let s = Math.floor(ms / 1000);
+  const d = Math.floor(s / 86400); s %= 86400;
+  const h = Math.floor(s / 3600); s %= 3600;
+  const m = Math.floor(s / 60); s %= 60;
+  return pad(d) + " d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
 }
-const flag=cc=>`<img class="flag" src="https://flagcdn.com/w20/${cc.toLowerCase()}.png" alt="">`;
 
+function isDate(txt){
+  return /^\d{4}-\d{2}-\d{2}$/.test(txt);
+}
 
-document.querySelectorAll('#conf-table tbody tr').forEach(tr=>{
-  const cc=tr.dataset.cc;
-  if(cc&&!tr.dataset.f){tr.querySelector('.conf').insertAdjacentHTML('beforeend',flag(cc));tr.dataset.f=1;}
-});
+function hidePast(td){
+  const txt = td.textContent.trim();
+  if(!isDate(txt)) return;
+  const past = Date.now() > new Date(txt + "T23:59:59").getTime();
+  if(past && !td.dataset.h){
+    td.innerHTML = '<span class="hidden-text">' + txt + "</span>";
+    td.dataset.h = "1";
+  }
+}
 
+function flag(cc){
+  if(!cc) return "";
+  return '<img class="flag" src="https://flagcdn.com/w20/' + cc.toLowerCase() + '.png" alt="">';
+}
 
-function tick(){
-  document.querySelectorAll('table').forEach(tb=>{
-    tb.querySelectorAll('tbody tr').forEach((tr,i)=>{
-      tr.querySelector('.idx').textContent=i+1;
+function addOneDay(iso){
+  const d = new Date(iso + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0,10).replace(/-/g,"");
+}
 
-      const sub=tr.dataset.sub;
-      if(sub){
-        const diff=new Date(sub)-Date.now();
-        tr.querySelector('.clock').textContent=dhms(diff);
+function gcal(title, iso, details, url){
+  const start = iso.replace(/-/g,"");
+  const end = addOneDay(iso);
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: title,
+    dates: start + "/" + end,
+    details: details + "\n\nSource: " + url
+  });
+  return "https://calendar.google.com/calendar/render?" + params.toString();
+}
 
-   
-        tr.classList.remove('urg-green','urg-yellow','urg-orange','urg-red');
-        const days=diff/DAY;
-        if(days>14)      tr.classList.add('urg-green');
-        else if(days>6)  tr.classList.add('urg-yellow');
-        else if(days>2)  tr.classList.add('urg-orange');
-        else             tr.classList.add('urg-red');
-      }
+function buildConferenceTable(){
+  const tbody = document.querySelector("#conf-table tbody");
+  conferences.forEach(function(conf, i){
+    const tr = document.createElement("tr");
+    tr.dataset.sub = conf.submission;
 
-      tr.querySelectorAll('.date,.abs,.sub').forEach(hidePast);
-    });
+    let calHtml = "";
+    if(isDate(conf.abstract)){
+      calHtml += '<a class="cal-link" href="' +
+        gcal(conf.name + " abstract deadline", conf.abstract, conf.name + " abstract deadline", conf.url) +
+        '" target="_blank" rel="noopener noreferrer">Abstract</a>';
+    }
+    if(isDate(conf.submission)){
+      calHtml += '<a class="cal-link" href="' +
+        gcal(conf.name + " submission deadline", conf.submission, conf.name + " submission deadline", conf.url) +
+        '" target="_blank" rel="noopener noreferrer">Submission</a>';
+    }
+
+    tr.innerHTML =
+      '<td class="center idx">' + (i + 1) + '</td>' +
+      '<td class="conf"><a href="' + conf.url + '" target="_blank" rel="noopener noreferrer">' + conf.name + '</a>' + flag(conf.cc) +
+      '<br><span class="meta-inline">' + conf.meta + '</span></td>' +
+      '<td class="abs date">' + conf.abstract + '</td>' +
+      '<td class="sub date">' + conf.submission + '</td>' +
+      '<td class="clock"></td>' +
+      '<td>' + calHtml + '</td>';
+    tbody.appendChild(tr);
   });
 }
-tick(); setInterval(tick,1000);
+
+function buildArrTable(){
+  const tbody = document.querySelector("#arr-table tbody");
+  arrCycles.forEach(function(cycle, i){
+    const tr = document.createElement("tr");
+    tr.dataset.sub = cycle.submission;
+    tr.innerHTML =
+      '<td class="center idx">' + (i + 1) + '</td>' +
+      '<td class="conf"><a href="' + cycle.url + '" target="_blank" rel="noopener noreferrer">' + cycle.cycle + '</a></td>' +
+      '<td class="date sub">' + cycle.submission + '</td>' +
+      '<td class="date">' + cycle.reviewer + '</td>' +
+      '<td class="date">' + cycle.reviews + '</td>' +
+      '<td class="date">' + cycle.response + '</td>' +
+      '<td class="date">' + cycle.meta + '</td>' +
+      '<td class="date">' + cycle.end + '</td>' +
+      '<td class="clock"></td>' +
+      '<td><a class="cal-link" href="' +
+      gcal("ACL Rolling Review " + cycle.cycle + " submission deadline", cycle.submission, "ARR submission deadline", cycle.url) +
+      '" target="_blank" rel="noopener noreferrer">Submission</a></td>';
+    tbody.appendChild(tr);
+  });
+}
+
+function tick(){
+  document.querySelectorAll("table tbody tr").forEach(function(tr){
+    const sub = tr.dataset.sub;
+    if(sub && isDate(sub)){
+      const diff = new Date(sub + "T23:59:59").getTime() - Date.now();
+      tr.querySelector(".clock").textContent = dhms(diff);
+
+      tr.classList.remove("urg-green","urg-yellow","urg-orange","urg-red");
+      const days = diff / DAY;
+      if(days > 14) tr.classList.add("urg-green");
+      else if(days > 6) tr.classList.add("urg-yellow");
+      else if(days > 2) tr.classList.add("urg-orange");
+      else tr.classList.add("urg-red");
+    }
+
+    tr.querySelectorAll(".date,.abs,.sub").forEach(hidePast);
+  });
+}
+
+buildConferenceTable();
+buildArrTable();
+tick();
+setInterval(tick, 1000);
 </script>
 </body>
 </html>
