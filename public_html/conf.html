@@ -42,10 +42,64 @@
     font-size:22px;
     margin:25px 0 12px;
   }
+  .toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+    margin:12px 0 14px;
+  }
+  .stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:8px 0 18px;
+  }
+  .stat{
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.04);
+    padding:6px 10px;
+    border-radius:4px;
+    min-width:120px;
+  }
+  .stat-label{
+    display:block;
+    font-size:11px;
+    opacity:.7;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+  .stat-value{
+    font-size:18px;
+  }
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:0 0 14px;
+    font-size:12px;
+    opacity:.9;
+  }
+  .legend-item{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .legend-swatch{
+    width:12px;
+    height:12px;
+    border-radius:2px;
+    display:inline-block;
+  }
+  .table-wrap{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
   table{
     width:100%;
     border-collapse:collapse;
     margin-top:10px;
+    min-width:760px;
   }
   th,td{
     border:1px solid rgba(255,255,255,.35);
@@ -56,8 +110,16 @@
   th{
     background:#002a5f;
   }
+  thead th{
+    position:sticky;
+    top:0;
+    z-index:1;
+  }
   tbody tr:nth-child(even){
     background:rgba(255,255,255,.05);
+  }
+  tbody tr.is-past{
+    opacity:.6;
   }
   .center{
     width:40px;
@@ -97,6 +159,20 @@
     opacity:.75;
     font-size:12px;
   }
+  .btn{
+    font:inherit;
+    color:#fff;
+    background:#002a5f;
+    border:1px solid rgba(255,255,255,.3);
+    padding:5px 9px;
+    border-radius:4px;
+  }
+  .btn.is-active{
+    background:#0b4c8a;
+  }
+  .empty-cal{
+    opacity:.5;
+  }
   footer{
     margin-top:40px;
     font-size:13px;
@@ -122,39 +198,54 @@
   <div id="tz-badge"></div>
 </header>
 
+<div class="stats" id="stats"></div>
+<div class="legend">
+  <span class="legend-item"><span class="legend-swatch" style="background:#2ecc71"></span>14+ days</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:#f1c40f"></span>7-14 days</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:#e67e22"></span>3-6 days</span>
+  <span class="legend-item"><span class="legend-swatch" style="background:#e74c3c"></span>0-2 days</span>
+</div>
+
 <h2>Upcoming Conference Deadlines</h2>
-<table id="conf-table">
-  <thead>
-    <tr>
-      <th class="center">#</th>
-      <th>Conference</th>
-      <th>Abstract</th>
-      <th>Submission</th>
-      <th>Countdown</th>
-      <th>Google Cal</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+<div class="toolbar">
+  <button class="btn" id="toggle-past" type="button">Show Passed</button>
+</div>
+<div class="table-wrap">
+  <table id="conf-table">
+    <thead>
+      <tr>
+        <th class="center">#</th>
+        <th>Conference</th>
+        <th>Abstract</th>
+        <th>Submission</th>
+        <th>Countdown</th>
+        <th>Google Cal</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
 
 <h2>ACL Rolling Review — Monthly Cycles</h2>
-<table id="arr-table">
-  <thead>
-    <tr>
-      <th class="center">#</th>
-      <th>Cycle</th>
-      <th>Submission</th>
-      <th>Reviewer Reg.</th>
-      <th>Reviews Due</th>
-      <th>Author Resp.</th>
-      <th>Meta-reviews</th>
-      <th>Cycle End</th>
-      <th>Countdown</th>
-      <th>Google Cal</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+<div class="table-wrap">
+  <table id="arr-table">
+    <thead>
+      <tr>
+        <th class="center">#</th>
+        <th>Cycle</th>
+        <th>Submission</th>
+        <th>Reviewer Reg.</th>
+        <th>Reviews Due</th>
+        <th>Author Resp.</th>
+        <th>Meta-reviews</th>
+        <th>Cycle End</th>
+        <th>Countdown</th>
+        <th>Google Cal</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
 
 <footer>
   <p>
@@ -193,11 +284,11 @@ const conferences = [
   },
   {
     name: "CoNLL 2026",
-    url: "https://conll.org/",
-    cc: "",
+    url: "https://www.conll.org/2026",
+    cc: "us",
     meta: "NLP / official",
-    abstract: "2026-03-20",
-    submission: "2026-03-27"
+    abstract: "TBD",
+    submission: "2026-02-19"
   },
   {
     name: "COLM 2026",
@@ -210,16 +301,16 @@ const conferences = [
   {
     name: "EMNLP 2026",
     url: "https://2026.emnlp.org/",
-    cc: "",
+    cc: "hu",
     meta: "NLP / official",
-    abstract: "2026-05-19",
-    submission: "2026-05-26"
+    abstract: "TBD",
+    submission: "2026-05-25"
   },
   {
     name: "AAAI-27",
     url: "https://aaai.org/conference/aaai/",
-    cc: "",
-    meta: "AI / official / TBD",
+    cc: "ca",
+    meta: "AI / official / Montreal, Canada / TBD",
     abstract: "TBD",
     submission: "TBD"
   }
@@ -260,6 +351,7 @@ const arrCycles = [
 
 const DAY = 86400000;
 const pad = function(n){ return n.toString().padStart(2,"0"); };
+let showPast = false;
 
 function dhms(ms){
   if(ms <= 0) return "passed";
@@ -285,7 +377,7 @@ function hidePast(td){
 }
 
 function flag(cc){
-  if(!cc) return "";
+  if(!cc) return '<span class="flag" style="display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);font-size:11px;">?</span>';
   return '<img class="flag" src="https://flagcdn.com/w20/' + cc.toLowerCase() + '.png" alt="">';
 }
 
@@ -309,7 +401,12 @@ function gcal(title, iso, details, url){
 
 function buildConferenceTable(){
   const tbody = document.querySelector("#conf-table tbody");
-  conferences.forEach(function(conf, i){
+  const sorted = conferences.slice().sort(function(a, b){
+    const aTime = isDate(a.submission) ? new Date(a.submission + "T23:59:59").getTime() : Number.MAX_SAFE_INTEGER;
+    const bTime = isDate(b.submission) ? new Date(b.submission + "T23:59:59").getTime() : Number.MAX_SAFE_INTEGER;
+    return aTime - bTime;
+  });
+  sorted.forEach(function(conf, i){
     const tr = document.createElement("tr");
     tr.dataset.sub = conf.submission;
 
@@ -323,6 +420,9 @@ function buildConferenceTable(){
       calHtml += '<a class="cal-link" href="' +
         gcal(conf.name + " submission deadline", conf.submission, conf.name + " submission deadline", conf.url) +
         '" target="_blank" rel="noopener noreferrer">Submission</a>';
+    }
+    if(!calHtml){
+      calHtml = '<span class="empty-cal">TBD</span>';
     }
 
     tr.innerHTML =
@@ -365,6 +465,8 @@ function tick(){
     if(sub && isDate(sub)){
       const diff = new Date(sub + "T23:59:59").getTime() - Date.now();
       tr.querySelector(".clock").textContent = dhms(diff);
+      tr.classList.toggle("is-past", diff <= 0);
+      tr.style.display = (!showPast && diff <= 0 && tr.closest("#conf-table")) ? "none" : "";
 
       tr.classList.remove("urg-green","urg-yellow","urg-orange","urg-red");
       const days = diff / DAY;
@@ -372,14 +474,39 @@ function tick(){
       else if(days > 6) tr.classList.add("urg-yellow");
       else if(days > 2) tr.classList.add("urg-orange");
       else tr.classList.add("urg-red");
+    } else if(tr.closest("#conf-table")) {
+      tr.style.display = "";
     }
 
     tr.querySelectorAll(".date,.abs,.sub").forEach(hidePast);
   });
+  updateStats();
+}
+
+function updateStats(){
+  const withDates = conferences.filter(function(conf){ return isDate(conf.submission); });
+  const upcoming = withDates.filter(function(conf){
+    return new Date(conf.submission + "T23:59:59").getTime() > Date.now();
+  });
+  const next = upcoming.slice().sort(function(a, b){
+    return new Date(a.submission + "T23:59:59").getTime() - new Date(b.submission + "T23:59:59").getTime();
+  })[0];
+  const stats = document.getElementById("stats");
+  stats.innerHTML =
+    '<div class="stat"><span class="stat-label">Tracked</span><span class="stat-value">' + conferences.length + '</span></div>' +
+    '<div class="stat"><span class="stat-label">Upcoming</span><span class="stat-value">' + upcoming.length + '</span></div>' +
+    '<div class="stat"><span class="stat-label">ARR Cycles</span><span class="stat-value">' + arrCycles.length + '</span></div>' +
+    '<div class="stat"><span class="stat-label">Next Deadline</span><span class="stat-value">' + (next ? next.name : "TBD") + '</span></div>';
 }
 
 buildConferenceTable();
 buildArrTable();
+document.getElementById("toggle-past").addEventListener("click", function(){
+  showPast = !showPast;
+  this.textContent = showPast ? "Hide Passed" : "Show Passed";
+  this.classList.toggle("is-active", showPast);
+  tick();
+});
 tick();
 setInterval(tick, 1000);
 </script>
