@@ -386,6 +386,19 @@ td[width="67%"] > p:first-child,
 td[width="67%"] > .menu-strip {
   text-align: center;
 }
+.intro-table > tbody > tr {
+  display: flex;
+  align-items: center;
+}
+.intro-table > tbody > tr > td[width="67%"] {
+  width: 67%;
+  flex: 0 1 67%;
+}
+.intro-table > tbody > tr > td[width="33%"] {
+  width: 33%;
+  flex: 0 0 33%;
+  align-self: center;
+}
 .one, .crt-image-shell {
   border: 1px solid var(--theme-line);
   box-shadow: 3px 3px 0 rgba(240,160,32,0.22);
@@ -490,7 +503,7 @@ p[align=center]:last-of-type {
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
     <td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <table class="intro-table" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tr>
         <td width="67%" valign="middle">
         <p align="center">
@@ -530,7 +543,7 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
           <a class="menu-link" href="https://www.linkedin.com/in/ahmed-sabir-00a612132/?ppe=1">LinkedIn</a>
         </p>
         </td>
-        <td width="33%">
+        <td width="33%" valign="middle" align="center">
         <img src="public_html/-asabir/images/myphoto_1.jpg">
         </td>
       </tr>
