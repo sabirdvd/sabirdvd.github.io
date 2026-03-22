@@ -354,6 +354,43 @@ heading {
   font-weight: 700;
   font-style: normal;
 }
+.footer-credit {
+  color: var(--theme-muted);
+  letter-spacing: 0.04em;
+}
+.footer-credit-link {
+  display: inline-block;
+  padding: 0 6px;
+  margin: 0 2px;
+  color: var(--theme-ink) !important;
+  text-decoration: none !important;
+  background: linear-gradient(90deg, #39ff88, #39ff88) left center / 0% 100% no-repeat !important;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: background-size 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.18s ease;
+}
+.footer-credit-link:hover,
+.footer-credit-link:focus,
+.footer-credit-link:active {
+  background-size: 100% 100% !important;
+  color: #03150a !important;
+  border-color: rgba(57, 255, 136, 0.72) !important;
+  box-shadow: 0 0 8px rgba(57, 255, 136, 0.28), 3px 3px 0 rgba(57, 255, 136, 0.18);
+  animation: exit-sign-flicker 3.1s steps(1, end) infinite;
+}
+@keyframes exit-sign-flicker {
+  0%, 19%, 23%, 25%, 57%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 8px rgba(57, 255, 136, 0.28), 3px 3px 0 rgba(57, 255, 136, 0.18);
+  }
+  20%, 24%, 58% {
+    opacity: 0.76;
+    box-shadow: 0 0 3px rgba(57, 255, 136, 0.14), 2px 2px 0 rgba(57, 255, 136, 0.12);
+  }
+  21%, 59% {
+    opacity: 0.92;
+  }
+}
 .hidden-text {
   background-image: linear-gradient(90deg, var(--theme-ink) 50%, transparent 50%) !important;
 }
@@ -1356,7 +1393,7 @@ the supervision of Prof. Michiko Matsuda/Hiroshi Tanaka. Now, I'm a member of th
       <tr>
         <td>
         <br> 
-        <p align="right"><font size="2">This website is based on <a href="https://jonbarron.info/"><strong>jonbarron.info</strong></a> and inspired by <a href="https://arcprize.org/"><strong>arcprize.org</strong></a>.</font></p>
+        <p align="right"><span class="footer-credit">This website is based on <a class="footer-credit-link" href="https://jonbarron.info/"><strong>jonbarron.info</strong></a> and inspired by <a class="footer-credit-link" href="https://arcprize.org/"><strong>arcprize.org</strong></a>.</span></p>
         </td>
       </tr>
       </table>
