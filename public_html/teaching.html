@@ -57,6 +57,109 @@
             color: #ffaa00;
         }
     </style>
+<style>
+:root {
+  --theme-bg: #050505;
+  --theme-panel: #0b0b0b;
+  --theme-ink: #f3efe4;
+  --theme-muted: #b7af9d;
+  --theme-line: rgba(243, 239, 228, 0.72);
+  --theme-accent: #c45a8d;
+}
+html {
+  scroll-behavior: smooth;
+  background:
+    radial-gradient(circle at top right, rgba(240,160,32,0.12), transparent 22%),
+    radial-gradient(circle at left 18%, rgba(107,180,255,0.06), transparent 18%),
+    linear-gradient(180deg, #030303 0%, #090909 100%);
+}
+body {
+  width: min(100% - 20px, 1020px);
+  margin: 0 auto;
+  padding: 18px 20px 28px !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent 16%),
+    linear-gradient(90deg, rgba(107,180,255,0.035), transparent 18%, transparent 82%, rgba(240,160,32,0.05)),
+    var(--theme-panel) !important;
+  color: var(--theme-ink) !important;
+  border: 3px solid var(--theme-ink);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.06), 0 24px 70px rgba(0,0,0,0.46);
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.02) 50%, transparent 50%);
+  background-size: 100% 4px;
+  opacity: 0.14;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+body > * { position: relative; z-index: 1; }
+a {
+  display: inline-block;
+  padding: 0 2px;
+  color: var(--theme-ink) !important;
+  text-decoration: none !important;
+  background: linear-gradient(90deg, var(--theme-accent), var(--theme-accent)) left center / 0% 100% no-repeat;
+  border-bottom: 1px solid transparent;
+  transition: background-size 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.18s ease;
+}
+a:hover,
+a:focus {
+  background-size: 100% 100%;
+  color: #111 !important;
+  border-bottom-color: var(--theme-accent);
+  box-shadow: 3px 3px 0 rgba(240,160,32,0.22);
+}
+a:active { transform: translateY(1px); }
+h1, h2 {
+  color: var(--theme-accent);
+  margin-top: 0;
+  font-family: 'Departure Mono', monospace;
+}
+h1 {
+  font-size: 36px !important;
+  margin-bottom: 14px;
+}
+h2 {
+  font-size: 24px !important;
+  border-bottom: 2px solid var(--theme-line);
+  padding-bottom: 4px;
+  box-shadow: inset 0 -1px 0 rgba(107,180,255,0.18);
+  margin-bottom: 16px;
+}
+header, main, footer, section, ul, p {
+  position: relative;
+  z-index: 1;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+li {
+  margin: 12px 0;
+}
+main section,
+header,
+footer,
+body > ul,
+body > p {
+  background: rgba(255,255,255,0.012);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+small { color: var(--theme-muted); }
+@media (max-width: 900px) {
+  body {
+    width: calc(100% - 20px);
+    padding: 12px !important;
+  }
+}
+</style>
 </head>
 <body>
     <h2 id="glitch-title">Courses</h2>
