@@ -498,78 +498,132 @@ p[align=center]:last-of-type {
 </style>
 <style>
 @media (max-width: 700px) {
-  html, body {
-    overflow-x: hidden;
-  }
-
   body {
-    padding: 8px !important;
+    padding: 10px !important;
     font-size: 14px !important;
-    line-height: 1.58 !important;
-  }
-
-  body::before {
-    opacity: 0.08;
+    line-height: 1.6 !important;
   }
 
   body > table[width="800"] {
     width: 100% !important;
-    max-width: none !important;
     padding: 0 !important;
-    border-width: 2px !important;
-    box-shadow: 0 14px 32px rgba(0,0,0,0.34);
+    border-width: 1px !important;
+    box-shadow: none !important;
   }
 
   body > table[width="800"] > tbody > tr > td {
     border-width: 0 !important;
   }
 
+  .intro-table,
+  .intro-table > tbody,
   .intro-table > tbody > tr {
     display: block !important;
+    width: 100% !important;
   }
 
-  td[width="67%"],
-  td[width="33%"],
-  td[width="25%"],
-  td[width="75%"] {
+  .intro-table td[width="67%"],
+  .intro-table td[width="33%"] {
     display: block !important;
     width: 100% !important;
-    padding: 14px !important;
     box-sizing: border-box;
+    padding: 12px !important;
   }
 
-  td[width="33%"] {
+  .intro-table td[width="33%"] {
     text-align: center !important;
     padding-top: 0 !important;
   }
 
-  td[width="33%"] > img,
-  .one,
-  .crt-image-shell {
-    display: block;
-    width: min(78vw, 250px) !important;
+  .intro-table td[width="33%"] > img {
+    display: block !important;
+    width: min(62vw, 180px) !important;
     height: auto !important;
-    margin: 0 auto 14px !important;
+    margin: 0 auto 12px !important;
   }
 
-  .one {
-    height: min(78vw, 250px) !important;
+  table[width="100%"][cellpadding="20"],
+  table[width="100%"][cellpadding="20"] > tbody {
+    display: block !important;
+    width: 100% !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    margin: 0 0 14px !important;
+  }
+
+  table[width="100%"][cellpadding="20"] > tbody > tr {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+
+  table[width="100%"][cellpadding="20"] td[width="25%"],
+  table[width="100%"][cellpadding="20"] td[width="75%"] {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 10px 12px !important;
+  }
+
+  table[width="100%"][cellpadding="20"] td[width="25%"] {
+    display: none !important;
+  }
+
+  table[width="100%"][cellpadding="20"] td[width="75%"] {
+    order: 1 !important;
+    padding: 2px 12px 14px !important;
+  }
+
+  table[width="100%"][cellpadding="20"] td[width="75%"] a {
+    display: inline-block !important;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+
+  table[width="100%"][cellpadding="20"] td[width="75%"] papertitle {
+    display: block !important;
+    margin-bottom: 6px;
+  }
+
+  table[width="100%"][cellpadding="20"] td[width="75%"] p {
+    margin: 8px 0 0 !important;
+  }
+
+  .one,
+  .crt-image-shell {
+    width: fit-content !important;
+    max-width: min(50vw, 160px) !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .one > img,
+  .two > img {
+    display: block !important;
+    width: auto !important;
+    max-width: min(50vw, 160px) !important;
+    height: auto !important;
+    margin: 0 auto !important;
   }
 
   .two {
-    width: 100% !important;
-    height: 100% !important;
+    display: none !important;
   }
 
   name {
     font-size: 28px !important;
-    line-height: 1.15 !important;
+    line-height: 1.12 !important;
   }
 
   heading,
   h2#useful-links {
     font-size: 20px !important;
-    margin: 4px 0 0 !important;
+    margin: 8px 0 4px !important;
   }
 
   papertitle {
@@ -577,41 +631,21 @@ p[align=center]:last-of-type {
     line-height: 1.35 !important;
   }
 
-  p[align="center"],
-  p[align=center] {
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-  }
-
   .menu-strip {
-    margin-top: 10px !important;
+    margin-top: 8px !important;
     padding-top: 8px !important;
     line-height: 1.8 !important;
   }
 
   .menu-link {
     font-size: 11px !important;
-    letter-spacing: 0.08em !important;
+    letter-spacing: 0.06em !important;
   }
 
-  .menu-strip .menu-sep {
-    margin: 0 4px;
-  }
-
-  table[width="100%"] {
-    border-width: 1px !important;
-  }
-
-  table[width="100%"] td[width="25%"] {
+  p[align="center"],
+  p[align=center] {
+    margin-bottom: 10px !important;
     padding-bottom: 6px !important;
-  }
-
-  table[width="100%"] td[width="75%"] {
-    padding-top: 0 !important;
-  }
-
-  br + br {
-    display: none;
   }
 }
 </style>
