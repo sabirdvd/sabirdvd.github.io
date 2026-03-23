@@ -505,10 +505,13 @@ p[align=center]:last-of-type {
   }
 
   body > table[width="800"] {
-    width: 100% !important;
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 auto !important;
     padding: 0 !important;
     border-width: 1px !important;
     box-shadow: none !important;
+    box-sizing: border-box !important;
   }
 
   body > table[width="800"] > tbody > tr > td {
@@ -520,14 +523,18 @@ p[align=center]:last-of-type {
   .intro-table > tbody > tr {
     display: block !important;
     width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .intro-table td[width="67%"],
   .intro-table td[width="33%"] {
     display: block !important;
     width: 100% !important;
-    box-sizing: border-box;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     padding: 12px !important;
+    overflow-wrap: anywhere;
   }
 
   .intro-table td[width="33%"] {
@@ -546,10 +553,12 @@ p[align=center]:last-of-type {
   table[width="100%"][cellpadding="20"] > tbody {
     display: block !important;
     width: 100% !important;
+    max-width: 100% !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
     margin: 0 0 14px !important;
+    box-sizing: border-box !important;
   }
 
   table[width="100%"][cellpadding="20"] > tbody > tr {
@@ -573,7 +582,11 @@ p[align=center]:last-of-type {
 
   table[width="100%"][cellpadding="20"] td[width="75%"] {
     order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 2px 12px 14px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere;
   }
 
   table[width="100%"][cellpadding="20"] td[width="75%"] a {
@@ -650,14 +663,8 @@ p[align=center]:last-of-type {
 }
 </style>
 <style>
-body p,
-body li {
-  color: #f3efe4 !important;
-}
-
 a:not(.menu-link) {
   color: #8fd8ff !important;
-  text-decoration: none !important;
 }
 
 a:not(.menu-link):hover,
