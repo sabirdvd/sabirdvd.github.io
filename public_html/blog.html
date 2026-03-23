@@ -95,18 +95,195 @@
       background-color: rgba(250, 235, 206, 1);
     }
   </style>
+<style>
+:root {
+  --theme-bg: #050505;
+  --theme-panel: #0b0b0b;
+  --theme-ink: #f3efe4;
+  --theme-muted: #b7af9d;
+  --theme-line: rgba(243, 239, 228, 0.72);
+  --theme-accent: #c45a8d;
+}
+html { scroll-behavior: smooth; }
+body {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 22px !important;
+  background:
+    radial-gradient(circle at top right, rgba(240,160,32,0.12), transparent 22%),
+    radial-gradient(circle at left 18%, rgba(107,180,255,0.06), transparent 18%),
+    linear-gradient(180deg, #030303 0%, #090909 100%) !important;
+  color: var(--theme-ink) !important;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.7;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.02) 50%, transparent 50%);
+  background-size: 100% 4px;
+  opacity: 0.14;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+body {
+  border: 3px solid var(--theme-ink);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.06), 0 24px 70px rgba(0,0,0,0.46);
+}
+a {
+  display: inline-block;
+  padding: 0 2px;
+  color: var(--theme-ink) !important;
+  text-decoration: none !important;
+  background: linear-gradient(90deg, var(--theme-accent), var(--theme-accent)) left center / 0% 100% no-repeat;
+  border-bottom: 1px solid transparent;
+  transition: background-size 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.18s ease;
+}
+a:hover,
+a:focus {
+  background-size: 100% 100%;
+  color: #111 !important;
+  border-bottom-color: var(--theme-accent);
+  box-shadow: 3px 3px 0 rgba(240,160,32,0.22);
+}
+a:active {
+  transform: translateY(1px);
+}
+body > a:first-of-type {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--theme-ink) !important;
+  font-size: 20px;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.exit-link {
+  display: inline-block !important;
+  padding: 2px 10px !important;
+  margin-bottom: 10px;
+  color: #39ff88 !important;
+  text-decoration: none !important;
+  background: linear-gradient(90deg, #39ff88, #39ff88) left center / 0% 100% no-repeat !important;
+  border: 1px solid rgba(57, 255, 136, 0.75) !important;
+  box-shadow: 0 0 8px rgba(57, 255, 136, 0.18);
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  transition: background-size 0.7s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.18s ease !important;
+}
+.exit-link:hover,
+.exit-link:focus,
+.exit-link:active {
+  color: #03150a !important;
+  background-size: 100% 100% !important;
+  border-color: rgba(57, 255, 136, 0.85) !important;
+  box-shadow: 0 0 10px rgba(57, 255, 136, 0.28), 3px 3px 0 rgba(57, 255, 136, 0.18) !important;
+  animation: exit-sign-flicker 3.1s steps(1, end) infinite;
+}
+@keyframes exit-sign-flicker {
+  0%, 19%, 23%, 25%, 57%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 8px rgba(57, 255, 136, 0.18);
+  }
+  20%, 24%, 58% {
+    opacity: 0.76;
+    box-shadow: 0 0 3px rgba(57, 255, 136, 0.12);
+  }
+  21%, 59% {
+    opacity: 0.92;
+  }
+}
+p, li {
+  color: var(--theme-ink);
+}
+p > strong:first-child {
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: var(--theme-accent);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--theme-line);
+  padding-bottom: 4px;
+}
+ul {
+  list-style: none !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+}
+ul li {
+  margin: 8px 0;
+  padding-left: 0;
+}
+.noteBoxes {
+  width: auto !important;
+  max-width: 760px;
+  border: 1px solid var(--theme-line) !important;
+  border-radius: 0 !important;
+  padding: 14px 16px !important;
+  margin: 18px 0 !important;
+  background: rgba(255,255,255,0.04) !important;
+  color: var(--theme-ink) !important;
+  box-shadow: 3px 3px 0 rgba(240,160,32,0.18);
+}
+.type1 {
+  border-color: var(--theme-line) !important;
+  background: rgba(255,255,255,0.04) !important;
+}
+.type1,
+.type1 a,
+.noteBoxes,
+.noteBoxes a {
+  color: var(--theme-ink) !important;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a > img {
+  display: block;
+  margin: 10px 0 18px;
+  border: 1px solid var(--theme-line);
+  box-shadow: 3px 3px 0 rgba(240,160,32,0.22);
+}
+p[style*="font-size: small"] {
+  color: var(--theme-muted) !important;
+  margin-top: 22px;
+}
+@media (max-width: 700px) {
+  body {
+    padding: 14px !important;
+    margin: 0 8px;
+    font-size: 14px !important;
+  }
+  p > strong:first-child {
+    font-size: 18px;
+  }
+  .noteBoxes {
+    padding: 12px !important;
+  }
+}
+</style>
 </head>
 
 <body>
+  <div class="sakura-layer" id="sakura-layer" aria-hidden="true"></div>
   <!-- <a href="https://kodu.ut.ee/~ahmedabdulmajeed/" style="color:white;">&#9823;</a> -->
 
-  <a href="https://ahmed.jp//" style="color:white;">&#9823;</a>
+  <a href="https://ahmed.jp//" class="exit-link" style="color:#39ff88 !important;">EXIT</a>
 
   <p><strong>Welcome to my Blog & Research Note</strong></p> 
 
-  <a href="https://www.nytimes.com/2022/06/13/crosswords/chess/chess-algebraic-notation.html">
-    <img src="chess.jpg" height="400" />
-  </a>
+  <img src="chess.png" height="150" />
 
   <p class="noteBoxes type1" style="color: black;">
     <q>
@@ -171,5 +348,226 @@
     <a href="https://github.com/sabirdvd/cool-ui-effects" target="_blank">source code</a>. 
     <strong>Do not</strong> scrape the HTML from this page itself — use the GitHub code instead.
   </p>
+<!-- sakura-cursor-start -->
+<style>
+  @media (pointer: fine) {
+    body {
+      cursor: url("sakura-cursor.png") 6 6, auto !important;
+    }
+
+    body a,
+    body button,
+    body input[type="button"],
+    body input[type="submit"],
+    body input[type="reset"],
+    body select,
+    body summary,
+    body [role="button"] {
+      cursor: url("sakura-cursor-2.png") 6 6, pointer !important;
+    }
+  }
+
+  .sakura-layer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 240ms ease;
+  }
+
+  body.sakura-screensaver-on .sakura-layer {
+    opacity: 1;
+  }
+
+  .screensaver-sakura {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 96px;
+    height: 96px;
+    background-image: url("sakura_.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    animation: screensaver-sakura-fall linear infinite;
+    animation-duration: var(--fall-duration, 18s);
+    animation-delay: var(--fall-delay, 0s);
+    transform: translate3d(0, -12vh, 0) rotate(0deg) scale(var(--fall-scale, 1));
+    will-change: transform, opacity;
+  }
+
+  .trail-sakura,
+  .click-sakura {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1002;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    will-change: transform, opacity;
+  }
+
+  .trail-sakura {
+    width: 42px;
+    height: 42px;
+    background-image: url("sakura.png");
+    opacity: 0.58;
+    animation: trail-sakura-fade 520ms linear forwards;
+  }
+
+  .click-sakura {
+    width: 96px;
+    height: 96px;
+    background-image: url("sakura_1.png");
+    opacity: 0.95;
+    animation: click-sakura-pop 420ms ease-out forwards;
+  }
+
+  @keyframes click-sakura-pop {
+    0% {
+      transform: translate(-50%, -50%) scale(0.82) rotate(0deg);
+      opacity: 0.95;
+    }
+    100% {
+      transform: translate(-50%, -85%) scale(1.14) rotate(14deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes trail-sakura-fade {
+    0% {
+      transform: translate(-50%, -50%) scale(0.72) rotate(0deg);
+      opacity: 0.62;
+    }
+    100% {
+      transform: translate(-50%, -50%) translate3d(var(--trail-drift-x, 0px), var(--trail-drift-y, 0px), 0) scale(1.02) rotate(var(--trail-rotate, 12deg));
+      opacity: 0;
+    }
+  }
+
+  @keyframes screensaver-sakura-fall {
+    0% {
+      transform: translate3d(var(--x-shift, 0px), -12vh, 0) rotate(0deg) scale(var(--fall-scale, 1));
+      opacity: 0;
+    }
+    8% {
+      opacity: 0.85;
+    }
+    100% {
+      transform: translate3d(calc(var(--x-shift, 0px) + var(--drift, 40px)), 112vh, 0) rotate(220deg) scale(var(--fall-scale, 1));
+      opacity: 0.15;
+    }
+  }
+</style>
+<script>
+  function ensureSakuraScreensaver() {
+    var layer = document.getElementById("sakura-layer");
+    if (!layer || layer.childElementCount) return;
+
+    for (var i = 0; i < 14; i++) {
+      var bloom = document.createElement("span");
+      bloom.className = "screensaver-sakura";
+      bloom.style.left = Math.random() * 100 + "vw";
+      bloom.style.setProperty("--fall-duration", 14 + Math.random() * 10 + "s");
+      bloom.style.setProperty("--fall-delay", (-1 * Math.random() * 18) + "s");
+      bloom.style.setProperty("--fall-scale", (0.75 + Math.random() * 0.55).toFixed(2));
+      bloom.style.setProperty("--x-shift", (Math.random() * 80 - 40) + "px");
+      bloom.style.setProperty("--drift", (Math.random() * 140 - 70) + "px");
+      layer.appendChild(bloom);
+    }
+  }
+
+  var sakuraScreensaverTimer;
+  var lastTrailTime = 0;
+  function disableSakuraScreensaver() {
+    document.body.classList.remove("sakura-screensaver-on");
+  }
+
+  function scheduleSakuraScreensaver() {
+    disableSakuraScreensaver();
+    window.clearTimeout(sakuraScreensaverTimer);
+    sakuraScreensaverTimer = window.setTimeout(function () {
+      ensureSakuraScreensaver();
+      document.body.classList.add("sakura-screensaver-on");
+    }, 60000);
+  }
+
+  function spawnTrailSakura(x, y) {
+    var trail = document.createElement("span");
+    trail.className = "trail-sakura";
+    trail.style.left = x + "px";
+    trail.style.top = y + "px";
+    trail.style.setProperty("--trail-drift-x", (Math.random() * 24 - 12) + "px");
+    trail.style.setProperty("--trail-drift-y", (Math.random() * 18 - 14) + "px");
+    trail.style.setProperty("--trail-rotate", (Math.random() * 40 - 20) + "deg");
+    document.body.appendChild(trail);
+    window.setTimeout(function () {
+      trail.remove();
+    }, 540);
+  }
+
+  function maybeSpawnTrailSakura(event) {
+    var now = Date.now();
+    if (now - lastTrailTime < 70) return;
+    lastTrailTime = now;
+
+    spawnTrailSakura(event.clientX - 10, event.clientY - 6);
+    if (Math.random() > 0.55) {
+      spawnTrailSakura(event.clientX + 8, event.clientY + 6);
+    }
+  }
+
+  function spawnClickSakura(x, y) {
+    var burstOffsets = [
+      { x: -26, y: -10, rotate: -18, scale: 0.82 },
+      { x: 0, y: -22, rotate: 8, scale: 0.96 },
+      { x: 24, y: -4, rotate: 18, scale: 0.86 }
+    ];
+
+    burstOffsets.forEach(function (offset, index) {
+      var petal = document.createElement("span");
+      petal.className = "click-sakura";
+      petal.style.left = (x + offset.x) + "px";
+      petal.style.top = (y + offset.y) + "px";
+      petal.style.transform = "translate(-50%, -50%) scale(" + offset.scale + ") rotate(" + offset.rotate + "deg)";
+      document.body.appendChild(petal);
+      window.setTimeout(function () {
+        petal.remove();
+      }, 450 + index * 20);
+    });
+  }
+
+  function initSakuraCursor() {
+    if (document.body.dataset.sakuraCursorInit === "1") return;
+    document.body.dataset.sakuraCursorInit = "1";
+    document.querySelectorAll("a, button, input, textarea, select, [role='button']").forEach(function (el) {
+      el.addEventListener("mousedown", function (event) {
+        spawnClickSakura(event.clientX, event.clientY);
+      });
+    });
+    window.addEventListener("mousemove", function (event) {
+      maybeSpawnTrailSakura(event);
+      scheduleSakuraScreensaver();
+    }, { passive: true });
+    window.addEventListener("mousedown", function () {
+      scheduleSakuraScreensaver();
+    }, { passive: true });
+    window.addEventListener("keydown", function () {
+      scheduleSakuraScreensaver();
+    });
+    scheduleSakuraScreensaver();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSakuraCursor);
+  } else {
+    initSakuraCursor();
+  }
+</script>
+<!-- sakura-cursor-end -->
 </body>
 </html>
