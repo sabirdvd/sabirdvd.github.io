@@ -148,7 +148,7 @@ a {
   transition: background-size 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.18s ease;
 }
 a:hover,
-a:focus {
+a:focus-visible {
   background-size: 100% 100%;
   color: #111 !important;
   border-bottom-color: var(--theme-accent);
@@ -156,6 +156,21 @@ a:focus {
 }
 a:active {
   transform: translateY(1px);
+}
+a:focus:not(:focus-visible) {
+  background-size: 0% 100%;
+  color: var(--theme-ink) !important;
+  border-bottom-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+.exit-link:focus:not(:focus-visible) {
+  color: #39ff88 !important;
+  background-size: 0% 100% !important;
+  border-color: rgba(57, 255, 136, 0.75) !important;
+  box-shadow: 0 0 8px rgba(57, 255, 136, 0.18) !important;
+  animation: none !important;
+  outline: none;
 }
 body > a:first-of-type {
   display: inline-block;
@@ -180,7 +195,7 @@ body > a:first-of-type {
   transition: background-size 0.7s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, transform 0.18s ease !important;
 }
 .exit-link:hover,
-.exit-link:focus,
+.exit-link:focus-visible,
 .exit-link:active {
   color: #03150a !important;
   background-size: 100% 100% !important;
@@ -234,6 +249,20 @@ ul li {
   background: rgba(255,255,255,0.04) !important;
   color: var(--theme-ink) !important;
   box-shadow: 3px 3px 0 rgba(240,160,32,0.18);
+}
+.comic-box-link {
+  display: inline-block;
+  color: inherit !important;
+  text-decoration: none !important;
+  background: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.comic-box-link:hover .noteBoxes,
+.comic-box-link:focus-visible .noteBoxes {
+  border-color: var(--theme-accent) !important;
+  box-shadow: 3px 3px 0 rgba(240,160,32,0.22);
 }
 .type1 {
   border-color: var(--theme-line) !important;
@@ -289,17 +318,14 @@ p[style*="font-size: small"] {
 
     <img src="chess.png" class="blog-hero-image" style="width:100%; max-width:790px; height:auto;" />
 
+  <a href="comic.png" class="comic-box-link">
   <p class="noteBoxes type1" style="color: black;">
     <q>
-      <!-- <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTovUr3EpPjRaJP90vjGges3p0GdR3gsxn70Q&s" style="color: black;"> -->
-        <a href="comic.png" style="color: black;">
-  <!-- <img src="public_html/comic.png" alt="Comic" /> -->
-</a>
-        Writing is a nature's way of letting you know how sloppy your thinking is.
-      </a>
+      Writing is a nature's way of letting you know how sloppy your thinking is.
     </q>
     - Dick Guindon 
   </p>
+  </a>
 
   <p><strong>Medium</strong></p>
   <ul style="list-style-type: '&#9823'; margin: 0; padding: 0;">
@@ -549,6 +575,16 @@ p[style*="font-size: small"] {
       }, 450 + index * 20);
     });
   }
+
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest("a");
+    if (!link) return;
+    window.setTimeout(function () {
+      if (document.activeElement === link) {
+        link.blur();
+      }
+    }, 0);
+  });
 
   function initSakuraCursor() {
     if (document.body.dataset.sakuraCursorInit === "1") return;
