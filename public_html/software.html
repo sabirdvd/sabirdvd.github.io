@@ -220,6 +220,16 @@ body > a:first-of-type {
 p, li {
   color: var(--theme-ink);
 }
+#glitch-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+  color: var(--theme-accent);
+  font-family: 'Departure Mono', monospace;
+  font-size: 24px;
+  border-bottom: 2px solid var(--theme-line);
+  box-shadow: inset 0 -1px 0 rgba(107,180,255,0.18);
+}
 p > strong:first-child {
   display: inline-block;
   margin-top: 16px;
@@ -374,7 +384,7 @@ p[style*="font-size: small"] {
 
   <a lang="ja" href="https://ahmed.jp//" class="exit-link" style="color:#39ff88 !important;">出口</a>
 
-  <p><strong>Software & Dataset</strong></p>
+  <h2 id="glitch-title">Software &amp; Dataset</h2>
 
   <p><strong>Software</strong></p>
   <article class="software-card">
@@ -397,7 +407,7 @@ p[style*="font-size: small"] {
     <div>
       <h2>AI Deadline Dog <em class="software-status">Coming soon</em></h2>
       <p>Chrome extension that finds conference deadlines on webpages, adds them to your calendar, and reminds you before they arrive.</p>
-      <p class="software-link"><a href="https://aideadlinedog.github.io/AIDeadlineDog/">Visit website →</a></p>
+      <p class="software-link"><a href="index.html">Visit website →</a></p>
     </div>
   </article>
 
@@ -408,7 +418,7 @@ p[style*="font-size: small"] {
       : Lexical resource for examining gender bias beyond occupational titles (English &amp; Japanese).
     </li>
     <li>
-      <a href="https://huggingface.co/datasets/AhmedSSabir/est-gender-bias-dataset" target="_blank">Est-gender-bias-dataset</a>
+      <a href="https://huggingface.co/datasets/AhmedSSabir/est-gender-bias-dataset" target="_blank">est-gender-bias-dataset</a>
       : Estonian gender bias evaluation set for measuring bias in a genderless language.
     </li>
     <li>
