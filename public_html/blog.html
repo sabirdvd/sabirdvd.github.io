@@ -219,6 +219,16 @@ body > a:first-of-type {
 p, li {
   color: var(--theme-ink);
 }
+#glitch-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+  color: var(--theme-accent);
+  font-family: 'Departure Mono', monospace;
+  font-size: 24px;
+  border-bottom: 2px solid var(--theme-line);
+  box-shadow: inset 0 -1px 0 rgba(107,180,255,0.18);
+}
 p > strong:first-child {
   display: inline-block;
   margin-top: 16px;
@@ -313,7 +323,7 @@ p[style*="font-size: small"] {
 
   <a lang="ja" href="https://ahmed.jp//" class="exit-link" style="color:#39ff88 !important;">出口</a>
 
-   <p><strong>Welcome to my Blog & Research Note <span lang="ja">へようこそ！</span></strong></p> 
+  <h2 id="glitch-title">Welcome to my Blog &amp; Research Note <span lang="ja">へようこそ！</span></h2>
 
 
     <img src="chess.png" class="blog-hero-image" style="width:100%; max-width:790px; height:auto;" />
@@ -383,6 +393,7 @@ p[style*="font-size: small"] {
     <a href="https://github.com/sabirdvd/cool-ui-effects" target="_blank">source code</a>. 
     <strong>Do not</strong> scrape the HTML from this page itself — use the GitHub code instead.
   </p>
+  <script src="glitch_H1.js" defer></script>
 <!-- sakura-cursor-start -->
 <style>
   @media (pointer: fine) {
@@ -616,4 +627,3 @@ p[style*="font-size: small"] {
 <!-- sakura-cursor-end -->
 </body>
 </html>
-
